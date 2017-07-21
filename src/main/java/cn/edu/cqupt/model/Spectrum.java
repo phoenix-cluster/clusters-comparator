@@ -44,15 +44,20 @@ public class Spectrum {
 
 	@Override
 	public boolean equals(Object otherObject) {
-		if (otherObject == null)
+		if (otherObject == null) {
+			// System.out.println("otherObject == null");
 			return false;
+		}
 
-		if (this == otherObject)
+		if (this == otherObject) {
+			// System.out.println("this == otherObject");
 			return true;
+		}
 
-		if (this.getClass() != otherObject.getClass())
+		if (this.getClass() != otherObject.getClass()) {
+			// System.out.println("this.getClass() != otherObject.getClass()");
 			return false;
-		else {
+		} else {
 			Spectrum other = (Spectrum) otherObject;
 			if (this.species == null || this.species.isEmpty() || this.species == "" || other.species == null
 					|| other.species.isEmpty() || other.species == "")
@@ -61,6 +66,16 @@ public class Spectrum {
 			else
 				return this.spectrumId.equals(other.spectrumId) && this.charge == other.charge
 						&& this.precursorMz == other.precursorMz && this.species.equals(other.species);
+
+			// if (this.spectrumId.equals(other.spectrumId)) {
+			// System.out.println("this.spectrumId.equals(other.spectrumId)");
+			// return true;
+			// } else {
+			// System.out.println("this.spectrumId = " + this.spectrumId);
+			// System.out.println("other.spectrumId = " + other.spectrumId);
+			// System.out.println("!this.spectrumId.equals(other.spectrumId)");
+			// return false;
+			// }
 		}
 	}
 

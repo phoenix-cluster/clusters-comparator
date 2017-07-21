@@ -4,6 +4,7 @@ import java.util.List;
 
 import cn.edu.cqupt.model.Cluster;
 import cn.edu.cqupt.model.Page;
+import cn.edu.cqupt.model.Spectrum;
 import cn.edu.cqupt.service.ClusterTableService;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -17,13 +18,17 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
+import javafx.scene.layout.VBox;
 import javafx.util.Callback;
 
 public class ClusterTable {
-	private String[] colName = { "ID", "av_precursor_mz", "av_precursor_intens", "Spectrum Count" }; // 列名
-	private String[] property = { "id", "avPrecursorMz", "avPrecursorIntens", "specCount" }; // 列属性
+//	private String[] colName = { "ID", "av_precursor_mz", "av_precursor_intens", "Spectrum Count" }; // 列名
+//	private String[] property = { "id", "avPrecursorMz", "avPrecursorIntens", "specCount" }; // 列属性
 	private HBox hBox;
-	private StackPane stackPane;
+	private VBox vBox;
+	private StackPane spectrumStackPane;
+	private StackPane pieStackPane;
+	private List<Cluster> releaseCluster;
 
 	public HBox gethBox() {
 		return hBox;
@@ -37,11 +42,22 @@ public class ClusterTable {
 
 	}
 
-	public ClusterTable(ClusterTableService clusterTableService, int pageSize) {
-		this.hBox = new HBox();
-		this.stackPane = new StackPane(); // receive spectrum tables
+	public VBox getvBox() {
+		return vBox;
+	}
 
-		// initial parameter
+	public void setvBox(VBox vBox) {
+		this.vBox = vBox;
+	}
+
+	public ClusterTable(ClusterTableService clusterTableService, int pageSize, List<Cluster> releaseCluster) {
+		this.hBox = new HBox();
+		this.vBox = new VBox();
+		this.spectrumStackPane = new StackPane(); // receive spectrum tables
+		this.pieStackPane = new StackPane();
+		this.releaseCluster = releaseCluster;
+
+		// get data of the default display page
 		Page<Cluster> iniPara = clusterTableService.getCurrentPageClusters(1, pageSize);
 
 		// create cluster table with pagination
@@ -51,8 +67,14 @@ public class ClusterTable {
 
 		// create spectrum table of cluster 1
 		SpectrumTable spectrumTable = new SpectrumTable(iniPara.getDataList().get(0).getSpectrums());
-		stackPane.getChildren().add(spectrumTable.getSpectrumTable());
-		hBox.getChildren().add(stackPane);
+		spectrumStackPane.getChildren().add(spectrumTable.getSpectrumTable());
+		hBox.getChildren().add(spectrumStackPane);
+
+		// create pie chart of cluster 1
+		ComparerPieChart comparerPieChart = new ComparerPieChart();
+		comparerPieChart.createComparerPieChart(iniPara.getDataList().get(0), releaseCluster);
+		pieStackPane.getChildren().add(comparerPieChart.getComparerPieChart());
+		vBox.getChildren().addAll(hBox, pieStackPane);
 	}
 
 	private TableView<Cluster> createClusterTable(List<Cluster> tableData) {
@@ -60,25 +82,54 @@ public class ClusterTable {
 		ObservableList<Cluster> observableTableData = FXCollections.observableList(tableData);
 
 		// 设置表格：表头和单元格值类型
-		for (int i = 0; i < colName.length; i++) {
-			TableColumn<Cluster, String> tmpCol = new TableColumn<>(colName[i]); // 这里是存疑的，因为有一些数据不是String，后期如果有排序等操作会出错
-			tmpCol.setCellValueFactory(new PropertyValueFactory<>(property[i]));
-			clusterTable.getColumns().add(tmpCol);
-		}
+//		for (int i = 0; i < colName.length; i++) {
+//			TableColumn<Cluster, String> tmpCol = new TableColumn<>(colName[i]); // 这里是存疑的，因为有一些数据不是String，后期如果有排序等操作会出错
+//			tmpCol.setCellValueFactory(new PropertyValueFactory<>(property[i]));
+//			clusterTable.getColumns().add(tmpCol);
+//		}
+		
+		TableColumn<Cluster, String> idCol = new TableColumn<>("ID");
+		idCol.setCellValueFactory(new PropertyValueFactory<Cluster, String>("id"));
+		clusterTable.getColumns().add(idCol);
+		TableColumn<Cluster, Float> avPrecursorMzCol = new TableColumn<>("av_precursor_mz");
+		avPrecursorMzCol.setCellValueFactory(new PropertyValueFactory<>("avPrecursorMz"));
+		clusterTable.getColumns().add(avPrecursorMzCol);
+		TableColumn<Cluster, Float> avPrecursorIntensCol = new TableColumn<>("av_precursor_intens");
+		avPrecursorIntensCol.setCellValueFactory(new PropertyValueFactory<>("avPrecursorIntens"));
+		clusterTable.getColumns().add(avPrecursorIntensCol);
+		TableColumn<Cluster, Integer> specCount = new TableColumn<>("Spectrum Count");
+		specCount.setCellValueFactory(new PropertyValueFactory<>("specCount"));
+		clusterTable.getColumns().add(specCount);
 
-		// add event to cluster table
+		// add event to cluster table : click on the row of the cluster table to display
+		// the corresponding spectrums
 		clusterTable.setOnMouseClicked(new EventHandler<MouseEvent>() {
 			@Override
 			public void handle(MouseEvent click) {
+
+				// obtain position
 				TablePosition<Cluster, String> pos = clusterTable.getSelectionModel().getSelectedCells().get(0);
 				int row = pos.getRow();
 				int col = pos.getColumn();
-				System.out.println("it is " + row + " row and " + col + " column");
+//				System.out.println("you have clicked : it is " + row + " row and " + col + " column");
+
 				if (clusterTable.getItems().get(row) != null) {
+
+					// create spectrum table
 					SpectrumTable spectrumTable = new SpectrumTable(tableData.get(row).getSpectrums());
-					stackPane.getChildren().add(spectrumTable.getSpectrumTable());
+					spectrumStackPane.getChildren().add(spectrumTable.getSpectrumTable());
 					hBox.getChildren().remove(1);
-					hBox.getChildren().add(stackPane);
+					hBox.getChildren().add(spectrumStackPane);
+
+					// create pie chart
+					ComparerPieChart comparerPieChart = new ComparerPieChart();
+					comparerPieChart.createComparerPieChart(tableData.get(row), releaseCluster);
+					
+					pieStackPane.getChildren().remove(0);
+					pieStackPane.getChildren().add(comparerPieChart.getComparerPieChart());
+					vBox.getChildren().remove(1);
+					vBox.getChildren().add(pieStackPane);
+
 				}
 			}
 		});
@@ -102,10 +153,11 @@ public class ClusterTable {
 			public Node call(Integer pageIndex) {
 				Page<Cluster> currentPageClusters = clusterTableService.getCurrentPageClusters(pageIndex + 1, pageSize);
 
-				System.out.println("pageIndex:" + pageIndex);
-				System.out.println("getPageSize: " + currentPageClusters.getPageSize());
-				System.out.println("getTotalRecord: " + currentPageClusters.getTotalRecord());
-				System.out.println("getTotalPage: " + currentPageClusters.getTotalPage());
+				// System.out.println("pageIndex:" + pageIndex);
+				// System.out.println("getPageSize: " + currentPageClusters.getPageSize());
+				// System.out.println("getTotalRecord: " +
+				// currentPageClusters.getTotalRecord());
+				// System.out.println("getTotalPage: " + currentPageClusters.getTotalPage());
 
 				return createClusterTable(currentPageClusters.getDataList());
 			}

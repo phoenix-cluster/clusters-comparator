@@ -1,8 +1,9 @@
 package cn.edu.cqupt.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
-public class Cluster {
+public class Cluster implements Cloneable{
 
 	private String id;
 	private float avPrecursorMz;
@@ -52,6 +53,17 @@ public class Cluster {
 
 	public void setSpectrums(List<Spectrum> spectrums) {
 		this.spectrums = spectrums;
+	}
+	
+	@Override
+	public Cluster clone() throws CloneNotSupportedException{
+		Cluster result = (Cluster) super.clone();
+		List<Spectrum> tmpSpectrums = new ArrayList<>(spectrums.size());
+		for(Spectrum spec : spectrums) {
+			tmpSpectrums.add(spec);
+		}
+		result.spectrums = tmpSpectrums;
+		return result;
 	}
 
 }
