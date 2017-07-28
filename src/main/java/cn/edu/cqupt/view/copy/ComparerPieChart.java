@@ -1,4 +1,4 @@
-package cn.edu.cqupt.view;
+package cn.edu.cqupt.view.copy;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
@@ -116,7 +116,7 @@ public class ComparerPieChart {
 					// add bulids into tabB
 					grid.add(sourceSpectrumTable.getSpectrumTable(), 0, 0);
 					grid.add(objectSpectrumTable.getSpectrumTable(), 1, 0);
-					grid.add(peakMap.getVbox(), 0, 1, 2, 1);
+					grid.add(peakMap.getStackPane(), 0, 1, 2, 1);
 					tabB.setContent(grid);
 				}
 			});

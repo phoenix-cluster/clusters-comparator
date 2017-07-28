@@ -84,6 +84,8 @@ public class FileUtil {
 			tmpCluster.setAvPrecursorIntens(tmpICluster.getAvPrecursorIntens());
 			tmpCluster.setAvPrecursorMz(tmpICluster.getAvPrecursorMz());
 			tmpCluster.setSpecCount(tmpICluster.getSpecCount());
+			tmpCluster.setIntensValues(tmpICluster.getConsensusIntensValues());
+			tmpCluster.setMzValues(tmpICluster.getConsensusMzValues());
 
 			// Spectrum
 			List<Spectrum> allSpectrums = new ArrayList<>();

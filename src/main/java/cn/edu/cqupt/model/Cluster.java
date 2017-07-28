@@ -3,13 +3,15 @@ package cn.edu.cqupt.model;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Cluster implements Cloneable{
+public class Cluster implements Cloneable {
 
 	private String id;
 	private float avPrecursorMz;
 	private float avPrecursorIntens;
 	private int specCount;
 	private List<Spectrum> spectrums;
+	private List<Float> mzValues;
+	private List<Float> intensValues;
 
 	public Cluster() {
 
@@ -54,12 +56,28 @@ public class Cluster implements Cloneable{
 	public void setSpectrums(List<Spectrum> spectrums) {
 		this.spectrums = spectrums;
 	}
-	
+
+	public List<Float> getMzValues() {
+		return mzValues;
+	}
+
+	public void setMzValues(List<Float> mzValues) {
+		this.mzValues = mzValues;
+	}
+
+	public List<Float> getIntensValues() {
+		return intensValues;
+	}
+
+	public void setIntensValues(List<Float> intensValues) {
+		this.intensValues = intensValues;
+	}
+
 	@Override
-	public Cluster clone() throws CloneNotSupportedException{
+	public Cluster clone() throws CloneNotSupportedException {
 		Cluster result = (Cluster) super.clone();
 		List<Spectrum> tmpSpectrums = new ArrayList<>(spectrums.size());
-		for(Spectrum spec : spectrums) {
+		for (Spectrum spec : spectrums) {
 			tmpSpectrums.add(spec);
 		}
 		result.spectrums = tmpSpectrums;

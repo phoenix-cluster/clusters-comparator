@@ -13,13 +13,20 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
+
 	<repositories>
-		<!-- EBI repo -->
 		<repository>
 			<id>nexus-ebi-repo</id>
 			<url>http://www.ebi.ac.uk/intact/maven/nexus/content/repositories/ebi-repo</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
 		</repository>
 	</repositories>
+
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
@@ -31,7 +38,27 @@
 		<dependency>
 			<groupId>uk.ac.ebi.pride.toolsuite</groupId>
 			<artifactId>inspector-mzgraph-browser</artifactId>
-			<version>2.0.3</version>
+			<version>2.0.0</version>
+		</dependency>
+
+		<!-- zoom builds -->
+		<dependency>
+			<groupId>com.github.kerner1000</groupId>
+			<artifactId>javafx-chart-zooming</artifactId>
+			<version>0.0.8</version>
 		</dependency>
 	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 </project>

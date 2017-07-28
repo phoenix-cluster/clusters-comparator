@@ -1,4 +1,4 @@
-package cn.edu.cqupt.view;
+package cn.edu.cqupt.view.copy;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package cn.edu.cqupt.view;
+package cn.edu.cqupt.view.copy;
 
 import java.util.List;
 
@@ -65,7 +65,7 @@ public class ClusterTable {
 		// create peak map of cluster 1
 		PeakMap peakMap = new PeakMap(iniPara.getDataList().get(0).getMzValues(),
 				iniPara.getDataList().get(0).getIntensValues());
-		peakMapStackPane.getChildren().add(peakMap.getVbox());
+		peakMapStackPane.getChildren().add(peakMap.getStackPane());
 
 		// create pie chart of cluster 1
 		ComparerPieChart comparerPieChart = new ComparerPieChart(iniPara.getDataList().get(0), releaseCluster);
@@ -131,7 +131,7 @@ public class ClusterTable {
 					spectrumStackPane.getChildren().remove(0);
 					spectrumStackPane.getChildren().add(spectrumTable.getSpectrumTable());
 					peakMapStackPane.getChildren().remove(0);
-					peakMapStackPane.getChildren().add(peakMap.getVbox());
+					peakMapStackPane.getChildren().add(peakMap.getStackPane());
 					pieStackPane.getChildren().remove(0);
 					pieStackPane.getChildren().add(comparerPieChart.getComparerPieChart());
 				}

@@ -1,4 +1,4 @@
-package cn.edu.cqupt.view;
+package cn.edu.cqupt.view.copy;
 
 import cn.edu.cqupt.service.ClusterTableService;
 import javafx.application.Application;
