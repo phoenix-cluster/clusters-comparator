@@ -24,9 +24,8 @@ public class FileUtil {
 	 * @param clusteringFilePath
 	 *            cluster file path
 	 */
-	public FileUtil(String ClusteringFilePath) {
-		File clusterFile = new File(ClusteringFilePath);
-		ClusteringFileReader reader = new ClusteringFileReader(clusterFile);
+	public FileUtil(File clusteringFile) {
+		ClusteringFileReader reader = new ClusteringFileReader(clusteringFile);
 		try {
 			this.cluster = reader.readAllClusters();
 			this.totalRecord = this.cluster.size();

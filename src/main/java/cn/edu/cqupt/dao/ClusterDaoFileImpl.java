@@ -1,6 +1,8 @@
 package cn.edu.cqupt.dao;
 
+import java.io.File;
 import java.util.List;
+
 import cn.edu.cqupt.model.Cluster;
 import cn.edu.cqupt.model.Page;
 import cn.edu.cqupt.util.FileUtil;
@@ -12,8 +14,8 @@ public class ClusterDaoFileImpl implements IClusterDao {
 
 	}
 
-	public ClusterDaoFileImpl(String clusteringFilePath) {
-		this.fileUtil = new FileUtil(clusteringFilePath);
+	public ClusterDaoFileImpl(File clusteringFile) {
+		this.fileUtil = new FileUtil(clusteringFile);
 	}
 
 	@Override

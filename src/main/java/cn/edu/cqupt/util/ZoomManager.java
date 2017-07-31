@@ -115,6 +115,7 @@ public class ZoomManager<X, Y> {
 		setUpZooming(zoomRect, chart);
 	}
 
+	@SafeVarargs
 	public ZoomManager(final Pane chartParent, final XYChart<X, Y> chart, final Series<X, Y>... series) {
 		this(chartParent, chart, Arrays.asList(series));
 
@@ -162,7 +163,7 @@ public class ZoomManager<X, Y> {
 		} else if (o1 instanceof String || o2 instanceof String) {
 			doZoom(x, (String) o1, (String) o2);
 		} else {
-			final int wait = 0;
+//			final int wait = 0;
 		}
 	}
 

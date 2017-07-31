@@ -17,6 +17,7 @@ import javafx.scene.chart.PieChart;
 import javafx.scene.control.Tab;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.VBox;
 
 public class ComparerPieChart {
 	private PieChart comparerPieChart;
@@ -78,7 +79,7 @@ public class ComparerPieChart {
 				@Override
 				public void handle(MouseEvent event) {
 					
-					GridPane grid = new GridPane();
+					VBox vbox = new VBox();
 					
 					// get tabB
 					Tab tabB = null;
@@ -95,29 +96,33 @@ public class ComparerPieChart {
 					// obtain clusterID
 					String clusterId = data.getName().split("\\n")[0];
 
-					// source spectrum table
+					/*// source spectrum table
 					SpectrumTable sourceSpectrumTable = new SpectrumTable(cluster.getSpectrums(),
 							overlapSpectrumOfCluster.get(clusterId));
 
 					// object spectrum table
 					SpectrumTable objectSpectrumTable = new SpectrumTable(overlapCluster.get(clusterId).getSpectrums(),
+							overlapSpectrumOfCluster.get(clusterId));*/
+					SpectrumTable spectrumTable = new SpectrumTable(cluster.getSpectrums(), overlapCluster.get(clusterId).getSpectrums(),
 							overlapSpectrumOfCluster.get(clusterId));
+					GridPane overlapSpecs = spectrumTable.getOverlapSpecs();
 					// System.out.println(cluster.getId() + " : " + cluster.getSpecCount());
 					// System.out.println("overlap spectrum counts" + " : " +
 					// overlapSpectrumOfCluster.get(clusterId).size());
 					// System.out.println(overlapCluster.get(clusterId).getId() + " : " +
 					// overlapCluster.get(clusterId).getSpecCount());
 
+					// add color picker for two spectrum table
+					
+					
 					// peak map
 					PeakMap peakMap = new PeakMap(cluster.getMzValues(), cluster.getIntensValues(),
 							overlapCluster.get(clusterId).getMzValues(),
 							overlapCluster.get(clusterId).getIntensValues());
 					
 					// add bulids into tabB
-					grid.add(sourceSpectrumTable.getSpectrumTable(), 0, 0);
-					grid.add(objectSpectrumTable.getSpectrumTable(), 1, 0);
-					grid.add(peakMap.getVbox(), 0, 1, 2, 1);
-					tabB.setContent(grid);
+					vbox.getChildren().addAll(overlapSpecs, peakMap.getVbox());
+					tabB.setContent(vbox);
 				}
 			});
 		}

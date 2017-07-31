@@ -1,15 +1,17 @@
 E:\SpringWorkspace\cluster-comparer\src\main\java\cn\edu\cqupt\model\Page.java
+E:\SpringWorkspace\cluster-comparer\src\main\java\cn\edu\cqupt\util\ColorUtil.java
+E:\SpringWorkspace\cluster-comparer\src\main\java\cn\edu\cqupt\view\PeakMap.java
 E:\SpringWorkspace\cluster-comparer\src\main\java\cn\edu\cqupt\util\FileUtil.java
 E:\SpringWorkspace\cluster-comparer\src\main\java\cn\edu\cqupt\object\ISpectrumReference.java
 E:\SpringWorkspace\cluster-comparer\src\main\java\cn\edu\cqupt\object\ClusteringFilePSM.java
 E:\SpringWorkspace\cluster-comparer\src\main\java\cn\edu\cqupt\model\Spectrum.java
 E:\SpringWorkspace\cluster-comparer\src\main\java\cn\edu\cqupt\service\SpectrumComparerService.java
 E:\SpringWorkspace\cluster-comparer\src\main\java\cn\edu\cqupt\object\ClusteringFileSpectrumReference.java
-E:\SpringWorkspace\cluster-comparer\src\main\java\cn\edu\cqupt\view\Test.java
 E:\SpringWorkspace\cluster-comparer\src\main\java\cn\edu\cqupt\object\IPeptideSpectrumMatch.java
 E:\SpringWorkspace\cluster-comparer\src\main\java\cn\edu\cqupt\object\ClusteringFileModification.java
 E:\SpringWorkspace\cluster-comparer\src\main\java\cn\edu\cqupt\view\ComparerPieChart.java
 E:\SpringWorkspace\cluster-comparer\src\main\java\cn\edu\cqupt\util\IClusterSourceListener.java
+E:\SpringWorkspace\cluster-comparer\src\main\java\cn\edu\cqupt\util\ZoomManager.java
 E:\SpringWorkspace\cluster-comparer\src\main\java\cn\edu\cqupt\dao\IClusterDao.java
 E:\SpringWorkspace\cluster-comparer\src\main\java\cn\edu\cqupt\service\SpectrumTableService.java
 E:\SpringWorkspace\cluster-comparer\src\main\java\cn\edu\cqupt\object\SequenceCount.java
@@ -17,7 +19,6 @@ E:\SpringWorkspace\cluster-comparer\src\main\java\cn\edu\cqupt\object\PeakMzComp
 E:\SpringWorkspace\cluster-comparer\src\main\java\cn\edu\cqupt\view\SpectrumTable.java
 E:\SpringWorkspace\cluster-comparer\src\main\java\cn\edu\cqupt\model\Cluster.java
 E:\SpringWorkspace\cluster-comparer\src\main\java\cn\edu\cqupt\dao\ClusterDaoFileImpl.java
-E:\SpringWorkspace\cluster-comparer\src\main\java\cn\edu\cqupt\view\TableII.java
 E:\SpringWorkspace\cluster-comparer\src\main\java\cn\edu\cqupt\util\ClusteringFileReader.java
 E:\SpringWorkspace\cluster-comparer\src\main\java\cn\edu\cqupt\view\ClusterTable.java
 E:\SpringWorkspace\cluster-comparer\src\main\java\cn\edu\cqupt\service\ClusterTableService.java

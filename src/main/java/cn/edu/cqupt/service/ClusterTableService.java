@@ -1,5 +1,6 @@
 package cn.edu.cqupt.service;
 
+import java.io.File;
 import java.util.List;
 
 import cn.edu.cqupt.dao.ClusterDaoFileImpl;
@@ -23,8 +24,8 @@ public class ClusterTableService {
 	}
 
 	// read clustering file
-	public ClusterTableService(String clusteringFilePath) {
-		this.clusterDao = new ClusterDaoFileImpl(clusteringFilePath);
+	public ClusterTableService(File clusteringFile) {
+		this.clusterDao = new ClusterDaoFileImpl(clusteringFile);
 	}
 
 	// get the clustering result of a release
