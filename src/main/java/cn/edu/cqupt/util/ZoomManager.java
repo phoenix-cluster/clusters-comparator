@@ -82,7 +82,8 @@ public class ZoomManager<X, Y> {
 		zoomRect.setManaged(false);
 		zoomRect.setFill(Color.LIGHTSEAGREEN.deriveColor(0, 1, 1, 0.5));
 		chartParent.getChildren().add(zoomRect);
-		setUpZooming(zoomRect, chart);
+		// setUpZooming(zoomRect, chart);
+		setZoomRectangle(zoomRect);
 	}
 
 	@SafeVarargs
@@ -123,93 +124,93 @@ public class ZoomManager<X, Y> {
 		});
 	}
 
-	private void setUpZooming(final Rectangle rect, final XYChart<X, Y> chart) {
+	private void setZoomRectangle(Rectangle rect) {
 
-		setUpZoomingRectangle(rect);
+		SimpleObjectProperty<Point2D> rectinit = new SimpleObjectProperty<>();
+		Node chartBackground = chart.lookup(".chart-plot-background");
 
-	}
+		// set mouse handler
+		EventHandler<MouseEvent> mouseHandler = new EventHandler<MouseEvent>() {
 
-	/**
-	 * Displays a colored rectangle that will indicate zooming boundaries
-	 *
-	 * @param rect
-	 */
-	private void setUpZoomingRectangle(final Rectangle rect) {
-
-		final Node chartBackground = chart.lookup(".chart-plot-background");
-		final ObjectProperty<Point2D> mouseAnchor = new SimpleObjectProperty<>();
-		chart.setOnMousePressed(new EventHandler<MouseEvent>() {
 			@Override
-			public void handle(final MouseEvent event) {
-				mouseAnchor.set(new Point2D(event.getX(), event.getY()));
-				System.out.println("begin-> " + "X: " + mouseAnchor.get().getX() + "\tY: " + mouseAnchor.get().getY());
-			}
-		});
-		chart.setOnMouseClicked(new EventHandler<MouseEvent>() {
-			@Override
-			public void handle(final MouseEvent event) {
-				if (event.getButton().equals(MouseButton.PRIMARY)) {
-					if (zoomed && event.getClickCount() == 2) {
+			public void handle(MouseEvent event) {
+				if (event.getEventType() == MouseEvent.MOUSE_PRESSED) {
+					rectinit.set(new Point2D(event.getX(), event.getY()));
+					double x = (double) chart.getXAxis().getValueForDisplay(event.getX());
+					double y = (double) chart.getYAxis().getValueForDisplay(event.getY());
+					System.out.println("x=" + x + "\ty=" + y);
+				} else if (event.getEventType() == MouseEvent.MOUSE_DRAGGED) {
+					System.out.println("X: " + Math.min(event.getX(), rectinit.get().getX()));
+					rect.setX(Math.min(event.getX(), rectinit.get().getX()));
+					rect.setY(Math.min(event.getY(), rectinit.get().getY()));
+					rect.setWidth(Math.abs(event.getX() - rectinit.get().getX()));
+					rect.setHeight(Math.abs(event.getY() - rectinit.get().getY()));
+				} else if (event.getEventType() == MouseEvent.MOUSE_RELEASED) {
+
+					// Bounds boundInChart = chartBackground.sceneToLocal(rect.getBoundsInLocal());
+					// double minXAxis = (double)
+					// chart.getXAxis().getValueForDisplay(boundInChart.getMinX());
+					// double maxXAxis = (double)
+					// chart.getXAxis().getValueForDisplay(boundInChart.getMaxX());
+					// double minYAxis = (double)
+					// chart.getYAxis().getValueForDisplay(boundInChart.getMinY());
+					// double maxYAxis = (double)
+					// chart.getYAxis().getValueForDisplay(boundInChart.getMaxY());
+					//
+					// System.out.println("boundX: " + boundInChart.getMinX() + "\tboundX: " +
+					// boundInChart.getMaxX());
+					// System.out.println("minXAxis: " + minXAxis + "\tmaxXAxis: " + maxXAxis);
+					// System.out.println("boundY: " + boundInChart.getMinY() + "\tboundY: " +
+					// boundInChart.getMaxY());
+					// System.out.println("minYAxis: " + minYAxis + "\tmaxYAxis: " + maxYAxis);
+
+					/*
+					 * Bounds boundInChart = chartBackground.getBoundsInLocal(); double minXAxis =
+					 * (double) chart.getXAxis().getValueForDisplay(boundInChart.getMinX()); double
+					 * maxXAxis = (double)
+					 * chart.getXAxis().getValueForDisplay(boundInChart.getMaxX()); double minYAxis
+					 * = (double) chart.getYAxis().getValueForDisplay(boundInChart.getMinY());
+					 * double maxYAxis = (double)
+					 * chart.getYAxis().getValueForDisplay(boundInChart.getMaxY());
+					 * 
+					 * System.out.println("boundX: " + boundInChart.getMinX() + "\tboundX: " +
+					 * boundInChart.getMaxX()); System.out.println("minXAxis: " + minXAxis +
+					 * "\tmaxXAxis: " + maxXAxis); System.out.println("boundY: " +
+					 * boundInChart.getMinY() + "\tboundY: " + boundInChart.getMaxY());
+					 * System.out.println("minYAxis: " + minYAxis + "\tmaxYAxis: " + maxYAxis);
+					 */
+					//
+					// rect.setWidth(0);
+					// rect.setHeight(0);
+
+					final Bounds bb = chartBackground.sceneToLocal(rect.getBoundsInLocal());
+
+					final double minx = bb.getMinX();
+					final double maxx = bb.getMaxX();
+
+					doZoom(true, chart.getXAxis().getValueForDisplay(minx), chart.getXAxis().getValueForDisplay(maxx));
+
+					rect.setWidth(0);
+					rect.setHeight(0);
+
+				} else if (event.getEventType() == MouseEvent.MOUSE_CLICKED) {
+					System.out.println("click");
+					if (event.getClickCount() == 2) {
+						System.out.println("click2");
 						restoreData();
 						zoomed = false;
 						event.consume();
 					}
 				}
 			}
-		});
-		chart.setOnMouseDragged(new EventHandler<MouseEvent>() {
-			@Override
-			public void handle(final MouseEvent event) {
-				final double x = event.getX();
-				final double y = event.getY();
-				rect.setX(Math.min(x, mouseAnchor.get().getX()));
-				rect.setY(Math.min(y, mouseAnchor.get().getY()));
-				rect.setWidth(Math.abs(x - mouseAnchor.get().getX()));
-				rect.setHeight(Math.abs(y - mouseAnchor.get().getY()));
-				
-				System.out.println("Grag->" + "X: " + x + "\tY: " + y);
-			
-			}
-		});
-		chart.setOnMouseReleased(new EventHandler<MouseEvent>() {
-			@Override
-			public void handle(final MouseEvent event) {
+		};
 
-				final Bounds bb = chartBackground.sceneToLocal(rect.getBoundsInLocal());
-
-				final double minx = bb.getMinX();
-				final double maxx = bb.getMaxX();
-
-				final double miny = bb.getMinY();
-				final double maxy = bb.getMaxY();
-				
-//				final double miny = Math.abs(bb.getMinY());
-//				final double maxy = Math.abs(bb.getMaxY());
-				
-//				final double miny = 0;
-//				final double maxy = 3;
-
-				doZoom(true, chart.getXAxis().getValueForDisplay(minx), chart.getXAxis().getValueForDisplay(maxx));
-
-				doZoom(false, chart.getYAxis().getValueForDisplay(miny), chart.getYAxis().getValueForDisplay(maxy));
-//				doZoom(false, 0, 2.84);
-
-				System.out.println("minX: " + minx);
-				System.out.println("maxX: " + maxx);
-				System.out.println("getValueForDisplay(Xmin)" + chart.getXAxis().getValueForDisplay(minx));
-				System.out.println("getValueForDisplay(Xmax)" + chart.getXAxis().getValueForDisplay(maxx));
-				
-				System.out.println("minY: " + miny);
-				System.out.println("maxY: " + maxy);
-				System.out.println("getValueForDisplay(Ymin)" + chart.getYAxis().getValueForDisplay(miny));
-				System.out.println("getValueForDisplay(Ymax)" + chart.getYAxis().getValueForDisplay(maxy));
-				
-				rect.setWidth(0);
-				rect.setHeight(0);
-			}
-		});
+		chart.setOnMousePressed(mouseHandler);
+		chart.setOnMouseDragged(mouseHandler);
+		chart.setOnMouseReleased(mouseHandler);
+		chart.setOnMouseClicked(mouseHandler);
 	}
-	
+
 	private void doZoom(final boolean x, final Number n1, final Number n2) {
 		final double min = Math.min(n1.doubleValue(), n2.doubleValue());
 		final double max = Math.max(n1.doubleValue(), n2.doubleValue());
@@ -252,7 +253,7 @@ public class ZoomManager<X, Y> {
 		} else if (o1 instanceof String || o2 instanceof String) {
 			doZoom(x, (String) o1, (String) o2);
 		} else {
-//			final int wait = 0;
+			// final int wait = 0;
 		}
 	}
 
@@ -296,7 +297,7 @@ public class ZoomManager<X, Y> {
 			}
 		}
 	}
-	
+
 	static <X, Y> ObservableList<X> extractXValues(final ObservableList<Data<X, Y>> data) {
 		final ObservableList<X> result = FXCollections.observableArrayList();
 		for (final Data<X, Y> d : data) {
