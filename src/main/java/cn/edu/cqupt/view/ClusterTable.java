@@ -22,10 +22,7 @@ import javafx.scene.layout.VBox;
 import javafx.util.Callback;
 
 public class ClusterTable {
-	// private String[] colName = { "ID", "av_precursor_mz", "av_precursor_intens",
-	// "Spectrum Count" }; // 列名
-	// private String[] property = { "id", "avPrecursorMz", "avPrecursorIntens",
-	// "specCount" }; // 列属性
+
 	private StackPane spectrumStackPane; // hold spectrum tables
 	private StackPane peakMapStackPane; // hold peak map
 	private StackPane pieStackPane; // hold pie chart
@@ -82,14 +79,6 @@ public class ClusterTable {
 		TableView<Cluster> clusterTable = new TableView<>();
 		ObservableList<Cluster> observableTableData = FXCollections.observableList(tableData);
 
-		// 设置表格：表头和单元格值类型
-		// for (int i = 0; i < colName.length; i++) {
-		// TableColumn<Cluster, String> tmpCol = new TableColumn<>(colName[i]); //
-		// 这里是存疑的，因为有一些数据不是String，后期如果有排序等操作会出错
-		// tmpCol.setCellValueFactory(new PropertyValueFactory<>(property[i]));
-		// clusterTable.getColumns().add(tmpCol);
-		// }
-
 		TableColumn<Cluster, String> idCol = new TableColumn<>("ID");
 		idCol.setCellValueFactory(new PropertyValueFactory<Cluster, String>("id"));
 		clusterTable.getColumns().add(idCol);
@@ -138,13 +127,13 @@ public class ClusterTable {
 			}
 		});
 
-		// 设置表格大小
+		// set table size
 		clusterTable.setPrefSize(800, 350);
 
 		// 设置多余部分分散在列之间
 		clusterTable.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
 
-		// 填充数据
+		// fill data
 		clusterTable.setItems(observableTableData);
 
 		return clusterTable;

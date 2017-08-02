@@ -14,6 +14,7 @@ import javafx.scene.control.MenuBar;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
+import javafx.scene.control.TextArea;
 import javafx.scene.input.KeyCombination;
 import javafx.scene.layout.VBox;
 import javafx.stage.FileChooser;
@@ -21,11 +22,24 @@ import javafx.stage.Stage;
 import javafx.stage.Window;
 
 public class ClusterApplication extends Application {
-	
+
 	public static TabPane tabPane = new TabPane();
 	private ClusterTableService releaseI;
 	private ClusterTableService releaseII;
 	private int pageSize = 8;
+
+	static void setIntroTab() {
+		
+		// add introduce tab to tab Pane
+		Tab introTab = new Tab("Introduce");
+		tabPane.getTabs().add(introTab);
+		
+		// introduce text
+		TextArea introText = new TextArea("manual : the manual will be added soom");
+		
+		// add text area to tab
+		introTab.setContent(introText);
+	}
 
 	public MenuBar getApplicationMenu(Window ownerWindow) {
 
@@ -34,74 +48,72 @@ public class ClusterApplication extends Application {
 
 		// create File menu
 		Menu fileMenu = new Menu("File");
-		
+
 		// add "select clustering files" item to File menu
 		MenuItem openFile = new MenuItem("Select clustering files");
 		openFile.setAccelerator(KeyCombination.keyCombination("Ctrl + O"));
 		openFile.setOnAction((ActionEvent e) -> {
 			FileChooser fileChooser = new FileChooser();
 			fileChooser.setTitle("Select Clustering File");
-			fileChooser.getExtensionFilters().addAll(
-					new FileChooser.ExtensionFilter("Clustering file", "*.clustering"),
-					new FileChooser.ExtensionFilter("All files", "*.*")
-					);
+			fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("Clustering file", "*.clustering"),
+					new FileChooser.ExtensionFilter("All files", "*.*"));
 			List<File> clusteringFiles = fileChooser.showOpenMultipleDialog(ownerWindow);
-			if(clusteringFiles == null) {
-				
-			}
-			else if(clusteringFiles.size() != 2) {
+			if (clusteringFiles == null) {
+
+			} else if (clusteringFiles.size() != 2) {
 				Alert alert = new Alert(AlertType.ERROR);
 				alert.setTitle("Error Dialog");
 				alert.setHeaderText(null);
 				alert.setContentText("You must choose two clustering files");
 				alert.showAndWait();
-			}else {
-				
+			} else {
+
 				// read data
 				this.releaseI = new ClusterTableService(clusteringFiles.get(0));
 				this.releaseII = new ClusterTableService(clusteringFiles.get(1));
-				
+
 				// create cluster table and spectrum table
 				ClusterTable clusterTable = new ClusterTable(releaseI, pageSize, releaseII.getAllClusters());
-				
+
 				// set tab pane
-				Tab tabA = new Tab("Tab I");
+				tabPane.getTabs().clear();
+				Tab tabA = new Tab("Cluster selection");
 				tabA.setContent(clusterTable.getGridPane());
-				
-				Tab tabB = new Tab("Tab II");
-				
+
+				Tab tabB = new Tab("Cluster comparison");
+
 				tabPane.getTabs().addAll(tabA, tabB);
 			}
-			
+
 		});
-		
+
 		// add "exit" item to file menu
 		MenuItem exit = new MenuItem("Exit");
 		exit.setOnAction((ActionEvent e) -> {
 			System.exit(0);
 		});
-		
+
 		fileMenu.getItems().addAll(openFile, exit);
-		
+
 		// create Tools menu
 		Menu toolMenu = new Menu("Tools");
-		
+
 		// add "Switch clustering files" item to tool menu
 		MenuItem swap = new MenuItem("Swap principal-subordinate relationship");
 		swap.setOnAction((ActionEvent e) -> {
-			
+
 			// exchange
 			ClusterTableService tmp = this.releaseI;
 			this.releaseI = this.releaseII;
 			this.releaseII = tmp;
-			
+
 			// create cluster table and spectrum table
 			ClusterTable clusterTable = new ClusterTable(releaseI, pageSize, releaseII.getAllClusters());
 			tabPane.getTabs().get(0).setContent(clusterTable.getGridPane());
 		});
 
 		toolMenu.getItems().add(swap);
-		
+
 		// add menu items into menu bar
 		menuBar.getMenus().addAll(fileMenu, toolMenu);
 		return menuBar;
@@ -110,10 +122,13 @@ public class ClusterApplication extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		
+		// introduce tab
+		setIntroTab();
+		
 		// vbox
 		VBox vbox = new VBox();
 		vbox.getChildren().addAll(getApplicationMenu(primaryStage), tabPane);
-		
+
 		// scene
 		Scene scene = new Scene(vbox, 1600, 900);
 

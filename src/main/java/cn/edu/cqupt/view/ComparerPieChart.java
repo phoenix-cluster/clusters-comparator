@@ -86,7 +86,7 @@ public class ComparerPieChart {
 					if (ClusterApplication.tabPane.getTabs().size() == 2)
 						tabB = ClusterApplication.tabPane.getTabs().get(1);
 					else {
-						tabB = new Tab("Tab II");
+						tabB = new Tab("Cluster comparison");
 						ClusterApplication.tabPane.getTabs().add(tabB);
 					}
 					

@@ -74,8 +74,8 @@ public class PeakMap extends Application {
 		});
 
 		// create hbox
-		this.hbox = new HBox();
-		this.hbox.getChildren().addAll(this.comboBox, this.colorPicker);
+		 this.hbox = new HBox();
+		 this.hbox.getChildren().addAll(this.comboBox, this.colorPicker);
 
 		// create peakMap
 		NumberAxis xAxis = new NumberAxis();
@@ -136,7 +136,7 @@ public class PeakMap extends Application {
 			XYChart.Series<Number, Number> series = new XYChart.Series<>();
 			series.getData().add(new XYChart.Data<>(x, 0));
 			series.getData().add(new XYChart.Data<>(x, y));
-			this.peakMap.getData().add(series);
+			// this.peakMap.getData().add(series);
 			this.allSeries.add(series);
 		}
 	}
@@ -147,12 +147,14 @@ public class PeakMap extends Application {
 		List<Float> mz = new ArrayList<Float>();
 		List<Float> intens = new ArrayList<Float>();
 
-		for (int i = 0; i < 10; i++) {
-			mz.add(i + 0.1f);
-			intens.add(i + 5.1f);
-		}
+		mz.add(1F);
+		mz.add(2F);
+		mz.add(3F);
+		intens.add(1F);
+		intens.add(2F);
+		intens.add(3F);
 
-		PeakMap peakMap = new PeakMap(mz, intens, mz, intens);
+		PeakMap peakMap = new PeakMap(mz, intens);
 
 		// create scene
 		Scene scene = new Scene(peakMap.getVbox());

@@ -17,7 +17,6 @@ import javafx.event.EventHandler;
 import javafx.geometry.Bounds;
 import javafx.geometry.Point2D;
 import javafx.scene.Node;
-import javafx.scene.chart.Axis;
 import javafx.scene.chart.XYChart;
 import javafx.scene.chart.XYChart.Data;
 import javafx.scene.chart.XYChart.Series;
@@ -53,40 +52,11 @@ public class ZoomManager<X, Y> {
 		return result;
 	}
 
-	static <X, Y> ObservableList<X> extractXValues(final ObservableList<Data<X, Y>> data) {
-		final ObservableList<X> result = FXCollections.observableArrayList();
-		for (final Data<X, Y> d : data) {
-			result.add(d.getXValue());
-		}
-		return result;
-	}
-
-	static <X, Y> ObservableList<Y> extractYValues(final ObservableList<Data<X, Y>> data) {
-		final ObservableList<Y> result = FXCollections.observableArrayList();
-		for (final Data<X, Y> d : data) {
-			result.add(d.getYValue());
-		}
-		return result;
-	}
-
-	static Object getObject(final Axis<?> axis, final double cooridnate) {
-		final Object object = axis.getValueForDisplay(cooridnate);
-		return object;
-	}
-
-	static Node getRootNode(final Node node) {
-		Node n = node;
-		while (n.getParent() != null) {
-			n = n.getParent();
-		}
-		return n;
-	}
-
 	private final ObservableList<XYChart.Series<X, Y>> series;
 
 	private final XYChart<X, Y> chart;
 
-	private volatile boolean zoomed;
+	private volatile boolean zoomed = false;
 
 	public static Color firstColor = Color.RED;
 
@@ -121,6 +91,125 @@ public class ZoomManager<X, Y> {
 
 	}
 
+	private void restoreData() {
+		// make a tmp variable of data, since we will modify it but need to be
+		// able to restore
+		final ObservableList<XYChart.Series<X, Y>> backup2 = deepCopySeries(series);
+		chart.getData().setAll(backup2);
+		for (int i = 0; i < backup2.size(); i++) {
+			if (i < anchorPoint) {
+				if (firstColor != null) {
+					backup2.get(i).getNode().lookup(".chart-series-line")
+							.setStyle("-fx-stroke: " + ColorUtil.colorToHex(firstColor));
+					// System.out.println("firstColor-Zoom");
+				}
+			} else {
+				backup2.get(i).getNode().lookup(".chart-series-line")
+						.setStyle("-fx-stroke: " + ColorUtil.colorToHex(secondColor));
+				// System.out.println("secondColor-Zoom");
+			}
+		}
+	}
+
+	private void colorChange() {
+		colorChanged.addListener(new ChangeListener<Boolean>() {
+
+			@Override
+			public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
+				System.out.println("changed " + oldValue + "->" + newValue);
+				restoreData();
+				colorChanged.setValue(false);
+			}
+		});
+	}
+
+	private void setUpZooming(final Rectangle rect, final XYChart<X, Y> chart) {
+
+		setUpZoomingRectangle(rect);
+
+	}
+
+	/**
+	 * Displays a colored rectangle that will indicate zooming boundaries
+	 *
+	 * @param rect
+	 */
+	private void setUpZoomingRectangle(final Rectangle rect) {
+
+		final Node chartBackground = chart.lookup(".chart-plot-background");
+		final ObjectProperty<Point2D> mouseAnchor = new SimpleObjectProperty<>();
+		chart.setOnMousePressed(new EventHandler<MouseEvent>() {
+			@Override
+			public void handle(final MouseEvent event) {
+				mouseAnchor.set(new Point2D(event.getX(), event.getY()));
+				System.out.println("begin-> " + "X: " + mouseAnchor.get().getX() + "\tY: " + mouseAnchor.get().getY());
+			}
+		});
+		chart.setOnMouseClicked(new EventHandler<MouseEvent>() {
+			@Override
+			public void handle(final MouseEvent event) {
+				if (event.getButton().equals(MouseButton.PRIMARY)) {
+					if (zoomed && event.getClickCount() == 2) {
+						restoreData();
+						zoomed = false;
+						event.consume();
+					}
+				}
+			}
+		});
+		chart.setOnMouseDragged(new EventHandler<MouseEvent>() {
+			@Override
+			public void handle(final MouseEvent event) {
+				final double x = event.getX();
+				final double y = event.getY();
+				rect.setX(Math.min(x, mouseAnchor.get().getX()));
+				rect.setY(Math.min(y, mouseAnchor.get().getY()));
+				rect.setWidth(Math.abs(x - mouseAnchor.get().getX()));
+				rect.setHeight(Math.abs(y - mouseAnchor.get().getY()));
+				
+				System.out.println("Grag->" + "X: " + x + "\tY: " + y);
+			
+			}
+		});
+		chart.setOnMouseReleased(new EventHandler<MouseEvent>() {
+			@Override
+			public void handle(final MouseEvent event) {
+
+				final Bounds bb = chartBackground.sceneToLocal(rect.getBoundsInLocal());
+
+				final double minx = bb.getMinX();
+				final double maxx = bb.getMaxX();
+
+				final double miny = bb.getMinY();
+				final double maxy = bb.getMaxY();
+				
+//				final double miny = Math.abs(bb.getMinY());
+//				final double maxy = Math.abs(bb.getMaxY());
+				
+//				final double miny = 0;
+//				final double maxy = 3;
+
+				doZoom(true, chart.getXAxis().getValueForDisplay(minx), chart.getXAxis().getValueForDisplay(maxx));
+
+				doZoom(false, chart.getYAxis().getValueForDisplay(miny), chart.getYAxis().getValueForDisplay(maxy));
+//				doZoom(false, 0, 2.84);
+
+				System.out.println("minX: " + minx);
+				System.out.println("maxX: " + maxx);
+				System.out.println("getValueForDisplay(Xmin)" + chart.getXAxis().getValueForDisplay(minx));
+				System.out.println("getValueForDisplay(Xmax)" + chart.getXAxis().getValueForDisplay(maxx));
+				
+				System.out.println("minY: " + miny);
+				System.out.println("maxY: " + maxy);
+				System.out.println("getValueForDisplay(Ymin)" + chart.getYAxis().getValueForDisplay(miny));
+				System.out.println("getValueForDisplay(Ymax)" + chart.getYAxis().getValueForDisplay(maxy));
+				
+				rect.setWidth(0);
+				rect.setHeight(0);
+			}
+		});
+	}
+	
 	private void doZoom(final boolean x, final Number n1, final Number n2) {
 		final double min = Math.min(n1.doubleValue(), n2.doubleValue());
 		final double max = Math.max(n1.doubleValue(), n2.doubleValue());
@@ -207,102 +296,21 @@ public class ZoomManager<X, Y> {
 			}
 		}
 	}
-
-	private void restoreData() {
-		// make a tmp variable of data, since we will modify it but need to be
-		// able to restore
-		final ObservableList<XYChart.Series<X, Y>> backup2 = deepCopySeries(series);
-		chart.getData().setAll(backup2);
-		for (int i = 0; i < backup2.size(); i++) {
-			if (i < anchorPoint) {
-				if (firstColor != null) {
-					backup2.get(i).getNode().lookup(".chart-series-line")
-							.setStyle("-fx-stroke: " + ColorUtil.colorToHex(firstColor));
-					// System.out.println("firstColor-Zoom");
-				}
-			} else {
-				backup2.get(i).getNode().lookup(".chart-series-line")
-						.setStyle("-fx-stroke: " + ColorUtil.colorToHex(secondColor));
-				// System.out.println("secondColor-Zoom");
-			}
+	
+	static <X, Y> ObservableList<X> extractXValues(final ObservableList<Data<X, Y>> data) {
+		final ObservableList<X> result = FXCollections.observableArrayList();
+		for (final Data<X, Y> d : data) {
+			result.add(d.getXValue());
 		}
+		return result;
 	}
 
-	private void colorChange() {
-		colorChanged.addListener(new ChangeListener<Boolean>() {
-
-			@Override
-			public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
-				System.out.println("changed " + oldValue + "->" + newValue);
-				restoreData();
-				colorChanged.setValue(false);
-			}
-		});
+	static <X, Y> ObservableList<Y> extractYValues(final ObservableList<Data<X, Y>> data) {
+		final ObservableList<Y> result = FXCollections.observableArrayList();
+		for (final Data<X, Y> d : data) {
+			result.add(d.getYValue());
+		}
+		return result;
 	}
 
-	private void setUpZooming(final Rectangle rect, final XYChart<X, Y> chart) {
-
-		setUpZoomingRectangle(rect);
-
-	}
-
-	/**
-	 * Displays a colored rectangle that will indicate zooming boundaries
-	 *
-	 * @param rect
-	 */
-	private void setUpZoomingRectangle(final Rectangle rect) {
-
-		final Node chartBackground = chart.lookup(".chart-plot-background");
-		final ObjectProperty<Point2D> mouseAnchor = new SimpleObjectProperty<>();
-		chart.setOnMousePressed(new EventHandler<MouseEvent>() {
-			@Override
-			public void handle(final MouseEvent event) {
-				mouseAnchor.set(new Point2D(event.getX(), event.getY()));
-			}
-		});
-		chart.setOnMouseClicked(new EventHandler<MouseEvent>() {
-			@Override
-			public void handle(final MouseEvent event) {
-				if (event.getButton().equals(MouseButton.PRIMARY)) {
-					if (zoomed && event.getClickCount() == 2) {
-						restoreData();
-						zoomed = false;
-						event.consume();
-					}
-				}
-			}
-		});
-		chart.setOnMouseDragged(new EventHandler<MouseEvent>() {
-			@Override
-			public void handle(final MouseEvent event) {
-				final double x = event.getX();
-				final double y = event.getY();
-				rect.setX(Math.min(x, mouseAnchor.get().getX()));
-				rect.setY(Math.min(y, mouseAnchor.get().getY()));
-				rect.setWidth(Math.abs(x - mouseAnchor.get().getX()));
-				rect.setHeight(Math.abs(y - mouseAnchor.get().getY()));
-			}
-		});
-		chart.setOnMouseReleased(new EventHandler<MouseEvent>() {
-			@Override
-			public void handle(final MouseEvent event) {
-
-				final Bounds bb = chartBackground.sceneToLocal(rect.getBoundsInLocal());
-
-				final double minx = bb.getMinX();
-				final double maxx = bb.getMaxX();
-
-				final double miny = bb.getMinY();
-				final double maxy = bb.getMaxY();
-
-				doZoom(true, chart.getXAxis().getValueForDisplay(minx), chart.getXAxis().getValueForDisplay(maxx));
-
-				doZoom(false, chart.getYAxis().getValueForDisplay(miny), chart.getYAxis().getValueForDisplay(maxy));
-
-				rect.setWidth(0);
-				rect.setHeight(0);
-			}
-		});
-	}
 }
