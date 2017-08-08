@@ -1,7 +1,5 @@
 package cn.edu.cqupt.view;
 
-package cn.edu.cqupt.view;
-
 import java.io.File;
 import java.util.HashMap;
 import java.util.Iterator;

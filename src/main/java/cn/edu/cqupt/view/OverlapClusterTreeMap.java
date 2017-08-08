@@ -147,8 +147,8 @@ public class OverlapClusterTreeMap extends Application {
 	}
 
 	public void start(Stage primaryStage) {
-		List<Cluster> releaseI = new ClusterDaoFileImpl(new File("./compare/compare_4.clustering")).findAllClusters();
-		List<Cluster> releaseII = new ClusterDaoFileImpl(new File("./compare/compare_3.clustering")).findAllClusters();
+		List<Cluster> releaseI = new ClusterDaoFileImpl(new File("./compare/compare_3.clustering")).findAllClusters();
+		List<Cluster> releaseII = new ClusterDaoFileImpl(new File("./compare/compare_4.clustering")).findAllClusters();
 		Cluster cluster = releaseI.get(0);
 		ClusterComparerService clusterComparer = null;
 		try {
@@ -161,7 +161,7 @@ public class OverlapClusterTreeMap extends Application {
 
 		// method
 		StackPane root = new StackPane();
-		treeMap.createRelationChart(clusterComparer.getOverlapClusterComponent(), 50, 50, 10);
+		treeMap.createRelationChart(clusterComparer.getRoot(), 50, 50, 10);
 		root.getChildren().add(treeMap.getRelationChartPane());
 		Scene scene = new Scene(root);
 		primaryStage.setScene(scene);
