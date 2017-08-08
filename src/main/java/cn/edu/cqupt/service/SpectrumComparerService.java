@@ -12,8 +12,7 @@ public class SpectrumComparerService {
 	// key: cluster's id existed overlap; value: cluster existed overlap
 	private HashMap<String, Cluster> overlapCluster; 
 	// key: cluster's id existed overlap; value: overlap spectrums of corresponding cluster, intersection of two clusters
-	private HashMap<String, List<Spectrum>> overlapSpectrumOfCluster; // key: a cluster id of releaseCluster, value:
-																		// overlap cluster's spectrums
+	private HashMap<String, List<Spectrum>> overlapSpectrumOfCluster; 
 
 	public HashMap<String, Integer> getOverlapSpectrumCount() {
 		return overlapSpectrumCount;

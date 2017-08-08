@@ -1,6 +1,6 @@
 package cn.edu.cqupt.model;
 
-public class Spectrum {
+public class Spectrum implements Cloneable{
 	private String spectrumId;
 	private float charge;
 	private float precursorMz;
@@ -83,5 +83,11 @@ public class Spectrum {
 	public String toString() {
 		return "Spectrum [spectrumId=" + spectrumId + ", charge=" + charge + ", precursorMz=" + precursorMz
 				+ ", species=" + species + "]";
+	}
+	
+	@Override
+	public Spectrum clone() throws CloneNotSupportedException{
+		Spectrum result = (Spectrum) super.clone();	
+		return result;
 	}
 }
