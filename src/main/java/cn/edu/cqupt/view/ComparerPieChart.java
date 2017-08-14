@@ -103,7 +103,7 @@ public class ComparerPieChart {
 					// object spectrum table
 					SpectrumTable objectSpectrumTable = new SpectrumTable(overlapCluster.get(clusterId).getSpectrums(),
 							overlapSpectrumOfCluster.get(clusterId));*/
-					SpectrumTable spectrumTable = new SpectrumTable(cluster.getSpectrums(), overlapCluster.get(clusterId).getSpectrums(),
+					SpectrumTable spectrumTable = new SpectrumTable(cluster.getSpectra(), overlapCluster.get(clusterId).getSpectra(),
 							overlapSpectrumOfCluster.get(clusterId));
 					GridPane overlapSpecs = spectrumTable.getOverlapSpecs();
 					// System.out.println(cluster.getId() + " : " + cluster.getSpecCount());

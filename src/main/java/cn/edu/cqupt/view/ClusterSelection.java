@@ -16,20 +16,19 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
-import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
-import javafx.scene.layout.VBox;
 import javafx.util.Callback;
 
-public class ClusterTable {
+public class ClusterSelection {
 
 	private StackPane spectrumStackPane; // hold spectrum tables
 	private StackPane peakMapStackPane; // hold peak map
 	private StackPane pieStackPane; // hold pie chart
+	private StackPane overlapClusterPane; // hold overlap cluster map
 	private GridPane gridPane; // hold cluster table, spectrum table, peak map and pie chart
 	private List<Cluster> releaseCluster;
 
-	public ClusterTable() {
+	public ClusterSelection() {
 
 	}
 
@@ -41,38 +40,46 @@ public class ClusterTable {
 		this.gridPane = gridPane;
 	}
 
-	public ClusterTable(ClusterTableService clusterTableService, int pageSize, List<Cluster> releaseCluster) {
+	public ClusterSelection(ClusterTableService clusterTableService, int pageSize, List<Cluster> releaseCluster) {
 		this.spectrumStackPane = new StackPane(); // hold spectrum tables
 		this.peakMapStackPane = new StackPane(); // hold peak map
 		this.pieStackPane = new StackPane(); // hold pie chart
+		this.overlapClusterPane = new StackPane();
 		this.gridPane = new GridPane();
 		this.releaseCluster = releaseCluster;
 
 		// get data of the default display page
 		Page<Cluster> iniPara = clusterTableService.getCurrentPageClusters(1, pageSize);
+		Cluster firstCluster = iniPara.getDataList().get(0);
 
 		// create cluster table with pagination
 		int pageCount = iniPara.getTotalPage(); // get total page count
 		Pagination pagination = createPagination(clusterTableService, pageSize, pageCount);
 
 		// create spectrum table of cluster 1
-		SpectrumTable spectrumTable = new SpectrumTable(iniPara.getDataList().get(0).getSpectrums());
+		SpectrumTable spectrumTable = new SpectrumTable(firstCluster.getSpectra());
 		spectrumStackPane.getChildren().add(spectrumTable.getSpectrumTable());
 
 		// create peak map of cluster 1
-		PeakMap peakMap = new PeakMap(iniPara.getDataList().get(0).getMzValues(),
-				iniPara.getDataList().get(0).getIntensValues());
+		PeakMap peakMap = new PeakMap(firstCluster.getMzValues(),
+				firstCluster.getIntensValues());
 		peakMapStackPane.getChildren().add(peakMap.getVbox());
 
 		// create pie chart of cluster 1
-		ComparerPieChart comparerPieChart = new ComparerPieChart(iniPara.getDataList().get(0), releaseCluster);
+		ComparerPieChart comparerPieChart = new ComparerPieChart(firstCluster, releaseCluster);
 		pieStackPane.getChildren().add(comparerPieChart.getComparerPieChart());
+
+		// create overlap cluster map
+		OverlapClusterMap overlapClusterMap = new OverlapClusterMap(firstCluster, 
+				ClusterApplication.serviceReleaseI.getAllClusters(),ClusterApplication.serviceReleaseII.getAllClusters());
+		overlapClusterPane.getChildren().add(overlapClusterMap.getOverlapClusterMap());
 
 		// add builds to grid pane
 		gridPane.add(pagination, 0, 0);
 		gridPane.add(spectrumStackPane, 1, 0);
 		gridPane.add(peakMapStackPane, 0, 1);
 		gridPane.add(pieStackPane, 1, 1);
+		gridPane.add(overlapClusterPane, 2, 1);
 	}
 
 	private TableView<Cluster> createClusterTable(List<Cluster> tableData) {
@@ -105,17 +112,25 @@ public class ClusterTable {
 				// column");
 
 				if (clusterTable.getItems().get(row) != null) {
+					
+					// current cluster
+					Cluster currentCluster = tableData.get(row);
 
 					// create spectrum table
-					SpectrumTable spectrumTable = new SpectrumTable(tableData.get(row).getSpectrums());
+					SpectrumTable spectrumTable = new SpectrumTable(currentCluster.getSpectra());
 
 					// create peak map
-					PeakMap peakMap = new PeakMap(tableData.get(row).getMzValues(),
-							tableData.get(row).getIntensValues());
+					PeakMap peakMap = new PeakMap(currentCluster.getMzValues(),
+							currentCluster.getIntensValues());
 
 					// create pie chart
-					ComparerPieChart comparerPieChart = new ComparerPieChart(tableData.get(row), releaseCluster);
+					ComparerPieChart comparerPieChart = new ComparerPieChart(currentCluster, releaseCluster);
 
+					// create overlap cluster map
+					OverlapClusterMap overlapClusterMap = new OverlapClusterMap(currentCluster, 
+							ClusterApplication.serviceReleaseI.getAllClusters(), 
+							ClusterApplication.serviceReleaseII.getAllClusters());;
+					
 					// add builds into pane
 					spectrumStackPane.getChildren().remove(0);
 					spectrumStackPane.getChildren().add(spectrumTable.getSpectrumTable());
@@ -123,6 +138,7 @@ public class ClusterTable {
 					peakMapStackPane.getChildren().add(peakMap.getVbox());
 					pieStackPane.getChildren().remove(0);
 					pieStackPane.getChildren().add(comparerPieChart.getComparerPieChart());
+					overlapClusterPane.getChildren().add(overlapClusterMap.getOverlapClusterMap());
 				}
 			}
 		});

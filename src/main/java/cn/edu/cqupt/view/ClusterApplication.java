@@ -5,7 +5,9 @@ import java.util.List;
 
 import cn.edu.cqupt.service.ClusterTableService;
 import javafx.application.Application;
+import javafx.application.HostServices;
 import javafx.event.ActionEvent;
+import javafx.geometry.Rectangle2D;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
@@ -18,14 +20,16 @@ import javafx.scene.control.TextArea;
 import javafx.scene.input.KeyCombination;
 import javafx.scene.layout.VBox;
 import javafx.stage.FileChooser;
+import javafx.stage.Screen;
 import javafx.stage.Stage;
 import javafx.stage.Window;
 
 public class ClusterApplication extends Application {
 
 	public static TabPane tabPane = new TabPane();
-	private ClusterTableService releaseI;
-	private ClusterTableService releaseII;
+	public static ClusterTableService serviceReleaseI;
+	public static ClusterTableService serviceReleaseII;
+	public static HostServices hostServices;
 	private int pageSize = 8;
 
 	static void setIntroTab() {
@@ -69,11 +73,11 @@ public class ClusterApplication extends Application {
 			} else {
 
 				// read data
-				this.releaseI = new ClusterTableService(clusteringFiles.get(0));
-				this.releaseII = new ClusterTableService(clusteringFiles.get(1));
+				serviceReleaseI = new ClusterTableService(clusteringFiles.get(0));
+				serviceReleaseII = new ClusterTableService(clusteringFiles.get(1));
 
 				// create cluster table and spectrum table
-				ClusterTable clusterTable = new ClusterTable(releaseI, pageSize, releaseII.getAllClusters());
+				ClusterSelection clusterTable = new ClusterSelection(serviceReleaseI, pageSize, serviceReleaseII.getAllClusters());
 
 				// set tab pane
 				tabPane.getTabs().clear();
@@ -103,12 +107,12 @@ public class ClusterApplication extends Application {
 		swap.setOnAction((ActionEvent e) -> {
 
 			// exchange
-			ClusterTableService tmp = this.releaseI;
-			this.releaseI = this.releaseII;
-			this.releaseII = tmp;
+			ClusterTableService tmp = serviceReleaseI;
+			serviceReleaseI = serviceReleaseII;
+			serviceReleaseII = tmp;
 
 			// create cluster table and spectrum table
-			ClusterTable clusterTable = new ClusterTable(releaseI, pageSize, releaseII.getAllClusters());
+			ClusterSelection clusterTable = new ClusterSelection(serviceReleaseI, pageSize, serviceReleaseII.getAllClusters());
 			tabPane.getTabs().get(0).setContent(clusterTable.getGridPane());
 		});
 
@@ -121,6 +125,7 @@ public class ClusterApplication extends Application {
 
 	@Override
 	public void start(Stage primaryStage) {
+		ClusterApplication.hostServices = this.getHostServices();
 		
 		// introduce tab
 		setIntroTab();
@@ -130,10 +135,18 @@ public class ClusterApplication extends Application {
 		vbox.getChildren().addAll(getApplicationMenu(primaryStage), tabPane);
 
 		// scene
-		Scene scene = new Scene(vbox, 1600, 900);
+		Scene scene = new Scene(vbox);
 
+		// get maximized size
+		Rectangle2D primaryScreenBounds = Screen.getPrimary().getBounds();
+		
 		// set stage
 		primaryStage.setScene(scene);
+		primaryStage.setX(primaryScreenBounds.getMinX());
+		primaryStage.setY(primaryScreenBounds.getMinY());
+		primaryStage.setWidth(primaryScreenBounds.getWidth());
+		primaryStage.setHeight(primaryScreenBounds.getHeight());
+		primaryStage.setMaximized(true); // maximized
 		primaryStage.setTitle("Cluster Comparer GUI");
 		primaryStage.show();
 	}

@@ -201,6 +201,11 @@ public class ClusteringFileSpectrumReference implements ISpectrumReference {
 	public String getSpectrumId() {
 		return id;
 	}
+	
+	@Override
+	public String getSequence() {
+		return sequence;
+	}
 
 	@Override
 	public float getPrecursorMz() {

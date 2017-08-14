@@ -27,27 +27,15 @@ public class FileUtil {
 	public FileUtil(File clusteringFile) {
 		ClusteringFileReader reader = new ClusteringFileReader(clusteringFile);
 		try {
-			this.cluster = reader.readAllClusters();
+			this.cluster = reader.readAllClusters(); // ICluster
 			this.totalRecord = this.cluster.size();
 		} catch (Exception e) {
 			throw new RuntimeException("Read the clustered result file with an exception", e);
 		}
 	}
 
-	public List<ICluster> getAllClusters() {
-		return cluster;
-	}
-
-	public void setAllClusters(List<ICluster> cluster) {
-		this.cluster = cluster;
-	}
-
 	public int getTotalRecord() {
 		return totalRecord;
-	}
-
-	public void setTotalRecord(int totalRecord) {
-		this.totalRecord = totalRecord;
 	}
 
 	public List<Cluster> findAllClusters() {
@@ -69,9 +57,9 @@ public class FileUtil {
 		return assembleCluster(subCluster);
 	}
 
-	public List<Cluster> assembleCluster(List<ICluster> clusterPart) {
+	private List<Cluster> assembleCluster(List<ICluster> clusterPart) {
 		List<Cluster> allClusters = new ArrayList<Cluster>(); // return value
-
+		
 		// traverse and get data needed
 		Iterator<ICluster> cluItr = clusterPart.iterator();
 		while (cluItr.hasNext()) {
@@ -85,6 +73,12 @@ public class FileUtil {
 			tmpCluster.setSpecCount(tmpICluster.getSpecCount());
 			tmpCluster.setIntensValues(tmpICluster.getConsensusIntensValues());
 			tmpCluster.setMzValues(tmpICluster.getConsensusMzValues());
+//			
+//			// sequences -> assemble sequence for each spectrum
+//			Set<String> sequences = tmpICluster.getSequences();
+//			Iterator<String> seqItr = sequences.iterator();
+//			System.out.println("speNum: " + tmpICluster.getSpecCount());
+//			System.out.println("Num: " + sequences.size());
 
 			// Spectrum
 			List<Spectrum> allSpectrums = new ArrayList<>();
@@ -93,10 +87,13 @@ public class FileUtil {
 			while (specItr.hasNext()) {
 				Spectrum tmpSpectrum = new Spectrum();
 				ISpectrumReference tmpSpecTrumReferences = specItr.next();
-				tmpSpectrum.setSpectrumId(tmpSpecTrumReferences.getSpectrumId());
+				tmpSpectrum.setId(tmpSpecTrumReferences.getSpectrumId());
 				tmpSpectrum.setCharge(tmpSpecTrumReferences.getCharge());
 				tmpSpectrum.setPrecursorMz(tmpSpecTrumReferences.getPrecursorMz());
 				tmpSpectrum.setSpecies(tmpSpecTrumReferences.getSpecies());
+				
+				// add sequence
+				tmpSpectrum.setSequence(tmpSpecTrumReferences.getSequence());
 				allSpectrums.add(tmpSpectrum);
 			}
 

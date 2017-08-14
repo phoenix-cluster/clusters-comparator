@@ -7,11 +7,14 @@ import cn.edu.cqupt.model.Spectrum;
 
 public class SpectrumComparerService {
 
-	// key: cluster's id existed overlap; value: the count of overlap spectrum
+	// key: cluster's id existed overlap; value: the count of overlap spectra
 	private HashMap<String, Integer> overlapSpectrumCount; 
+	
 	// key: cluster's id existed overlap; value: cluster existed overlap
 	private HashMap<String, Cluster> overlapCluster; 
-	// key: cluster's id existed overlap; value: overlap spectrums of corresponding cluster, intersection of two clusters
+	
+	// key: cluster's id existed overlap; 
+	// value: overlap spectra of corresponding cluster, intersection of two clusters
 	private HashMap<String, List<Spectrum>> overlapSpectrumOfCluster; 
 
 	public HashMap<String, Integer> getOverlapSpectrumCount() {
@@ -59,23 +62,26 @@ public class SpectrumComparerService {
 		this.overlapSpectrumOfCluster = new HashMap<>();
 		this.overlapSpectrumCount = new HashMap<>();
 
-		List<Spectrum> sourceSpectrums = cluster.getSpectrums();
+		List<Spectrum> sourceSpectra = cluster.getSpectra();
 		for (Cluster tmpCluster : releaseCluster) {
 
 			// releaseCluster will change if directly use tmpCluster: there need to override
 			// Cluster.clone()
 			Cluster cloneCluster = tmpCluster.clone();
-			List<Spectrum> tmpSpectrums = cloneCluster.getSpectrums();
+			List<Spectrum> tmpSpectra = cloneCluster.getSpectra();
+			System.out.println("spectra: " + sourceSpectra);
+			System.out.println("tmpSpectra: " + tmpSpectra);
 
 			// get intersection of two different cluster: there need override
 			// Spectrum.equals()
-			tmpSpectrums.retainAll(sourceSpectrums);
+			tmpSpectra.retainAll(sourceSpectra);
 
 			// only store the cluster existed overlap
-			if (tmpSpectrums.size() > 0) {
+			if (tmpSpectra.size() > 0) {
+				System.out.println("compare: " + tmpCluster.getId());
 				this.overlapCluster.put(tmpCluster.getId(), tmpCluster);
-				this.overlapSpectrumOfCluster.put(tmpCluster.getId(), tmpSpectrums);
-				this.overlapSpectrumCount.put(tmpCluster.getId(), tmpSpectrums.size());
+				this.overlapSpectrumOfCluster.put(tmpCluster.getId(), tmpSpectra);
+				this.overlapSpectrumCount.put(tmpCluster.getId(), tmpSpectra.size());
 			}
 		}
 	}

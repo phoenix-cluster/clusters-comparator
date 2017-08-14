@@ -13,6 +13,8 @@ import java.util.List;
  */
 public interface ISpectrumReference {
 	public String getSpectrumId();
+	
+	public String getSequence();
 
 	public float getPrecursorMz();
 

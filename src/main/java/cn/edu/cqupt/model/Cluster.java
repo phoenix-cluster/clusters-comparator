@@ -9,7 +9,7 @@ public class Cluster implements Cloneable {
 	private float avPrecursorMz;
 	private float avPrecursorIntens;
 	private int specCount;
-	private List<Spectrum> spectrums;
+	private List<Spectrum> spectra;
 	private List<Float> mzValues;
 	private List<Float> intensValues;
 
@@ -49,12 +49,12 @@ public class Cluster implements Cloneable {
 		this.specCount = specCount;
 	}
 
-	public List<Spectrum> getSpectrums() {
-		return spectrums;
+	public List<Spectrum> getSpectra() {
+		return spectra;
 	}
 
-	public void setSpectrums(List<Spectrum> spectrums) {
-		this.spectrums = spectrums;
+	public void setSpectrums(List<Spectrum> spectra) {
+		this.spectra = spectra;
 	}
 
 	public List<Float> getMzValues() {
@@ -76,12 +76,36 @@ public class Cluster implements Cloneable {
 	@Override
 	public Cluster clone() throws CloneNotSupportedException {
 		Cluster result = (Cluster) super.clone();
-		List<Spectrum> tmpSpectrums = new ArrayList<>(spectrums.size());
-		for (Spectrum spec : spectrums) {
-			tmpSpectrums.add(spec);
+		List<Spectrum> tmpSpectra = new ArrayList<>(spectra.size());
+		for (Spectrum spec : spectra) {
+			tmpSpectra.add(spec.clone());
 		}
-		result.spectrums = tmpSpectrums;
+		result.spectra = tmpSpectra;
 		return result;
 	}
 
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((id == null) ? 0 : id.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Cluster other = (Cluster) obj;
+		if (id == null) {
+			if (other.id != null)
+				return false;
+		} else if (!id.equals(other.id))
+			return false;
+		return true;
+	}
 }
