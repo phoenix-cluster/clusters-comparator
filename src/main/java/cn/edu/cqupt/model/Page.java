@@ -4,60 +4,64 @@ import java.util.List;
 
 public class Page<T> {
 
-	private int totalRecord; // total record number in source data
-	private int pageSize; // the number of data in per page
-	private int totalPage; // total page number
-	private int currentPage; // current page number
-	private List<T> dataList; // data in current page
-	
-	public Page(int totalRecord, int pageSize, int totalPage, int currentPage, List<T> dataList) {
-		super();
-		this.totalRecord = totalRecord;
-		this.pageSize = pageSize;
-		this.totalPage = totalPage;
-		this.currentPage = currentPage;
-		this.dataList = dataList;
-	}
+    private int totalRecord; // total record number in source data
+    private int pageSize; // the number of data in per page
+    private int totalPage; // total page number
+    private int currentPage; // current page number
+    private List<T> dataList; // data in current page
 
-	public int getTotalRecord() {
-		return totalRecord;
-	}
+    public Page() {
 
-	public void setTotalRecord(int totalRecord) {
-		this.totalRecord = totalRecord;
-	}
+    }
 
-	public int getPageSize() {
-		return pageSize;
-	}
+    public Page(int totalRecord, int pageSize, int totalPage, int currentPage, List<T> dataList) {
+        super();
+        this.totalRecord = totalRecord;
+        this.pageSize = pageSize;
+        this.totalPage = totalPage;
+        this.currentPage = currentPage;
+        this.dataList = dataList;
+    }
 
-	public void setPageSize(int pageSize) {
-		this.pageSize = pageSize;
-	}
+    public int getTotalRecord() {
+        return totalRecord;
+    }
 
-	public int getTotalPage() {
-		return totalPage;
-	}
+    public void setTotalRecord(int totalRecord) {
+        this.totalRecord = totalRecord;
+    }
 
-	public void setTotalPage(int totalPage) {
-		this.totalPage = totalPage;
-	}
+    public int getPageSize() {
+        return pageSize;
+    }
 
-	public int getCurrentPage() {
-		return currentPage;
-	}
+    public void setPageSize(int pageSize) {
+        this.pageSize = pageSize;
+    }
 
-	public void setCurrentPage(int currentPage) {
-		this.currentPage = currentPage;
-	}
+    public int getTotalPage() {
+        return totalPage;
+    }
 
-	public List<T> getDataList() {
-		return dataList;
-	}
+    public void setTotalPage(int totalPage) {
+        this.totalPage = totalPage;
+    }
 
-	public void setDataList(List<T> dataList) {
-		this.dataList = dataList;
-	}
-	
-	
+    public int getCurrentPage() {
+        return currentPage;
+    }
+
+    public void setCurrentPage(int currentPage) {
+        this.currentPage = currentPage;
+    }
+
+    public List<T> getDataList() {
+        return dataList;
+    }
+
+    public void setDataList(List<T> dataList) {
+        this.dataList = dataList;
+    }
+
+
 }

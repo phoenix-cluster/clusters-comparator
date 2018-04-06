@@ -28,10 +28,10 @@ public class Vertex{
 		this.releaseName = releaseName;
 	}
 	
-	@Override
-	public String toString() {
-		return cluster.getId() + ": " + weight;
-	}
+//	@Override
+//	public String toString() {
+//		return cluster.getId() + ": " + weight;
+//	}
 
 	@Override
 	public int hashCode() {

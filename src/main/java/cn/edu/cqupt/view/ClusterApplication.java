@@ -1,8 +1,8 @@
 package cn.edu.cqupt.view;
 
-import java.io.File;
-import java.util.List;
-
+import cn.edu.cqupt.mgf.MgfFileReader;
+import cn.edu.cqupt.mgf.view.MgfInfoDisplayPane;
+import cn.edu.cqupt.score.calculate.MS;
 import cn.edu.cqupt.service.ClusterTableService;
 import javafx.application.Application;
 import javafx.application.HostServices;
@@ -12,24 +12,22 @@ import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.geometry.Rectangle2D;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Alert.AlertType;
-import javafx.scene.control.Menu;
-import javafx.scene.control.MenuBar;
-import javafx.scene.control.MenuItem;
-import javafx.scene.control.Tab;
-import javafx.scene.control.TabPane;
-import javafx.scene.control.TextArea;
+import javafx.scene.control.*;
 import javafx.scene.input.KeyCombination;
-import javafx.scene.layout.VBox;
-import javafx.stage.FileChooser;
+import javafx.scene.layout.*;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
 import javafx.stage.Window;
 
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
+
 public class ClusterApplication extends Application {
 
-	public static TabPane tabPane = new TabPane();
+	public static TabPane tabPane;
+	public static HashMap<String, Tab> tabs;
 	public static ClusterTableService serviceReleaseI;
 	public static ClusterTableService serviceReleaseII;
 	public static HostServices hostServices;
@@ -40,7 +38,15 @@ public class ClusterApplication extends Application {
 	public static Rectangle2D screenBounds; // screen size
 	public static Stage window;
 
-	static {
+	public ClusterApplication() {
+
+		// set tab pane and tabs
+		tabPane = new TabPane();
+		tabs = new HashMap<>();
+		tabs.put("Cluster Selection", new Tab("Cluster Selection"));
+		tabs.put("Cluster Comparison", new Tab("Cluster Comparison"));
+		tabs.put("MGF Selection", new Tab("MGF Selection"));
+
 		// get screen size
 		screenBounds = Screen.getPrimary().getBounds();
 
@@ -78,105 +84,145 @@ public class ClusterApplication extends Application {
 		// create File menu
 		Menu fileMenu = new Menu("File");
 
-		// add "select clustering files" item to File menu
-		MenuItem openFile = new MenuItem("Select clustering files");
-		openFile.setAccelerator(KeyCombination.keyCombination("Ctrl + O"));
-
-		/*********************** MY TEST *****************/
-		// // read data
-		// serviceReleaseI = new ClusterTableService(new
-		// File("C:\\Users\\huangjs\\Desktop\\clustering\\myData\\compare_5.clustering"));
-		// serviceReleaseII = new ClusterTableService(new
-		// File("C:\\Users\\huangjs\\Desktop\\clustering\\myData\\compare_6.clustering"));
-		//
-		// // create cluster table and spectrum table
-		// releaseIName = "compare_5.clustering";
-		// releaseIIName = "compare_6.clustering";
-		// ClusterSelection clusterTable = new ClusterSelection(releaseIName,
-		// serviceReleaseI, pageSize,
-		// serviceReleaseII.getAllClusters());
-		//
-		// // set tab pane
-		// tabPane.getTabs().clear();
-		// Tab tabA = new Tab("Cluster selection");
-		// tabA.setContent(clusterTable.getGridPane());
-		//
-		// Tab tabB = new Tab("Cluster comparison");
-		//
-		// tabPane.getTabs().addAll(tabA, tabB);
-		/***************************************************************/
-
-		openFile.setOnAction((ActionEvent e) -> {
-
-			// set file chooser
-			FileChooser fileChooser = new FileChooser();
-			fileChooser.setTitle("Select Clustering File");
-			// fileChooser.setInitialDirectory(new
-			// File("C:\\Users\\huangjs\\Desktop\\clustering\\myData"));
-
-			// file filter
-			fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("Clustering file", "*.clustering"),
-					new FileChooser.ExtensionFilter("All files", "*.*"));
-			List<File> clusteringFiles = fileChooser.showOpenMultipleDialog(ownerWindow);
-			if (clusteringFiles == null) {
-
-			} else if (clusteringFiles.size() != 2) {
-				Alert alert = new Alert(AlertType.ERROR);
-				alert.setTitle("Error Dialog");
-				alert.setHeaderText(null);
-				alert.setContentText("You must choose two clustering files");
-				alert.showAndWait();
-			} else {
-
-				serviceReleaseI = null;
-				serviceReleaseII = null;
-
-				// read data
-				serviceReleaseI = new ClusterTableService(clusteringFiles.get(0));
-				serviceReleaseII = new ClusterTableService(clusteringFiles.get(1));
-				releaseIName = clusteringFiles.get(0).getName();
-				releaseIIName = clusteringFiles.get(1).getName();
-
-				// create cluster table and spectrum table
-				pageSize.set(8);
-				pageCount.set(serviceReleaseI.getCurrentPageClusters(1, pageSize.get()).getTotalPage());
-				ClusterSelection clusterTable = new ClusterSelection(releaseIName, serviceReleaseI, pageSize.get(),
-						pageCount.get(), serviceReleaseII.getAllClusters());
-
-				// set tab pane
-				tabPane.getTabs().clear();
-				Tab tabA = new Tab("Cluster selection");
-				tabA.setContent(clusterTable.getGridPane());
-				tabA.setClosable(false);
-				tabPane.getTabs().add(tabA);
-			}
-
-		});
+//		// add "select clustering files" item to File menu
+//		MenuItem openFile = new MenuItem("Select clustering files");
+//		openFile.setAccelerator(KeyCombination.keyCombination("Ctrl + O"));
+//
+//		/*********************** MY TEST *****************/
+//		// // read data
+//		// serviceReleaseI = new ClusterTableService(new
+//		// File("C:\\Users\\huangjs\\Desktop\\clustering\\myData\\compare_5.clustering"));
+//		// serviceReleaseII = new ClusterTableService(new
+//		// File("C:\\Users\\huangjs\\Desktop\\clustering\\myData\\compare_6.clustering"));
+//		//
+//		// // create cluster table and spectrum table
+//		// releaseIName = "compare_5.clustering";
+//		// releaseIIName = "compare_6.clustering";
+//		// ClusterSelection clusterTable = new ClusterSelection(releaseIName,
+//		// serviceReleaseI, pageSize,
+//		// serviceReleaseII.getAllClusters());
+//		//
+//		// // set tab pane
+//		// tabPane.getTabs().clear();
+//		// Tab tabA = new Tab("Cluster selection");
+//		// tabA.setContent(clusterTable.getGridPane());
+//		//
+//		// Tab tabB = new Tab("Cluster comparison");
+//		//
+//		// tabPane.getTabs().addAll(tabA, tabB);
+//		/***************************************************************/
+//
+//		openFile.setOnAction((ActionEvent e) -> {
+//
+//			// set file chooser
+//			FileChooser fileChooser = new FileChooser();
+//			fileChooser.setTitle("Select Clustering File");
+//			// fileChooser.setInitialDirectory(new
+//			// File("C:\\Users\\huangjs\\Desktop\\clustering\\myData"));
+//
+//			// file filter
+//			fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("Clustering file", "*.clustering"),
+//					new FileChooser.ExtensionFilter("All files", "*.*"));
+//			List<File> clusteringFiles = fileChooser.showOpenMultipleDialog(ownerWindow);
+//			if (clusteringFiles == null) {
+//
+//			} else if (clusteringFiles.size() != 2) {
+//				Alert alert = new Alert(AlertType.ERROR);
+//				alert.setTitle("Error Dialog");
+//				alert.setHeaderText(null);
+//				alert.setContentText("You must choose two clustering files");
+//				alert.showAndWait();
+//			} else {
+//
+//				serviceReleaseI = null;
+//				serviceReleaseII = null;
+//
+//				// read data
+//				serviceReleaseI = new ClusterTableService(clusteringFiles.get(0));
+//				serviceReleaseII = new ClusterTableService(clusteringFiles.get(1));
+//				releaseIName = clusteringFiles.get(0).getName();
+//				releaseIIName = clusteringFiles.get(1).getName();
+//
+//				// create cluster table and spectrum table
+//				pageSize.set(8);
+//				pageCount.set(serviceReleaseI.getCurrentPageClusters(1, pageSize.get()).getTotalPage());
+//				ClusterSelection clusterTable = new ClusterSelection(releaseIName, serviceReleaseI, pageSize.get(),
+//						pageCount.get());
+//
+//				// set tab pane
+//				tabPane.getTabs().clear();
+//				Tab tabA = new Tab("Cluster selection");
+//				tabA.setContent(clusterTable.getGridPane());
+//				tabA.setClosable(false);
+//				tabPane.getTabs().add(tabA);
+//			}
+//
+//		});
 
 		MenuItem importData = new MenuItem("Import Data");
 		importData.setAccelerator(KeyCombination.keyCombination("Ctrl + I"));
 		importData.setOnAction((ActionEvent event) -> {
-			Stage importDataStage = ImportData.getImportDataStage();
-			importDataStage.showAndWait();
-			if(ImportData.method == null) {
-				
-			}else if (ImportData.method.equals("FILE")) {
+			ImportDataStage importDataStage = new ImportDataStage();
+			Stage stage = importDataStage.getImportDataStage();
+			stage.showAndWait();
+			if(importDataStage.getImportMethod().equals("MGF FILE")){
+				File mgfFileI = importDataStage.getMgfFileI();
+				File mgfFileII = importDataStage.getMgfFileII();
+				ArrayList<MS> msList1 = null;
+				ArrayList<MS> msList2 = null;
+				try {
+					msList1 = MgfFileReader.getAllSpectra(mgfFileI);
+					msList2 = MgfFileReader.getAllSpectra(mgfFileII);
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+
+				// set pane
+				MgfInfoDisplayPane mgfInfoDisplayPane = new MgfInfoDisplayPane(msList1, msList2, 8);
+				GridPane pane = mgfInfoDisplayPane.getMgfInfoDisplayPane();
+				double screenHeight = screenBounds.getHeight();
+				double screenWidth = screenBounds.getWidth();
+				double c1Width = screenWidth * 1 / 3;
+				double c2Width = screenWidth * 2 / 3;
+				double r1Height = 20.0;
+				double r2Height = (screenHeight - 40.0) * 1 / 2;
+				double r3Height = (screenHeight - 50.0) * 1 / 2;
+				ColumnConstraints col1 = new ColumnConstraints(c1Width);
+				ColumnConstraints col2 = new ColumnConstraints(c2Width);
+				pane.getColumnConstraints().addAll(col1, col2);
+				RowConstraints row1 = new RowConstraints(r1Height, r1Height, r1Height);
+				RowConstraints row2 = new RowConstraints(r2Height, r2Height, r2Height);
+				RowConstraints row3 = new RowConstraints(r3Height, r3Height, r3Height);
+				pane.getRowConstraints().addAll(row1, row2, row3);
+				pane.setVgap(10.0);
+
+
+				// add the pane into tab
+				Tab mgfSelectionTab = ClusterApplication.tabs.get("MGF Selection");
+				if(mgfSelectionTab.getContent() != null){
+					new HBox(mgfSelectionTab.getContent());
+				}
+				mgfSelectionTab.setContent(pane);
+				if(!ClusterApplication.tabPane.getTabs().contains(mgfSelectionTab)){
+					ClusterApplication.tabPane.getTabs().add(mgfSelectionTab);
+				}
+				ClusterApplication.tabPane.getSelectionModel().select(mgfSelectionTab);
+
+			} else if (importDataStage.getImportMethod().equals("Clustering FILE")) {
 
 				// read data from file
 				serviceReleaseI = null;
 				serviceReleaseII = null;
-				serviceReleaseI = new ClusterTableService(ImportData.releaseIFile);
-				serviceReleaseII = new ClusterTableService(ImportData.releaseIIFile);
-				releaseIName = ImportData.releaseIFile.getName();
-				releaseIIName = ImportData.releaseIIFile.getName();
-				ImportData.releaseIFile = null;
-				ImportData.releaseIIFile = null;
+				serviceReleaseI = new ClusterTableService(importDataStage.getReleaseIFile());
+				serviceReleaseII = new ClusterTableService(importDataStage.getReleaseIIFile());
+				releaseIName = importDataStage.getReleaseIFile().getName();
+				releaseIIName = importDataStage.getReleaseIIFile().getName();
 
 				// create cluster table and spectrum table
 				pageSize.set(8);
 				pageCount.set(serviceReleaseI.getCurrentPageClusters(1, pageSize.get()).getTotalPage());
 				ClusterSelection clusterTable = new ClusterSelection(releaseIName, serviceReleaseI, pageSize.get(),
-						pageCount.get(), serviceReleaseII.getAllClusters());
+						pageCount.get());
 
 				// set tab pane
 				tabPane.getTabs().clear();
@@ -184,14 +230,35 @@ public class ClusterApplication extends Application {
 				tabA.setContent(clusterTable.getGridPane());
 				tabA.setClosable(false);
 				tabPane.getTabs().add(tabA);
-			}else {
+			}else if (importDataStage.getImportMethod().equals("RESTFUL")) {
 				
 				// read data from restful
-				Alert alert = new Alert(AlertType.ERROR);
-				alert.setTitle("Error Dialog");
-				alert.setHeaderText(null);
-				alert.setContentText("It is terrible, developing...");
-				alert.showAndWait();
+				serviceReleaseI = null;
+				serviceReleaseII = null;
+				releaseIName = importDataStage.getReleaseIName();
+				releaseIIName = importDataStage.getReleaseIIName();
+				serviceReleaseI = new ClusterTableService(releaseIName,
+						importDataStage.getOrderKey(), importDataStage.getOrderDirection(),
+						importDataStage.getStartIndex(), importDataStage.getEndIndex());
+				serviceReleaseII = new ClusterTableService(releaseIIName,
+						importDataStage.getOrderKey(), importDataStage.getOrderDirection(),
+						importDataStage.getStartIndex(), importDataStage.getEndIndex());
+
+				// create cluster table and spectrum table
+				pageSize.set(1);
+				pageCount.set(serviceReleaseI.getCurrentPageClusters(1, pageSize.get())
+						.getTotalPage());
+				ClusterSelection clusterTable = new ClusterSelection(releaseIName, serviceReleaseI,
+						pageSize.get(),	pageCount.get());
+
+				// set tab pane
+				tabPane.getTabs().clear();
+				Tab tabA = new Tab("Cluster selection");
+				tabA.setContent(clusterTable.getGridPane());
+				tabA.setClosable(false);
+				tabPane.getTabs().add(tabA);
+			}else{
+				System.err.print("Data Import Error, Please Re-import!");
 			}
 		});
 
@@ -201,7 +268,7 @@ public class ClusterApplication extends Application {
 			System.exit(0);
 		});
 
-		fileMenu.getItems().addAll(openFile, importData, exit);
+		fileMenu.getItems().addAll(importData, exit);
 
 		// create Tools menu
 		Menu toolMenu = new Menu("Tools");

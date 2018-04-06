@@ -130,4 +130,11 @@ public class Cluster implements Cloneable {
 			return false;
 		return true;
 	}
+
+	@Override
+	public String toString() {
+		return "Cluster [id=" + id + ", avPrecursorMz=" + avPrecursorMz + ", avPrecursorIntens=" + avPrecursorIntens
+				+ ", specCount=" + specCount + ", ratio=" + ratio + ", spectra=" + spectra + ", mzValues=" + mzValues
+				+ ", intensValues=" + intensValues + "]";
+	}
 }

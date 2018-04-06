@@ -52,9 +52,9 @@ public class Edge {
 		return true;
 	}
 	
-	@Override
-	public String toString() {
-		return weight + "";
-	}
+//	@Override
+//	public String toString() {
+//		return weight + "";
+//	}
 
 }

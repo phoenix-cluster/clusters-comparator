@@ -115,7 +115,7 @@ public class ComparerPieChart {
 					// get tabB
 					Tab tabB = null;
 					if (ClusterApplication.tabPane.getTabs().size() == 1) {
-						tabB = new Tab("Cluster comparison");
+						tabB = new Tab("Cluster Comparison");
 						ClusterApplication.tabPane.getTabs().add(tabB);
 					}else {
 						tabB = ClusterApplication.tabPane.getTabs().get(1);
@@ -211,7 +211,7 @@ public class ComparerPieChart {
 					// get tabB
 					Tab tabB = null;
 					if (ClusterApplication.tabPane.getTabs().size() == 1) {
-						tabB = new Tab("Cluster comparison");
+						tabB = new Tab("Cluster Comparison");
 						ClusterApplication.tabPane.getTabs().add(tabB);
 					}else {
 						tabB = ClusterApplication.tabPane.getTabs().get(1);

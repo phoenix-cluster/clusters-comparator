@@ -44,7 +44,6 @@ public class ClusterSelection {
 	public StackPane pieChartStackPane; // hold pie chart
 	public static StackPane networkGraphStackPane; // hold overlap cluster map
 	private GridPane gridPane; // hold cluster table, spectrum table, peak map, pie chart and network graph
-	private List<Cluster> releaseCluster;
 	private Pagination pagination; // cluster table only with pagination
 	private TableView<Cluster> clusterTable; // cluster table
 
@@ -60,8 +59,7 @@ public class ClusterSelection {
 		this.gridPane = gridPane;
 	}
 
-	public ClusterSelection(String releaseName, ClusterTableService clusterTableService, int pageSize, int pageCount,
-			List<Cluster> releaseCluster) {
+	public ClusterSelection(String releaseName, ClusterTableService clusterTableService, int pageSize, int pageCount) {
 		this.spectrumStackPane = new StackPane(); // hold spectrum tables
 		this.peakMapStackPane = new StackPane(); // hold peak map
 		this.pieChartStackPane = new StackPane(); // hold pie chart
@@ -69,7 +67,6 @@ public class ClusterSelection {
 		this.pagination = new Pagination(ClusterApplication.pageCount.get());
 		this.clusterTable = new TableView<>();
 		this.gridPane = new GridPane();
-		this.releaseCluster = releaseCluster;
 
 		// set grid pane width
 		ColumnConstraints col1 = new ColumnConstraints();
@@ -80,7 +77,8 @@ public class ClusterSelection {
 
 		// add builds to grid pane
 		createClusterTable();
-		BorderPane clusterTablePane = getClusterTablePane(releaseName, clusterTableService, pageSize, pageCount);
+		BorderPane clusterTablePane = getClusterTablePane(releaseName, clusterTableService, pageSize,
+				pageCount);
 		gridPane.add(clusterTablePane, 0, 0);
 		gridPane.add(spectrumStackPane, 1, 0);
 
@@ -182,6 +180,8 @@ public class ClusterSelection {
 					// current cluster
 					Cluster currentCluster = clusterTable.getItems().get(row);
 
+					System.out.println("currentCluster.getSpectra():\n" + currentCluster.getSpectra());
+
 					// create spectrum table
 					SpectrumTable spectrumTable = new SpectrumTable(currentCluster.getSpectra());
 
@@ -190,17 +190,13 @@ public class ClusterSelection {
 
 					// create pie chart
 					ComparerPieChart comparerPieChart = new ComparerPieChart(ClusterApplication.releaseIName,
-							ClusterApplication.releaseIIName, currentCluster, releaseCluster);
+							ClusterApplication.releaseIIName, currentCluster,
+							ClusterApplication.serviceReleaseII.getAllClusters());
 
 					// create overlap cluster map
 					NetworkGraph networkGraph = new NetworkGraph(currentCluster, ClusterApplication.releaseIName,
 							ClusterApplication.releaseIIName, ClusterApplication.serviceReleaseI.getAllClusters(),
 							ClusterApplication.serviceReleaseII.getAllClusters());
-
-					// // cteate circos
-					// MyCircos mycircos = new MyCircos(currentCluster,
-					// ClusterApplication.serviceReleaseI.getAllClusters(),
-					// ClusterApplication.serviceReleaseII.getAllClusters());
 
 					// add builds into pane
 					StackPane trashCans = new StackPane();
@@ -289,7 +285,7 @@ public class ClusterSelection {
 					.getCurrentPageClusters(1, ClusterApplication.pageSize.get()).getTotalPage());
 			ClusterSelection clusterTable = new ClusterSelection(ClusterApplication.releaseIName,
 					ClusterApplication.serviceReleaseI, ClusterApplication.pageSize.get(),
-					ClusterApplication.pageCount.get(), ClusterApplication.serviceReleaseII.getAllClusters());
+					ClusterApplication.pageCount.get());
 			ClusterApplication.tabPane.getTabs().get(0).setContent(clusterTable.getGridPane());
 		});
 		HBox top = new HBox(rlsNameLabel, rlsName, switchButton);
