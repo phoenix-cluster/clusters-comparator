@@ -179,7 +179,7 @@ SPEC	spec11			348.12817	3.0			0.0
 
 以**cluster table**中指定的cluster为起点，搜索其相关的spectrum的分布，根据搜索结果的内在联系做出**network graph**
 
-![image/network-graph](image\network-graph.png)
+![image/network-graph](image/network-graph.png)
 
 举一个例子说明**network graph**的含义（依旧使用上面给出的sample1.clustering和sample2.clustering）：
 
