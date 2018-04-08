@@ -34,7 +34,7 @@ public class ComparerPieChart {
 		return comparerPieChart;
 	}
 
-	public ComparerPieChart() {
+	private void initialize() {
 		this.tabBGridPane = new GridPane();
 
 		ColumnConstraints col1 = new ColumnConstraints();
@@ -47,14 +47,14 @@ public class ComparerPieChart {
 	}
 
 	public ComparerPieChart(String releaseIName, String releaseIIName, Cluster cluster, List<Cluster> releaseCluster) {
-		this();
+		initialize();
 		this.releaseIName = releaseIName;
 		this.releaseIIName = releaseIIName;
 		this.comparerPieChart = createComparerPieChart(cluster, releaseCluster);
 	}
 
 	public ComparerPieChart(String releaseIName, String releaseIIName, UndirectedGraph<Vertex, Edge> undirectedGraph, Vertex focusVertex) {
-		this();
+		initialize();
 		this.releaseIName = releaseIName;
 		this.releaseIIName = releaseIIName;
 		this.comparerPieChart = createComparerPieChart(undirectedGraph, focusVertex);

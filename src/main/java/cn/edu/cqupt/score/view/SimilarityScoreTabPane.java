@@ -46,7 +46,9 @@ public class SimilarityScoreTabPane{
         Button mulPairsSpecReportBtn = createMulPairsSpecReportBtn("View Visualization Result", service);
 
         // set content for similarity score tab
-        simiScorePane.getChildren().addAll(new ScrollPane(simiScoreTable), mulPairsSpecReportBtn);
+        ScrollPane scrollPane = new ScrollPane(simiScoreTable);
+        scrollPane.setFitToWidth(true);
+        simiScorePane.getChildren().addAll(scrollPane, mulPairsSpecReportBtn);
         Tab simiScoreTab = similarityScoreTabs.get("Similarity Score");
         if(simiScoreTab.getContent() != null){
             new HBox(simiScoreTab.getContent()); // clear tab content
@@ -88,6 +90,8 @@ public class SimilarityScoreTabPane{
 
         // set data
         simiScoreTable.setItems(FXCollections.observableList(service.getSimiScoreTableDataList()));
+
+        simiScoreTable.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
 
         return simiScoreTable;
     }

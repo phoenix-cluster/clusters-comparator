@@ -10,12 +10,17 @@ import javafx.beans.property.SimpleDoubleProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
+import javafx.scene.control.Label;
 import javafx.scene.control.SelectionMode;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontPosture;
+import javafx.scene.text.FontWeight;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,6 +30,8 @@ import java.util.List;
  */
 public class MgfInfoDisplayPane {
 
+    private String mgfName1;
+    private String mgfName2;
     private ArrayList<MS> msList1;
     private ArrayList<MS> msList2;
     private SimpleDoubleProperty fragmentTolerance;
@@ -77,24 +84,25 @@ public class MgfInfoDisplayPane {
         threshold = new SimpleIntegerProperty(10);
     }
 
-    public MgfInfoDisplayPane(ArrayList<MS> msList1, ArrayList<MS> msList2, int pageSize) {
+    public MgfInfoDisplayPane(String mgfName1, String mgfName2, ArrayList<MS> msList1, ArrayList<MS> msList2, int pageSize) {
         this();
+        this.mgfName1 = mgfName1;
+        this.mgfName2 = mgfName2;
         this.msList1 = msList1;
         this.msList2 = msList2;
-        this.pageSize = pageSize;
-    }
-
-    public MgfInfoDisplayPane(ArrayList<MS> msList1, ArrayList<MS> msList2, SimpleDoubleProperty fragmentTolerance, SimpleIntegerProperty threshold, int pageSize) {
-        this.msList1 = msList1;
-        this.msList2 = msList2;
-        this.fragmentTolerance = fragmentTolerance;
-        this.threshold = threshold;
         this.pageSize = pageSize;
     }
 
 
     public GridPane getMgfInfoDisplayPane() {
         mgfInfoDisplayPane = new GridPane();
+
+        // mgf name label
+        Label mgfLabel = new Label("MGF: ");
+        mgfLabel.setFont(Font.font("Arial", FontWeight.BLACK, 16));
+        Label mgfNameLabel = new Label(mgfName1);
+        mgfNameLabel.setFont(Font.font("Arial", FontWeight.EXTRA_LIGHT, FontPosture.ITALIC, 16));
+        mgfInfoDisplayPane.add(new HBox(mgfLabel, mgfNameLabel), 0, 0);
 
         // mgf table
         Page<MS> page = new Page<>(msList1, pageSize);

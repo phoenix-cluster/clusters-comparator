@@ -18,7 +18,7 @@ public class MgfInfoDisplayPaneTest extends Application{
     public void start(Stage primaryStage) throws Exception {
         ArrayList<MS> msList1 = MgfFileReader.getAllSpectra(new File("C:\\Users\\huangjs\\Desktop\\mgf\\header_test.mgf"));
         ArrayList<MS> msList2 = MgfFileReader.getAllSpectra(new File("C:\\Users\\huangjs\\Desktop\\mgf\\header_test.mgf"));
-        MgfInfoDisplayPane pane = new MgfInfoDisplayPane(msList1, msList2, 8);
+        MgfInfoDisplayPane pane = new MgfInfoDisplayPane("header_test.mgf", "header_test.mgf", msList1, msList2, 8);
 
         Scene scene = new Scene(pane.getMgfInfoDisplayPane());
         primaryStage.setScene(scene);

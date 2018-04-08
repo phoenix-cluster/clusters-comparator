@@ -167,8 +167,9 @@ public class ClusterSelection {
 					VBox comparerPieChartPane = new VBox();
 					UndirectedGraph<Vertex, Edge> undirectedGraph = networtGraphService.getUndirectedGraph();
 					Vertex focusVertex = networtGraphService.getFocusVertex();
-					PieChart comparerPieChart = new ComparerPieChart().createComparerPieChart(
-							undirectedGraph, focusVertex );
+					PieChart comparerPieChart = new ComparerPieChart(
+							ClusterApplication.releaseIName, ClusterApplication.releaseIIName,
+							undirectedGraph, focusVertex).getComparerPieChart();
 
 					// create similarity score button and set event
 					Button simiScoreBtn = new Button("Do Similarity Score");

@@ -12,13 +12,46 @@
 ## 1. 读取数据
 
 菜单栏中以此点选`File`->`Import Data`，在弹窗中选择`Get Data From MGF File`，然后选择需要进行分析的MGF文件，因为想要进行相似性打分，所以需要输入两个文件。
+
 ![./image/mgf-import](image/mgf-import.png)
+
+## 2. 查看结果
+
+### MGF table
+
+**MGF table**显示MGF文件的内容
+
+![image/mgf-table](image/mgf-table.png)
+
+支持操作：
+- 点击表格不同的谱图，**Similarity Score Table**、**Peak Map**会随之变化
+
+## Similarity Score table
+
+**Similarity Score table**显示当前谱图与另外一个文件中所有的谱图比对，进行相似性打分的结果。
+
+![image/similarity-score-table](image/similarity-score-table.png)
+
+- ID：同**MGF table**的Title
+
+- Match Rate：在考虑容错率的条件下，两个谱图匹配的峰比例（匹配的峰 / 两处理后的谱图峰数目的最大值）
+
+- Similarity Score：相似性得分，**相似性得分越高越相似**。
+
+- Detail：点击**Show**按钮显示每次迭代结果的报告
+
+    - 筛选掉的数据具有一定的透明度，实际用于计算的数据不透明
+
+- 点击**View Visualization Result**按钮将会给出比对的可视化结果——最优相似性分数对应的数据处理结果
+
+
 
 # `*.clustering`文件的分析和可视化
 
 ## 1. 读取数据
 
 菜单栏中以此点选`File`->`Import Data`，在弹窗中选择`Get Data From Clustering File`，然后选择需要进行分析的`*.clustering`文件。
+
 ![./image/clustering-import](image/clustering-import.png)
 
 ## 2. 查看结果
@@ -129,5 +162,30 @@ SPEC	spec11			348.12817	3.0			0.0
 - Do Similarity Score
 
   单击**Do Similarity Score**按钮会针对当前cluster和饼图显示的cluster进行相似性打分（上面的例子应该是针对cluster1_1 vs cluster2_1和cluster2_2进行相似性打分）。
-  
-> 相似性得分越高越相似
+
+  - ID：同**cluster table**ID
+  - Match Rate：在考虑容错率的条件下，两个谱图匹配的峰比例（匹配的峰 / 两处理后的谱图峰数目的最大值）
+  - Similarity Score：相似性得分，**相似性得分越高越相似**。
+  - Detail：点击**Show**按钮显示每次迭代结果的报告
+
+    - 筛选掉的数据具有一定的透明度，实际用于计算的数据不透明
+
+  - 点击**View Visualization Result**按钮将会给出比对的可视化结果——最优相似性分数对应的数据处理结果
+
+![  image/similarity-score-clustering](image/similarity-score-clustering.png)
+
+### network graph
+
+以**cluster table**中指定的cluster为起点，搜索其相关的spectrum的分布，根据搜索结果的内在联系做出**network graph**
+
+![image/network-graph](image\network-graph.png)
+
+举一个例子说明**network graph**的含义（依旧使用上面给出的sample1.clustering和sample2.clustering）：
+
+![network-graph-example](network-graph-example.png)
+
+cluster1_1中的谱图分散在cluster2_1和clustering2_2中，但是cluster2_1中还包含了不在cluster1_1中的谱图{spec5, spec7, spec8, spec9}这部分谱图被聚到了cluster1_2中，而cluster1_2中的spec10实在cluster2_3中，在**network graph**中为了表示这种关系，使用节点存储cluster，使用边连接存在重叠谱图的节点，节点的纵向宽度代表了该类簇包含的谱图数量，边的纵向宽度代表了两类簇共同拥有的谱图的数量。
+
+支持操作：
+- 点击节点，显示cluster信息
+- 点击边，显示两个cluster的比对情况

@@ -178,7 +178,8 @@ public class ClusterApplication extends Application {
 				}
 
 				// set pane
-				MgfInfoDisplayPane mgfInfoDisplayPane = new MgfInfoDisplayPane(msList1, msList2, 8);
+				MgfInfoDisplayPane mgfInfoDisplayPane = new MgfInfoDisplayPane(
+						mgfFileI.getName(), mgfFileII.getName(), msList1, msList2, 8);
 				GridPane pane = mgfInfoDisplayPane.getMgfInfoDisplayPane();
 				double screenHeight = screenBounds.getHeight();
 				double screenWidth = screenBounds.getWidth();
