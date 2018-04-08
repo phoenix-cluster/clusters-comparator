@@ -4,14 +4,10 @@ import cn.edu.cqupt.graph.UndirectedGraph;
 import cn.edu.cqupt.model.Cluster;
 import cn.edu.cqupt.model.Edge;
 import cn.edu.cqupt.model.Vertex;
-import cn.edu.cqupt.view.ClusterSelection;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.google.gson.reflect.TypeToken;
 
 import java.io.File;
-import java.lang.reflect.Type;
-import java.util.HashMap;
 
 public class NetworkGraphServiceTest {
     public static void main(String[] args) {

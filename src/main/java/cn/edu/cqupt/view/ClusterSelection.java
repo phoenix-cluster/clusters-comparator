@@ -1,12 +1,19 @@
 package cn.edu.cqupt.view;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import cn.edu.cqupt.graph.UndirectedGraph;
 import cn.edu.cqupt.model.Cluster;
+import cn.edu.cqupt.model.Edge;
 import cn.edu.cqupt.model.Page;
+import cn.edu.cqupt.model.Vertex;
+import cn.edu.cqupt.score.calculate.MS;
+import cn.edu.cqupt.score.view.SimilarityScoreTabPane;
 import cn.edu.cqupt.service.ClusterTableService;
+import cn.edu.cqupt.service.NetworkGraphService;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
@@ -16,25 +23,17 @@ import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.geometry.Rectangle2D;
 import javafx.scene.Node;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.Pagination;
-import javafx.scene.control.ScrollPane;
-import javafx.scene.control.SelectionMode;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.Scene;
+import javafx.scene.chart.PieChart;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.ColumnConstraints;
-import javafx.scene.layout.GridPane;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.StackPane;
+import javafx.scene.layout.*;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontPosture;
 import javafx.scene.text.FontWeight;
 import javafx.stage.Screen;
+import javafx.stage.Stage;
 import javafx.util.Callback;
 
 public class ClusterSelection {
@@ -97,41 +96,6 @@ public class ClusterSelection {
 		gridPane.add(bottomPane, 0, 1, 2, 1);
 		// gridPane.setGridLinesVisible(true);
 		bottomPane.setGridLinesVisible(true);
-
-		// add zoom function for charts
-		// Scale peakMapPaneScale = new Scale();
-		// peakMapPaneScale.pivotYProperty().bind(peakMapStackPane.heightProperty());
-		// peakMapStackPane.getTransforms().add(peakMapPaneScale);
-		// peakMapStackPane.hoverProperty().addListener((observable, oldVal, newVal) ->
-		// {
-		// peakMapStackPane.setStyle("-fx-background-color: rgb(255, 255, 255, 1)");
-		// double scaleFactor = newVal ? 1.5 : 1;
-		// peakMapPaneScale.setX(scaleFactor);
-		// peakMapPaneScale.setY(scaleFactor);
-		// });
-		// Scale pieChartPaneScale = new Scale();
-		// pieChartPaneScale.pivotYProperty().bind(pieChartStackPane.heightProperty());
-		// pieChartStackPane.getTransforms().add(pieChartPaneScale);
-		// pieChartStackPane.hoverProperty().addListener((obserable, oldVal, newVal) ->
-		// {
-		// pieChartStackPane.setStyle("-fx-background-color: rgb(255, 255, 255, 1)");
-		// double scaleFactor = newVal ? 1.5 : 1;
-		// pieChartPaneScale.setX(scaleFactor);
-		// pieChartPaneScale.setY(scaleFactor);
-		// });
-		// Scale overlapClusterPaneScale = new Scale();
-		// overlapClusterPaneScale.pivotXProperty().bind(networkGraphStackPane.widthProperty());
-		// overlapClusterPaneScale.pivotYProperty().bind(networkGraphStackPane.heightProperty());
-		// networkGraphStackPane.getTransforms().add(overlapClusterPaneScale);
-		// networkGraphStackPane.hoverProperty().addListener((observable, oldVal,
-		// newVal) -> {
-		// networkGraphStackPane.setStyle("-fx-background-color: rgb(255, 255, 255,
-		// 1)");
-		// double scaleFactor = newVal ? 1.5 : 1;
-		// overlapClusterPaneScale.setX(scaleFactor);
-		// overlapClusterPaneScale.setY(scaleFactor);
-		// });
-
 	}
 
 	/**
@@ -188,15 +152,50 @@ public class ClusterSelection {
 					// create peak map
 					PeakMap peakMap = new PeakMap(currentCluster.getMzValues(), currentCluster.getIntensValues());
 
-					// create pie chart
-					ComparerPieChart comparerPieChart = new ComparerPieChart(ClusterApplication.releaseIName,
-							ClusterApplication.releaseIIName, currentCluster,
-							ClusterApplication.serviceReleaseII.getAllClusters());
+					// get networkGraphservice to create pie chart and network graph
+					NetworkGraphService networtGraphService = null;
+					try {
+						networtGraphService = new NetworkGraphService(
+                                currentCluster, ClusterApplication.releaseIName, ClusterApplication.releaseIIName,
+                                ClusterApplication.serviceReleaseI.getAllClusters(),
+                                ClusterApplication.serviceReleaseII.getAllClusters());
+					} catch (CloneNotSupportedException e) {
+						e.printStackTrace();
+					}
 
-					// create overlap cluster map
-					NetworkGraph networkGraph = new NetworkGraph(currentCluster, ClusterApplication.releaseIName,
-							ClusterApplication.releaseIIName, ClusterApplication.serviceReleaseI.getAllClusters(),
-							ClusterApplication.serviceReleaseII.getAllClusters());
+					/** pie chart pane: pie chart and do similarity score button **/
+					VBox comparerPieChartPane = new VBox();
+					UndirectedGraph<Vertex, Edge> undirectedGraph = networtGraphService.getUndirectedGraph();
+					Vertex focusVertex = networtGraphService.getFocusVertex();
+					PieChart comparerPieChart = new ComparerPieChart().createComparerPieChart(
+							undirectedGraph, focusVertex );
+
+					// create similarity score button and set event
+					Button simiScoreBtn = new Button("Do Similarity Score");
+					simiScoreBtn.setOnAction(event -> {
+
+						// create similarity score tab pane
+						List<Cluster> adjacencyClusterList = new ArrayList<>();
+						for(Vertex vertex: undirectedGraph.getAdjacencyVertices(focusVertex)){
+							adjacencyClusterList.add(vertex.getCluster());
+						}
+						MS currentMS = MS.clustering2MS(currentCluster);
+						ArrayList<MS> msList = new ArrayList<>(MS.clustering2MS(adjacencyClusterList));
+						TabPane simiScoreTabPane = SimilarityScoreTabPane.create(currentMS, msList, 0.5, 10);
+
+						// open new stage
+						Stage stage = new Stage();
+						Scene scene = new Scene(simiScoreTabPane);
+						stage.setScene(scene);
+						stage.show();
+					});
+					comparerPieChartPane.getChildren().addAll(simiScoreBtn, comparerPieChart);
+					comparerPieChartPane.setSpacing(10);
+
+
+					// network graph
+					GridPane networkGraphPane = new NetworkGraph().create(networtGraphService);
+
 
 					// add builds into pane
 					StackPane trashCans = new StackPane();
@@ -208,8 +207,8 @@ public class ClusterSelection {
 
 					spectrumStackPane.getChildren().add(spectrumTable.getSpectrumTable());
 					peakMapStackPane.getChildren().add(peakMap.getVbox());
-					pieChartStackPane.getChildren().add(comparerPieChart.getComparerPieChart());
-					networkGraphStackPane.getChildren().add(networkGraph.getNetworkGraphPane());
+					pieChartStackPane.getChildren().add(comparerPieChartPane);
+					networkGraphStackPane.getChildren().add(networkGraphPane);
 				}
 
 			}
@@ -242,13 +241,6 @@ public class ClusterSelection {
 			@Override
 			public Node call(Integer pageIndex) {
 				Page<Cluster> currentPageClusters = clusterTableService.getCurrentPageClusters(pageIndex + 1, pageSize);
-
-				// System.out.println("pageIndex:" + (pageIndex + 1));
-				// System.out.println("getPageSize: " + currentPageClusters.getPageSize());
-				// System.out.println("getTotalRecord: " +
-				// currentPageClusters.getTotalRecord());
-				// System.out.println("getTotalPage: " + currentPageClusters.getTotalPage());
-
 				clusterTable.setItems(FXCollections.observableList(currentPageClusters.getDataList()));
 				return clusterTable;
 			}

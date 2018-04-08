@@ -1,16 +1,7 @@
 package cn.edu.cqupt.view;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-
 import cn.edu.cqupt.util.ColorUtil;
 import cn.edu.cqupt.util.ZoomManager;
-import javafx.application.Application;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
-import javafx.scene.Scene;
 import javafx.scene.chart.LineChart;
 import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
@@ -20,8 +11,10 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
-import javafx.stage.Stage;
-import umontreal.iro.lecuyer.util.Num;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
 public class PeakMap {
 	private ComboBox<String> comboBox;

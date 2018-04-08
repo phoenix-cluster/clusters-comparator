@@ -109,17 +109,6 @@ public class MS implements Cloneable {
         return ms;
     }
 
-    public static MS clustering2MS(Cluster cluster){
-        String title = cluster.getId();
-        ArrayList<Peak> peakList = new ArrayList<>();
-        for(int i = 0; i < cluster.getMzValues().size(); i ++){
-            Peak peak = new Peak(cluster.getMzValues().get(i), cluster.getIntensValues().get(i));
-            peakList.add(peak);
-        }
-        MS ms = new MS(title, peakList);
-        return ms;
-    }
-
     public List<Double> getMzList(){
         List<Double> mzList = new ArrayList<>();
         for(Peak peak : peakList){
@@ -136,30 +125,22 @@ public class MS implements Cloneable {
         return intensityList;
     }
 
-//    public static void main(String[] args) {
-//        String title = "spec1";
-//        ArrayList<Peak> peakList = new ArrayList<>();
-//        peakList.add(new Peak(1.0f, 3.0f));
-//        peakList.add(new Peak(1.0f, 4.0f));
-//        peakList.add(new Peak(2.0f, 5.0f));
-//        peakList.add(new Peak(4.0f, 8.0f));
-//
-//        MS ms = new MS(title, peakList);
-//        System.out.println(ms.getPeakListAscMz());
-//        System.out.println(ms.getPeakListDescMz());
-//        System.out.println(ms.getPeakListAscIntensity());
-//        System.out.println(ms.getPeakListDescIntensity());
-//        ms.getPeakListAscMz();
-//        System.out.println("ascMz->" + peakList.get(0));
-//        ms.getPeakListDescIntensity();
-//        System.out.println("ascMz->" + peakList.get(0));
-//
-//
-//        System.out.println("**clone**");
-//        MS msClone = ms.clone();
-//        System.out.println(ms == msClone);
-//        System.out.println(ms.hashCode() + " " + msClone.hashCode() + "->" + (ms == msClone));
-//        System.out.println(ms.getTitle().hashCode() + " " + msClone.getTitle().hashCode() + "->" + (ms.getTitle() == msClone.getTitle()));
-//        System.out.println(ms.getPeakList().hashCode() + " " + msClone.getPeakList().hashCode() + "->" + (ms.getPeakList() == msClone.getPeakList()));
-//    }
+    public static MS clustering2MS(Cluster cluster){
+        String title = cluster.getId();
+        ArrayList<Peak> peakList = new ArrayList<>();
+        for(int i = 0; i < cluster.getMzValues().size(); i ++){
+            Peak peak = new Peak(cluster.getMzValues().get(i), cluster.getIntensValues().get(i));
+            peakList.add(peak);
+        }
+        MS ms = new MS(title, peakList);
+        return ms;
+    }
+
+    public static List<MS> clustering2MS(List<Cluster> clusterList){
+        List<MS> msList = new ArrayList<>();
+        for(Cluster cluster : clusterList){
+            msList.add(clustering2MS(cluster));
+        }
+        return msList;
+    }
 }

@@ -26,6 +26,22 @@ public class NetworkGraphService{
 	private HashMap<String, Vertex> visitedVertices;
 	private  Vertex focusVertex;
 
+	public String getReleaseIName() {
+		return releaseIName;
+	}
+
+	public String getReleaseIIName() {
+		return releaseIIName;
+	}
+
+	public List<Cluster> getReleaseI() {
+		return releaseI;
+	}
+
+	public List<Cluster> getReleaseII() {
+		return releaseII;
+	}
+
 	public Vertex getFocusVertex() {
 		return focusVertex;
 	}
