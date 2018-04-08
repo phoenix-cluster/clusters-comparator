@@ -52,6 +52,7 @@
 
 菜单栏中以此点选`File`->`Import Data`，在弹窗中选择`Get Data From Clustering File`，然后选择需要进行分析的`*.clustering`文件。
 
+
 ![./image/clustering-import](image/clustering-import.png)
 
 ## 2. 查看结果
@@ -62,7 +63,7 @@
 
 **cluster table**和**spectrum table**显示了`*.clustering`的内容
 
-![image/cluster-table](image\cluster-table.png)
+![image/cluster-table](image/cluster-table.png)
 
 支持操作：
 - 点击**switch**按钮显示另一个`*.clustering`的内容
