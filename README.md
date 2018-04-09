@@ -191,3 +191,8 @@ cluster1_1中的谱图分散在cluster2_1和clustering2_2中，但是cluster2_1�
 - 点击节点，显示cluster信息
 - 点击边，显示两个cluster的比对情况
 - 使用调节器调节**network graph**的显示
+
+# 下一个小版本
+
+- [ ] 修改相关代码的组织形式，解耦和
+- [ ] 修改GUI视图
