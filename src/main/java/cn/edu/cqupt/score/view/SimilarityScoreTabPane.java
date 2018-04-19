@@ -19,10 +19,6 @@ public class SimilarityScoreTabPane{
     public static TabPane similarityScoreTabPane = new TabPane();
     public static HashMap<String, Tab> similarityScoreTabs = new HashMap<>();
 
-    public SimilarityScoreTabPane() {
-
-    }
-
     static{
         // initialize tabs
         similarityScoreTabs.put("Similarity Score", new Tab("Similarity Score"));
@@ -31,7 +27,7 @@ public class SimilarityScoreTabPane{
     }
 
 
-    public static TabPane create(MS ms1, ArrayList<MS> msList, double fragmentTolerance, int threshold) {
+    public static void setData(MS ms1, ArrayList<MS> msList, double fragmentTolerance, int threshold) {
 
         // get data from similarity score table service
         SimilarityScoreTableService service = new SimilarityScoreTableService(ms1, msList, fragmentTolerance, threshold);
@@ -58,7 +54,6 @@ public class SimilarityScoreTabPane{
             similarityScoreTabPane.getTabs().add(simiScoreTab);
         }
         similarityScoreTabPane.getSelectionModel().select(simiScoreTab);
-        return similarityScoreTabPane;
     }
 
     private static TableView<SimilarityScoreTableData> createSimilarityScoreTable(SimilarityScoreTableService service) {
@@ -117,6 +112,4 @@ public class SimilarityScoreTabPane{
         });
         return mulPairsSpecReportBtn;
     }
-
-
 }

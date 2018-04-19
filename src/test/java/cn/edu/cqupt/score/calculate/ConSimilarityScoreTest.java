@@ -2,49 +2,40 @@ package cn.edu.cqupt.score.calculate;
 
 import cn.edu.cqupt.model.Cluster;
 import cn.edu.cqupt.service.ClusterTableService;
-import javafx.application.Application;
-import javafx.scene.Scene;
-import javafx.scene.control.ScrollPane;
-import javafx.stage.Stage;
 
 import java.io.File;
+import java.sql.Time;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-/**
- * Created by huangjs on 2018/3/24.
- */
-public class SimilarityScoreTest extends Application {
+public class ConSimilarityScoreTest {
+    public static void main(String[] args) {
 
-    @Override
-    public void start(Stage primaryStage) {
         File clusterFile1 = new File(
                 "D:\\workspace\\coding\\java\\cluster-comparer\\testdata\\clutering\\cli_clustering.pxd000021.0.7_4.clustering");
         File clusterFile2 = new File(
                 "D:\\workspace\\coding\\java\\cluster-comparer\\testdata\\clutering\\hdp_clustering.pxd000021.0.7_4.clustering");
-//        File clusterFile1 = new File("C:\\Users\\huangjs\\Desktop\\compare\\compare_1.clustering");
-//        File clusterFile2 = new File("C:\\Users\\huangjs\\Desktop\\compare\\compare_2.clustering");
         ClusterTableService serviceReleaseI = new ClusterTableService(clusterFile1);
         ClusterTableService serviceReleaseII = new ClusterTableService(clusterFile2);
         List<Cluster> clusterList1 = serviceReleaseI.getAllClusters();
         List<Cluster> clusterList2 = serviceReleaseII.getAllClusters();
 
-        // score
+        // transform clustering to ms
         MS ms1 = MS.clustering2MS(clusterList1.get(0));
         List<MS> msList = new ArrayList<>();
         for(int i = 0; i < 4; i++){
             msList.add(MS.clustering2MS(clusterList2.get(i)));
         }
-        SimilarityScore score = new SimilarityScore(ms1, msList, 0.5);
-        HashMap<MS, Double> result = score.calSimilarityScore();
-        System.out.println("similarity score: " + result);
-        Scene scene = new Scene(new ScrollPane(score.mulPairsSpecReport()), 1000, 600);
-        primaryStage.setScene(scene);
-        primaryStage.show();
-    }
 
-    public static void main(String[] args) {
-        launch(args);
+        // score
+        SimilarityScore score = new SimilarityScore(ms1, msList, 0.5);
+        long time0 = System.currentTimeMillis();
+        score.calSimilarityScore();
+        long time1 = System.currentTimeMillis();
+        score.conCalSimilarityScore();
+        long time2 = System.currentTimeMillis();
+        System.out.println("串行时间：" + (time1 - time0) / 1000 + "s");
+        System.out.println("并行时间：" + (time2 - time1) / 1000 + "s");
     }
 }

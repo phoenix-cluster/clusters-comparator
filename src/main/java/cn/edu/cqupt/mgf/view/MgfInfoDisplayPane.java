@@ -111,9 +111,8 @@ public class MgfInfoDisplayPane {
 
         // similarity score table
         // create similarity score pane
-        mgfInfoDisplayPane.add(
-                SimilarityScoreTabPane.create(msList1.get(0), msList2, fragmentTolerance.doubleValue(), threshold.intValue()),
-                1, 1);
+        SimilarityScoreTabPane.setData(msList1.get(0), msList2, fragmentTolerance.doubleValue(), threshold.intValue());
+        mgfInfoDisplayPane.add(SimilarityScoreTabPane.similarityScoreTabPane, 1, 1);
 
         return mgfInfoDisplayPane;
     }
@@ -153,7 +152,7 @@ public class MgfInfoDisplayPane {
 
                     // update similarity score table
                     // create similarity score pane
-                    SimilarityScoreTabPane.create(currentMS, msList2, fragmentTolerance.doubleValue(), threshold.intValue());
+                    SimilarityScoreTabPane.setData(currentMS, msList2, fragmentTolerance.doubleValue(), threshold.intValue());
 
                     // create peak map
                     mgfInfoDisplayPane.add(createPeakMap(currentMS), 0, 2, 2, 1);
