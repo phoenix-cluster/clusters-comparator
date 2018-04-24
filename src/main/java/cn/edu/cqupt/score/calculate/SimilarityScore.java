@@ -3,6 +3,7 @@ package cn.edu.cqupt.score.calculate;
 import cn.edu.cqupt.util.MathUtil;
 import cn.edu.cqupt.view.PeakMap;
 import javafx.geometry.HPos;
+import javafx.geometry.Pos;
 import javafx.geometry.VPos;
 import javafx.scene.chart.XYChart;
 import javafx.scene.control.Label;
@@ -13,10 +14,8 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
+import java.util.concurrent.CountDownLatch;
 import java.util.stream.IntStream;
 
 /**
@@ -183,28 +182,31 @@ public class SimilarityScore {
         maxSimilarityScore = new HashMap<>();
         maxSimilarityScoreIndex = new HashMap<>();
         for (MS ms2 : msList) {
+            System.out.println(processedPeaks1.size());
 
             // the result of a similarity score(subscripts represent the number of cycles)
-            ArrayList<ArrayList<Peak>> tmpProcessedPeaks2 = new ArrayList<>();
-            ArrayList<HashMap<Peak, Peak>> tmpAllMatchedPeaks = new ArrayList<>();
-            ArrayList<Double> tmpSimilarityScore = new ArrayList<>();
+            ArrayList<ArrayList<Peak>> tmpProcessedPeaks2 = new ArrayList<>(cycleTimes);
+            ArrayList<HashMap<Peak, Peak>> tmpAllMatchedPeaks = new ArrayList<>(cycleTimes);
+            ArrayList<Double> tmpSimilarityScore = new ArrayList<>(cycleTimes);
             double tmpMaxSimilarityScore = Double.NEGATIVE_INFINITY;
             int tmpMaxSimilarityScoreIndex = -1;
 
+            CountDownLatch countDownLatch = new CountDownLatch(cycleTimes);
             for (int j = 0; j < cycleTimes; j++) {
-                int i = j;
+                final int i = j;
                 new Thread(() -> {
+
                     // split and filter spectrum
                     if (processedPeaks1.size() <= cycleTimes) {
                         ArrayList<Peak> sfPeakList1 = splitAndFilter(ms1, i + 1);
-                        processedPeaks1.add(sfPeakList1);
+                        processedPeaks1.add(i, sfPeakList1);
                     }
                     ArrayList<Peak> sfPeakList2 = splitAndFilter(ms2, i + 1);
-                    tmpProcessedPeaks2.add(sfPeakList2);
+                    tmpProcessedPeaks2.add(i, sfPeakList2);
 
                     // match: peak1(from ms1) => peak2(from ms2)
                     HashMap<Peak, Peak> matchedPeaks = searchMatchedPeaks(processedPeaks1.get(i), sfPeakList2);
-                    tmpAllMatchedPeaks.add(matchedPeaks);
+                    tmpAllMatchedPeaks.add(i, matchedPeaks);
 
                     // calculate probability-based score
                     int n = processedPeaks1.get(i).size() > sfPeakList2.size() ? processedPeaks1.get(i).size() : sfPeakList2.size();
@@ -218,7 +220,8 @@ public class SimilarityScore {
                     // calculate a similarity score when retaining i high intensity peaks
                     double currSimilarityScore = -10 * MathUtil.log(probabilityScore, 10) * intensityScore;
                     currSimilarityScore = currSimilarityScore == 0.0 ? 0.0 : currSimilarityScore;
-                    tmpSimilarityScore.add(currSimilarityScore);
+                    tmpSimilarityScore.add(i, currSimilarityScore);
+                    countDownLatch.countDown();
                 }).start();
 
                 // record the maximum similarity score
@@ -226,6 +229,11 @@ public class SimilarityScore {
 //                    tmpMaxSimilarityScore = currSimilarityScore;
 //                    tmpMaxSimilarityScoreIndex = i;
 //                }
+            }
+            try {
+                countDownLatch.await();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
             }
             processedPeaks2.put(ms2, tmpProcessedPeaks2);
             allMatchedPeaks.put(ms2, tmpAllMatchedPeaks);
@@ -423,37 +431,49 @@ public class SimilarityScore {
         report.setVgap(10);
 
         // header
-        Label headerTitle = new Label("Report");
+        Label headerTitle = new Label(ms1.getTitle() + "\n"
+        + "vs\n"
+        + ms2.getTitle());
         headerTitle.setFont(Font.font("Arial", FontWeight.BOLD, 18));
         report.add(headerTitle, 0, 0, 3, 1);
         GridPane.setHalignment(headerTitle, HPos.CENTER);
 
         // body: peak map and remark
+        CountDownLatch latch = new CountDownLatch(cycleTimes); // do concurrency
         int[] descOrderIndex = getDescOrderIndex(similarityScoreList);
         for (int i = 0, row = 1; i < cycleTimes; i++, row += 2) {
+            final int id = i;
+            final int rowNum = row;
 
-            // sequence number field
-            Label indexLabel = new Label((i + 1) + "");
-            GridPane.setValignment(indexLabel, VPos.CENTER);
+            new Thread(() -> {
 
-            // chart
-            int index = descOrderIndex[i];
-            XYChart<Number, Number> peakMap = chart(ms1, ms2, processedPeaksList1.get(index), processedPeaksList2.get(index));
-            GridPane.setValignment(peakMap, VPos.CENTER);
+                // sequence number field
+                Label indexLabel = new Label((id + 1) + "");
 
-            // remark
-            TextArea remarkTextArea = new TextArea(remark(index, processedPeaksList1, processedPeaksList2,
-                    allMatchedPeaks.get(ms2), similarityScore.get(ms2)));
-            GridPane.setValignment(remarkTextArea, VPos.CENTER);
-            remarkTextArea.setEditable(false);
-            remarkTextArea.setPrefHeight(70);
-            remarkTextArea.setMaxHeight(70);
-            remarkTextArea.setMinHeight(70);
+                // chart
+                int index = descOrderIndex[id];
+                XYChart<Number, Number> peakMap = chart(ms1, ms2, processedPeaksList1.get(index), processedPeaksList2.get(index));
 
-            // organize components
-            report.add(indexLabel, 0, row, 1, 2);
-            report.add(peakMap, 1, row);
-            report.add(remarkTextArea, 1, row + 1);
+                // remark
+                TextArea remarkTextArea = new TextArea(remark(index, processedPeaksList1, processedPeaksList2,
+                        allMatchedPeaks.get(ms2), similarityScore.get(ms2)));
+                remarkTextArea.setEditable(false);
+                remarkTextArea.setPrefHeight(70);
+                remarkTextArea.setMaxHeight(70);
+                remarkTextArea.setMinHeight(70);
+
+                // organize components
+                report.add(indexLabel, 0, rowNum, 1, 2);
+                report.add(peakMap, 1, rowNum);
+                report.add(remarkTextArea, 1, rowNum + 1);
+                report.setAlignment(Pos.CENTER);
+                latch.countDown();
+            }).start();
+        }
+        try {
+            latch.await();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
         return report;
     }

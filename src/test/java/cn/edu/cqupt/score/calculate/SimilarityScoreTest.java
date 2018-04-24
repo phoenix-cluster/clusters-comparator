@@ -20,9 +20,9 @@ public class SimilarityScoreTest extends Application {
     @Override
     public void start(Stage primaryStage) {
         File clusterFile1 = new File(
-                "D:\\workspace\\coding\\java\\cluster-comparer\\testdata\\clutering\\cli_clustering.pxd000021.0.7_4.clustering");
+                "D:\\@project\\program\\coding\\java\\cluster-comparer\\testdata\\clutering\\cli_clustering.pxd000021.0.7_4.clustering");
         File clusterFile2 = new File(
-                "D:\\workspace\\coding\\java\\cluster-comparer\\testdata\\clutering\\hdp_clustering.pxd000021.0.7_4.clustering");
+                "D:\\@project\\program\\coding\\java\\cluster-comparer\\testdata\\clutering\\hdp_clustering.pxd000021.0.7_4.clustering");
 //        File clusterFile1 = new File("C:\\Users\\huangjs\\Desktop\\compare\\compare_1.clustering");
 //        File clusterFile2 = new File("C:\\Users\\huangjs\\Desktop\\compare\\compare_2.clustering");
         ClusterTableService serviceReleaseI = new ClusterTableService(clusterFile1);

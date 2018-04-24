@@ -109,26 +109,26 @@ public class MS implements Cloneable {
         return ms;
     }
 
-    public List<Double> getMzList(){
+    public List<Double> getMzList() {
         List<Double> mzList = new ArrayList<>();
-        for(Peak peak : peakList){
+        for (Peak peak : peakList) {
             mzList.add(peak.getMz());
         }
         return mzList;
     }
 
-    public List<Double> getIntensityList(){
+    public List<Double> getIntensityList() {
         List<Double> intensityList = new ArrayList<>();
-        for(Peak peak : peakList){
+        for (Peak peak : peakList) {
             intensityList.add(peak.getIntensity());
         }
         return intensityList;
     }
 
-    public static MS clustering2MS(Cluster cluster){
+    public static MS clustering2MS(Cluster cluster) {
         String title = cluster.getId();
         ArrayList<Peak> peakList = new ArrayList<>();
-        for(int i = 0; i < cluster.getMzValues().size(); i ++){
+        for (int i = 0; i < cluster.getMzValues().size(); i++) {
             Peak peak = new Peak(cluster.getMzValues().get(i), cluster.getIntensValues().get(i));
             peakList.add(peak);
         }
@@ -136,9 +136,17 @@ public class MS implements Cloneable {
         return ms;
     }
 
-    public static List<MS> clustering2MS(List<Cluster> clusterList){
+    public static MS[] clustering2MS(Cluster... cluster) {
+        MS[] msArr = new MS[cluster.length];
+        for (int i = 0; i < cluster.length; i++) {
+            msArr[i] = clustering2MS(cluster[i]);
+        }
+        return msArr;
+    }
+
+    public static List<MS> clustering2MS(List<Cluster> clusterList) {
         List<MS> msList = new ArrayList<>();
-        for(Cluster cluster : clusterList){
+        for (Cluster cluster : clusterList) {
             msList.add(clustering2MS(cluster));
         }
         return msList;

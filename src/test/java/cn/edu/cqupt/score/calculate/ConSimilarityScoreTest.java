@@ -13,9 +13,9 @@ public class ConSimilarityScoreTest {
     public static void main(String[] args) {
 
         File clusterFile1 = new File(
-                "D:\\workspace\\coding\\java\\cluster-comparer\\testdata\\clutering\\cli_clustering.pxd000021.0.7_4.clustering");
+                "C:\\Users\\huangjs\\Desktop\\testdata\\clutering\\cli_clustering.pxd000021.0.7_4.clustering");
         File clusterFile2 = new File(
-                "D:\\workspace\\coding\\java\\cluster-comparer\\testdata\\clutering\\hdp_clustering.pxd000021.0.7_4.clustering");
+                "C:\\Users\\huangjs\\Desktop\\testdata\\clutering\\hdp_clustering.pxd000021.0.7_4.clustering");
         ClusterTableService serviceReleaseI = new ClusterTableService(clusterFile1);
         ClusterTableService serviceReleaseII = new ClusterTableService(clusterFile2);
         List<Cluster> clusterList1 = serviceReleaseI.getAllClusters();
@@ -34,8 +34,8 @@ public class ConSimilarityScoreTest {
         score.calSimilarityScore();
         long time1 = System.currentTimeMillis();
         score.conCalSimilarityScore();
-        long time2 = System.currentTimeMillis();
-        System.out.println("串行时间：" + (time1 - time0) / 1000 + "s");
-        System.out.println("并行时间：" + (time2 - time1) / 1000 + "s");
+//        long time2 = System.currentTimeMillis();
+        System.out.println("串行时间：" + (time1 - time0) + "ms");
+//        System.out.println("并行时间：" + (time2 - time1) + "ms");
     }
 }

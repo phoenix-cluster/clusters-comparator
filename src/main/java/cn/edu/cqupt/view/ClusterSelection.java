@@ -143,8 +143,6 @@ public class ClusterSelection {
                     // current cluster
                     Cluster currentCluster = clusterTable.getItems().get(row);
 
-                    System.out.println("currentCluster.getSpectra():\n" + currentCluster.getSpectra());
-
                     // create spectrum table
                     SpectrumTable spectrumTable = new SpectrumTable(currentCluster.getSpectra());
 
@@ -185,7 +183,7 @@ public class ClusterSelection {
 
                         // open new stage
                         Stage stage = new Stage();
-                        Scene scene = new Scene(new StackPane(SimilarityScoreTabPane.similarityScoreTabPane));
+                        Scene scene = new Scene(new StackPane(SimilarityScoreTabPane.similarityScoreTabPane), 800, 500);
                         stage.setScene(scene);
                         stage.show();
                     });
@@ -330,7 +328,6 @@ public class ClusterSelection {
                     Matcher match = pattern.matcher(inputText);
                     if (match.find()) {
                         int currentPageIndex = Integer.parseInt(inputText) - 1;
-                        System.out.println("currentPageIndex: " + currentPageIndex);
                         pagination.setCurrentPageIndex(currentPageIndex);
                     }
                 }
