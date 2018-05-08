@@ -53,7 +53,7 @@ public class MgfFileReader {
             if(Pattern.matches(peakPattern, line)){
                 Matcher matcher = Pattern.compile(peakPattern).matcher(line);
                 matcher.find();
-                Peak peak = new Peak(Double.parseDouble(matcher.group(1)), Double.parseDouble(matcher.group(1)));
+                Peak peak = new Peak(Double.parseDouble(matcher.group(1)), Double.parseDouble(matcher.group(2)));
                 tmpMS.getPeakList().add(peak);
                 continue;
             }
