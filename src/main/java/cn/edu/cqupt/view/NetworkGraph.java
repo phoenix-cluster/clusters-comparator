@@ -1,22 +1,16 @@
 package cn.edu.cqupt.view;
 
-import java.util.List;
-
 import cn.edu.cqupt.graph.UndirectedGraph;
-import cn.edu.cqupt.model.Cluster;
 import cn.edu.cqupt.model.Edge;
 import cn.edu.cqupt.model.Vertex;
-import cn.edu.cqupt.sankey.SankeyDiagram;
+import cn.edu.cqupt.sankey.ClusteringSankeyDiagram;
 import cn.edu.cqupt.service.NetworkGraphService;
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.scene.Group;
 import javafx.scene.control.Button;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.Tab;
-import javafx.scene.input.MouseButton;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
 
@@ -41,7 +35,7 @@ public class NetworkGraph {
         String releaseIIName = networkGraphService.getReleaseIIName();
 
         // obtain sankey diagram
-        SankeyDiagram sankey = new SankeyDiagram(releaseIName, releaseIIName, graph, focusVertex);
+        ClusteringSankeyDiagram sankey = new ClusteringSankeyDiagram(releaseIName, releaseIIName, graph, focusVertex);
         GridPane sankeyontroller = sankey.getController();
         Group sankeyGroup = sankey.getGroup();
 

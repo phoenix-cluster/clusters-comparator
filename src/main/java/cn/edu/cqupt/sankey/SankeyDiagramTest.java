@@ -92,7 +92,7 @@ public class SankeyDiagramTest extends Application {
 		System.out.println("==========================================");
 
 		// sankey diagram
-		SankeyDiagram sankey = new SankeyDiagram(releaseIName, releaseIIName, graph, focusVertex);
+		ClusteringSankeyDiagram sankey = new ClusteringSankeyDiagram(releaseIName, releaseIIName, graph, focusVertex);
 		GridPane controller = sankey.getController();
 		Group group = sankey.getGroup();
 		VBox vbox = new VBox(controller, new ScrollPane(group));

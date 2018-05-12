@@ -1,6 +1,8 @@
 package cn.edu.cqupt.test;
 
+import java.util.Arrays;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -20,5 +22,10 @@ public class TempTest {
            System.out.println(e.doubleValue());
        }
 
+       List<Integer> re = Arrays.asList(new Integer[]{1, 2, 3});
+        System.out.println(re.subList(0, 3));
+
+        // 向上取整
+        System.out.println(Math.ceil((double)-7 / 2 ));
     }
 }

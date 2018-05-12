@@ -171,75 +171,53 @@ public class SimilarityScore {
     }
 
     /**
-     * calculate similarity score in parallel
+     * only calculating similarity score, so other parameters will not be assigned
      * @return maximum similarity score of each alignment
      */
-    public HashMap<MS, Double> conCalSimilarityScore(){
+    public HashMap<MS, Double> onlyCalSimilarityScore(){
         processedPeaks1 = new ArrayList<>();
-        processedPeaks2 = new HashMap<>();
-        allMatchedPeaks = new HashMap<>();
-        similarityScore = new HashMap<>();
         maxSimilarityScore = new HashMap<>();
-        maxSimilarityScoreIndex = new HashMap<>();
         for (MS ms2 : msList) {
-            System.out.println(processedPeaks1.size());
 
             // the result of a similarity score(subscripts represent the number of cycles)
-            ArrayList<ArrayList<Peak>> tmpProcessedPeaks2 = new ArrayList<>(cycleTimes);
-            ArrayList<HashMap<Peak, Peak>> tmpAllMatchedPeaks = new ArrayList<>(cycleTimes);
-            ArrayList<Double> tmpSimilarityScore = new ArrayList<>(cycleTimes);
+            ArrayList<ArrayList<Peak>> tmpProcessedPeaks2 = new ArrayList<>();
+            ArrayList<HashMap<Peak, Peak>> tmpAllMatchedPeaks = new ArrayList<>();
+            ArrayList<Double> tmpSimilarityScore = new ArrayList<>();
             double tmpMaxSimilarityScore = Double.NEGATIVE_INFINITY;
-            int tmpMaxSimilarityScoreIndex = -1;
+            for (int i = 0; i < cycleTimes; i++) {
 
-            CountDownLatch countDownLatch = new CountDownLatch(cycleTimes);
-            for (int j = 0; j < cycleTimes; j++) {
-                final int i = j;
-                new Thread(() -> {
+                // split and filter spectrum
+                if (processedPeaks1.size() <= cycleTimes) {
+                    ArrayList<Peak> sfPeakList1 = splitAndFilter(ms1, i + 1);
+                    processedPeaks1.add(sfPeakList1);
+                }
+                ArrayList<Peak> sfPeakList2 = splitAndFilter(ms2, i + 1);
+                tmpProcessedPeaks2.add(sfPeakList2);
 
-                    // split and filter spectrum
-                    if (processedPeaks1.size() <= cycleTimes) {
-                        ArrayList<Peak> sfPeakList1 = splitAndFilter(ms1, i + 1);
-                        processedPeaks1.add(i, sfPeakList1);
-                    }
-                    ArrayList<Peak> sfPeakList2 = splitAndFilter(ms2, i + 1);
-                    tmpProcessedPeaks2.add(i, sfPeakList2);
+                // match: peak1(from ms1) => peak2(from ms2)
+                HashMap<Peak, Peak> matchedPeaks = searchMatchedPeaks(processedPeaks1.get(i), sfPeakList2);
+                tmpAllMatchedPeaks.add(matchedPeaks);
 
-                    // match: peak1(from ms1) => peak2(from ms2)
-                    HashMap<Peak, Peak> matchedPeaks = searchMatchedPeaks(processedPeaks1.get(i), sfPeakList2);
-                    tmpAllMatchedPeaks.add(i, matchedPeaks);
+                // calculate probability-based score
+                int n = processedPeaks1.get(i).size() > sfPeakList2.size() ? processedPeaks1.get(i).size() : sfPeakList2.size();
+                int k = matchedPeaks.size();
+                double p = (double) (i + 1) / massWindow;
+                double probabilityScore = calProbabilityScore(n, k, p);
 
-                    // calculate probability-based score
-                    int n = processedPeaks1.get(i).size() > sfPeakList2.size() ? processedPeaks1.get(i).size() : sfPeakList2.size();
-                    int k = matchedPeaks.size();
-                    double p = (double) (i + 1) / massWindow;
-                    double probabilityScore = calProbabilityScore(n, k, p);
+                // calculate intensity-based score
+                double intensityScore = calIntensityScore(processedPeaks1.get(i), sfPeakList2, matchedPeaks);
 
-                    // calculate intensity-based score
-                    double intensityScore = calIntensityScore(processedPeaks1.get(i), sfPeakList2, matchedPeaks);
-
-                    // calculate a similarity score when retaining i high intensity peaks
-                    double currSimilarityScore = -10 * MathUtil.log(probabilityScore, 10) * intensityScore;
-                    currSimilarityScore = currSimilarityScore == 0.0 ? 0.0 : currSimilarityScore;
-                    tmpSimilarityScore.add(i, currSimilarityScore);
-                    countDownLatch.countDown();
-                }).start();
+                // calculate a similarity score when retaining i high intensity peaks
+                double currSimilarityScore = -10 * MathUtil.log(probabilityScore, 10) * intensityScore;
+                currSimilarityScore = currSimilarityScore == 0.0 ? 0.0 : currSimilarityScore;
+                tmpSimilarityScore.add(currSimilarityScore);
 
                 // record the maximum similarity score
-//                if (currSimilarityScore > tmpMaxSimilarityScore) {
-//                    tmpMaxSimilarityScore = currSimilarityScore;
-//                    tmpMaxSimilarityScoreIndex = i;
-//                }
+                if (currSimilarityScore > tmpMaxSimilarityScore) {
+                    tmpMaxSimilarityScore = currSimilarityScore;
+                }
             }
-            try {
-                countDownLatch.await();
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-            processedPeaks2.put(ms2, tmpProcessedPeaks2);
-            allMatchedPeaks.put(ms2, tmpAllMatchedPeaks);
-            similarityScore.put(ms2, tmpSimilarityScore);
             maxSimilarityScore.put(ms2, tmpMaxSimilarityScore);
-            maxSimilarityScoreIndex.put(ms2, tmpMaxSimilarityScoreIndex);
         }
         return maxSimilarityScore;
     }
