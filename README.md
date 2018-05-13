@@ -142,7 +142,7 @@ Supported Operation:
 
 The **network graph** shows the cluster specified in **cluster table** is used as the starting point to search the distribution of its related spectra in two `*.clustering` files. This is different from the search way in pie chart. Specially, we can give an example to explain the meaning of **network graph**(we still use `sample1.clustering` and `sample2.clustering` given above).
 
-![network-graph-example](network-graph-example.png)
+![network-graph-example](image/network-graph-example.png)
 
 The spectra in cluster1_1 are scattered in cluster2_1 and clustering_2_2, but the cluster2_1 also contains spectra {spec5, spec7, spec8, spec9} not in cluster1_1. These spectra are clustered into cluster1_2. And spec10 in cluster1_2 is in cluster2_3. In order to express this relationship in the **network graph**, we use the node storage cluster and use edges to connect nodes with overlapping spectra. The vertical width of the nodes represents the number of spectra contained in the cluster, and the vertical width of the edges represents the number of spectra shared by two clusters.
 
@@ -153,7 +153,7 @@ Supported Operation:
 
 # Analysis and Visualization of MGF Files
 
-## 1. 读取数据
+## 1. Data Import
 
 Select `File` > `Import Data` in the menu bar, select `Get Data From MGF File` inthe popup window, and then select and submit the MGF files to be analysis. Because comparison need two object, you need to enter two files.
 

@@ -141,7 +141,7 @@ SPEC	spec11			348.12817	3.0			0.0
 
 **network graph**显示了以**cluster table**中指定的cluster为起点，搜索其相关的spectrum的分布。这和饼图的搜索有所不同，具体我们举一个例子说明**network graph**的含义（依旧使用上面给出的sample1.clustering和sample2.clustering）：
 
-![network-graph-example](network-graph-example.png)
+![network-graph-example](image/network-graph-example.png)
 
 cluster1_1中的谱图分散在cluster2_1和clustering2_2中，但是cluster2_1中还包含了不在cluster1_1中的谱图{spec5, spec7, spec8, spec9}这部分谱图被聚到了cluster1_2中，而cluster1_2中的spec10是在cluster2_3中，在**network graph**中为了表示这种关系，使用节点存储cluster，使用边连接存在重叠谱图的节点，节点的垂直宽度代表了该类簇包含的谱图数量，边的垂直宽度代表了两类簇共同拥有的谱图的数量。
 
