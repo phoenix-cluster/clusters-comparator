@@ -23,10 +23,10 @@ public class GraphCircosTest extends Application {
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		ClusterTableService serviceReleaseI = new ClusterTableService(
-				new File("C:\\Users\\huangjs\\Desktop\\clustering\\cli_clustering.pxd000021.0.7_4.clustering"));
+				new File("D:\\@project\\program\\coding\\java\\clusters-comparator\\testdata\\clutering\\hdp_clustering.pxd000021.0.7_4.clustering"));
 		ClusterTableService serviceReleaseII = new ClusterTableService(
-				new File("C:\\Users\\huangjs\\Desktop\\clustering\\hdp_clustering.pxd000021.0.7_4.clustering"));
-		Cluster currentCluster = serviceReleaseI.getCurrentPageClusters(48, 16).getDataList().get(0);
+				new File("D:\\@project\\program\\coding\\java\\clusters-comparator\\testdata\\clutering\\cli_clustering.pxd000021.0.7_4.clustering"));
+		Cluster currentCluster = serviceReleaseI.getCurrentPageClusters(2, 8).getDataList().get(0);
 		System.out.println("currentCluster id: " + currentCluster.getId());
 		String releaseIName = "cli_clustering.pxd000021.0.7_4.clustering";
 		String releaseIIName = "hdp_clustering.pxd000021.0.7_4.clustering";

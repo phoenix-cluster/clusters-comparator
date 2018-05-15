@@ -168,26 +168,26 @@ public class UndirectedGraph<V, E> {
 		return verticesOfEdge;
 	}
 
-	/**
-	 * @param edge
-	 * @return
-	 */
-	public List<HashMap<V, V>> getAllVerticesOfEdge(E edge) {
-		List<HashMap<V, V>> verticesOfEdge = null;
-		if (getAllEdges().contains(edge)) {
-			verticesOfEdge = new ArrayList<>();
-			for (V vertex1 : unredundantAdjacencyTable.keySet()) {
-				for (V vertex2 : unredundantAdjacencyTable.get(vertex1).keySet()) {
-					if (unredundantAdjacencyTable.get(vertex1).get(vertex2).equals(edge)) {
-						HashMap<V, V> vertices = new HashMap<>();
-						vertices.put(vertex1, vertex2);
-						verticesOfEdge.add(vertices);
-					}
-				}
-			}
-		}
-		return verticesOfEdge;
-	}
+//	/**
+//	 * @param edge
+//	 * @return
+//	 */
+//	public List<HashMap<V, V>> getAllVerticesOfEdge(E edge) {
+//		List<HashMap<V, V>> verticesOfEdge = null;
+//		if (getAllEdges().contains(edge)) {
+//			verticesOfEdge = new ArrayList<>();
+//			for (V vertex1 : unredundantAdjacencyTable.keySet()) {
+//				for (V vertex2 : unredundantAdjacencyTable.get(vertex1).keySet()) {
+//					if (unredundantAdjacencyTable.get(vertex1).get(vertex2).equals(edge)) {
+//						HashMap<V, V> vertices = new HashMap<>();
+//						vertices.put(vertex1, vertex2);
+//						verticesOfEdge.add(vertices);
+//					}
+//				}
+//			}
+//		}
+//		return verticesOfEdge;
+//	}
 
 	/**
 	 * judge whether the vertex is contained

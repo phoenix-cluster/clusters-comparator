@@ -39,13 +39,11 @@ public class UndirectedGraphTest {
 		System.out.println("successd: " + flag);
 
 		System.out.println("*************getVerticesOfEdge*********************");
-		System.out.println(graph.getAllVerticesOfEdge(1000));
-		System.out.println(graph.getAllVerticesOfEdge(10));
 		System.out.println(graph.getFirstVerticesOfEdge(10));
-		
+
 		System.out.println("*************getBfsVerticesOrder*********************");
 		System.out.println(graph.getBfsVerticesOrder("A"));
-		
+
 		System.out.println("*************dfs*********************");
 
 	}

@@ -73,7 +73,7 @@ public class Circos {
 		setBuildsPercentage();
 
 		// set track circle
-		setTrackCircle(350, 350, 600);
+		setTrackCircle(350, 350, 200);
 
 		// set arc
 		setArc();

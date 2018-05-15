@@ -351,8 +351,9 @@ public class SimilarityScore {
         GridPane root = new GridPane();
         root.getColumnConstraints().addAll(noCol, titleCol);
 
-        for(int i = 0, row = 2; i < msList.size(); i++, row += 2){
-            MS ms2 = msList.get(i);
+        MS[] msArr = getKeysDescByMaxSimScoreValues();
+        for(int i = 0, row = 2; i < msArr.length; i++, row += 2){
+            MS ms2 = msArr[i];
 
             // ms2's title
             TextField ms2Title = new TextField(ms2.getTitle());

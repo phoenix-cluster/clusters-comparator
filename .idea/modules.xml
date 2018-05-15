@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/cluster-comparer.iml" filepath="$PROJECT_DIR$/cluster-comparer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/clusters-comparator.iml" filepath="$PROJECT_DIR$/clusters-comparator.iml" />
     </modules>
   </component>
 </project>
