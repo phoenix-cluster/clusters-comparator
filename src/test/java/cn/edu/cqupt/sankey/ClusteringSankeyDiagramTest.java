@@ -21,7 +21,7 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 
-public class SankeyDiagramTest extends Application {
+public class ClusteringSankeyDiagramTest extends Application {
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
