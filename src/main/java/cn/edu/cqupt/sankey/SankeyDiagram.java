@@ -83,7 +83,10 @@ public class SankeyDiagram {
         // return value
         group = new Group();
         controller = new GridPane();
-        firstRunFlag = true;
+
+        // initialize
+        initialize();
+        firstRunFlag = false;
     }
 
     public void initialize() {

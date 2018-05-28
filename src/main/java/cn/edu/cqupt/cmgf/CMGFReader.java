@@ -11,15 +11,27 @@ import java.util.List;
 
 public class CMGFReader {
 
-    public static List<CMGF> readCMGFList(File mgfFile, File clusterLabelsFile) throws IOException {
+    /**
+     * read mgf file and cluster labels of each spectrum, then add them into object CMGF[]
+     * @param mgfFile mgf file path
+     * @param labelsFile1 cluster labels file path using algorithm I
+     * @param labelsFile2 cluster labels file path using algorithm II
+     * @return
+     * @throws IOException
+     */
+    public static CMGF[] readCMGF(File mgfFile, File labelsFile1, File labelsFile2) throws IOException {
+
+        // read mgf file and cluster labels of each spectrum
         List<MS> msList = MgfFileReader.getAllSpectra(mgfFile);
-        String[] clusterLabels = readClusterLabels(clusterLabelsFile);
-//        System.out.println("msList.size = " + msList.size() + "\n" + "labels.size = " + clusterLabels.length);
-        List<CMGF> cmgfList = new ArrayList<>();
+        String[] labels1 = readClusterLabels(labelsFile1);
+        String[] labels2 = readClusterLabels(labelsFile2);
+
+        // add into CMGF object
+        CMGF[] cmgfArr = new CMGF[msList.size()];
         for(int i = 0; i < msList.size(); i++){
-            cmgfList.add(new CMGF(msList.get(i), clusterLabels[i]));
+            cmgfArr[i] = new CMGF(msList.get(i), labels1[i], labels2[i]);
         }
-        return cmgfList;
+        return cmgfArr;
     }
 
     private static String[] readClusterLabels(File clusterLabelsFile) throws IOException {

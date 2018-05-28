@@ -224,7 +224,7 @@ public class SimilarityScore {
 
     private ArrayList<Peak> splitAndFilter(MS ms, int highIntensityPeaksCount) {
         ArrayList<Peak> sfPeakList = new ArrayList<>(); // peaks list after splitting and filtering
-        ArrayList<Peak> peakListAscMz = ms.getPeakListAscMz();
+        List<Peak> peakListAscMz = ms.getPeakListAscMz();
         double limitMz = peakListAscMz.get(0).getMz(); // minimal mz value
         ArrayList<Peak> tmpPeakList = new ArrayList<>(); // peaks list in a window
         for (int i = 0; i < peakListAscMz.size(); i++) {
@@ -492,8 +492,8 @@ public class SimilarityScore {
 
     private XYChart<Number, Number> chart(MS ms1, MS ms2, ArrayList<Peak> currProcessedPeakList1,
                                           ArrayList<Peak> currProcessedPeakList2) {
-        ArrayList<Peak> peakList1 = ms1.getPeakList();
-        ArrayList<Peak> peakList2 = ms2.getPeakList();
+        List<Peak> peakList1 = ms1.getPeakList();
+        List<Peak> peakList2 = ms2.getPeakList();
 
         List<Double> mzValues1 = ms1.getMzList();
         List<Double> intensityValues1 = ms1.getIntensityList();

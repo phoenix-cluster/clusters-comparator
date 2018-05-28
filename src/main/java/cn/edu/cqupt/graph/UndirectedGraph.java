@@ -273,22 +273,19 @@ public class UndirectedGraph<V, E> {
 	}
 
 	public void printAdjacencyTable() {
-		for (V tmpVer : adjacencyTable.keySet()) {
-			System.out.print(tmpVer);
-			for (V adjVer : adjacencyTable.get(tmpVer).keySet()) {
-				System.out.print(" - " + adjVer + ": " + getEdge(tmpVer, adjVer));
-			}
-			System.out.println();
-		}
+		printMessage(adjacencyTable);
 	}
 
 	public void printUnredundantAdjacencyTable() {
-		for (V tmpVer : unredundantAdjacencyTable.keySet()) {
-			System.out.print(tmpVer);
-			for (V adjVer : unredundantAdjacencyTable.get(tmpVer).keySet()) {
-				System.out.print(" - " + adjVer + ": " + getEdge(tmpVer, adjVer));
+		printMessage(unredundantAdjacencyTable);
+	}
+
+	public void printMessage( HashMap<V, HashMap<V, E>>  graph){
+		for (V tmpVer : graph.keySet()) {
+			System.out.println(tmpVer);
+			for (V adjVer : graph.get(tmpVer).keySet()) {
+				System.out.println("\t-> " + adjVer + " ( " + getEdge(tmpVer, adjVer) + ")");
 			}
-			System.out.println();
 		}
 	}
 }

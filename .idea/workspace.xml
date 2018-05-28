@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/cmgf/CMGFReader.java" line="29" />
+    <bookmark url="file://$PROJECT_DIR$/src/test/java/cn/edu/cqupt/cmgf/CMGFGrapyTest.java" line="6" mnemonic="9" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="3688d33e-74c6-415b-a84d-7a54f522cec5" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/sankey/EdgeImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/sankey/SankeyDiagramTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/sankey/VertexImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testdata/cmgf/label1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testdata/cmgf/label2.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/sankey/SankeyDiagram.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/sankey/SankeyDiagram.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/sankey/SankeyDiagramTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/sankey/ClusteringSankeyDiagramTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/sankey/SankeyDiagramTest$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/sankey/SankeyDiagramTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clusters-comparator.iml" beforeDir="false" afterPath="$PROJECT_DIR$/clusters-comparator.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/cmgf/CMGF.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/cmgf/CMGF.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/cmgf/CMGFReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/cmgf/CMGFReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/cmgf/graph/CMGFEdge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/cmgf/graph/CMGFEdge.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/cmgf/graph/CMGFGraphService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/cmgf/graph/CMGFGraphService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/cmgf/graph/CMGFVertex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/cmgf/graph/CMGFVertex.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/cmgf/CMGFGrapyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/cmgf/CMGFGrapyTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,108 +25,187 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/clusters_comparator$CMGFGrapyTest.ic" NAME="CMGFGrapyTest Coverage Results" MODIFIED="1527421119322" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>cn.edu.cqupt.cmgf.*</FILTER>
+    </SUITE>
+  </component>
   <component name="FavoritesManager">
     <favorites_list name="cluster-comparer" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ClusteringSankeyDiagram.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/sankey/ClusteringSankeyDiagram.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="99">
-              <caret line="589" selection-start-line="589" selection-end-line="589" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SankeyDiagram.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/sankey/SankeyDiagram.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="167">
-              <caret line="129" column="55" selection-start-line="129" selection-start-column="55" selection-end-line="129" selection-end-column="55" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Map.java" pinned="false" current-in-tab="false">
-        <entry file="jar://D:/software/Java/jdk1.8.0_161/src.zip!/java/util/Map.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
-              <caret line="835" column="20" selection-start-line="835" selection-start-column="20" selection-end-line="835" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Collectors.java" pinned="false" current-in-tab="false">
-        <entry file="jar://D:/software/Java/jdk1.8.0_161/src.zip!/java/util/stream/Collectors.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-502">
-              <caret line="850" column="31" selection-start-line="850" selection-start-column="31" selection-end-line="850" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UndirectedGraph.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/graph/UndirectedGraph.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="552">
-              <caret line="43" column="29" selection-start-line="43" selection-start-column="22" selection-end-line="43" selection-end-column="29" />
-              <folding>
-                <element signature="e#1108#1109#0" expanded="true" />
-                <element signature="e#1147#1148#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Vertex.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/sankey/Vertex.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SankeyDiagramTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/cn/edu/cqupt/sankey/SankeyDiagramTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="584">
-              <caret line="32" column="28" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="28" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#236#237#0" expanded="true" />
-                <element signature="e#263#264#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="VertexImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/cn/edu/cqupt/sankey/VertexImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="16" column="23" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EdgeImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/cn/edu/cqupt/sankey/EdgeImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="6" column="36" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
-              <folding>
-                <element signature="e#170#171#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.45277777">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="CMGFReader.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/cmgf/CMGFReader.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="24">
+                  <caret line="21" column="25" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="CMGF.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/cmgf/CMGF.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="288">
+                  <caret line="32" selection-start-line="32" selection-end-line="33" selection-end-column="29" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                    <element signature="e#1059#1060#0" expanded="true" />
+                    <element signature="e#1084#1085#0" expanded="true" />
+                    <element signature="e#1116#1117#0" expanded="true" />
+                    <element signature="e#1144#1145#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="MS.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/score/calculate/MS.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="136">
+                  <caret line="30" selection-start-line="30" selection-end-line="30" />
+                  <folding>
+                    <element signature="e#835#836#0" expanded="true" />
+                    <element signature="e#863#864#0" expanded="true" />
+                    <element signature="e#972#973#0" expanded="true" />
+                    <element signature="e#1001#1002#0" expanded="true" />
+                    <element signature="e#1120#1121#0" expanded="true" />
+                    <element signature="e#1151#1152#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Peak.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/score/calculate/Peak.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="136">
+                  <caret line="28" selection-start-line="28" selection-end-line="28" />
+                  <folding>
+                    <element signature="e#1089#1090#0" expanded="true" />
+                    <element signature="e#1114#1115#0" expanded="true" />
+                    <element signature="e#1214#1215#0" expanded="true" />
+                    <element signature="e#1246#1247#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="CMGFGraphService.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/cmgf/graph/CMGFGraphService.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="427">
+                  <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="NetworkGraphService.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/service/NetworkGraphService.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-60">
+                  <caret line="92" column="63" selection-start-line="92" selection-start-column="63" selection-end-line="92" selection-end-column="63" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="UndirectedGraph.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/graph/UndirectedGraph.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="484">
+                  <caret line="284" column="37" selection-start-line="284" selection-start-column="37" selection-end-line="284" selection-end-column="37" />
+                  <folding>
+                    <element signature="e#1108#1109#0" expanded="true" />
+                    <element signature="e#1147#1148#0" expanded="true" />
+                    <element signature="e#7204#7205#0" expanded="true" />
+                    <element signature="e#7219#7220#0" expanded="true" />
+                    <element signature="e#7493#7494#0" expanded="true" />
+                    <element signature="e#7511#7512#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="CMGFEdge.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/cmgf/graph/CMGFEdge.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="648">
+                  <caret line="29" column="48" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="48" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                    <element signature="e#418#419#0" expanded="true" />
+                    <element signature="e#454#455#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="CMGFVertex.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/cmgf/graph/CMGFVertex.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="168">
+                  <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                    <element signature="e#573#574#0" expanded="true" />
+                    <element signature="e#605#606#0" expanded="true" />
+                    <element signature="e#652#653#0" expanded="true" />
+                    <element signature="e#676#677#0" expanded="true" />
+                    <element signature="e#719#720#0" expanded="true" />
+                    <element signature="e#743#744#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="CMGFGrapyTest.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/test/java/cn/edu/cqupt/cmgf/CMGFGrapyTest.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="334">
+                  <caret line="33" column="46" selection-start-line="33" selection-start-column="46" selection-end-line="33" selection-end-column="46" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                    <element signature="e#439#440#0" expanded="true" />
+                    <element signature="e#466#467#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Vertex.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/sankey/Vertex.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="48">
+                  <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="SankeyDiagram.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/sankey/SankeyDiagram.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="392">
+                  <caret line="87" column="21" selection-start-line="87" selection-start-column="21" selection-end-line="87" selection-end-column="21" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -151,10 +234,11 @@
       <find>count</find>
       <find />
       <find>groupingBy</find>
-      <find />
       <find>iden</find>
       <find>startYOfVertex</find>
       <find>startYOfVerticesShape</find>
+      <find>ArrayList</find>
+      <find>sourceVertex</find>
     </findStrings>
     <replaceStrings>
       <replace>id</replace>
@@ -165,12 +249,11 @@
       <replace>verticesShapes</replace>
       <replace>startYOfVertices</replace>
       <replace />
-      <replace />
-      <replace />
       <replace>preVertexEndY</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
@@ -187,35 +270,41 @@
         <option value="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/score/calculate/Explore.java" />
         <option value="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/score/calculate/ConSimilarityScoreTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/score/calculate/SimilarityScoreTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/score/calculate/MS.java" />
         <option value="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/score/view/SimilarityScoreTableTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/score/view/CountDownLatchTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/score/view/SimilarityScoreTabPane.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/score/view/SimilarityScoreTableService.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/view/ClusterSelection.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/mgf/MgfFileReader.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/cmgf/CMGFReader.java" />
-        <option value="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/cmgf/CMGFGrapyTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/test/TempTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/mgf/MGFSimilarityScore.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/cmgf/CMGFGraph.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/cmgf/CMGF.java" />
         <option value="$PROJECT_DIR$/DevelopmentLog.md" />
         <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/sankey/ClusteringSankeyDiagram.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/cmgf/graph/CMGFVertex.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/cmgf/graph/CMGFGraph.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/sankey/Edge.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/sankey/Vertex.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/view/ClusterApplication.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/graph/UndirectedGraph.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/graph/UndirectedGraphTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/test/test/java/cn/edu/cqupt/test/GroupingTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/circos/GraphCircosTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/circos/Circos.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/score/calculate/SimilarityScore.java" />
         <option value="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/sankey/VertexImpl.java" />
         <option value="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/sankey/EdgeImpl.java" />
         <option value="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/sankey/SankeyDiagramTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/cmgf/CMGFGraphService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/cmgf/CMGFReader.java" />
+        <option value="$PROJECT_DIR$/testdata/cmgf/label1" />
+        <option value="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/test/test/java/cn/edu/cqupt/test/GroupingTest.java" />
+        <option value="$PROJECT_DIR$/testdata/cmgf/label2.txt" />
+        <option value="$PROJECT_DIR$/testdata/cmgf/sample.mgf" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/cmgf/graph/CMGFGraph.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/score/calculate/SimilarityScore.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/cmgf/CMGF.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/cmgf/graph/CMGFEdge.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/score/calculate/MS.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/graph/UndirectedGraph.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/cmgf/graph/CMGFVertex.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/cmgf/graph/CMGFGraphService.java" />
+        <option value="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/cmgf/CMGFGrapyTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/sankey/SankeyDiagram.java" />
       </list>
     </option>
@@ -249,18 +338,16 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="46" />
-    <option name="y" value="117" />
-    <option name="width" value="1240" />
-    <option name="height" value="704" />
+    <option name="x" value="71" />
+    <option name="y" value="182" />
+    <option name="width" value="1938" />
+    <option name="height" value="1100" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -301,7 +388,35 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="cqupt" type="462c0819:PsiDirectoryNode" />
+              <item name="cmgf" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="clusters-comparator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="clusters-comparator" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cqupt" type="462c0819:PsiDirectoryNode" />
+              <item name="cmgf" type="462c0819:PsiDirectoryNode" />
               <item name="graph" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="clusters-comparator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="clusters-comparator" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cqupt" type="462c0819:PsiDirectoryNode" />
+              <item name="graph" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="clusters-comparator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="clusters-comparator" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cqupt" type="462c0819:PsiDirectoryNode" />
+              <item name="mgf" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="clusters-comparator" type="b2602c69:ProjectViewProjectNode" />
@@ -357,6 +472,15 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="cqupt" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="clusters-comparator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="clusters-comparator" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cqupt" type="462c0819:PsiDirectoryNode" />
               <item name="view" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -387,24 +511,52 @@
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="cqupt" type="462c0819:PsiDirectoryNode" />
+              <item name="cmgf" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="clusters-comparator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="clusters-comparator" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cqupt" type="462c0819:PsiDirectoryNode" />
               <item name="sankey" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="clusters-comparator" type="b2602c69:ProjectViewProjectNode" />
               <item name="clusters-comparator" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="clusters-comparator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="clusters-comparator" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="clusters-comparator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="clusters-comparator" type="462c0819:PsiDirectoryNode" />
               <item name="testdata" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="clusters-comparator" type="b2602c69:ProjectViewProjectNode" />
               <item name="clusters-comparator" type="462c0819:PsiDirectoryNode" />
               <item name="testdata" type="462c0819:PsiDirectoryNode" />
-              <item name="clutering" type="462c0819:PsiDirectoryNode" />
+              <item name="cmgf" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="clusters-comparator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="clusters-comparator" type="462c0819:PsiDirectoryNode" />
+              <item name="testdata" type="462c0819:PsiDirectoryNode" />
+              <item name="mgf" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -416,13 +568,14 @@
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="cn.edu.cqupt.sankey" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\@project\program\coding\java\clusters-comparator\testdata\cmgf" />
       <recent name="D:\@project\program\coding\java\cluster-comparer\testdata\mgf" />
     </key>
   </component>
@@ -438,9 +591,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.SankeyDiagramTest">
+  <component name="RunManager" selected="Application.CMGFGrapyTest">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+    </configuration>
+    <configuration name="CMGFGrapyTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cn.edu.cqupt.cmgf.CMGFGrapyTest" />
+      <module name="clusters-comparator" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.edu.cqupt.cmgf.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
     </configuration>
     <configuration name="ClusterApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="cn.edu.cqupt.view.ClusterApplication" />
@@ -506,17 +670,6 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="cn.edu.cqupt.sankey.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-    </configuration>
-    <configuration name="UndirectedGraphTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="cn.edu.cqupt.graph.UndirectedGraphTest" />
-      <module name="clusters-comparator" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="cn.edu.cqupt.graph.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -589,12 +742,13 @@
       <item itemvalue="Application.MGFSimilarityScore" />
       <item itemvalue="Application.ClusteringSankeyDiagramTest" />
       <item itemvalue="Application.GroupingTest" />
-      <item itemvalue="Application.UndirectedGraphTest" />
       <item itemvalue="Application.GraphCircosTest" />
       <item itemvalue="Application.SankeyDiagramTest" />
+      <item itemvalue="Application.CMGFGrapyTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.CMGFGrapyTest" />
         <item itemvalue="Application.SankeyDiagramTest" />
         <item itemvalue="Application.ClusteringSankeyDiagramTest" />
         <item itemvalue="Application.GraphCircosTest" />
@@ -631,11 +785,15 @@
       <workItem from="1526370647001" duration="5005000" />
       <workItem from="1526399961755" duration="6296000" />
       <workItem from="1526538856706" duration="8082000" />
+      <workItem from="1526887689316" duration="1014000" />
+      <workItem from="1527331818784" duration="912000" />
+      <workItem from="1527407636022" duration="15862000" />
+      <workItem from="1527483629574" duration="14641000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="107658000" />
+    <option name="totallyTimeSpent" value="140087000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -643,64 +801,66 @@
     <layout>
       <window_info anchor="right" id="Palette" order="2" />
       <window_info anchor="bottom" id="TODO" order="7" />
-      <window_info anchor="bottom" id="Messages" order="3" weight="0.3276316" />
+      <window_info anchor="bottom" id="Messages" order="3" weight="0.3263158" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5013889" side_tool="true" weight="0.11578947" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50208336" side_tool="true" weight="0.46276596" />
       <window_info anchor="right" id="Maven Projects" order="7" weight="0.08919271" />
       <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="12" />
-      <window_info active="true" anchor="bottom" id="Run" order="5" sideWeight="0.49791667" visible="true" weight="0.2744681" />
+      <window_info active="true" anchor="bottom" id="Run" order="5" sideWeight="0.49791667" visible="true" weight="0.2212766" />
       <window_info anchor="bottom" id="Spring" order="1" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49861112" weight="0.44198895" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49791667" weight="0.46276596" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4985119" visible="true" weight="0.20833333" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4985119" weight="0.1953125" />
       <window_info anchor="right" id="Database" order="6" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info id="Favorites" order="5" sideWeight="0.5014881" side_tool="true" weight="0.22152779" />
-      <window_info anchor="bottom" id="Debug" order="6" weight="0.39893618" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="6" weight="0.49078947" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="bottom" id="Message" order="2" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="4" />
+      <window_info anchor="right" id="Coverage" order="9" side_tool="true" visible="true" weight="0.115885414" />
+      <window_info anchor="bottom" id="Message" order="2" />
+      <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="4" weight="0.32978722" />
     </layout>
     <layout-to-restore>
-      <window_info anchor="right" id="Palette" order="2" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
-      <window_info anchor="bottom" id="Run" order="5" sideWeight="0.49791667" visible="true" weight="0.35638297" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4985119" visible="true" weight="0.20833333" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="TODO" order="7" />
-      <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
+      <window_info anchor="right" id="Palette" order="2" />
       <window_info anchor="bottom" id="Spring" order="1" />
+      <window_info id="Image Layers" order="2" />
+      <window_info anchor="bottom" id="Run" order="5" sideWeight="0.49791667" visible="true" weight="0.2744681" />
+      <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
+      <window_info anchor="right" id="Coverage" order="9" side_tool="true" visible="true" weight="0.115885414" />
       <window_info id="UI Designer" order="4" />
-      <window_info anchor="bottom" id="Find" order="4" />
-      <window_info anchor="right" id="Database" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49861112" weight="0.34042552" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5013889" side_tool="true" weight="0.11578947" />
+      <window_info id="Favorites" order="5" sideWeight="0.5014881" side_tool="true" weight="0.22152779" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49791667" weight="0.46276596" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50208336" side_tool="true" weight="0.46276596" />
+      <window_info anchor="bottom" id="Messages" order="3" weight="0.32659575" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="12" />
-      <window_info anchor="bottom" id="Debug" order="6" weight="0.39917126" />
-      <window_info id="Capture Tool" order="6" />
-      <window_info anchor="bottom" id="Message" order="2" />
-      <window_info anchor="bottom" id="Messages" order="3" weight="0.3276316" />
       <window_info anchor="right" id="Maven Projects" order="7" weight="0.08919271" />
-      <window_info id="Favorites" order="5" sideWeight="0.5014881" side_tool="true" weight="0.22152779" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4985119" visible="true" weight="0.1953125" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="bottom" id="Message" order="2" />
+      <window_info anchor="bottom" id="TODO" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="4" weight="0.32978722" />
+      <window_info anchor="bottom" id="Debug" order="6" weight="0.49574468" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -711,102 +871,21 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/cmgf/graph/CMGFGraphService.java</url>
+          <line>49</line>
+          <properties />
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+      </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="4" />
+      <option name="time" value="10" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/java/cn/edu/cqupt/test/TempTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="28" column="51" selection-start-line="28" selection-start-column="51" selection-end-line="28" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/cn/edu/cqupt/mgf/MGFSimilarityScore.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1416">
-          <caret line="59" column="45" selection-start-line="59" selection-start-column="45" selection-end-line="59" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/cn/edu/cqupt/cmgf/CMGFGrapyTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="15" column="39" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/cmgf/graph/CMGFEdge.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/software/jdk1.8_161/src.zip!/java/util/List.java" />
-    <entry file="jar://D:/software/jdk1.8_161/src.zip!/java/lang/Object.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/cmgf/CMGFReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="16" column="112" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="112" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/score/calculate/MS.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/model/MGF.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/cmgf/CMGF.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DevelopmentLog.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="72">
-            <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/cmgf/graph/CMGFVertex.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="6" column="26" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/cmgf/graph/CMGFGraph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="624">
-          <caret line="34" column="17" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/sankey/Edge.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="3" column="15" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://D:/software/jdk1.8_161/javafx-src.zip!/javafx/scene/layout/BorderPane.java" />
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/4.2.4.RELEASE/spring-core-4.2.4.RELEASE.jar!/org/springframework/core/convert/support/ArrayToCollectionConverter.class">
       <provider selected="true" editor-type-id="text-editor">
@@ -848,13 +927,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/cn/edu/cqupt/test/test/java/cn/edu/cqupt/test/GroupingTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="15" column="57" selection-start-line="15" selection-start-column="57" selection-end-line="15" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://D:/software/jdk1.8_161/src.zip!/java/util/stream/Collectors.java" />
     <entry file="jar://D:/software/jdk1.8_161/src.zip!/java/util/function/Function.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/circos/GraphCircosTest.java">
@@ -868,22 +940,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1416">
           <caret line="75" column="34" selection-start-line="75" selection-start-column="34" selection-end-line="75" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/view/NetworkGraph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/graph/GraphTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#2304#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -905,13 +961,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1944">
           <caret line="92" column="96" selection-start-line="92" selection-start-column="96" selection-end-line="92" selection-end-column="96" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/score/calculate/SimilarityScore.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3072">
-          <caret line="20" column="3" lean-forward="true" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
         </state>
       </provider>
     </entry>
@@ -947,9 +996,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="6" column="36" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
-          <folding>
-            <element signature="e#170#171#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -969,59 +1015,230 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/cn/edu/cqupt/sankey/SankeyDiagramTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="584">
+        <state relative-caret-position="720">
           <caret line="32" column="28" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#236#237#0" expanded="true" />
-            <element signature="e#263#264#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/sankey/Vertex.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/graph/UndirectedGraph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="43" column="29" selection-start-line="43" selection-start-column="22" selection-end-line="43" selection-end-column="29" />
-          <folding>
-            <element signature="e#1108#1109#0" expanded="true" />
-            <element signature="e#1147#1148#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="jar://D:/software/Java/jdk1.8.0_161/src.zip!/java/util/stream/Collectors.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-502">
+        <state relative-caret-position="18576">
           <caret line="850" column="31" selection-start-line="850" selection-start-column="31" selection-end-line="850" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="jar://D:/software/Java/jdk1.8.0_161/src.zip!/java/util/Map.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
+        <state relative-caret-position="19416">
           <caret line="835" column="20" selection-start-line="835" selection-start-column="20" selection-end-line="835" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testdata/mgf/sample1.mgf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="14" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/cn/edu/cqupt/test/test/java/cn/edu/cqupt/test/GroupingTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="63" column="22" lean-forward="true" selection-start-line="63" selection-start-column="22" selection-end-line="63" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testdata/cmgf/label2.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="7" selection-start-column="7" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testdata/cmgf/label1.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="7" selection-start-column="7" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/software/Java/jdk1.8.0_161/src.zip!/java/util/List.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="364" column="73" lean-forward="true" selection-start-line="364" selection-start-column="35" selection-end-line="364" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/score/calculate/SimilarityScore.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="495" column="8" lean-forward="true" selection-start-line="495" selection-start-column="8" selection-end-line="495" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/software/Java/jdk1.8.0_161/src.zip!/java/util/function/Function.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="48" column="6" selection-start-line="48" selection-start-column="6" selection-end-line="48" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/cmgf/CMGFReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="21" column="25" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/cmgf/CMGF.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="32" selection-start-line="32" selection-end-line="33" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1059#1060#0" expanded="true" />
+            <element signature="e#1084#1085#0" expanded="true" />
+            <element signature="e#1116#1117#0" expanded="true" />
+            <element signature="e#1144#1145#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/sankey/ClusteringSankeyDiagram.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="589" selection-start-line="589" selection-end-line="589" />
+        <state relative-caret-position="-4440">
+          <caret line="33" column="57" selection-start-line="33" selection-start-column="42" selection-end-line="33" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/view/NetworkGraph.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="37" column="59" selection-start-line="37" selection-start-column="59" selection-end-line="37" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/cmgf/graph/CMGFGraph.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="35" column="15" selection-end-line="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/score/calculate/Peak.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+          <folding>
+            <element signature="e#1089#1090#0" expanded="true" />
+            <element signature="e#1114#1115#0" expanded="true" />
+            <element signature="e#1214#1215#0" expanded="true" />
+            <element signature="e#1246#1247#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/score/calculate/MS.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+          <folding>
+            <element signature="e#835#836#0" expanded="true" />
+            <element signature="e#863#864#0" expanded="true" />
+            <element signature="e#972#973#0" expanded="true" />
+            <element signature="e#1001#1002#0" expanded="true" />
+            <element signature="e#1120#1121#0" expanded="true" />
+            <element signature="e#1151#1152#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/sankey/Vertex.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/cmgf/graph/CMGFVertex.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#573#574#0" expanded="true" />
+            <element signature="e#605#606#0" expanded="true" />
+            <element signature="e#652#653#0" expanded="true" />
+            <element signature="e#676#677#0" expanded="true" />
+            <element signature="e#719#720#0" expanded="true" />
+            <element signature="e#743#744#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/cmgf/graph/CMGFEdge.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="29" column="48" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#418#419#0" expanded="true" />
+            <element signature="e#454#455#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/graph/UndirectedGraph.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="284" column="37" selection-start-line="284" selection-start-column="37" selection-end-line="284" selection-end-column="37" />
+          <folding>
+            <element signature="e#1108#1109#0" expanded="true" />
+            <element signature="e#1147#1148#0" expanded="true" />
+            <element signature="e#7204#7205#0" expanded="true" />
+            <element signature="e#7219#7220#0" expanded="true" />
+            <element signature="e#7493#7494#0" expanded="true" />
+            <element signature="e#7511#7512#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/service/NetworkGraphService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-60">
+          <caret line="92" column="63" selection-start-line="92" selection-start-column="63" selection-end-line="92" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/cn/edu/cqupt/cmgf/CMGFGrapyTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="334">
+          <caret line="33" column="46" selection-start-line="33" selection-start-column="46" selection-end-line="33" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#439#440#0" expanded="true" />
+            <element signature="e#466#467#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/sankey/SankeyDiagram.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="129" column="55" selection-start-line="129" selection-start-column="55" selection-end-line="129" selection-end-column="55" />
+        <state relative-caret-position="392">
+          <caret line="87" column="21" selection-start-line="87" selection-start-column="21" selection-end-line="87" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/cmgf/graph/CMGFGraphService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="427">
+          <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1085,6 +1302,7 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>

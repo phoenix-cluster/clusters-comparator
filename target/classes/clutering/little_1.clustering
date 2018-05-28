@@ -1,0 +1,18 @@
+=Cluster=
+id=cluster1_1
+av_precursor_mz=348.128
+av_precursor_intens=1.0
+consensus_mz=1,2,3
+consensus_intens=1,2,3
+SPEC	spec1			348.12817	3.0			0.0
+SPEC	spec2			348.12817	3.0			0.0
+SPEC	spec3			348.12817	3.0			0.0
+=Cluster=
+id=cluster1_2
+av_precursor_mz=348.128
+av_precursor_intens=1.0
+consensus_mz=1,2,3
+consensus_intens=1,2,3
+SPEC	spec4			348.12817	3.0			0.0
+SPEC	spec5			348.12817	3.0			0.0
+SPEC	spec6			348.12817	3.0			0.0
