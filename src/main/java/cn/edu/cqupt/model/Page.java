@@ -62,6 +62,4 @@ public class Page<T> {
     public void setDataList(List<T> dataList) {
         this.dataList = dataList;
     }
-
-
 }

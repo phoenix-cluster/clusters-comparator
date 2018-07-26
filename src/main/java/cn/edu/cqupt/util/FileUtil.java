@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+import cn.edu.cqupt.clustering.io.ClusteringFileReader;
 import cn.edu.cqupt.model.Cluster;
 import cn.edu.cqupt.model.Spectrum;
 import cn.edu.cqupt.object.ICluster;
@@ -101,7 +102,6 @@ public class FileUtil {
 			allClusters.add(tmpCluster);
 		}
 		return allClusters;
-
 	}
 
 }

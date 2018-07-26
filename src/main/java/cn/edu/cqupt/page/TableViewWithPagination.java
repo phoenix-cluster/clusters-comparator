@@ -90,7 +90,7 @@ public class TableViewWithPagination {
         return controller;
     }
 
-    public static BorderPane getDefaultLayoutPane(Page page, TableView tableView){
+    public static BorderPane createByDefaultLayout(Page page, TableView tableView){
         Pagination pagination = create(page, tableView);
         HBox controller = createContoller(page, tableView, pagination);
         BorderPane pane = new BorderPane();

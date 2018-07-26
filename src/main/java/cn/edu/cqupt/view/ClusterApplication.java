@@ -98,7 +98,7 @@ public class ClusterApplication extends Application {
 //		// // create cluster table and spectrum table
 //		// releaseIName = "compare_5.clustering";
 //		// releaseIIName = "compare_6.clustering";
-//		// ClusterSelection clusterTable = new ClusterSelection(releaseIName,
+//		// ClusterSelectionPane clusterTable = new ClusterSelectionPane(releaseIName,
 //		// serviceReleaseI, pageSize,
 //		// serviceReleaseII.getAllClusters());
 //		//
@@ -146,7 +146,7 @@ public class ClusterApplication extends Application {
 //				// create cluster table and spectrum table
 //				pageSize.set(8);
 //				pageCount.set(serviceReleaseI.getCurrentPageClusters(1, pageSize.get()).getTotalPage());
-//				ClusterSelection clusterTable = new ClusterSelection(releaseIName, serviceReleaseI, pageSize.get(),
+//				ClusterSelectionPane clusterTable = new ClusterSelectionPane(releaseIName, serviceReleaseI, pageSize.get(),
 //						pageCount.get());
 //
 //				// set tab pane
@@ -287,7 +287,7 @@ public class ClusterApplication extends Application {
 		// releaseIIName = tmpName;
 		//
 		// // create cluster table and spectrum table
-		// ClusterSelection clusterTable = new ClusterSelection(releaseIName,
+		// ClusterSelectionPane clusterTable = new ClusterSelectionPane(releaseIName,
 		// serviceReleaseI, pageSize,
 		// serviceReleaseII.getAllClusters());
 		// tabPane.getTabs().get(0).setContent(clusterTable.getGridPane());

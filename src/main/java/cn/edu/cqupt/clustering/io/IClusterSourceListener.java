@@ -1,4 +1,4 @@
-package cn.edu.cqupt.util;
+package cn.edu.cqupt.clustering.io;
 import cn.edu.cqupt.object.ICluster;
 
 /**
