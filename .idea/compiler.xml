@@ -6,12 +6,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="cluster-comparer (1)" />
-        <module name="clusters-comparator" />
+        <module name="cluster-comparer" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="clusters-comparator" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
 </project>
