@@ -16,7 +16,7 @@ public class ClusterTableTest extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         ClusterTable clusterTable = new ClusterTable();
-        File file = new File("C:\\@code\\java\\clusters-comparator\\testdata\\clutering\\cli_clustering.pxd000021.0.7_4.clustering");
+        File file = new File("C:\\@code\\java\\clusters-comparator\\testdata\\clustering\\cli_clustering.pxd000021.0.7_4.clustering");
         List<Cluster> clusterList = ClusteringFileHandler.getAllClusters(file);
         BorderPane clusterTablePane = clusterTable.create(clusterList, 8);
 

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+<head>
+    <meta charset="UTF-8">
+    <title>Peak Map</title>
+    <!--import echarts.js-->
+    <script src="../js/echarts.js"></script>
+</head>
+<body style="height: 100%; margin: 0">
+<div id="container" style="height: 100%"></div>
+<div id="test" style="height: 100%; border:1px solid royalblue"></div>
+
+<script type="text/javascript">
+    var dom = document.getElementById("container");
+    var myChart = echarts.init(dom, null, {renderer: 'svg'});
+    var sourceCluster = {name: 'c1', value: 100};
+    var targetCluster = [{name: 'c1-', value: 90}, {name: 'c2-', value: 80}];
+
+    var option = {
+        title: {
+            text: 'Pie Chart',
+            x: 'center'
+        },
+
+        tooltip: {
+            trigger: 'item',
+            formatter: function (params) {
+                var result;
+                if (params.data.name === "missing data") {
+                    result = '<p style="color:red;">warning: there is missing data!</p>';
+                } else {
+                    var percent = new Number(params.data.value / sourceCluster.value * 100).toFixed(2);
+                    result = '<p>' + sourceCluster.name + ': ' + sourceCluster.value + '</p>' +
+                        '<p>' + targetCluster[params.dataIndex].name + ': ' + targetCluster[params.dataIndex].value + '</p>' +
+                        'overlap: ' + params.data.value + ' [' + percent + '%]</p>';
+                }
+                return result;
+            }
+        },
+        calculable: true,
+        series: [
+            {
+                name: 'Pie Chart',
+                type: 'pie',
+                radius: [30, 110],
+                center: ['50%', '50%'],
+                roseType: 'area',
+                data: [
+                    {value: 10, name: 'c1-'},
+                    {value: 50, name: 'c2-'},
+                    {value: 20, name: 'missing data',}
+                ]
+            }
+        ]
+    };
+    myChart.setOption(option, true);
+
+    myChart.on('click', function (params) {
+
+            // 打印所有图例的状态
+            console.log(params);
+            console.log("======" + params.data.name + "=====");
+            document.getElementById("test").innerHTML = "<h1>" + params.data.name + "</h1>";
+            pieChart.createClusterComparison(params.data.name);
+        }
+    );
+
+    /**update data**/
+    function updateData(focusedCluster, overlapCluster, overlapSpectraCount) {
+        sourceCluster = focusedCluster;
+        targetCluster = overlapCluster;
+        option.series[0].data = overlapSpectraCount;
+        myChart.setOption(option, true);
+    }
+</script>
+</body>
+</html>

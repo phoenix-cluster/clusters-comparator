@@ -2,14 +2,20 @@ package cn.edu.cqupt.main;
 
 import cn.edu.cqupt.clustering.ClusteringFileHandler;
 import cn.edu.cqupt.clustering.view.ClusterTable;
+import cn.edu.cqupt.clustering.view.PieChart;
 import cn.edu.cqupt.clustering.view.SpectrumTable;
+import cn.edu.cqupt.graph.UndirectedGraph;
 import cn.edu.cqupt.model.Cluster;
+import cn.edu.cqupt.model.Edge;
 import cn.edu.cqupt.model.Spectrum;
+import cn.edu.cqupt.model.Vertex;
+import cn.edu.cqupt.service.NetworkGraphService;
 import javafx.beans.value.ObservableValue;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TableView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
+import javafx.scene.web.WebView;
 
 import java.io.File;
 import java.util.List;
@@ -60,29 +66,47 @@ public class ClusterSelection {
 
     /**
      * Note: all tables and charts only are created once and then filled by different data
+     *
      * @return
      * @throws Exception
      */
     public GridPane create() throws Exception {
 
         // make clusteringFileI as the display target
-        List<Cluster> clusterList = ClusteringFileHandler.getAllClusters(clusteringFileI);
+        List<Cluster> releaseIList = ClusteringFileHandler.getAllClusters(clusteringFileI);
+        List<Cluster> releaseIIList = ClusteringFileHandler.getAllClusters(clusteringFileII);
+        String releaseIName = clusteringFileI.getName();
+        String releaseIIName = clusteringFileII.getName();
 
+        /** make a display framework **/
         // cluster table
         ClusterTable clusterTable = new ClusterTable();
-        BorderPane clusterTablePane = clusterTable.create(clusterList, pageSize);
-        clusterSelectionPane.add(clusterTablePane, 0, 0);
+        BorderPane clusterTablePane = clusterTable.create(releaseIList, pageSize);
 
         // spectrum table
         SpectrumTable spectrumTable = new SpectrumTable();
         TableView<Spectrum> spectrumTableView = spectrumTable.createSpectrumTableView(); // create a framework
-        clusterSelectionPane.add(new ScrollPane(spectrumTableView), 1, 0);
+
+        // peak map
+
+        // pie chart
+        PieChart pieChart = new PieChart(releaseIName, releaseIIName);
+        WebView pieChartPane = pieChart.getWebView();
+
+        // network graph
+
+
+        // layout
+        GridPane tableGridPane = new GridPane();
+        tableGridPane.add(clusterTablePane, 0, 0);
+        tableGridPane.add(new ScrollPane(spectrumTableView), 1, 0);
+        clusterSelectionPane.add(tableGridPane, 0, 0, 2, 1);
+        clusterSelectionPane.add(pieChartPane, 1, 1);
 
         // add event to cluster table: focus on the row of the cluster table to display
         // the corresponding table and charts
         clusterTable.getClusterTableView().getFocusModel().focusedIndexProperty().addListener(
                 (ObservableValue<? extends Number> observable, Number oldValue, Number newValue) -> {
-
                     TableView<Cluster> clusterTableView = clusterTable.getClusterTableView();
 
                     // acquire the focused row number
@@ -97,15 +121,32 @@ public class ClusterSelection {
 
                         // peak map
 
+                        // pie chart
+                        NetworkGraphService ngs = null;
+                        try {
+                            ngs = new NetworkGraphService(currentCluster, releaseIName, releaseIIName,
+                                    releaseIList, releaseIIList);
+
+                        UndirectedGraph<Vertex, Edge> graph = ngs.getUndirectedGraph();
+                        Vertex focusVertex = ngs.getFocusVertex();
+
+                        // plot
+                        pieChart.organize(graph, focusVertex);
+
+
                         // network graph
+
+                        } catch (Exception e) {
+
+                        }
 
                     }
                 }
         );
-
+//        clusterTable.getClusterTableView().getFocusModel().focus(0);
         // trigger cluster table view's event to display chars and tables
-        clusterTable.getClusterTableView().getFocusModel().focus(1);
-        clusterTable.getClusterTableView().getFocusModel().focus(0);
+//        clusterTable.getClusterTableView().getFocusModel().focus(1);
+//        clusterTable.getClusterTableView().getFocusModel().focus(0);
 
         return clusterSelectionPane;
     }

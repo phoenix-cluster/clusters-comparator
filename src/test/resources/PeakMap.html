@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ECharts</title>
+    <!-- 引入 echarts.js -->
+    <script src="echarts.js"></script>
+</head>
+<body>
+<!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+<div id="main" style="width: 600px;height:400px;"></div>
+<script type="text/javascript">
+    // 基于准备好的dom，初始化echarts实例
+    var myChart = echarts.init(document.getElementById('main'), null, {renderer: 'svg'});
+
+    // 指定图表的配置项和数据
+    var option = {
+        title: {
+            text: 'Peak Map'
+        },
+        xAxis: {
+            name: 'm/z',
+            scale: true,
+            axisLine: {
+                onZero: false
+            },
+            splitLine: {show: false},
+            min: function (value) {
+                return value.min - 1 >= 0 ? value.min - 1 : 0;
+            },
+            max: function (value) {
+                return value.max + 1;
+            }
+        },
+        yAxis: {
+            splitLine: {
+                show: true
+            }
+        },
+        dataZoom: {
+            type: 'slider',
+            show: true,
+            xAxisIndex: [0]
+        },
+        series: [
+            {
+                name: 'cluster1',
+                type: 'line',
+                showSymbol: false,
+                data: [[1, 0], [1, 100]]
+            },
+            {
+                name: 'cluster1',
+                type: 'line',
+                showSymbol: false,
+                data: [[2, 0], [2, 200]]
+            },
+            {
+                name: 'cluster1',
+                type: 'line',
+                showSymbol: false,
+                data: [[3, 0], [3, 130]]
+            },
+            {
+                name: 'cluster2',
+                type: 'line',
+                showSymbol: false,
+                data: [[1, 0], [1, -100]]
+            },
+            {
+                name: 'cluster2',
+                type: 'line',
+                showSymbol: false,
+                data: [[3, 0], [3, -230]]
+            },
+            {
+                name: 'cluster2',
+                type: 'line',
+                showSymbol: false,
+                data: [[4, 0], [4, -130]]
+            }
+        ]
+    };
+
+    // 使用刚指定的配置项和数据显示图表。
+    myChart.setOption(option);
+</script>
+</body>
+</html>

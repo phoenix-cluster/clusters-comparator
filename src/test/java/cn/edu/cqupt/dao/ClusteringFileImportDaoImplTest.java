@@ -9,7 +9,7 @@ import java.util.List;
 public class ClusteringFileImportDaoImplTest extends TestCase {
 
     public void testGetResult() throws Exception {
-        File clusteringFile = new File("C:\\@code\\java\\clusters-comparator\\testdata\\clutering\\cli_clustering.pxd000021.0.7_4.clustering");
+        File clusteringFile = new File("C:\\@code\\java\\clusters-comparator\\testdata\\clustering\\cli_clustering.pxd000021.0.7_4.clustering");
         List<Cluster> data = new ClusteringFileImportDaoImpl().getResult(clusteringFile);
         data.stream().forEach(
                 System.out::println

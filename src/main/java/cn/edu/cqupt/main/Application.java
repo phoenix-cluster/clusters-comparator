@@ -86,17 +86,26 @@ public class Application extends javafx.application.Application {
 
         MenuItem clusteringMenuItem = new MenuItem("*.clustering");
         clusteringMenuItem.setOnAction(e -> {
-//            ClusteringDataStage dataStage = new ClusteringDataStage();
-//            Stage subStage = new Stage();
-//            Scene scene = new Scene(dataStage.create(subStage));
-//            subStage.setScene(scene);
-//            subStage.showAndWait();
+/*            ClusteringDataStage dataStage = new ClusteringDataStage();
+            Stage subStage = new Stage();
+            Scene scene = new Scene(dataStage.create(subStage));
+            subStage.setScene(scene);
+            subStage.showAndWait();*/
 
             /** analysis and visualization **/
             // cluster selection pane
-//            ClusterSelection clusterSelection = new ClusterSelection(dataStage.getClusteringFileI(), dataStage.getClusteringFileII());
-            ClusterSelection clusterSelection = new ClusterSelection(new File("C:\\@code\\java\\clusters-comparator\\testdata\\clutering\\cli_clustering.pxd000021.0.7_4.clustering"),
-                    new File("C:\\@code\\java\\clusters-comparator\\testdata\\clutering\\hdp_clustering.pxd000021.0.7_4.clustering"));
+
+            /*ClusterSelection clusterSelection = new ClusterSelection(dataStage.getClusteringFileI(), dataStage.getClusteringFileII());*/
+            File file1 = new File("C:\\@code\\java\\clusters-comparator\\testdata\\clustering\\cli_clustering.pxd000021.0.7_4.clustering");
+            File file2 = new File("C:\\@code\\java\\clusters-comparator\\testdata\\clustering\\hdp_clustering.pxd000021.0.7_4.clustering");
+//            //little data
+//            File file1 = new File("C:\\@code\\java\\clusters-comparator\\testdata\\clustering\\compare_5.clustering");
+//            File file2 = new File("C:\\@code\\java\\clusters-comparator\\testdata\\clustering\\compare_6.clustering");
+//            // missing data example
+//            File file1 = new File("C:\\@code\\java\\clusters-comparator\\testdata\\clustering\\compare_7.clustering");
+//            File file2 = new File("C:\\@code\\java\\clusters-comparator\\testdata\\clustering\\compare_8.clustering");
+
+            ClusterSelection clusterSelection = new ClusterSelection(file1, file2);
             GridPane clusterSelectionPane = null;
             try {
                 clusterSelectionPane = clusterSelection.create();

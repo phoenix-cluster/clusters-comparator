@@ -1,6 +1,5 @@
 package cn.edu.cqupt.page;
 
-import cn.edu.cqupt.view.ClusterApplication;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -8,7 +7,6 @@ import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.Border;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 
@@ -23,13 +21,14 @@ public class TableViewWithPagination {
     public static Pagination create(Page page, TableView tableView) {
         Pagination pagination = new Pagination(page.getTotalPage(), 0);
         pagination.setPageFactory(pageIndex -> {
-                tableView.setItems(FXCollections.observableList(page.getCurrentPageDataList(pageIndex)));
-                return tableView;
+            tableView.setItems(FXCollections.observableList(page.getCurrentPageDataList(pageIndex)));
+            tableView.getSelectionModel().select(0);
+            return tableView;
         });
         return pagination;
     }
 
-    public static HBox createContoller(Page page, TableView tableView, Pagination pagination){
+    public static HBox createContoller(Page page, TableView tableView, Pagination pagination) {
 
         // page size controller
         TextField pageSizeTF = new TextField(page.getPageSize() + "");
@@ -90,7 +89,7 @@ public class TableViewWithPagination {
         return controller;
     }
 
-    public static BorderPane createByDefaultLayout(Page page, TableView tableView){
+    public static BorderPane createByDefaultLayout(Page page, TableView tableView) {
         Pagination pagination = create(page, tableView);
         HBox controller = createContoller(page, tableView, pagination);
         BorderPane pane = new BorderPane();
