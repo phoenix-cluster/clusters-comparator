@@ -116,10 +116,6 @@ public class NetworkGraphService{
 							vertex2 = new Vertex(objectReleaseName, tmpCluster, tmpCluster.getSpecCount());
 							visitedVertices.put(tmpCluster.getId(), vertex2);
 						}
-						// Vertex vertex1 = new Vertex(sourceCluster, sourceCluster.getSpecCount(),
-						// !isFirstRelease);
-						// Vertex vertex2 = new Vertex(tmpCluster, tmpCluster.getSpecCount(),
-						// !isFirstRelease);
 						undirectedGraph.addEdge(vertex1, vertex2, new Edge(tmpSpectra1, tmpSpectra1.size()));
 						visitedEdges.add(tmpSpectra1);
 

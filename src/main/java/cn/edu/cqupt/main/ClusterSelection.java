@@ -1,7 +1,8 @@
 package cn.edu.cqupt.main;
 
-import cn.edu.cqupt.clustering.ClusteringFileHandler;
+import cn.edu.cqupt.clustering.io.ClusteringFileHandler;
 import cn.edu.cqupt.clustering.view.ClusterTable;
+import cn.edu.cqupt.clustering.view.NetworkGraph;
 import cn.edu.cqupt.clustering.view.PieChart;
 import cn.edu.cqupt.clustering.view.SpectrumTable;
 import cn.edu.cqupt.graph.UndirectedGraph;
@@ -11,10 +12,10 @@ import cn.edu.cqupt.model.Spectrum;
 import cn.edu.cqupt.model.Vertex;
 import cn.edu.cqupt.service.NetworkGraphService;
 import javafx.beans.value.ObservableValue;
+import javafx.geometry.Pos;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TableView;
-import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.GridPane;
+import javafx.scene.layout.*;
 import javafx.scene.web.WebView;
 
 import java.io.File;
@@ -55,6 +56,7 @@ public class ClusterSelection {
         this.clusteringFileI = clusteringFileI;
         this.clusteringFileII = clusteringFileII;
         this.clusterSelectionPane = new GridPane();
+        setClusterSelectionPane();
     }
 
     public ClusterSelection(File clusteringFileI, File clusteringFileII, int pageSize) {
@@ -62,6 +64,7 @@ public class ClusterSelection {
         this.clusteringFileII = clusteringFileII;
         this.clusterSelectionPane = new GridPane();
         this.pageSize = pageSize;
+        setClusterSelectionPane();
     }
 
     /**
@@ -94,14 +97,16 @@ public class ClusterSelection {
         WebView pieChartPane = pieChart.getWebView();
 
         // network graph
-
+        NetworkGraph netWorkGraph = new NetworkGraph();
+        GridPane networkGraphPane = netWorkGraph.getNetworkGraphPane();
 
         // layout
-        GridPane tableGridPane = new GridPane();
-        tableGridPane.add(clusterTablePane, 0, 0);
-        tableGridPane.add(new ScrollPane(spectrumTableView), 1, 0);
-        clusterSelectionPane.add(tableGridPane, 0, 0, 2, 1);
-        clusterSelectionPane.add(pieChartPane, 1, 1);
+        HBox tablePane = new HBox();
+        tablePane.setAlignment(Pos.CENTER);
+        tablePane.getChildren().addAll(clusterTablePane, new ScrollPane(spectrumTableView));
+        clusterSelectionPane.add(tablePane, 0, 0, 3, 1);
+        clusterSelectionPane.add(new ScrollPane(pieChartPane), 1, 1);
+        clusterSelectionPane.add(new ScrollPane(networkGraphPane), 2, 1);
 
         // add event to cluster table: focus on the row of the cluster table to display
         // the corresponding table and charts
@@ -127,14 +132,16 @@ public class ClusterSelection {
                             ngs = new NetworkGraphService(currentCluster, releaseIName, releaseIIName,
                                     releaseIList, releaseIIList);
 
-                        UndirectedGraph<Vertex, Edge> graph = ngs.getUndirectedGraph();
-                        Vertex focusVertex = ngs.getFocusVertex();
+                            UndirectedGraph<Vertex, Edge> graph = ngs.getUndirectedGraph();
+                            Vertex focusedVertex = ngs.getFocusVertex();
 
-                        // plot
-                        pieChart.organize(graph, focusVertex);
+                            // plot
+                            pieChart.organize(graph, focusedVertex);
 
 
-                        // network graph
+                            // network graph
+                            netWorkGraph.create(releaseIName, releaseIIName,
+                                    graph, focusedVertex);
 
                         } catch (Exception e) {
 
@@ -149,5 +156,21 @@ public class ClusterSelection {
 //        clusterTable.getClusterTableView().getFocusModel().focus(0);
 
         return clusterSelectionPane;
+    }
+
+    private void setClusterSelectionPane() {
+        ColumnConstraints col1 = new ColumnConstraints();
+        col1.setPercentWidth(30);
+        ColumnConstraints col2 = new ColumnConstraints();
+        col2.setPercentWidth(30);
+        ColumnConstraints col3 = new ColumnConstraints();
+        col3.setPercentWidth(40);
+        clusterSelectionPane.getColumnConstraints().addAll(col1, col2, col3);
+
+        RowConstraints row1 = new RowConstraints();
+        row1.setPercentHeight(50);
+        RowConstraints row2 = new RowConstraints();
+        row2.setPercentHeight(50);
+        clusterSelectionPane.getRowConstraints().addAll(row1, row2);
     }
 }

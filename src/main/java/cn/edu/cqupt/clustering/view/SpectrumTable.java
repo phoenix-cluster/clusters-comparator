@@ -1,5 +1,6 @@
 package cn.edu.cqupt.clustering.view;
 
+import cn.edu.cqupt.main.Application;
 import cn.edu.cqupt.model.Cluster;
 import cn.edu.cqupt.model.Spectrum;
 import cn.edu.cqupt.util.ColorUtil;
@@ -96,8 +97,10 @@ public class SpectrumTable {
         spectrumTableView.getColumns().add(speCol);
 
         // set size
-        Rectangle2D bounds = Screen.getPrimary().getBounds();
-        spectrumTableView.setMinSize(bounds.getWidth() * 0.5, bounds.getHeight() * 0.45);
+        double width = Application.SCREEN_BOUNDS.getWidth() * 0.5;
+        spectrumTableView.setMaxWidth(width);
+        spectrumTableView.setMinWidth(width);
+        spectrumTableView.setPrefWidth(width);
 
         // set column resize policy
         spectrumTableView.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);

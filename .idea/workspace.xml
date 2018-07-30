@@ -2,30 +2,167 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dbd4db41-c464-4a98-b49b-0be87eaf2fdd" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/circos/GraphCircosTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/circos/GraphCircosTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/ClusteringFileHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/io/ClusteringFileHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/view/ClusterTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/view/ClusterTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/view/PieChart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/view/PieChart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/view/SpectrumTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/view/SpectrumTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/dao/ClusteringFileImportDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/dao/ClusteringFileImportDaoImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/main/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/main/Application.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/main/ClusterSelection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/main/ClusterSelection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/page/TableViewWithPagination.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/page/TableViewWithPagination.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/service/NetworkGraphServiceTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/html/PeakMap.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/html/PeakMap.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/service/NetworkGraphService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/service/NetworkGraphService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/html/PieChart.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/html/PieChart.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/clustering/view/ClusterTableTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/clustering/view/ClusterTableTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/clustering/view/PeakMapTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/clustering/view/PeakMapTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/dao/ClusteringFileImportDaoImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/dao/ClusteringFileImportDaoImplTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/score/calculate/SimilarityScoreTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/score/calculate/SimilarityScoreTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/circos/GraphCircosTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/circos/GraphCircosTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/service/NetworkGraphServiceTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/cn/edu/cqupt/score/calculate/SimilarityScoreTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/cn/edu/cqupt/score/calculate/SimilarityScoreTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testdata/clutering/cli_clustering.pxd000021.0.7_4.clustering" beforeDir="false" afterPath="$PROJECT_DIR$/testdata/clustering/cli_clustering.pxd000021.0.7_4.clustering" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testdata/clutering/compare_1.clustering" beforeDir="false" afterPath="$PROJECT_DIR$/testdata/clustering/compare_1.clustering" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testdata/clutering/compare_2.clustering" beforeDir="false" afterPath="$PROJECT_DIR$/testdata/clustering/compare_2.clustering" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testdata/clutering/compare_5.clustering" beforeDir="false" afterPath="$PROJECT_DIR$/testdata/clustering/compare_5.clustering" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testdata/clutering/compare_6.clustering" beforeDir="false" afterPath="$PROJECT_DIR$/testdata/clustering/compare_6.clustering" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testdata/clutering/hdp_clustering.pxd000021.0.7_4.clustering" beforeDir="false" afterPath="$PROJECT_DIR$/testdata/clustering/hdp_clustering.pxd000021.0.7_4.clustering" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testdata/clutering/little_1.clustering" beforeDir="false" afterPath="$PROJECT_DIR$/testdata/clustering/little_1.clustering" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testdata/clutering/little_2.clustering" beforeDir="false" afterPath="$PROJECT_DIR$/testdata/clustering/little_2.clustering" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testdata/clutering/sample1.clustering" beforeDir="false" afterPath="$PROJECT_DIR$/testdata/clustering/sample1.clustering" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testdata/clutering/sample2.clustering" beforeDir="false" afterPath="$PROJECT_DIR$/testdata/clustering/sample2.clustering" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/clustering/view/PieChartTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/clustering/view/PieChartTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/service/NetworkGraphServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/service/NetworkGraphServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/circos/ArcTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/circos/Circos.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/circos/CircosTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/circos/GraphCircosTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/cmgf/CMGF.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/cmgf/CMGFReader.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/cmgf/graph/CMGFEdge.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/cmgf/graph/CMGFGraph.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/cmgf/graph/CMGFVertex.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/dao/ClusterDaoFileImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/dao/ClusterDaoRestfulImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/dao/IClusterDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/graph/NetworkGraphData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/graph/UndirectedGraph.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/graph/UndirectedGraphTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/mgf/MgfFileReader.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/mgf/view/MgfInfoDisplayPane$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/mgf/view/MgfInfoDisplayPane.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/model/Cluster.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/model/Direction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/model/Edge.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/model/MGF.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/model/Page.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/model/Spectrum.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/model/Vertex.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/object/ClusteringFileCluster.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/object/ClusteringFileModification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/object/ClusteringFilePSM.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/object/ClusteringFileSpectrumReference$Peak.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/object/ClusteringFileSpectrumReference.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/object/ICluster.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/object/IModification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/object/IPeptideSpectrumMatch.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/object/ISpectrumReference.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/object/PeakMzComparator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/object/SequenceCount.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/page/Page.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/page/TableViewWithPagination$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/page/TableViewWithPagination.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/restful/RestCluster.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/restful/RestSpectrum.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/restful/RestfulClient.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/restful/RestfulGraph.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/sankey/ClusteringSankeyDiagram$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/sankey/ClusteringSankeyDiagram$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/sankey/ClusteringSankeyDiagram$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/sankey/ClusteringSankeyDiagram$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/sankey/ClusteringSankeyDiagram$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/sankey/ClusteringSankeyDiagram$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/sankey/ClusteringSankeyDiagram$7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/sankey/ClusteringSankeyDiagram.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/sankey/Edge.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/sankey/SankeyDiagram.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/sankey/Vertex.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/score/calculate/MS.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/score/calculate/Peak.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/score/calculate/SimilarityScore.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/score/calculate/SimilarityScoreUnit.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/score/view/SimilarityScoreTabPane.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/score/view/SimilarityScoreTableData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/score/view/SimilarityScoreTableService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/service/ClusterTableService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/service/NetworkGraphService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/service/SpectrumComparerService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/util/ColorUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/util/FileUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/util/MathUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/util/ZoomManager$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/util/ZoomManager$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/util/ZoomManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/view/ClusterApplication$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/view/ClusterApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/view/ClusterSelection$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/view/ClusterSelection$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/view/ClusterSelection$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/view/ClusterSelection.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/view/ComparerPieChart$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/view/ComparerPieChart$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/view/ComparerPieChart.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/view/ImportDataStage$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/view/ImportDataStage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/view/NetworkGraph.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/view/PeakMap.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/view/SpectrumTable$1$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/view/SpectrumTable$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/view/SpectrumTable$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/view/SpectrumTable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cluster-comparer-0.0.1-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-cn.edu.cqupt.mgf.MgfFileReaderTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-cn.edu.cqupt.mgf.view.MgfInfoDisplayPaneTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-cn.edu.cqupt.page.PageTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-cn.edu.cqupt.page.TableViewWithPaginationTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-cn.edu.cqupt.score.calculate.SimilarityScoreTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-cn.edu.cqupt.score.view.SimilarityScoreTableTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-cn.edu.cqupt.test.FontFamilyTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-cn.edu.cqupt.test.GsonHashMapTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-cn.edu.cqupt.test.TempTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-cn.edu.cqupt.test.test.java.cn.edu.cqupt.test.FontFamilyTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-cn.edu.cqupt.test.test.java.cn.edu.cqupt.test.GsonHashMapTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-cn.edu.cqupt.view.PeakMapTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/cn.edu.cqupt.mgf.MgfFileReaderTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/cn.edu.cqupt.mgf.view.MgfInfoDisplayPaneTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/cn.edu.cqupt.page.PageTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/cn.edu.cqupt.page.TableViewWithPaginationTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/cn.edu.cqupt.score.calculate.SimilarityScoreTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/cn.edu.cqupt.score.view.SimilarityScoreTableTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/cn.edu.cqupt.test.FontFamilyTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/cn.edu.cqupt.test.GsonHashMapTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/cn.edu.cqupt.test.TempTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/cn.edu.cqupt.test.test.java.cn.edu.cqupt.test.FontFamilyTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/cn.edu.cqupt.test.test.java.cn.edu.cqupt.test.GsonHashMapTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/cn.edu.cqupt.view.PeakMapTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/cn/edu/cqupt/cmgf/CMGFGrapyTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/cn/edu/cqupt/mgf/MGFSimilarityScore.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/cn/edu/cqupt/mgf/MgfFileReaderTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/cn/edu/cqupt/mgf/view/MgfInfoDisplayPaneTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/cn/edu/cqupt/page/PageTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/cn/edu/cqupt/page/People.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/cn/edu/cqupt/page/TableViewWithPaginationTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/cn/edu/cqupt/sankey/ClusteringSankeyDiagramTest$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/cn/edu/cqupt/sankey/ClusteringSankeyDiagramTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/cn/edu/cqupt/sankey/EdgeImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/cn/edu/cqupt/sankey/SankeyDiagramTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/cn/edu/cqupt/sankey/VertexImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/cn/edu/cqupt/score/calculate/Explore.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/cn/edu/cqupt/score/calculate/Item.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/cn/edu/cqupt/score/calculate/SimilarityScoreTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/cn/edu/cqupt/score/view/CountDownLatchTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/cn/edu/cqupt/score/view/SimilarityScoreTableTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/cn/edu/cqupt/test/FontFamilyTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/cn/edu/cqupt/test/GsonHashMapTest$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/cn/edu/cqupt/test/GsonHashMapTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/cn/edu/cqupt/test/People.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/cn/edu/cqupt/test/TempTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/cn/edu/cqupt/test/test/java/cn/edu/cqupt/test/Cluster.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/cn/edu/cqupt/test/test/java/cn/edu/cqupt/test/FontFamilyTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/cn/edu/cqupt/test/test/java/cn/edu/cqupt/test/GroupingTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/cn/edu/cqupt/test/test/java/cn/edu/cqupt/test/GsonHashMapTest$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/cn/edu/cqupt/test/test/java/cn/edu/cqupt/test/GsonHashMapTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/cn/edu/cqupt/test/test/java/cn/edu/cqupt/test/People.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/cn/edu/cqupt/view/PeakMapTest.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,14 +173,34 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.84807074">
+    <splitter split-orientation="horizontal" split-proportion="0.24609375">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="PeakMapTest.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/test/java/cn/edu/cqupt/clustering/view/PeakMapTest.java">
+          <file leaf-file-name="PieChart.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/view/PieChart.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="96">
-                  <caret line="4" column="26" lean-forward="true" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
+                <state relative-caret-position="480">
+                  <caret line="41" column="68" selection-start-line="41" selection-start-column="39" selection-end-line="41" selection-end-column="68" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                    <element signature="e#1612#1613#0" expanded="true" />
+                    <element signature="e#1649#1650#0" expanded="true" />
+                    <element signature="e#1715#1716#0" expanded="true" />
+                    <element signature="e#1752#1753#0" expanded="true" />
+                    <element signature="e#1801#1802#0" expanded="true" />
+                    <element signature="e#1838#1839#0" expanded="true" />
+                    <element signature="e#1880#1881#0" expanded="true" />
+                    <element signature="e#1917#1918#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="ClusterSelection.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/main/ClusterSelection.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="3504">
+                  <caret line="173" column="66" selection-start-line="173" selection-start-column="66" selection-end-line="173" selection-end-column="66" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -51,20 +208,32 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="PeakMap.html" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/test/resources/PeakMap.html">
+          <file leaf-file-name="Application.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/main/Application.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="864">
-                  <caret line="36" column="26" lean-forward="true" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="26" />
+                <state>
+                  <caret column="8" lean-forward="true" selection-start-column="8" selection-end-column="25" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
           </file>
           <file leaf-file-name="ClusteringFileHandler.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/ClusteringFileHandler.java">
+            <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/io/ClusteringFileHandler.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="384">
-                  <caret line="38" column="59" lean-forward="true" selection-start-line="26" selection-end-line="38" selection-end-column="59" />
+                <state relative-caret-position="158">
+                  <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="ClusterTable.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/view/ClusterTable.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1800">
+                  <caret line="90" column="80" selection-start-line="90" selection-start-column="80" selection-end-line="90" selection-end-column="80" />
                 </state>
               </provider>
             </entry>
@@ -72,61 +241,35 @@
           <file leaf-file-name="NetworkGraphService.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/service/NetworkGraphService.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="216">
-                  <caret line="18" column="30" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
+                <state relative-caret-position="2640">
+                  <caret line="131" column="5" selection-start-line="131" selection-start-column="5" selection-end-line="131" selection-end-column="5" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="NetworkGraphServiceTest.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/test/java/cn/edu/cqupt/service/NetworkGraphServiceTest.java">
+          <file leaf-file-name="ClusteringFileImportDaoImpl.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/dao/ClusteringFileImportDaoImpl.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="169">
-                  <caret line="40" column="67" selection-start-line="40" selection-start-column="67" selection-end-line="40" selection-end-column="67" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
+                <state relative-caret-position="264">
+                  <caret line="15" selection-start-line="15" selection-end-line="15" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="UndirectedGraph.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/graph/UndirectedGraph.java">
+          <file leaf-file-name="IClusterDao.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/dao/IClusterDao.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="360">
-                  <caret line="167" column="30" selection-start-line="167" selection-start-column="30" selection-end-line="167" selection-end-column="30" />
+                <state relative-caret-position="96">
+                  <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="PieChart.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/view/PieChart.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="218">
-                  <caret line="174" column="27" lean-forward="true" selection-start-line="174" selection-start-column="27" selection-end-line="174" selection-end-column="27" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="e#1442#1443#0" expanded="true" />
-                    <element signature="e#1479#1480#0" expanded="true" />
-                    <element signature="e#1545#1546#0" expanded="true" />
-                    <element signature="e#1582#1583#0" expanded="true" />
-                    <element signature="e#1631#1632#0" expanded="true" />
-                    <element signature="e#1668#1669#0" expanded="true" />
-                    <element signature="e#1710#1711#0" expanded="true" />
-                    <element signature="e#1747#1748#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="JavaFXApp.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/test/java/cn/edu/cqupt/test/webview/JavaFXApp.java">
+          <file leaf-file-name="ImportDao.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/dao/ImportDao.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="240">
-                  <caret line="25" column="11" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="11" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
+                  <caret line="10" selection-start-line="10" selection-end-line="10" />
                 </state>
               </provider>
             </entry>
@@ -135,92 +278,32 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="book.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/test/resources/book.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="312">
-                  <caret line="13" column="82" selection-start-line="13" selection-start-column="82" selection-end-line="13" selection-end-column="82" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="echarts-demo.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/test/resources/echarts-demo.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="192">
-                  <caret line="8" selection-start-line="8" selection-end-line="37" selection-end-column="13" />
-                  <folding>
-                    <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ClusterSelection.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/main/ClusterSelection.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="324">
-                  <caret line="109" column="2" selection-start-line="109" selection-start-column="2" selection-end-line="109" selection-end-column="2" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ClusterTable.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/view/ClusterTable.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="336">
-                  <caret line="47" column="33" selection-start-line="47" selection-start-column="33" selection-end-line="47" selection-end-column="33" />
-                  <folding>
-                    <element signature="e#741#742#0" expanded="true" />
-                    <element signature="e#800#801#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="TableViewWithPagination.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/page/TableViewWithPagination.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="336">
-                  <caret line="25" column="27" lean-forward="true" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Application.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/main/Application.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="96">
-                  <caret line="99" column="24" selection-start-line="98" selection-start-column="22" selection-end-line="99" selection-end-column="24" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file leaf-file-name="PieChart.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/resources/html/PieChart.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="110">
-                  <caret line="59" selection-start-line="59" selection-end-line="59" />
+                <state relative-caret-position="1512">
+                  <caret line="63" column="46" selection-start-line="63" selection-start-column="46" selection-end-line="63" selection-end-column="46" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="ClusteringFileHandlerTest.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/test/java/cn/edu/cqupt/clustering/ClusteringFileHandlerTest.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="301">
+                  <caret line="19" column="10" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
                   <folding>
-                    <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+                    <element signature="imports" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="SpectrumTable.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/view/SpectrumTable.java">
+          <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/pom.xml">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-276">
-                  <caret line="132" column="32" selection-start-line="132" selection-start-column="20" selection-end-line="132" selection-end-column="32" />
+                <state relative-caret-position="276">
+                  <caret line="83" column="65" selection-start-line="83" selection-start-column="65" selection-end-line="83" selection-end-column="65" />
                 </state>
               </provider>
             </entry>
@@ -233,8 +316,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="JUnit3 Test Class" />
         <option value="Class" />
+        <option value="JUnit3 Test Class" />
       </list>
     </option>
   </component>
@@ -256,6 +339,12 @@
       <find>tooltip</find>
       <find>undirectedGraph</find>
       <find>cluster</find>
+      <find>webEngine</find>
+      <find>screenBounds</find>
+      <find>get</find>
+      <find>getPrimary</find>
+      <find>getBounds</find>
+      <find>f07</find>
     </findStrings>
     <replaceStrings>
       <replace>create</replace>
@@ -272,10 +361,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/service/ClusterTableService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/dao/ClusterDaoRestfulImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/restful/RestfulClient.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/dao/ImportDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/dao/ClusteringFileImportDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/util/FileUtil.java" />
@@ -297,8 +383,6 @@
         <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/main/data/stage/ClusteringDataStage.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/main/data/stage/MgfDataStage.java" />
         <option value="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/clustering/view/ClusterTableTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/view/ClusterTable.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/view/SpectrumTable.java" />
         <option value="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/test/AbstractClassTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/test/AbstractClassTestExtension.java" />
         <option value="$PROJECT_DIR$/src/test/resources/pie-nest.html" />
@@ -311,15 +395,23 @@
         <option value="$PROJECT_DIR$/src/main/resources/html/PeakMap.html" />
         <option value="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/clustering/view/PeakMapTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/service/NetworkGraphServiceTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/main/Application.java" />
         <option value="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/clustering/view/PieChartTest.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/html/PieChart.html" />
         <option value="$PROJECT_DIR$/src/test/resources/book.html" />
         <option value="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/test/webview/JavaFXApp.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/view/PieChart.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/page/TableViewWithPagination.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/main/ClusterSelection.java" />
         <option value="$PROJECT_DIR$/src/test/resources/PeakMap.html" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/main/PieChartPeakMapTest.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/html/PieChart.html" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/view/NetworkGraph.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/view/SpectrumTable.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/view/ClusterTable.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/view/PieChart.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/main/ClusterSelection.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/main/Application.java" />
+        <option value="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/clustering/ClusteringFileHandlerTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/ClusteringFileHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/service/NetworkGraphService.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -349,6 +441,12 @@
           <item name="cluster-comparer" type="9519ce18:MavenProjectsStructure$ProjectNode" />
           <item name="Plugins" type="7aea1407:MavenProjectsStructure$PluginsNode" />
         </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="cluster-comparer" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Plugins" type="7aea1407:MavenProjectsStructure$PluginsNode" />
+          <item name="clean" type="36feed69:MavenProjectsStructure$PluginNode" />
+        </path>
       </expand>
       <select />
     </treeState>
@@ -370,205 +468,20 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="cluster-comparer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="clusters-comparator" type="b2602c69:ProjectViewProjectNode" />
               <item name="clusters-comparator" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cluster-comparer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="clusters-comparator" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cluster-comparer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="clusters-comparator" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cluster-comparer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="clusters-comparator" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cluster-comparer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="clusters-comparator" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="cqupt" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cluster-comparer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="clusters-comparator" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="cqupt" type="462c0819:PsiDirectoryNode" />
-              <item name="clustering" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cluster-comparer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="clusters-comparator" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="cqupt" type="462c0819:PsiDirectoryNode" />
-              <item name="clustering" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cluster-comparer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="clusters-comparator" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="cqupt" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cluster-comparer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="clusters-comparator" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="cqupt" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="stage" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cluster-comparer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="clusters-comparator" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="cqupt" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cluster-comparer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="clusters-comparator" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="cqupt" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cluster-comparer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="clusters-comparator" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="cqupt" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cluster-comparer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="clusters-comparator" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cluster-comparer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="clusters-comparator" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cluster-comparer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="clusters-comparator" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cluster-comparer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="clusters-comparator" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="cqupt" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cluster-comparer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="clusters-comparator" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="cqupt" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cluster-comparer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="clusters-comparator" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="cqupt" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cluster-comparer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="clusters-comparator" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="cqupt" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cluster-comparer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="clusters-comparator" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="cqupt" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="webview" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cluster-comparer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="clusters-comparator" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cluster-comparer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="clusters-comparator" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cluster-comparer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="clusters-comparator" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="test-classes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cluster-comparer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="clusters-comparator" type="462c0819:PsiDirectoryNode" />
-              <item name="testdata" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cluster-comparer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="clusters-comparator" type="462c0819:PsiDirectoryNode" />
-              <item name="testdata" type="462c0819:PsiDirectoryNode" />
-              <item name="clustering" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="AndroidView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -576,37 +489,38 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit3" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit3" value="cn.edu.cqupt.main.Application" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit3" value="junit.framework.TestCase" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="cn.edu.cqupt.clustering" />
       <recent name="cn.edu.cqupt.service" />
       <recent name="cn.edu.cqupt.clustering.view" />
       <recent name="cn.edu.cqupt.dao" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\@code\java\clusters-comparator\src\main\resources\html" />
+      <recent name="C:\@code\java\clusters-comparator\testdata\clutering" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="cn.edu.cqupt.clustering.view" />
+      <recent name="cn.edu.cqupt.main" />
+    </key>
     <key name="CreateTestDialog.Recents.Supers">
-      <recent name="cn.edu.cqupt.main.Application" />
       <recent name="junit.framework.TestCase" />
+      <recent name="cn.edu.cqupt.main.Application" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\@code\java\clusters-comparator\src\test\resources" />
       <recent name="C:\@code\java\clusters-comparator\src\main\resources" />
       <recent name="C:\@code\java\clusters-comparator\src\main\resources\html" />
       <recent name="C:\@code\java\clusters-comparator\src\main\resources\js" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="cn.edu.cqupt.clustering.view" />
-      <recent name="cn.edu.cqupt.main" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\@code\java\clusters-comparator\src\main\resources\html" />
-      <recent name="C:\@code\java\clusters-comparator\testdata\clutering" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -621,10 +535,10 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.PeakMapTest">
+  <component name="RunManager" selected="Application.Application">
     <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="cn.edu.cqupt.main.Application" />
-      <module name="cluster-comparer" />
+      <module name="clusters-comparator" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -633,42 +547,9 @@
         </pattern>
       </extension>
     </configuration>
-    <configuration name="JavaFXApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="cn.edu.cqupt.test.webview.JavaFXApp" />
-      <module name="cluster-comparer" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="cn.edu.cqupt.test.webview.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-    </configuration>
-    <configuration name="NetworkGraphServiceTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="cn.edu.cqupt.service.NetworkGraphServiceTest" />
-      <module name="cluster-comparer" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="cn.edu.cqupt.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-    </configuration>
     <configuration name="PeakMapTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="cn.edu.cqupt.clustering.view.PeakMapTest" />
-      <module name="cluster-comparer" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="cn.edu.cqupt.clustering.view.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-    </configuration>
-    <configuration name="PieChartTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="cn.edu.cqupt.clustering.view.PieChartTest" />
-      <module name="cluster-comparer" />
+      <module name="clusters-comparator" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -679,6 +560,75 @@
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="ClusteringFileHandlerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="clusters-comparator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.edu.cqupt.clustering.io.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="cn.edu.cqupt.clustering" />
+      <option name="MAIN_CLASS_NAME" value="cn.edu.cqupt.clustering.ClusteringFileHandlerTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="ClusteringFileHandlerTest.testOldReassembleCluster" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="clusters-comparator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.edu.cqupt.clustering.io.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="cn.edu.cqupt.clustering" />
+      <option name="MAIN_CLASS_NAME" value="cn.edu.cqupt.clustering.ClusteringFileHandlerTest" />
+      <option name="METHOD_NAME" value="testOldReassembleCluster" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="ClusteringFileHandlerTest.testReassembleCluster" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="clusters-comparator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.edu.cqupt.clustering.io.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="cn.edu.cqupt.clustering" />
+      <option name="MAIN_CLASS_NAME" value="cn.edu.cqupt.clustering.ClusteringFileHandlerTest" />
+      <option name="METHOD_NAME" value="testReassembleCluster" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -719,19 +669,19 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="Application.PieChartTest" />
       <item itemvalue="Application.Application" />
-      <item itemvalue="Application.NetworkGraphServiceTest" />
-      <item itemvalue="Application.JavaFXApp" />
       <item itemvalue="Application.PeakMapTest" />
+      <item itemvalue="JUnit.ClusteringFileHandlerTest.testOldReassembleCluster" />
+      <item itemvalue="JUnit.ClusteringFileHandlerTest.testReassembleCluster" />
+      <item itemvalue="JUnit.ClusteringFileHandlerTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.PeakMapTest" />
         <item itemvalue="Application.Application" />
-        <item itemvalue="Application.JavaFXApp" />
-        <item itemvalue="Application.PieChartTest" />
-        <item itemvalue="Application.NetworkGraphServiceTest" />
+        <item itemvalue="JUnit.ClusteringFileHandlerTest" />
+        <item itemvalue="JUnit.ClusteringFileHandlerTest.testOldReassembleCluster" />
+        <item itemvalue="JUnit.ClusteringFileHandlerTest.testReassembleCluster" />
+        <item itemvalue="Application.PeakMapTest" />
       </list>
     </recent_temporary>
   </component>
@@ -753,19 +703,44 @@
       <workItem from="1532671094265" duration="16276000" />
       <workItem from="1532740712640" duration="9439000" />
       <workItem from="1532767426393" duration="23508000" />
+      <workItem from="1532952149328" duration="1870000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ClusteringFileImportDaoImplTest_testGetResult - 2018.07.24 at 14h 13m 19s.xml">
-      <configuration name="ClusteringFileImportDaoImplTest.testGetResult" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="ClusteringFileImportDaoImplTest_testGetResult - 2018.07.24 at 14h 17m 58s.xml">
       <configuration name="ClusteringFileImportDaoImplTest.testGetResult" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="ClusteringFileHandlerTest_testOldReassembleCluster - 2018.07.30 at 10h 30m 28s.xml">
+      <configuration name="ClusteringFileHandlerTest.testOldReassembleCluster" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ClusteringFileHandlerTest_testReassembleCluster - 2018.07.30 at 10h 30m 35s.xml">
+      <configuration name="ClusteringFileHandlerTest.testReassembleCluster" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ClusteringFileHandlerTest_testOldReassembleCluster - 2018.07.30 at 10h 30m 42s.xml">
+      <configuration name="ClusteringFileHandlerTest.testOldReassembleCluster" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ClusteringFileHandlerTest - 2018.07.30 at 10h 31m 03s.xml">
+      <configuration name="ClusteringFileHandlerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ClusteringFileHandlerTest - 2018.07.30 at 10h 33m 16s.xml">
+      <configuration name="ClusteringFileHandlerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ClusteringFileHandlerTest - 2018.07.30 at 10h 33m 33s.xml">
+      <configuration name="ClusteringFileHandlerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ClusteringFileHandlerTest - 2018.07.30 at 10h 37m 28s.xml">
+      <configuration name="ClusteringFileHandlerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ClusteringFileHandlerTest - 2018.07.30 at 10h 37m 58s.xml">
+      <configuration name="ClusteringFileHandlerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ClusteringFileHandlerTest - 2018.07.30 at 11h 08m 45s.xml">
+      <configuration name="ClusteringFileHandlerTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="118238000" />
+    <option name="totallyTimeSpent" value="136388000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -773,7 +748,6 @@
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="7" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.32872927" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info id="Image Layers" order="6" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
@@ -781,7 +755,7 @@
       <window_info anchor="right" id="Maven Projects" order="7" weight="0.3294271" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="11" />
-      <window_info active="true" anchor="bottom" id="Run" order="3" visible="true" weight="0.22375691" />
+      <window_info anchor="bottom" id="Run" order="3" weight="0.22375691" />
       <window_info anchor="bottom" id="Spring" order="0" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.41793102" />
       <window_info id="Capture Tool" order="3" />
@@ -800,36 +774,37 @@
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.32872927" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32872927" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info id="Designer" order="2" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.32872927" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Run" order="3" visible="true" weight="0.22375691" />
+      <window_info anchor="bottom" id="Version Control" order="11" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="1" />
-      <window_info anchor="bottom" id="Find" order="2" weight="0.32872927" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19010417" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="bottom" id="TODO" order="7" />
-      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info id="Image Layers" order="6" />
-      <window_info id="Capture Tool" order="3" />
       <window_info anchor="bottom" id="Spring" order="0" />
+      <window_info anchor="bottom" id="Run" order="3" visible="true" weight="0.22375691" />
+      <window_info id="Image Layers" order="6" />
+      <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="4" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.08287293" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.41793102" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
-      <window_info anchor="bottom" id="Version Control" order="11" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.08287293" />
+      <window_info id="Capture Tool" order="3" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.32872927" />
-      <window_info anchor="right" id="Maven Projects" order="7" weight="0.3294271" />
+      <window_info anchor="right" id="Maven Projects" order="7" visible="true" weight="0.3294271" />
       <window_info id="Favorites" order="5" side_tool="true" />
     </layout-to-restore>
   </component>
@@ -845,143 +820,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/util/ArrayList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="652" selection-start-line="652" selection-end-line="652" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/cn/edu/cqupt/test/AbstractClassTestExtension.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/cn/edu/cqupt/test/AbstractClassTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="4" selection-start-line="4" selection-end-line="4" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/cn/edu/cqupt/clustering/view/ClusterTableTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/cn/edu/cqupt/test/TempTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/net/URLStreamHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="479" column="21" selection-start-line="479" selection-start-column="21" selection-end-line="479" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/net/URL.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="928" column="32" selection-start-line="928" selection-start-column="32" selection-end-line="928" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/js/echarts.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/welcome.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="696">
-          <caret line="29" column="7" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/pie-nest.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="19" column="59" selection-start-line="19" selection-start-column="59" selection-end-line="19" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/cn/edu/cqupt/test/webview/JavaFXWeb.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1608">
-          <caret line="89" column="43" selection-start-line="89" selection-start-column="30" selection-end-line="89" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/javafx-src.zip!/javafx/scene/web/WebEngine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="1001" column="18" selection-start-line="1001" selection-start-column="18" selection-end-line="1001" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/html/PeakMap.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1272">
-          <caret line="53" column="74" selection-start-line="53" selection-start-column="19" selection-end-line="53" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/cn/edu/cqupt/test/webview/EchartDemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/model/Cluster.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="98" column="19" selection-start-line="98" selection-start-column="19" selection-end-line="98" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/service/SpectrumComparerService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-56">
-          <caret line="69" column="49" selection-start-line="69" selection-start-column="49" selection-end-line="69" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/html/bar-negative.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="18" column="11" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
-          <folding>
-            <element signature="n#style#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/model/Edge.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-384">
-          <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
-          <folding>
-            <element signature="e#178#179#0" expanded="true" />
-            <element signature="e#206#207#0" expanded="true" />
-            <element signature="e#234#235#0" expanded="true" />
-            <element signature="e#254#255#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/io/File.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="178">
@@ -991,20 +829,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/testdata/clustering/compare_5.clustering" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/testdata/clustering/compare_6.clustering" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/service/NetworkGraphService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="18" column="30" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/dao/ClusterDaoFileImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="17" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <element signature="e#397#398#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1015,34 +843,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/ClusteringFileHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="38" column="59" lean-forward="true" selection-start-line="26" selection-end-line="38" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/io/ClusteringFileReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/service/NetworkGraphServiceTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="29" selection-start-line="13" selection-start-column="8" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/service/NetworkGraphServiceTest.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/cn/edu/cqupt/service/NetworkGraphServiceTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="169">
           <caret line="40" column="67" selection-start-line="40" selection-start-column="67" selection-end-line="40" selection-end-column="67" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1057,9 +862,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
           <caret line="8" selection-start-line="8" selection-end-line="37" selection-end-column="13" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1067,20 +869,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="290">
           <caret line="66" column="19" selection-start-line="66" selection-start-column="19" selection-end-line="66" selection-end-column="19" />
-          <folding>
-            <element signature="e#1955#1956#0" expanded="true" />
-            <element signature="e#2009#2010#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/view/PeakMap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="12" selection-start-line="12" selection-end-line="48" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1098,42 +886,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/main/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="99" column="24" selection-start-line="98" selection-start-column="22" selection-end-line="99" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/view/SpectrumTable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-276">
-          <caret line="132" column="32" selection-start-line="132" selection-start-column="20" selection-end-line="132" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/html/PieChart.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="59" selection-start-line="59" selection-end-line="59" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/cn/edu/cqupt/clustering/view/PieChartTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="-8">
+          <caret line="19" column="60" selection-start-line="19" selection-start-column="60" selection-end-line="19" selection-end-column="60" />
         </state>
       </provider>
     </entry>
@@ -1148,10 +904,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="1174" selection-start-line="1174" selection-end-line="1174" />
-          <folding>
-            <element signature="e#4396#4397#0" expanded="true" />
-            <element signature="e#4425#4426#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1184,9 +936,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="25" column="11" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1197,17 +946,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/view/ClusterTable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="47" column="33" selection-start-line="47" selection-start-column="33" selection-end-line="47" selection-end-column="33" />
-          <folding>
-            <element signature="e#741#742#0" expanded="true" />
-            <element signature="e#800#801#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/page/TableViewWithPagination.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
@@ -1215,41 +953,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/main/ClusterSelection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="109" column="2" selection-start-line="109" selection-start-column="2" selection-end-line="109" selection-end-column="2" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/view/PieChart.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="174" column="27" lean-forward="true" selection-start-line="174" selection-start-column="27" selection-end-line="174" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1442#1443#0" expanded="true" />
-            <element signature="e#1479#1480#0" expanded="true" />
-            <element signature="e#1545#1546#0" expanded="true" />
-            <element signature="e#1582#1583#0" expanded="true" />
-            <element signature="e#1631#1632#0" expanded="true" />
-            <element signature="e#1668#1669#0" expanded="true" />
-            <element signature="e#1710#1711#0" expanded="true" />
-            <element signature="e#1747#1748#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/cn/edu/cqupt/clustering/view/PeakMapTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="4" column="26" lean-forward="true" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="113">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
@@ -1257,6 +964,201 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="864">
           <caret line="36" column="26" lean-forward="true" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/main/PieChartPeakMapTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/test/resources/webview1.html" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/html/webview1.html" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/html/PeakMap.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="69" column="8" selection-end-line="99" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/html/PieChart.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1512">
+          <caret line="63" column="46" selection-start-line="63" selection-start-column="46" selection-end-line="63" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/sankey/ClusteringSankeyDiagram.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="67" column="11" selection-start-line="67" selection-start-column="11" selection-end-line="67" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/view/NetworkGraph.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="864">
+          <caret line="50" column="25" selection-start-line="50" selection-start-column="8" selection-end-line="50" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/javafx-src.zip!/javafx/scene/layout/ColumnConstraints.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="256" column="32" selection-start-line="256" selection-start-column="32" selection-end-line="256" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/view/ClusterApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="50" column="55" lean-forward="true" selection-start-line="50" selection-start-column="8" selection-end-line="50" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/javafx-src.zip!/javafx/stage/Screen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="243" column="28" selection-start-line="243" selection-start-column="4" selection-end-line="245" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/view/SpectrumTable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="327">
+          <caret line="105" column="26" selection-start-line="105" selection-start-column="26" selection-end-line="105" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/view/PeakMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="41" selection-end-line="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/view/PieChart.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="41" column="68" selection-start-line="41" selection-start-column="39" selection-end-line="41" selection-end-column="68" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1612#1613#0" expanded="true" />
+            <element signature="e#1649#1650#0" expanded="true" />
+            <element signature="e#1715#1716#0" expanded="true" />
+            <element signature="e#1752#1753#0" expanded="true" />
+            <element signature="e#1801#1802#0" expanded="true" />
+            <element signature="e#1838#1839#0" expanded="true" />
+            <element signature="e#1880#1881#0" expanded="true" />
+            <element signature="e#1917#1918#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/io/ClusteringFileReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-864">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/view/ClusterTable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1800">
+          <caret line="90" column="80" selection-start-line="90" selection-start-column="80" selection-end-line="90" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/dao/IClusterDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/dao/ImportDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testdata/clustering/cli_clustering.pxd000021.0.7_4.clustering">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-29" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testdata/clustering/hdp_clustering.pxd000021.0.7_4.clustering">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1109" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/dao/ClusteringFileImportDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/main/ClusterSelection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3504">
+          <caret line="173" column="66" selection-start-line="173" selection-start-column="66" selection-end-line="173" selection-end-column="66" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/model/Spectrum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="49" column="11" selection-start-line="49" selection-start-column="11" selection-end-line="49" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/cn/edu/cqupt/clustering/ClusteringFileHandlerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="19" column="10" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/service/NetworkGraphService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2640">
+          <caret line="131" column="5" selection-start-line="131" selection-start-column="5" selection-end-line="131" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/io/ClusteringFileHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/main/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="8" lean-forward="true" selection-start-column="8" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="83" column="65" selection-start-line="83" selection-start-column="65" selection-end-line="83" selection-end-column="65" />
         </state>
       </provider>
     </entry>
@@ -1312,12 +1214,11 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>cluster-comparer</last-edited>
+          <last-edited>clusters-comparator</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>

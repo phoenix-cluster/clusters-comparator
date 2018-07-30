@@ -5,6 +5,7 @@ import cn.edu.cqupt.main.data.stage.MgfDataStage;
 import cn.edu.cqupt.util.TabPaneExpansion;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.event.ActionEvent;
+import javafx.geometry.Rectangle2D;
 import javafx.scene.Scene;
 import javafx.scene.control.Menu;
 import javafx.scene.control.MenuBar;
@@ -14,6 +15,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
+import javafx.stage.Screen;
 import javafx.stage.Stage;
 import javafx.stage.Window;
 
@@ -25,6 +27,7 @@ public class Application extends javafx.application.Application {
     public static String releaseIIName;
     public static SimpleIntegerProperty pageSize; //the number of each page
     public static TabPaneExpansion tabPaneExpansion;
+    public static final Rectangle2D SCREEN_BOUNDS = Screen.getPrimary().getBounds();
 
     static {
         pageSize = new SimpleIntegerProperty(8);
@@ -52,8 +55,14 @@ public class Application extends javafx.application.Application {
         Scene scene = new Scene(root);
 
         // set stage
+        double width = SCREEN_BOUNDS.getWidth();
+        double height = SCREEN_BOUNDS.getHeight() - 100;
         primaryStage.setScene(scene);
         primaryStage.setTitle("Cluster Comparer GUI");
+        primaryStage.setMinWidth(width);
+        primaryStage.setMinHeight(height);
+        primaryStage.setMaxWidth(width);
+        primaryStage.setMaxHeight(height);
         primaryStage.show();
 
     }
@@ -96,8 +105,9 @@ public class Application extends javafx.application.Application {
             // cluster selection pane
 
             /*ClusterSelection clusterSelection = new ClusterSelection(dataStage.getClusteringFileI(), dataStage.getClusteringFileII());*/
-            File file1 = new File("C:\\@code\\java\\clusters-comparator\\testdata\\clustering\\cli_clustering.pxd000021.0.7_4.clustering");
-            File file2 = new File("C:\\@code\\java\\clusters-comparator\\testdata\\clustering\\hdp_clustering.pxd000021.0.7_4.clustering");
+            File file1 = new File("C:\\@code\\java\\clusters-comparator\\testdata\\clustering\\hdp_clustering.pxd000021.0.7_4.clustering");
+            File file2 = new File("C:\\@code\\java\\clusters-comparator\\testdata\\clustering\\cli_clustering.pxd000021.0.7_4.clustering");
+
 //            //little data
 //            File file1 = new File("C:\\@code\\java\\clusters-comparator\\testdata\\clustering\\compare_5.clustering");
 //            File file2 = new File("C:\\@code\\java\\clusters-comparator\\testdata\\clustering\\compare_6.clustering");
@@ -126,7 +136,9 @@ public class Application extends javafx.application.Application {
 
         // second level menu: exit
         MenuItem exit = new MenuItem("Exit");
-        exit.setOnAction((ActionEvent e) -> System.exit(0));
+        exit.setOnAction(
+                (ActionEvent e) -> System.exit(0)
+        );
 
         // add menu item for file menu
         fileMenu.getItems().addAll(importData, exit);

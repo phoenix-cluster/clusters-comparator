@@ -1,5 +1,6 @@
 package cn.edu.cqupt.clustering.view;
 
+import cn.edu.cqupt.main.Application;
 import cn.edu.cqupt.model.Cluster;
 import cn.edu.cqupt.page.Page;
 import cn.edu.cqupt.page.TableViewWithPagination;
@@ -83,6 +84,11 @@ public class ClusterTable {
 
         // set table
         clusterTable.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
+        double width = Application.SCREEN_BOUNDS.getWidth() * 0.45;
+        clusterTable.setMaxWidth(width);
+        clusterTable.setMinWidth(width );
+        clusterTable.setPrefWidth(width);
+        clusterTable.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
 
         return clusterTable;
     }

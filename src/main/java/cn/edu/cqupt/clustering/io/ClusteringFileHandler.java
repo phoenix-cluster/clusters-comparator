@@ -1,4 +1,4 @@
-package cn.edu.cqupt.clustering;
+package cn.edu.cqupt.clustering.io;
 
 import cn.edu.cqupt.clustering.io.ClusteringFileReader;
 import cn.edu.cqupt.model.Cluster;
@@ -10,6 +10,7 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * read clustering file and reassemble object Cluster
@@ -25,7 +26,7 @@ public class ClusteringFileHandler {
         return reassembleCluster(new ClusteringFileReader(clusteringFile).readAllClusters());
     }
 
-    private static List<Cluster> reassembleCluster(List<ICluster> clusterList) {
+    public static List<Cluster> oldReassembleCluster(List<ICluster> clusterList) {
         List<Cluster> allClusters = new ArrayList<Cluster>(); // return value
 
         // traverse and get data needed
@@ -65,4 +66,24 @@ public class ClusteringFileHandler {
         return allClusters;
     }
 
+    public static List<Cluster> reassembleCluster(List<ICluster> clusterList) {
+
+        // traverse and get data needed
+        return clusterList.stream()
+                .map(iCluster -> {
+                    List<Spectrum> spectra = iCluster.getSpectrumReferences().stream()
+                            .map(iSpectrumReference ->
+                                    new Spectrum(iSpectrumReference.getSpectrumId(),
+                                            iSpectrumReference.getSequence(),
+                                            iSpectrumReference.getCharge(),
+                                            iSpectrumReference.getPrecursorMz(),
+                                            iSpectrumReference.getSpecies()))
+                            .collect(Collectors.toList());
+
+                    return new Cluster(iCluster.getId(),
+                            iCluster.getAvPrecursorMz(), iCluster.getAvPrecursorIntens(),
+                            iCluster.getSpecCount(), iCluster.getMaxRatio(), spectra,
+                            iCluster.getConsensusMzValues(), iCluster.getConsensusIntensValues());
+                }).collect(Collectors.toList());
+    }
 }

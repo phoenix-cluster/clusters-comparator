@@ -1,6 +1,6 @@
 package cn.edu.cqupt.dao;
 
-import cn.edu.cqupt.clustering.ClusteringFileHandler;
+import cn.edu.cqupt.clustering.io.ClusteringFileHandler;
 import cn.edu.cqupt.model.Cluster;
 
 import java.io.File;

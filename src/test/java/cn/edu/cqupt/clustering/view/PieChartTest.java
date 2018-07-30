@@ -1,12 +1,11 @@
 package cn.edu.cqupt.clustering.view;
 
 
-import cn.edu.cqupt.clustering.ClusteringFileHandler;
+import cn.edu.cqupt.clustering.io.ClusteringFileHandler;
 import cn.edu.cqupt.graph.UndirectedGraph;
 import cn.edu.cqupt.model.Cluster;
 import cn.edu.cqupt.model.Edge;
 import cn.edu.cqupt.model.Vertex;
-import cn.edu.cqupt.service.ClusterTableService;
 import cn.edu.cqupt.service.NetworkGraphService;
 import javafx.application.Application;
 import javafx.scene.Scene;

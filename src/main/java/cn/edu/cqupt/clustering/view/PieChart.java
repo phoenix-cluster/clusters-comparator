@@ -151,7 +151,7 @@ public class PieChart {
                                     overlapSpectraCountStr + ")");
 
                             JSObject jsObject = (JSObject) webEngine.executeScript("window");
-                            jsObject.setMember("pieChart", new PieChart(releaseIName, releaseIIName));
+                            jsObject.setMember("jsPieChart", new PieChart(releaseIName, releaseIIName));
                         }
                     });
         }
