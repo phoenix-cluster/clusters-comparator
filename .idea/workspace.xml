@@ -1,24 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dbd4db41-c464-4a98-b49b-0be87eaf2fdd" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/io/ClusteringFileHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/io/ClusteringFileHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/view/ClusterTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/view/ClusterTable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/view/SpectrumTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/view/SpectrumTable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/main/ClusterSelection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/main/ClusterSelection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/mgf/view/MgfInfoDisplayPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/mgf/view/MgfInfoDisplayPane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/page/Page.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/page/Page.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/page/TableViewWithPagination.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/page/TableViewWithPagination.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/clustering/view/ClusterTableTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/clustering/view/ClusterTableTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/page/TableViewWithPaginationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/page/TableViewWithPaginationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/mgf/view/MgfInfoDisplayPane$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/mgf/view/MgfInfoDisplayPane$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/mgf/view/MgfInfoDisplayPane.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/mgf/view/MgfInfoDisplayPane.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/page/Page.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/page/Page.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/page/TableViewWithPagination$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/page/TableViewWithPagination$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/page/TableViewWithPagination.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/cqupt/page/TableViewWithPagination.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/cn/edu/cqupt/page/TableViewWithPaginationTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/cn/edu/cqupt/page/TableViewWithPaginationTest.class" afterDir="false" />
-    </list>
+    <list default="true" id="dbd4db41-c464-4a98-b49b-0be87eaf2fdd" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -33,7 +16,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/main/Application.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="72">
-              <caret line="3" column="49" lean-forward="true" selection-start-line="3" selection-start-column="49" selection-end-line="3" selection-end-column="49" />
+              <caret line="3" column="49" selection-start-line="3" selection-start-column="49" selection-end-line="3" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -58,7 +41,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/page/TableViewWithPagination.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
-              <caret line="135" column="39" lean-forward="true" selection-start-line="135" selection-start-column="39" selection-end-line="135" selection-end-column="39" />
+              <caret line="135" column="39" selection-start-line="135" selection-start-column="39" selection-end-line="135" selection-end-column="39" />
               <folding>
                 <element signature="e#770#771#0" expanded="true" />
                 <element signature="e#797#798#0" expanded="true" />
@@ -337,6 +320,12 @@
               <item name="clusters-comparator" type="b2602c69:ProjectViewProjectNode" />
               <item name="clusters-comparator" type="462c0819:PsiDirectoryNode" />
               <item name="image" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="clusters-comparator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="clusters-comparator" type="462c0819:PsiDirectoryNode" />
+              <item name="image" type="462c0819:PsiDirectoryNode" />
+              <item name="edraw" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="clusters-comparator" type="b2602c69:ProjectViewProjectNode" />
@@ -689,7 +678,7 @@
       <workItem from="1532740712640" duration="9439000" />
       <workItem from="1532767426393" duration="23508000" />
       <workItem from="1532952149328" duration="4682000" />
-      <workItem from="1533082266043" duration="36002000" />
+      <workItem from="1533082266043" duration="36262000" />
     </task>
     <servers />
   </component>
@@ -726,11 +715,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="175202000" />
+    <option name="totallyTimeSpent" value="175462000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
@@ -751,8 +739,8 @@
       <window_info anchor="bottom" id="Version Control" order="11" />
       <window_info anchor="bottom" id="Run" order="3" weight="0.22375691" />
       <window_info anchor="bottom" id="Spring" order="0" />
-      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.6616022" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19010417" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.36325967" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19010417" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.32872927" />
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info id="Favorites" order="5" side_tool="true" />
@@ -1064,7 +1052,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/main/Application.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
-          <caret line="3" column="49" lean-forward="true" selection-start-line="3" selection-start-column="49" selection-end-line="3" selection-end-column="49" />
+          <caret line="3" column="49" selection-start-line="3" selection-start-column="49" selection-end-line="3" selection-end-column="49" />
         </state>
       </provider>
     </entry>
@@ -1191,7 +1179,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/page/TableViewWithPagination.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
-          <caret line="135" column="39" lean-forward="true" selection-start-line="135" selection-start-column="39" selection-end-line="135" selection-end-column="39" />
+          <caret line="135" column="39" selection-start-line="135" selection-start-column="39" selection-end-line="135" selection-end-column="39" />
           <folding>
             <element signature="e#770#771#0" expanded="true" />
             <element signature="e#797#798#0" expanded="true" />
