@@ -43,12 +43,9 @@ public class TableViewWithPaginationTest extends Application {
 
 
         // layout
-        BorderPane root = new BorderPane();
-        Pagination pagination = TableViewWithPagination.create(page, table);
-        root.setCenter(pagination);
-        root.setBottom(TableViewWithPagination.createContoller(page, table, pagination));
+        TableViewWithPagination tableViewWithPagination = new TableViewWithPagination(page, table);
 
-        Scene scene = new Scene(root, 800, 900);
+        Scene scene = new Scene(tableViewWithPagination.getDefaultLayout(), 800, 900);
         primaryStage.setScene(scene);
         primaryStage.show();
 

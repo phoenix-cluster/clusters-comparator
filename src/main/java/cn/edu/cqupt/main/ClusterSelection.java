@@ -101,9 +101,27 @@ public class ClusterSelection {
         GridPane networkGraphPane = netWorkGraph.getNetworkGraphPane();
 
         // layout
-        HBox tablePane = new HBox();
-        tablePane.setAlignment(Pos.CENTER);
-        tablePane.getChildren().addAll(clusterTablePane, new ScrollPane(spectrumTableView));
+        double width = Application.SCREEN_BOUNDS.getWidth();
+//        HBox tablePane = new HBox();
+//        tablePane.setFillHeight(true);
+//        tablePane.setPrefWidth(width);
+//        tablePane.setMaxWidth(width);
+//        tablePane.setMaxWidth(width);
+//        tablePane.setAlignment(Pos.CENTER);
+//
+//        tablePane.getChildren().addAll(clusterTablePane, new ScrollPane(spectrumTableView));
+        GridPane tablePane = new GridPane();
+        ColumnConstraints col0 = new ColumnConstraints();
+        col0.setPercentWidth(50);
+        ColumnConstraints col1 = new ColumnConstraints();
+        col1.setPercentWidth(50);
+        tablePane.getColumnConstraints().addAll(col1, col1);
+        RowConstraints row0 = new RowConstraints();
+        row0.setPercentHeight(100);
+        tablePane.getRowConstraints().add(row0);
+        tablePane.add(clusterTablePane, 0, 0);
+        tablePane.add(new ScrollPane(spectrumTableView), 1, 0);
+        tablePane.setGridLinesVisible(true);
         clusterSelectionPane.add(tablePane, 0, 0, 3, 1);
         clusterSelectionPane.add(new ScrollPane(pieChartPane), 1, 1);
         clusterSelectionPane.add(new ScrollPane(networkGraphPane), 2, 1);
@@ -159,18 +177,18 @@ public class ClusterSelection {
     }
 
     private void setClusterSelectionPane() {
+        ColumnConstraints col0 = new ColumnConstraints();
+        col0.setPercentWidth(30);
         ColumnConstraints col1 = new ColumnConstraints();
         col1.setPercentWidth(30);
         ColumnConstraints col2 = new ColumnConstraints();
-        col2.setPercentWidth(30);
-        ColumnConstraints col3 = new ColumnConstraints();
-        col3.setPercentWidth(40);
-        clusterSelectionPane.getColumnConstraints().addAll(col1, col2, col3);
+        col2.setPercentWidth(40);
+        clusterSelectionPane.getColumnConstraints().addAll(col0, col1, col2);
 
+        RowConstraints row0 = new RowConstraints();
+        row0.setPercentHeight(50);
         RowConstraints row1 = new RowConstraints();
         row1.setPercentHeight(50);
-        RowConstraints row2 = new RowConstraints();
-        row2.setPercentHeight(50);
-        clusterSelectionPane.getRowConstraints().addAll(row1, row2);
+        clusterSelectionPane.getRowConstraints().addAll(row0, row1);
     }
 }

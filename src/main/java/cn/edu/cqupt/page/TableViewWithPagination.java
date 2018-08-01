@@ -6,41 +6,72 @@ import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.*;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
  * Created by huangjs on 2018/4/6.
  */
-public class TableViewWithPagination {
+public class TableViewWithPagination<T> {
 
-    public static Pagination create(Page page, TableView tableView) {
-        Pagination pagination = new Pagination(page.getTotalPage(), 0);
-        pagination.setPageFactory(pageIndex -> {
-            tableView.setItems(FXCollections.observableList(page.getCurrentPageDataList(pageIndex)));
-            tableView.getSelectionModel().select(0);
-            return tableView;
-        });
-        return pagination;
+    private Page<T> page;
+    private TableView<T> tableView;
+    private Pagination tableViewWithPaginationPane;
+
+    // the head of column => order way
+    private Map<Button, Order> orderMap;
+
+    public Page<T> getPage() {
+        return page;
     }
 
-    public static HBox createContoller(Page page, TableView tableView, Pagination pagination) {
+    public TableView<T> getTableView() {
+        return tableView;
+    }
+
+    public Pagination getTableViewWithPaginationPane() {
+        return tableViewWithPaginationPane;
+    }
+
+    public TableViewWithPagination(Page<T> page, TableView<T> tableView) {
+        this.page = page;
+        this.tableView = tableView;
+        orderMap = new HashMap<>();
+        tableViewWithPaginationPane = new Pagination();
+        tableViewWithPaginationPane.pageCountProperty().bindBidirectional(page.totalPageProperty());
+        tableViewWithPaginationPane.currentPageIndexProperty().bindBidirectional(page.currentPageProperty());
+        updatePagination();
+    }
+
+    private void updatePagination() {
+        tableViewWithPaginationPane.setPageFactory(pageIndex -> {
+            tableView.setItems(FXCollections.observableList(page.getCurrentPageDataList(pageIndex)));
+            return tableView;
+        });
+    }
+
+    public HBox createContoller() {
 
         // page size controller
         TextField pageSizeTF = new TextField(page.getPageSize() + "");
         pageSizeTF.setPrefWidth(40.0);
-        pageSizeTF.setOnMouseClicked((MouseEvent event) -> {
-            pageSizeTF.clear();
-        });
+        pageSizeTF.setOnMouseClicked((MouseEvent event) ->
+                pageSizeTF.clear()
+        );
         Label pageSizeLabel = new Label("Per Page");
 
         // redirect page index controller
         Label redirectLabel1 = new Label("To");
-        TextField redirectTF = new TextField(pagination.getCurrentPageIndex() + 1 + "");
+        TextField redirectTF = new TextField(tableViewWithPaginationPane.getCurrentPageIndex() + 1 + "");
         redirectTF.setOnMouseClicked((MouseEvent event) -> {
             redirectTF.setText("");
         });
@@ -61,22 +92,17 @@ public class TableViewWithPagination {
                 if (pageSizeText.length() != 0 && !pageSizeText.equals(page.getPageSize() + "")) {
                     Matcher matcher = pattern.matcher(pageSizeText);
                     if (matcher.find()) {
-                        page.changePageSize(Integer.parseInt(pageSizeText));
-                        pagination.setCurrentPageIndex(0);
-                        pagination.setPageCount(page.getTotalPage());
-                        pagination.setPageFactory(pageIndex -> {
-                            tableView.setItems(FXCollections.observableList(page.getCurrentPageDataList(pageIndex)));
-                            return tableView;
-                        });
+                        page.setPageSize(Integer.parseInt(pageSizeText));
+                        updatePagination();
                     }
                 }
 
                 // set redirect page index controller
-                if (inputText.length() != 0 && !inputText.equals(pagination.getCurrentPageIndex() + 1 + "")) {
+                if (inputText.length() != 0 && !inputText.equals(tableViewWithPaginationPane.getCurrentPageIndex() + 1 + "")) {
                     Matcher match = pattern.matcher(inputText);
                     if (match.find()) {
                         int currentPageIndex = Integer.parseInt(inputText) - 1;
-                        pagination.setCurrentPageIndex(currentPageIndex);
+                        tableViewWithPaginationPane.setCurrentPageIndex(currentPageIndex);
                     }
                 }
             }
@@ -89,12 +115,64 @@ public class TableViewWithPagination {
         return controller;
     }
 
-    public static BorderPane createByDefaultLayout(Page page, TableView tableView) {
-        Pagination pagination = create(page, tableView);
-        HBox controller = createContoller(page, tableView, pagination);
+    public BorderPane getDefaultLayout() {
+
+        HBox controller = createContoller();
         BorderPane pane = new BorderPane();
-        pane.setCenter(pagination);
+        pane.setCenter(tableViewWithPaginationPane);
         pane.setBottom(controller);
         return pane;
     }
+
+
+    public void addGlobalOrdering(TableColumn<T, ?> column, Comparator<? super T> ascComparator) {
+        System.out.println("column.getText() : " + column.getText());
+
+        /** button setting **/
+        Button button = new Button(column.getText());
+        button.setMinWidth(column.getMinWidth());
+        button.setMaxWidth(column.getMaxWidth());
+        button.setPrefWidth(column.getPrefWidth());
+        orderMap.put(button, Order.NO);
+
+        /** column setting **/
+        column.setText(null);
+        column.setGraphic(button);
+
+        // turn off built-in order in TableView
+        column.setSortable(false);
+
+        ImageView ascImg = new ImageView("/image-app/asc.png");
+        ImageView descImg = new ImageView("/image-app/desc.png");
+        button.setOnAction(actionEvent -> {
+            switch (orderMap.get(button)) {
+                case NO:
+                    orderMap.replace(button, Order.ASC);
+//                    button.setGraphic(ascImg);
+                    order(ascComparator);
+                    updatePagination();
+                    break;
+                case ASC:
+                    orderMap.put(button, Order.DESC);
+                    button.setGraphic(descImg);
+                    Collections.reverse(page.getRowDataList());
+                    updatePagination();
+                    break;
+                case DESC:
+                    orderMap.put(button, Order.ASC);
+                    button.setGraphic(ascImg);
+                    Collections.reverse(page.getRowDataList());
+                    updatePagination();
+                    break;
+            }
+        });
+    }
+
+    private void order(Comparator<? super T> comparator) {
+        Collections.sort(page.getRowDataList(), comparator);
+    }
+}
+
+enum Order {
+    NO, ASC, DESC
 }

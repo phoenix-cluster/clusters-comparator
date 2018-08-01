@@ -107,7 +107,8 @@ public class MgfInfoDisplayPane {
         // mgf table
         Page<MS> page = new Page<>(msList1, pageSize);
         TableView tableView = createMgfTable();
-        mgfInfoDisplayPane.add(TableViewWithPagination.createByDefaultLayout(page, tableView), 0, 1);
+        TableViewWithPagination tableViewWithPagination = new TableViewWithPagination(page, tableView);
+        mgfInfoDisplayPane.add(tableViewWithPagination.getDefaultLayout(), 0, 1);
 
         // similarity score table
         // create similarity score pane

@@ -20,11 +20,7 @@ public class ClusterTableTest extends Application {
         List<Cluster> clusterList = ClusteringFileHandler.getAllClusters(file);
         BorderPane clusterTablePane = clusterTable.create(clusterList, 8);
 
-        TableView<Cluster> clusterTableView = clusterTable.getClusterTableView();
-
-        for(Cluster c : clusterTableView.getItems()){
-            System.out.println(c);
-        }
+        System.out.println("total records number: " + clusterList.size());
 
         Scene scene = new Scene(clusterTablePane);
         primaryStage.setScene(scene);

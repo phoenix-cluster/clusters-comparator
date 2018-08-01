@@ -26,6 +26,7 @@ public class ClusteringFileHandler {
         return reassembleCluster(new ClusteringFileReader(clusteringFile).readAllClusters());
     }
 
+    @Deprecated
     public static List<Cluster> oldReassembleCluster(List<ICluster> clusterList) {
         List<Cluster> allClusters = new ArrayList<Cluster>(); // return value
 

@@ -1,16 +1,22 @@
 package cn.edu.cqupt.clustering.view;
 
-import cn.edu.cqupt.main.Application;
 import cn.edu.cqupt.model.Cluster;
 import cn.edu.cqupt.page.Page;
 import cn.edu.cqupt.page.TableViewWithPagination;
+import cn.edu.cqupt.util.TableViewUtil;
 import javafx.collections.FXCollections;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+import javafx.scene.control.Button;
 import javafx.scene.control.SelectionMode;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class ClusterTable {
@@ -46,7 +52,30 @@ public class ClusterTable {
         clusterTableView.setItems(FXCollections.observableList(clusterList));
 
         // create table with pagination
-        return TableViewWithPagination.createByDefaultLayout(page, clusterTableView);
+        TableViewWithPagination<Cluster> tableViewWithPagination = new TableViewWithPagination<>(page, clusterTableView);
+
+        // add global ordering for specified
+        tableViewWithPagination.addGlobalOrdering(
+                clusterTableView.getColumns().get(1),
+                (c1, c2) ->
+                        Float.compare(c1.getRatio(), c2.getRatio())
+        );
+        tableViewWithPagination.addGlobalOrdering(
+                clusterTableView.getColumns().get(2),
+                (c1, c2) ->
+                        Float.compare(c1.getAvPrecursorMz(), c2.getAvPrecursorMz())
+        );
+        tableViewWithPagination.addGlobalOrdering(
+                clusterTableView.getColumns().get(3),
+                (c1, c2) ->
+                        Float.compare(c1.getAvPrecursorIntens(), c2.getAvPrecursorIntens())
+        );
+        tableViewWithPagination.addGlobalOrdering(
+                clusterTableView.getColumns().get(4),
+                (c1, c2) ->
+                        Float.compare(c1.getSpecCount(), c2.getSpecCount())
+        );
+        return tableViewWithPagination.getDefaultLayout();
     }
 
     /**
@@ -60,11 +89,11 @@ public class ClusterTable {
 
         // set columns
         TableColumn<Cluster, String> idCol = new TableColumn<>("ID");
-        idCol.setCellValueFactory(new PropertyValueFactory<Cluster, String>("id"));
+        idCol.setCellValueFactory(new PropertyValueFactory("id"));
         idCol.setStyle("-fx-font-family:'Arial'; -fx-font-size: 14; -fx-alignment: CENTER;");
 
         TableColumn<Cluster, Float> ratioCol = new TableColumn<>("Ratio");
-        ratioCol.setCellValueFactory(new PropertyValueFactory<Cluster, Float>("ratio"));
+        ratioCol.setCellValueFactory(new PropertyValueFactory("ratio"));
         ratioCol.setStyle("-fx-font-family:'Arial'; -fx-font-size: 14; -fx-alignment: CENTER;");
 
         TableColumn<Cluster, Float> avPrecursorMzCol = new TableColumn<>("av_precursor_mz");
@@ -80,16 +109,17 @@ public class ClusterTable {
         specCountCol.setStyle("-fx-font-family: 'Arial'; -fx-font-size: 14; -fx-alignment: CENTER;");
 
         // add columns
-        clusterTable.getColumns().addAll(idCol, avPrecursorMzCol, avPrecursorIntensCol, specCountCol);
+        clusterTable.getColumns().addAll(idCol, ratioCol, avPrecursorMzCol, avPrecursorIntensCol, specCountCol);
 
         // set table
-        clusterTable.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
-        double width = Application.SCREEN_BOUNDS.getWidth() * 0.45;
-        clusterTable.setMaxWidth(width);
-        clusterTable.setMinWidth(width );
-        clusterTable.setPrefWidth(width);
         clusterTable.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
+        clusterTable.getSelectionModel().setCellSelectionEnabled(true);
+        clusterTable.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+
+        // make cluster table can copy
+        TableViewUtil.installCopyHandler(clusterTable);
 
         return clusterTable;
     }
+
 }

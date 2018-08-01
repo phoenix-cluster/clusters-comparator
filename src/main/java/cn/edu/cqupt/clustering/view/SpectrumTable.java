@@ -4,6 +4,7 @@ import cn.edu.cqupt.main.Application;
 import cn.edu.cqupt.model.Cluster;
 import cn.edu.cqupt.model.Spectrum;
 import cn.edu.cqupt.util.ColorUtil;
+import cn.edu.cqupt.util.TableViewUtil;
 import cn.edu.cqupt.view.ClusterApplication;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -104,6 +105,11 @@ public class SpectrumTable {
 
         // set column resize policy
         spectrumTableView.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
+        spectrumTableView.getSelectionModel().setCellSelectionEnabled(true);
+        spectrumTableView.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+
+        // add copy feature for spectrum table
+        TableViewUtil.installCopyHandler(spectrumTableView);
         return spectrumTableView;
     }
 
