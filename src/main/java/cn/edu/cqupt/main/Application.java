@@ -3,6 +3,7 @@ package cn.edu.cqupt.main;
 import cn.edu.cqupt.main.data.stage.ClusteringDataStage;
 import cn.edu.cqupt.main.data.stage.MgfDataStage;
 import cn.edu.cqupt.util.TabPaneExpansion;
+import cn.edu.cqupt.websocket.EchartsServer;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.event.ActionEvent;
 import javafx.geometry.Rectangle2D;
@@ -20,6 +21,8 @@ import javafx.stage.Stage;
 import javafx.stage.Window;
 
 import java.io.File;
+import java.io.IOException;
+import java.net.UnknownHostException;
 
 public class Application extends javafx.application.Application {
 
@@ -28,10 +31,22 @@ public class Application extends javafx.application.Application {
     public static SimpleIntegerProperty pageSize; //the number of each page
     public static TabPaneExpansion tabPaneExpansion;
     public static final Rectangle2D SCREEN_BOUNDS = Screen.getPrimary().getBounds();
-
+    public static EchartsServer echartsServer;
     static {
         pageSize = new SimpleIntegerProperty(8);
         tabPaneExpansion = new TabPaneExpansion();
+        tabPaneExpansion.addTabs(new Tab("Introduction"),
+                new Tab("Cluster Selection"),
+                new Tab("Cluster Comparison"));
+
+        // echart WebSocket
+        int port = 57861;
+        try {
+            echartsServer = new EchartsServer(port);
+            echartsServer.start();
+        } catch (UnknownHostException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
@@ -43,11 +58,12 @@ public class Application extends javafx.application.Application {
 
         // introduce
         WebView introductionPane = getIntroductionPane();
-        Tab introductionTab = new Tab("Introduction");
+//        Tab introductionTab = new Tab("Introduction");
+        Tab introductionTab = tabPaneExpansion.getTabByText("Introduction");
         introductionTab.setContent(introductionPane);
 
         // set builds layout
-        tabPaneExpansion.addTab(introductionTab);
+//        tabPaneExpansion.addTab(introductionTab);
         root.setCenter(tabPaneExpansion.getTabPane());
         root.setTop(menu);
 
@@ -63,6 +79,15 @@ public class Application extends javafx.application.Application {
         primaryStage.setMinHeight(height);
         primaryStage.setMaxWidth(width);
         primaryStage.setMaxHeight(height);
+        primaryStage.setOnCloseRequest(event -> {
+            try {
+                echartsServer.stop();
+            } catch (IOException e) {
+                e.printStackTrace();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        });
         primaryStage.show();
 
     }
@@ -122,10 +147,12 @@ public class Application extends javafx.application.Application {
             } catch (Exception e1) {
                 e1.printStackTrace();
             }
-            Tab clusterSelectionTab = new Tab("Cluster Selection");
+//            Tab clusterSelectionTab = new Tab("Cluster Selection");
+            Tab clusterSelectionTab = tabPaneExpansion.getTabByText("Cluster Selection");
             clusterSelectionTab.setContent(clusterSelectionPane);
             tabPaneExpansion.removeTab("Introduction");
-            tabPaneExpansion.addTab(clusterSelectionTab);
+//            tabPaneExpansion.addTab(clusterSelectionTab);
+            tabPaneExpansion.getTabPane().getSelectionModel().select(clusterSelectionTab);
 
         });
 
@@ -137,7 +164,16 @@ public class Application extends javafx.application.Application {
         // second level menu: exit
         MenuItem exit = new MenuItem("Exit");
         exit.setOnAction(
-                (ActionEvent e) -> System.exit(0)
+                (ActionEvent e) -> {
+                    try {
+                        echartsServer.stop();
+                    } catch (IOException e1) {
+                        e1.printStackTrace();
+                    } catch (InterruptedException e1) {
+                        e1.printStackTrace();
+                    }
+                    System.exit(0);
+                }
         );
 
         // add menu item for file menu

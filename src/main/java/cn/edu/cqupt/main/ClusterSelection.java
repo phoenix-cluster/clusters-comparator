@@ -1,10 +1,7 @@
 package cn.edu.cqupt.main;
 
 import cn.edu.cqupt.clustering.io.ClusteringFileHandler;
-import cn.edu.cqupt.clustering.view.ClusterTable;
-import cn.edu.cqupt.clustering.view.NetworkGraph;
-import cn.edu.cqupt.clustering.view.PieChart;
-import cn.edu.cqupt.clustering.view.SpectrumTable;
+import cn.edu.cqupt.clustering.view.*;
 import cn.edu.cqupt.graph.UndirectedGraph;
 import cn.edu.cqupt.model.Cluster;
 import cn.edu.cqupt.model.Edge;
@@ -91,6 +88,8 @@ public class ClusterSelection {
         TableView<Spectrum> spectrumTableView = spectrumTable.createSpectrumTableView(); // create a framework
 
         // peak map
+        PeakMap peakMap = new PeakMap();
+        WebView peakMapPane = peakMap.getWebView();
 
         // pie chart
         PieChart pieChart = new PieChart(releaseIName, releaseIIName);
@@ -101,7 +100,7 @@ public class ClusterSelection {
         GridPane networkGraphPane = netWorkGraph.getNetworkGraphPane();
 
         // layout
-        double width = Application.SCREEN_BOUNDS.getWidth();
+//        double width = Application.SCREEN_BOUNDS.getWidth();
 //        HBox tablePane = new HBox();
 //        tablePane.setFillHeight(true);
 //        tablePane.setPrefWidth(width);
@@ -123,6 +122,7 @@ public class ClusterSelection {
         tablePane.add(new ScrollPane(spectrumTableView), 1, 0);
         tablePane.setGridLinesVisible(true);
         clusterSelectionPane.add(tablePane, 0, 0, 3, 1);
+        clusterSelectionPane.add(new ScrollPane(peakMapPane), 0, 1);
         clusterSelectionPane.add(new ScrollPane(pieChartPane), 1, 1);
         clusterSelectionPane.add(new ScrollPane(networkGraphPane), 2, 1);
 
@@ -142,9 +142,7 @@ public class ClusterSelection {
                         // set spectrum table view
                         spectrumTable.setTableView(spectrumTableView, currentCluster.getSpectra());
 
-                        // peak map
-
-                        // pie chart
+                        // chart
                         NetworkGraphService ngs = null;
                         try {
                             ngs = new NetworkGraphService(currentCluster, releaseIName, releaseIIName,
@@ -153,7 +151,12 @@ public class ClusterSelection {
                             UndirectedGraph<Vertex, Edge> graph = ngs.getUndirectedGraph();
                             Vertex focusedVertex = ngs.getFocusVertex();
 
-                            // plot
+                            // peak map
+                            peakMap.updateData(currentCluster.getId(),
+                                    currentCluster.getMzValues(),
+                                    currentCluster.getIntensValues());
+
+                            // pie chart
                             pieChart.organize(graph, focusedVertex);
 
 

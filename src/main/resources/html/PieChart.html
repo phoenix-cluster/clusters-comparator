@@ -5,6 +5,14 @@
     <title>Peak Map</title>
     <!--import echarts.js-->
     <script src="../js/echarts.js"></script>
+    <script>
+        var webSocket = new WebSocket("ws://localhost:57861");
+        webSocket.onopen = function () {
+            document.getElementById("test").innerHTML = "<h1>连接成功</h1>";
+            var message = {type: "PieChart"};
+            webSocket.send(JSON.stringify(message));
+        }
+    </script>
 </head>
 <body style="height: 100%; margin: 0">
 <div id="container" style="height: 100%"></div>
@@ -58,19 +66,30 @@
     myChart.on('click', function (params) {
 
             // 打印所有图例的状态
-            console.log(params);
-            console.log("======" + params.data.name + "=====");
             document.getElementById("test").innerHTML = "<h1>" + params.data.name + "</h1>";
-            jsPieChart.createClusterComparison(params.data.name);
+            var message = {type: "PieChartClickEvent", data: params.data.name};
+            webSocket.send(JSON.stringify(message));
         }
     );
+    //
+    // /**update data**/
+    // function updateData(focusedCluster, overlapCluster, overlapSpectraCount) {
+    //     sourceCluster = focusedCluster;
+    //     targetCluster = overlapCluster;
+    //     option.series[0].data = overlapSpectraCount;
+    //     myChart.setOption(option, true);
+    // }
 
-    /**update data**/
-    function updateData(focusedCluster, overlapCluster, overlapSpectraCount) {
-        sourceCluster = focusedCluster;
-        targetCluster = overlapCluster;
-        option.series[0].data = overlapSpectraCount;
-        myChart.setOption(option, true);
+    webSocket.onmessage = function (event) {
+        var data = JSON.parse(event.data);
+
+        if (data.type === "PieChart") {
+            document.getElementById("test").innerHTML = JSON.stringify(data);
+            sourceCluster = data["focusedCluster"];
+            targetCluster = data["overlapCluster"];
+            option.series[0].data = data["overlapSpectraCount"];
+            myChart.setOption(option, true);
+        }
     }
 </script>
 </body>

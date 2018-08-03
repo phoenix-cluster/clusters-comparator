@@ -15,8 +15,10 @@ import java.io.File;
 import java.util.List;
 
 public class PieChartTest extends Application {
+    public static Stage primaryStage;
     @Override
     public void start(Stage primaryStage) throws Exception {
+        PieChartTest.primaryStage = primaryStage;
         // organize data
         String releaseIName = "compare_5.clustering";
         String releaseIIName = "compare_6.clustering";
@@ -24,10 +26,10 @@ public class PieChartTest extends Application {
         PieChart pieChart = new PieChart(releaseIName, releaseIIName);
 
         List<Cluster> releaseI = ClusteringFileHandler.getAllClusters(
-               new File(this.getClass().getResource("/testdata/clustering/compare_5.clustering").getPath()));
+               new File("C:\\@code\\java\\clusters-comparator\\testdata\\clustering\\compare_5.clustering"));
 
         List<Cluster> releaseII = ClusteringFileHandler.getAllClusters(
-                new File(this.getClass().getResource("/testdata/clustering/compare_6.clustering").getPath()));
+                new File("C:\\@code\\java\\clusters-comparator\\testdata\\clustering\\compare_6.clustering"));
 
         Cluster cluster = releaseI.get(0);
 
@@ -46,8 +48,6 @@ public class PieChartTest extends Application {
 
         Scene scene = new Scene(pieChart.getWebView());
         primaryStage.setScene(scene);
-        primaryStage.show();
-
     }
 
 }

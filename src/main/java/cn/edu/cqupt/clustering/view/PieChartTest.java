@@ -14,15 +14,15 @@ import javafx.stage.Stage;
 import java.io.File;
 import java.util.List;
 
-public class PeakMapTest extends Application {
+public class PieChartTest extends Application {
+
     @Override
     public void start(Stage primaryStage) throws Exception {
-
         // organize data
         String releaseIName = "compare_5.clustering";
         String releaseIIName = "compare_6.clustering";
 
-        PeakMap peakMap = new PeakMap();
+        PieChart pieChart = new PieChart(releaseIName, releaseIIName);
 
         List<Cluster> releaseI = ClusteringFileHandler.getAllClusters(
                 new File("C:\\@code\\java\\clusters-comparator\\testdata\\clustering\\compare_5.clustering"));
@@ -43,9 +43,9 @@ public class PeakMapTest extends Application {
         Vertex focusVertex = ngs.getFocusVertex();
 
         // plot
-        peakMap.updateData(cluster.getId(), cluster.getMzValues(), cluster.getIntensValues());
+        pieChart.organize(graph, focusVertex);
 
-        Scene scene = new Scene(peakMap.getWebView());
+        Scene scene = new Scene(pieChart.getWebView());
         primaryStage.setScene(scene);
         primaryStage.show();
     }

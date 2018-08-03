@@ -4,6 +4,8 @@ import javafx.collections.ListChangeListener;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 
@@ -35,37 +37,34 @@ public class TabPaneExpansion {
     }
 
     private void initial() {
-        tabPane.getTabs().addListener(new ListChangeListener<Tab>() {
+        tabPane.getTabs().addListener((ListChangeListener.Change<? extends Tab> c) -> {
+            while (c.next()) {
 
-            @Override
-            public void onChanged(Change<? extends Tab> c) {
-                while (c.next()) {
-
-                    // if elements were added into list, the elements's text
-                    // and the elements themselves need to be added into HashMap
-                    if (c.wasAdded()) {
-                        List<? extends Tab> addedTabs = c.getAddedSubList();
-                        for (Tab tab : addedTabs) {
-                            tabsMap.put(tab.getText(), tab);
-                        }
-                    }
-
-                    // if elements were removed from list, the elements's text
-                    // and the elements themselves need to be removed from HashMap
-                    if (c.wasRemoved()) {
-                        List<? extends Tab> removedTabs = c.getRemoved();
-                        for (Tab tab : removedTabs) {
-                            tabsMap.remove(tab.getText());
-                        }
+                // if elements were added into list, the elements's text
+                // and the elements themselves need to be added into HashMap
+                if (c.wasAdded()) {
+                    List<? extends Tab> addedTabs = c.getAddedSubList();
+                    for (Tab tab : addedTabs) {
+                        tabsMap.put(tab.getText(), tab);
                     }
                 }
 
+                // if elements were removed from list, the elements's text
+                // and the elements themselves need to be removed from HashMap
+                if (c.wasRemoved()) {
+                    List<? extends Tab> removedTabs = c.getRemoved();
+                    for (Tab tab : removedTabs) {
+                        tabsMap.remove(tab.getText());
+                    }
+                }
             }
+
+
         });
     }
 
     public boolean addTab(Tab tab) {
-        return this.tabPane.getTabs().add(tab);
+        return tabPane.getTabs().add(tab);
     }
 
     public boolean addTabs(Tab... tabs) {

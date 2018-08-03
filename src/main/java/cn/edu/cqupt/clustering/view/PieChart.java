@@ -6,26 +6,32 @@ import cn.edu.cqupt.model.Cluster;
 import cn.edu.cqupt.model.Edge;
 import cn.edu.cqupt.model.Spectrum;
 import cn.edu.cqupt.model.Vertex;
+import cn.edu.cqupt.websocket.EchartsServer;
+import cn.edu.cqupt.websocket.Parameters;
 import com.google.gson.Gson;
 import javafx.beans.value.ObservableValue;
+import javafx.collections.MapChangeListener;
 import javafx.concurrent.Worker;
+import javafx.scene.control.Button;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextArea;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
 import netscape.javascript.JSObject;
+import org.java_websocket.WebSocket;
 
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.net.UnknownHostException;
+import java.util.*;
 
 public class PieChart {
     private WebView webView;
     private Gson gson;
+    private boolean isFirstRun = true;
+
 
     // the cluster and its own cluster id which overlap with the focused cluster
     // (重叠的cluster id=>重叠的cluster)
@@ -38,32 +44,29 @@ public class PieChart {
     // missing data
     private static List<Spectrum> missingSpectra;
 
-    // cluster comparison tab
-    private Tab clusterComparisonTab = new Tab("Cluster Comparison");
-
     // cluster focused by cluster table
     private static Cluster focusedCluster;
 
-    private String releaseIName;
-    private String releaseIIName;
+    private static String releaseIName;
+    private static String releaseIIName;
 
     public WebView getWebView() {
         return webView;
     }
 
-    public HashMap<String, Cluster> getOverlapCluster() {
+    public static HashMap<String, Cluster> getOverlapCluster() {
         return overlapCluster;
     }
 
-    public HashMap<String, List<Spectrum>> getOverlapSpectra() {
+    public static HashMap<String, List<Spectrum>> getOverlapSpectra() {
         return overlapSpectra;
     }
 
-    public List<Spectrum> getMissingSpectra() {
+    public static List<Spectrum> getMissingSpectra() {
         return missingSpectra;
     }
 
-    public Cluster getFocusedCluster() {
+    public static Cluster getFocusedCluster() {
         return focusedCluster;
     }
 
@@ -76,8 +79,8 @@ public class PieChart {
         WebEngine webEngine = webView.getEngine();
         URL url = PeakMap.class.getResource("/html/PieChart.html");
         webEngine.load(url.toExternalForm());
-    }
 
+    }
 
     public void organize(UndirectedGraph<Vertex, Edge> undirectedGraph, Vertex focusedVertex) throws CloneNotSupportedException {
 
@@ -129,60 +132,76 @@ public class PieChart {
                 focusedCluster.getSpecCount()));
         String overlapSpectraCountStr = gson.toJson(overlapSpectraCount);
         String spectraCountOfOverlapClusterStr = gson.toJson(spectraCountOfOverlapCluster);
+        String data = "{\"type\":\"PieChart\"," +
+                "\"focusedCluster\":" + focusedClusterStr + "," +
+                "\"overlapCluster\":" + spectraCountOfOverlapClusterStr + "," +
+                "\"overlapSpectraCount\":" + overlapSpectraCountStr + "}";
+        if (isFirstRun) {
+            EchartsServer.webSocketMap.addListener(
+                    (MapChangeListener.Change<? extends String, ? extends WebSocket> change) -> {
+                        if (change.wasAdded()) {
+                            System.out.println("added = " + change.getKey());
+                            if (change.getKey().matches("PieChart")) {
+                                System.out.println("send message to pie chart: " + data);
+                                change.getValueAdded().send(data);
+                            }
 
 
-        // plot
-        WebEngine webEngine = webView.getEngine();
+                            if (change.getKey().matches("\\{\"type\":\"PieChartClickEvent\",\"data\":\".*\"\\}")) {
 
-        if (webEngine.getLoadWorker().getState() == Worker.State.SUCCEEDED) {
-            webEngine.executeScript("updateData(" + focusedClusterStr + ", " +
-                    spectraCountOfOverlapClusterStr + ", " +
-                    overlapSpectraCountStr + ")");
-        } else {
-            webEngine.getLoadWorker().stateProperty().addListener(
-                    (ObservableValue<? extends Worker.State> ov, Worker.State oldState, Worker.State newState) -> {
-                        if (newState == Worker.State.SUCCEEDED) {
-//                            System.out.println("else: updateData(" + focusedClusterStr + ", " +
-//                                    spectraCountOfOverlapClusterStr + ", " +
-//                                    overlapSpectraCountStr + ")");
+                              Parameters params = gson.fromJson(change.getKey(), Parameters.class);
 
-                            webEngine.executeScript("updateData(" + focusedClusterStr + ", " +
-                                    spectraCountOfOverlapClusterStr + ", " +
-                                    overlapSpectraCountStr + ")");
-
-                            JSObject jsObject = (JSObject) webEngine.executeScript("window");
-                            jsObject.setMember("jsPieChart", new PieChart(releaseIName, releaseIIName));
+                                System.out.println(params);
+//                                createClusterComparison(params.getData());
+                            }
                         }
                     });
+            isFirstRun = false;
+        } else {
+            EchartsServer.webSocketMap.get("PieChart").send(data);
         }
     }
 
     public void createClusterComparison(String overlapClusterId) {
 
-
-        // spectrum table
-        SpectrumTable spectrumTable = new SpectrumTable();
-        if (overlapClusterId.equals("missing data")) {
-            System.out.println("miss-overlapClusterId:" + overlapClusterId);
-            TableView spectrumTableView = spectrumTable.createSpectrumTableView();
-            spectrumTable.setTableView(spectrumTableView, missingSpectra);
-            clusterComparisonTab.setContent(new BorderPane(spectrumTableView));
+        Tab clusterComparisonTab = Application.tabPaneExpansion.getTabByText("Cluster Comparison");
+        if (Objects.isNull(clusterComparisonTab)) {
+            System.out.println("there is NullPointerException!!");
         } else {
-            Cluster cluster = overlapCluster.get(overlapClusterId);
-            List<Spectrum> spectra = overlapSpectra.get(overlapClusterId);
-            TableView spectrumTableView1 = spectrumTable.createSpectrumTableView();
-            TableView spectrumTableView2 = spectrumTable.createSpectrumTableView();
-            GridPane spectrumTablePane = spectrumTable.setTableView(spectrumTableView1, spectrumTableView2,
-                    releaseIName, releaseIIName, focusedCluster, cluster,
-                    spectra);
-            // layout
-            GridPane clusterComparisonPane = new GridPane();
-            clusterComparisonPane.add(spectrumTablePane, 0, 0, 2, 1);
-            clusterComparisonTab.setContent(clusterComparisonPane);
+            System.out.println("没有空，you know compiler!!!");
         }
 
-        Application.tabPaneExpansion.addTab(clusterComparisonTab);
+        // spectrum table
+//        SpectrumTable spectrumTable = new SpectrumTable();
+//        if (overlapClusterId.equals("missing data")) {
+//            System.out.println("miss-overlapClusterId:" + overlapClusterId);
+//            TableView spectrumTableView = spectrumTable.createSpectrumTableView();
+//            spectrumTable.setTableView(spectrumTableView, missingSpectra);
+//            clusterComparisonTab.setContent(new BorderPane(spectrumTableView));
+//        } else {
+//            Cluster cluster = overlapCluster.get(overlapClusterId);
+//            List<Spectrum> spectra = overlapSpectra.get(overlapClusterId);
+//            TableView spectrumTableView1 = spectrumTable.createSpectrumTableView();
+//            TableView spectrumTableView2 = spectrumTable.createSpectrumTableView();
+//            GridPane spectrumTablePane = spectrumTable.setTableView(spectrumTableView1, spectrumTableView2,
+//                    releaseIName, releaseIIName, focusedCluster, cluster,
+//                    spectra);
+////            // layout
+////            GridPane clusterComparisonPane = new GridPane();
+////            clusterComparisonPane.add(spectrumTablePane, 0, 0, 2, 1);
+//            clusterComparisonTab.setContent(spectrumTablePane);
+//        }
+
+        TextArea ta = new TextArea("XXXXXXXX\nXXXXXXXXX\nXXXXXXXX\nXXXXXXXXX\nXXXXXXXX\nXXXXXXXXX\nXXXXXXXX\nXXXXXXXXX\n");
+        clusterComparisonTab.setContent(ta);
+        System.out.println(Application.tabPaneExpansion.getTabPane().getTabs().size());
         Application.tabPaneExpansion.getTabPane().getSelectionModel().select(clusterComparisonTab);
+
+
+//        System.out.println("Application.tabPaneExpansion is null :" + (Application.tabPaneExpansion == null));
+//        System.out.println("clusterComparisonTab is null : " + (clusterComparisonTab == null));
+//        Application.tabPaneExpansion.addTab(clusterComparisonTab);
+//        Application.tabPaneExpansion.getTabPane().getSelectionModel().select(clusterComparisonTab);
 
     }
 }

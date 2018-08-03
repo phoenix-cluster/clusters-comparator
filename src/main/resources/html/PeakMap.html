@@ -1,99 +1,115 @@
 <!DOCTYPE html>
-<html lang="en" style="height: 100%">
+<html>
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <title>Peak Map</title>
-    <!--import echarts.js-->
     <script src="../js/echarts.js"></script>
+    <script>
+        var webSocket = new WebSocket("ws://localhost:57861");
+        webSocket.onopen = function () {
+            document.getElementById("test").innerHTML = "<h1>连接成功</h1>";
+            var message = {type: "PeakMap"};
+            webSocket.send(JSON.stringify(message));
+        }
+    </script>
 </head>
-<body style="height: 100%; margin: 0">
-<div id="container" style="height: 100%"></div>
-<div id="mess" style="height: 100%; border: 2px solid red"></div>
-
+<body>
+<!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+<div id="main" style="width: 600px;height:400px;"></div>
+<div id="test" style="height: 100%; border:1px solid royalblue"></div>
 <script type="text/javascript">
-    var dom = document.getElementById("container");
-    var myChart = echarts.init(dom, null, {renderer: 'svg'});
+    // 基于准备好的dom，初始化echarts实例
+    var myChart = echarts.init(document.getElementById('main'), null, {renderer: 'svg'});
 
+    // 指定图表的配置项和数据
     var option = {
         title: {
             text: 'Peak Map'
         },
-        tooltip: {
-            trigger: 'axis',
-            axisPointer: {            // 坐标轴指示器，坐标轴触发有效
-                type: 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
-            }
-        },
-        // legend: {
-        //     data: ['利润', '支出', '收入']
-        // },
-        grid: {
-            left: '3%',
-            right: '4%',
-            bottom: '3%',
-            containLabel: true
-        },
-        xAxis: [
-            {
-                type: 'category',
-                name: 'm/z',
-                axisTick: {show: false},
-                data: []
-            }
-        ],
-        yAxis: [
-            {
-                type: 'value'
-            }
-        ],
-        dataZoom:[
-            {
-                type: 'slider',
+        xAxis: {
+            name: 'm/z',
+            scale: true,
+            axisLine: {
+                onZero: false
             },
-            {
-                // support slide with mouse and wheel in coordinate system
-                type: 'inside'
+            splitLine: {show: false},
+            min: function (value) {
+                return value.min - 1 >= 0 ? value.min - 1 : 0;
+            },
+            max: function (value) {
+                return value.max + 1;
             }
-        ],
+        },
+        yAxis: {
+            splitLine: {
+                show: true
+            }
+        },
+        dataZoom: {
+            type: 'slider',
+            show: true,
+            xAxisIndex: [0]
+        },
         series: [
             {
-                name: '',
-                type: 'bar',
-                stack: 'spectrum',
-                data: []
+                name: 'cluster1',
+                type: 'line',
+                showSymbol: false,
+                data: [[1, 0], [1, 100]]
             },
             {
-                name: '',
-                type: 'bar',
-                stack: 'spectrum',
-                data: []
+                name: 'cluster1',
+                type: 'line',
+                showSymbol: false,
+                data: [[2, 0], [2, 200]]
+            },
+            {
+                name: 'cluster1',
+                type: 'line',
+                showSymbol: false,
+                data: [[3, 0], [3, 130]]
+            },
+            {
+                name: 'cluster2',
+                type: 'line',
+                showSymbol: false,
+                data: [[1, 0], [1, -100]]
+            },
+            {
+                name: 'cluster2',
+                type: 'line',
+                showSymbol: false,
+                data: [[3, 0], [3, -230]]
+            },
+            {
+                name: 'cluster2',
+                type: 'line',
+                showSymbol: false,
+                data: [[4, 0], [4, -130]]
             }
         ]
     };
-    if (option && typeof option === "object") {
-        myChart.setOption(option, true);
+
+    // 使用刚指定的配置项和数据显示图表。
+    myChart.setOption(option);
+
+    webSocket.onmessage = function (event) {
+        var data = JSON.parse(event.data);
+
+        if (data.type === "PeakMap") {
+            document.getElementById("test").innerHTML = JSON.stringify(data);
+            option.series = data.series;
+            myChart.setOption(option, true);
+        }
     }
 
-    /**update data**/
-    function updateSingleSpectrum(mzValue, intensityValue){
-        alert(mzValue[0]);
-        document.getElementById("mess").innerHTML="<h1>" + mzValue[0] + "</h1>";
-        option.xAxis[0].data = mzValue;
-        option.series[0].data = intensityValue;
-        myChart.setOption(option, true);
-    }
-
-    function updateMultiSpectrum(mzValue, intensityValue0, intensityValue1){
-        document.getElementById("mess").innerHTML="<h1>" + mzValue[0] + "</h1>";
-
-        option.xAxis[0].data = mzValue;
-        option.series[0].data = intensityValue0;
-        option.series[1].data = intensityValue1;
-        myChart.setOption(option, true);
+    function update(series) {
+        option.series = series;
+        myChart.setOption(option);
     }
 
     function test() {
-        return "hello javafx";
+        document.getElementById("test").innerHTML = "<h1>hello!!!!!!</h1>";
     }
 </script>
 </body>
