@@ -35,9 +35,9 @@ public class Application extends javafx.application.Application {
     static {
         pageSize = new SimpleIntegerProperty(8);
         tabPaneExpansion = new TabPaneExpansion();
-        tabPaneExpansion.addTabs(new Tab("Introduction"),
-                new Tab("Cluster Selection"),
-                new Tab("Cluster Comparison"));
+//        tabPaneExpansion.addTabs(new Tab("Introduction"),
+//                new Tab("Cluster Selection"),
+//                new Tab("Cluster Comparison"));
 
         // echart WebSocket
         int port = 57861;
@@ -58,12 +58,11 @@ public class Application extends javafx.application.Application {
 
         // introduce
         WebView introductionPane = getIntroductionPane();
-//        Tab introductionTab = new Tab("Introduction");
-        Tab introductionTab = tabPaneExpansion.getTabByText("Introduction");
+        Tab introductionTab = new Tab("Introduction");
         introductionTab.setContent(introductionPane);
 
         // set builds layout
-//        tabPaneExpansion.addTab(introductionTab);
+        tabPaneExpansion.addTab(introductionTab);
         root.setCenter(tabPaneExpansion.getTabPane());
         root.setTop(menu);
 
@@ -147,11 +146,10 @@ public class Application extends javafx.application.Application {
             } catch (Exception e1) {
                 e1.printStackTrace();
             }
-//            Tab clusterSelectionTab = new Tab("Cluster Selection");
-            Tab clusterSelectionTab = tabPaneExpansion.getTabByText("Cluster Selection");
+            Tab clusterSelectionTab = new Tab("Cluster Selection");
             clusterSelectionTab.setContent(clusterSelectionPane);
             tabPaneExpansion.removeTab("Introduction");
-//            tabPaneExpansion.addTab(clusterSelectionTab);
+            tabPaneExpansion.addTab(clusterSelectionTab);
             tabPaneExpansion.getTabPane().getSelectionModel().select(clusterSelectionTab);
 
         });

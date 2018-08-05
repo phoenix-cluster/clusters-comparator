@@ -1,6 +1,6 @@
 package cn.edu.cqupt.view;
 
-import cn.edu.cqupt.util.ColorUtil;
+import cn.edu.cqupt.util.ColorUtils;
 import cn.edu.cqupt.util.ZoomManager;
 import javafx.scene.chart.LineChart;
 import javafx.scene.chart.NumberAxis;
@@ -171,7 +171,7 @@ public class PeakMap {
 //		ArrayList<XYChart.Series<Number, Number>> allSeriesList = new ArrayList<>();
 //		for(XYChart.Series<Number, Number> series : seriesList1){
 //			series.getNode().lookup(".chart-series-line")
-//					.setStyle("-fx-stroke: " + ColorUtil.colorToHex(Color.RED));
+//					.setStyle("-fx-stroke: " + ColorUtils.colorToHex(Color.RED));
 //		}
 //		allSeriesList.addAll(seriesList1);
 //		allSeriesList.addAll(seriesList2);
@@ -197,7 +197,7 @@ public class PeakMap {
 											boolean isNegativeIntens, Color strokeColor) {
 //		XYChart.Series<Number, Number> series = new XYChart.Series<>();
 //		series.getNode().lookup(".chart-series-line")
-//				.setStyle("-fx-stroke: " + ColorUtil.colorToHex(strokeColor));
+//				.setStyle("-fx-stroke: " + ColorUtils.colorToHex(strokeColor));
 //		ArrayList<XYChart.Series<Number, Number>> seriesList = new ArrayList<>();
 		// build data
 		Iterator<Double> mzItr = mz.iterator();
@@ -211,7 +211,7 @@ public class PeakMap {
 			series.getData().add(new XYChart.Data<>(x, y));
 			filteredPeakMap.getData().add(series);
 			series.getNode().lookup(".chart-series-line")
-				.setStyle("-fx-stroke: " + ColorUtil.colorToHex(strokeColor));
+				.setStyle("-fx-stroke: " + ColorUtils.colorToHex(strokeColor));
 //			seriesList.add(series);
 		}
 	}

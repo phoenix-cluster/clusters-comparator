@@ -28,7 +28,7 @@ public class TableViewWithPagination<T> {
     private Pagination tableViewWithPaginationPane;
 
     // the head of column => order way
-    private Map<Button, Order> orderMap;
+    private Map<Label, Order> orderMap;
 
     public Page<T> getPage() {
         return page;
@@ -125,43 +125,47 @@ public class TableViewWithPagination<T> {
     }
 
 
-    public void addGlobalOrdering(TableColumn<T, ?> column, Comparator<? super T> ascComparator) {
+    public void addGlobalOrdering(TableColumn<T, ?> column,
+                                  Comparator<? super T> ascComparator,
+                                  Comparator<? super T> descComparator) {
         System.out.println("column.getText() : " + column.getText());
 
-        /** button setting **/
-        Button button = new Button(column.getText());
-        button.setMinWidth(column.getMinWidth());
-        button.setMaxWidth(column.getMaxWidth());
-        button.setPrefWidth(column.getPrefWidth());
-        orderMap.put(button, Order.NO);
+        /** label setting **/
+        Label label = new Label(column.getText());
+        label.setMinWidth(column.getMinWidth());
+        label.setMaxWidth(column.getMaxWidth());
+        label.setPrefWidth(column.getPrefWidth());
+        orderMap.put(label, Order.NO);
 
         /** column setting **/
         column.setText(null);
-        column.setGraphic(button);
+        column.setGraphic(label);
 
         // turn off built-in order in TableView
         column.setSortable(false);
 
         ImageView ascImg = new ImageView("/image-app/asc.png");
         ImageView descImg = new ImageView("/image-app/desc.png");
-        button.setOnAction(actionEvent -> {
-            switch (orderMap.get(button)) {
+        ImageView noImg = new ImageView("/image-app/no.png");
+        label.setOnMouseClicked(mouseEvent -> {
+            orderMap.keySet().stream().forEach(lab -> lab.setGraphic(noImg));
+            switch (orderMap.get(label)) {
                 case NO:
-                    orderMap.replace(button, Order.ASC);
-//                    button.setGraphic(ascImg);
+                    orderMap.replace(label, Order.ASC);
+                    label.setGraphic(ascImg);
                     order(ascComparator);
                     updatePagination();
                     break;
                 case ASC:
-                    orderMap.put(button, Order.DESC);
-                    button.setGraphic(descImg);
-                    Collections.reverse(page.getRowDataList());
+                    orderMap.put(label, Order.DESC);
+                    label.setGraphic(descImg);
+                    order(descComparator);
                     updatePagination();
                     break;
                 case DESC:
-                    orderMap.put(button, Order.ASC);
-                    button.setGraphic(ascImg);
-                    Collections.reverse(page.getRowDataList());
+                    orderMap.put(label, Order.ASC);
+                    label.setGraphic(ascImg);
+                    order(ascComparator);
                     updatePagination();
                     break;
             }

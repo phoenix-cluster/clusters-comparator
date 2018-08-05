@@ -3,14 +3,13 @@ package cn.edu.cqupt.clustering.view;
 import cn.edu.cqupt.main.Application;
 import cn.edu.cqupt.model.Cluster;
 import cn.edu.cqupt.model.Spectrum;
-import cn.edu.cqupt.util.ColorUtil;
+import cn.edu.cqupt.util.ColorUtils;
 import cn.edu.cqupt.util.TableViewUtil;
 import cn.edu.cqupt.view.ClusterApplication;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.geometry.Insets;
-import javafx.geometry.Rectangle2D;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.GridPane;
@@ -19,7 +18,6 @@ import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
-import javafx.stage.Screen;
 import javafx.util.Callback;
 
 import java.util.List;
@@ -201,7 +199,7 @@ public class SpectrumTable {
             public void updateItem(Spectrum item, boolean empty) {
                 if (item != null && !empty) {
                     if (overlapSpectrums.indexOf(item) != -1)
-                        setStyle("-fx-background-color: " + ColorUtil.colorToHex(color));
+                        setStyle("-fx-background-color: " + ColorUtils.colorToHex(color));
                     else
                         setStyle("");
                 }

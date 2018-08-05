@@ -99,12 +99,12 @@ public class ZoomManager<X, Y> {
 			if (i < anchorPoint) {
 				if (firstColor != null) {
 					backup2.get(i).getNode().lookup(".chart-series-line")
-							.setStyle("-fx-stroke: " + ColorUtil.colorToHex(firstColor));
+							.setStyle("-fx-stroke: " + ColorUtils.colorToHex(firstColor));
 					// System.out.println("firstColor-Zoom");
 				}
 			} else {
 				backup2.get(i).getNode().lookup(".chart-series-line")
-						.setStyle("-fx-stroke: " + ColorUtil.colorToHex(secondColor));
+						.setStyle("-fx-stroke: " + ColorUtils.colorToHex(secondColor));
 				// System.out.println("secondColor-Zoom");
 			}
 		}

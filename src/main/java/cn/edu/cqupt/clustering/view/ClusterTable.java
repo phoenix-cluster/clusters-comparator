@@ -57,23 +57,23 @@ public class ClusterTable {
         // add global ordering for specified
         tableViewWithPagination.addGlobalOrdering(
                 clusterTableView.getColumns().get(1),
-                (c1, c2) ->
-                        Float.compare(c1.getRatio(), c2.getRatio())
+                (c1, c2) -> Float.compare(c1.getRatio(), c2.getRatio()),
+                (c1, c2) -> Float.compare(c2.getRatio(), c1.getRatio())
         );
         tableViewWithPagination.addGlobalOrdering(
                 clusterTableView.getColumns().get(2),
-                (c1, c2) ->
-                        Float.compare(c1.getAvPrecursorMz(), c2.getAvPrecursorMz())
+                (c1, c2) -> Float.compare(c1.getAvPrecursorMz(), c2.getAvPrecursorMz()),
+                (c1, c2) -> Float.compare(c2.getAvPrecursorMz(), c1.getAvPrecursorMz())
         );
         tableViewWithPagination.addGlobalOrdering(
                 clusterTableView.getColumns().get(3),
-                (c1, c2) ->
-                        Float.compare(c1.getAvPrecursorIntens(), c2.getAvPrecursorIntens())
+                (c1, c2) -> Float.compare(c1.getAvPrecursorIntens(), c2.getAvPrecursorIntens()),
+                (c1, c2) -> Float.compare(c2.getAvPrecursorIntens(), c1.getAvPrecursorIntens())
         );
         tableViewWithPagination.addGlobalOrdering(
                 clusterTableView.getColumns().get(4),
-                (c1, c2) ->
-                        Float.compare(c1.getSpecCount(), c2.getSpecCount())
+                (c1, c2) -> Float.compare(c1.getSpecCount(), c2.getSpecCount()),
+                (c1, c2) -> Float.compare(c2.getSpecCount(), c1.getSpecCount())
         );
         return tableViewWithPagination.getDefaultLayout();
     }

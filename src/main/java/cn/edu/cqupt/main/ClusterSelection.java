@@ -1,5 +1,6 @@
 package cn.edu.cqupt.main;
 
+import cn.edu.cqupt.clustering.controller.AreaPieChartController;
 import cn.edu.cqupt.clustering.io.ClusteringFileHandler;
 import cn.edu.cqupt.clustering.view.*;
 import cn.edu.cqupt.graph.UndirectedGraph;
@@ -9,10 +10,12 @@ import cn.edu.cqupt.model.Spectrum;
 import cn.edu.cqupt.model.Vertex;
 import cn.edu.cqupt.service.NetworkGraphService;
 import javafx.beans.value.ObservableValue;
-import javafx.geometry.Pos;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TableView;
-import javafx.scene.layout.*;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.ColumnConstraints;
+import javafx.scene.layout.GridPane;
+import javafx.scene.layout.RowConstraints;
 import javafx.scene.web.WebView;
 
 import java.io.File;
@@ -92,23 +95,13 @@ public class ClusterSelection {
         WebView peakMapPane = peakMap.getWebView();
 
         // pie chart
-        PieChart pieChart = new PieChart(releaseIName, releaseIIName);
-        WebView pieChartPane = pieChart.getWebView();
+        AreaPieChart pieChart = new AreaPieChart(50, 50);
 
         // network graph
         NetworkGraph netWorkGraph = new NetworkGraph();
         GridPane networkGraphPane = netWorkGraph.getNetworkGraphPane();
 
         // layout
-//        double width = Application.SCREEN_BOUNDS.getWidth();
-//        HBox tablePane = new HBox();
-//        tablePane.setFillHeight(true);
-//        tablePane.setPrefWidth(width);
-//        tablePane.setMaxWidth(width);
-//        tablePane.setMaxWidth(width);
-//        tablePane.setAlignment(Pos.CENTER);
-//
-//        tablePane.getChildren().addAll(clusterTablePane, new ScrollPane(spectrumTableView));
         GridPane tablePane = new GridPane();
         ColumnConstraints col0 = new ColumnConstraints();
         col0.setPercentWidth(50);
@@ -123,11 +116,15 @@ public class ClusterSelection {
         tablePane.setGridLinesVisible(true);
         clusterSelectionPane.add(tablePane, 0, 0, 3, 1);
         clusterSelectionPane.add(new ScrollPane(peakMapPane), 0, 1);
-        clusterSelectionPane.add(new ScrollPane(pieChartPane), 1, 1);
+        clusterSelectionPane.add(new ScrollPane(pieChart.getDefaultLayout()), 1, 1);
         clusterSelectionPane.add(new ScrollPane(networkGraphPane), 2, 1);
 
-        // add event to cluster table: focus on the row of the cluster table to display
-        // the corresponding table and charts
+        /** add event to cluster table: focus on the row of the cluster table to display
+         * the corresponding table and charts
+         */
+        AreaPieChartController pieChartController = new AreaPieChartController(releaseIName, releaseIIName);
+        pieChart.clickedClusterIdProperty().addListener((observable, oldValue, newValue) ->
+                pieChartController.clusterComposition(newValue));
         clusterTable.getClusterTableView().getFocusModel().focusedIndexProperty().addListener(
                 (ObservableValue<? extends Number> observable, Number oldValue, Number newValue) -> {
                     TableView<Cluster> clusterTableView = clusterTable.getClusterTableView();
@@ -156,9 +153,11 @@ public class ClusterSelection {
                                     currentCluster.getMzValues(),
                                     currentCluster.getIntensValues());
 
+                            System.out.println("pie chart ing");
                             // pie chart
-                            pieChart.organize(graph, focusedVertex);
-
+                            pieChartController.organizeData(graph, focusedVertex);
+                            pieChart.setData(pieChartController.getOverlapSpectraCount());
+                            System.out.println("pie chart end");
 
                             // network graph
                             netWorkGraph.create(releaseIName, releaseIIName,
