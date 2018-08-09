@@ -4,7 +4,7 @@ public class RestSpectrum {
 
 	private String title;
 	private String sequence;
-	private float charge;
+	private int charge;
 	private float precursorMz;
 	private float similarysocre;
 	private String species;
@@ -27,11 +27,11 @@ public class RestSpectrum {
 		this.sequence = sequence;
 	}
 
-	public float getCharge() {
+	public int getCharge() {
 		return charge;
 	}
 
-	public void setCharge(float charge) {
+	public void setCharge(int charge) {
 		this.charge = charge;
 	}
 

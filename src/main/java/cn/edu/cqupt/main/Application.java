@@ -129,8 +129,8 @@ public class Application extends javafx.application.Application {
             // cluster selection pane
 
             /*ClusterSelection clusterSelection = new ClusterSelection(dataStage.getClusteringFileI(), dataStage.getClusteringFileII());*/
-            File file1 = new File("C:\\@code\\java\\clusters-comparator\\testdata\\clustering\\hdp_clustering.pxd000021.0.7_4.clustering");
             File file2 = new File("C:\\@code\\java\\clusters-comparator\\testdata\\clustering\\cli_clustering.pxd000021.0.7_4.clustering");
+            File file1 = new File("C:\\@code\\java\\clusters-comparator\\testdata\\clustering\\hdp_clustering.pxd000021.0.7_4.clustering");
 
 //            //little data
 //            File file1 = new File("C:\\@code\\java\\clusters-comparator\\testdata\\clustering\\compare_5.clustering");

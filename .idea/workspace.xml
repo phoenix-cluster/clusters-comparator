@@ -2,22 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dbd4db41-c464-4a98-b49b-0be87eaf2fdd" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/controller/AreaPieChartController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/view/AreaPieChart.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/util/ColorUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/clustering/view/AreaPieChartTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/db/ESDataStorage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/view/ClusterTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/view/ClusterTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/io/ClusteringFileHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/io/ClusteringFileHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/view/AreaPieChart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/view/AreaPieChart.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/view/PieChart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/view/PieChart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/view/PieChartTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/view/PieChartTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/view/SpectrumTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/view/SpectrumTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/db/ElasticSearch.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/db/Mysql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/db/MysqlDataStorage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/main/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/main/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/main/ClusterSelection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/main/ClusterSelection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/page/TableViewWithPagination.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/page/TableViewWithPagination.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/util/ColorUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/util/ZoomManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/util/ZoomManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/view/PeakMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/view/PeakMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/model/Spectrum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/model/Spectrum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/page/Page.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/page/Page.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/restful/RestSpectrum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/restful/RestSpectrum.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/view/SpectrumTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/view/SpectrumTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/clustering/ClusteringFileHandlerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/clustering/ClusteringFileHandlerTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,78 +28,59 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.55572915">
+    <splitter split-orientation="horizontal" split-proportion="0.37297997">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="TableViewWithPagination.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/page/TableViewWithPagination.java">
+          <file leaf-file-name="MysqlDataStorageTest.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/test/java/cn/edu/cqupt/db/MysqlDataStorageTest.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="543">
-                  <caret line="150" column="77" lean-forward="true" selection-start-line="150" selection-start-column="77" selection-end-line="150" selection-end-column="77" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="AreaPieChart.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/view/AreaPieChart.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="97">
-                  <caret line="213" column="37" selection-start-line="213" selection-start-column="37" selection-end-line="213" selection-end-column="37" />
+                <state relative-caret-position="432">
+                  <caret line="21" column="35" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
                   <folding>
                     <element signature="imports" expanded="true" />
-                    <element signature="e#1198#1199#0" expanded="true" />
-                    <element signature="e#1237#1238#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="ElasticSearch.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/db/ElasticSearch.java">
+          <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/pom.xml">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="72">
-                  <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+                <state relative-caret-position="1777">
+                  <caret line="88" column="26" selection-start-line="88" selection-start-column="26" selection-end-line="88" selection-end-column="26" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="SimpleStringProperty.java" pinned="false" current-in-tab="false">
-            <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/javafx.base/javafx/beans/property/SimpleStringProperty.java">
+          <file leaf-file-name="log4j2.xml" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/resources/log4j2.xml">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="672">
-                  <caret line="72" column="51" selection-start-line="72" selection-start-column="39" selection-end-line="72" selection-end-column="51" />
+                <state relative-caret-position="96">
+                  <caret line="4" column="73" selection-start-line="4" selection-start-column="73" selection-end-line="4" selection-end-column="73" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="AreaPieChartController.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/controller/AreaPieChartController.java">
+          <file leaf-file-name="ESDataStorageTest.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/test/java/cn/edu/cqupt/db/ESDataStorageTest.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="433">
-                  <caret line="118" column="5" selection-start-line="118" selection-start-column="5" selection-end-line="118" selection-end-column="5" />
+                <state relative-caret-position="698">
+                  <caret line="43" column="31" selection-start-line="43" selection-start-column="31" selection-end-line="43" selection-end-column="71" />
                   <folding>
                     <element signature="imports" expanded="true" />
-                    <element signature="e#1584#1585#0" expanded="true" />
-                    <element signature="e#1626#1627#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="ClusterSelection.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/main/ClusterSelection.java">
+          <file leaf-file-name="ESDataStorage.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/db/ESDataStorage.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="320">
-                  <caret line="126" column="48" selection-start-line="126" selection-start-column="48" selection-end-line="126" selection-end-column="48" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="SpectrumTable.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/view/SpectrumTable.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-360">
-                  <caret column="8" lean-forward="true" selection-start-column="8" selection-end-column="36" />
+                <state relative-caret-position="531">
+                  <caret line="169" column="13" selection-start-line="127" selection-start-column="8" selection-end-line="127" selection-end-column="39" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -107,21 +88,12 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf>
-          <file leaf-file-name="PieChart.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/view/PieChart.java">
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="ESLogAnalysis.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/db/ESLogAnalysis.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="288">
-                  <caret line="165" selection-start-line="165" selection-end-line="184" selection-end-column="13" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="AreaPieChartController.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/controller/AreaPieChartController.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="639">
-                  <caret line="156" column="1" selection-start-line="156" selection-start-column="1" selection-end-line="156" selection-end-column="1" />
+                <state relative-caret-position="511">
+                  <caret line="56" column="61" selection-start-line="56" selection-start-column="61" selection-end-line="56" selection-end-column="61" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -129,24 +101,41 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="TabPaneExpansion.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/util/TabPaneExpansion.java">
+          <file leaf-file-name="ClusteringFileHandler.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/io/ClusteringFileHandler.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="471">
-                  <caret line="74" column="25" lean-forward="true" selection-start-line="74" selection-start-column="25" selection-end-line="74" selection-end-column="25" />
+                <state relative-caret-position="1416">
+                  <caret line="69" column="32" selection-start-line="69" selection-start-column="32" selection-end-line="69" selection-end-column="32" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="MysqlDataStorage.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/db/MysqlDataStorage.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="152">
+                  <caret line="71" column="41" lean-forward="true" selection-start-line="71" selection-start-column="41" selection-end-line="71" selection-end-column="41" />
                   <folding>
-                    <element signature="e#2051#2052#0" expanded="true" />
-                    <element signature="e#2091#2092#0" expanded="true" />
+                    <element signature="imports" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="HashMap.java" pinned="false" current-in-tab="false">
-            <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/java.base/java/util/HashMap.java">
+          <file leaf-file-name="ClusteringFileSpectrumReference.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/object/ClusteringFileSpectrumReference.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="221">
-                  <caret line="554" column="13" selection-start-line="554" selection-start-column="13" selection-end-line="554" selection-end-column="13" />
+                <state relative-caret-position="60">
+                  <caret line="23" selection-start-line="23" selection-end-line="23" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Stream.java" pinned="false" current-in-tab="false">
+            <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/util/stream/Stream.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="304">
+                  <caret line="606" column="6" selection-start-line="606" selection-start-column="6" selection-end-line="606" selection-end-column="6" />
                 </state>
               </provider>
             </entry>
@@ -159,21 +148,14 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="JUnit3 Test Class" />
+        <option value="Kotlin File" />
         <option value="Class" />
+        <option value="JUnit3 Test Class" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>getBounds</find>
-      <find>f07</find>
-      <find>changePageSize</find>
-      <find>onClose</find>
-      <find>map</find>
-      <find>properties</find>
-      <find>daa8f003-c974-4adb-a02d-c67308b84032</find>
-      <find>NullPointerException</find>
       <find>Tab</find>
       <find>MapChangeListener</find>
       <find>PieChartClickEvent</find>
@@ -187,7 +169,6 @@
       <find>5C97BF</find>
       <find>length</find>
       <find>\n</find>
-      <find>System</find>
       <find>isShowed</find>
       <find>percentage</find>
       <find>Color</find>
@@ -196,6 +177,15 @@
       <find>tabPaneExpansion</find>
       <find>Cluster</find>
       <find>button</find>
+      <find>192.168.6.20</find>
+      <find>charge</find>
+      <find>System</find>
+      <find>convert</find>
+      <find>file</find>
+      <find>get</find>
+      <find>getLo</find>
+      <find>dataSize</find>
+      <find />
     </findStrings>
     <replaceStrings>
       <replace>create</replace>
@@ -209,6 +199,7 @@
       <replace>zoomFactor</replace>
       <replace>size()</replace>
       <replace>label</replace>
+      <replace>logFile</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -217,29 +208,14 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/test/resources/welcome.html" />
-        <option value="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/test/webview/JavaFXWeb.java" />
-        <option value="$PROJECT_DIR$/src/test/resources/echarts-demo.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/html/bar-negative.html" />
-        <option value="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/service/NetworkGraphServiceTest.java" />
-        <option value="$PROJECT_DIR$/src/test/resources/book.html" />
-        <option value="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/test/webview/JavaFXApp.java" />
-        <option value="$PROJECT_DIR$/src/test/resources/PeakMap.html" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/main/PieChartPeakMapTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/view/NetworkGraph.java" />
-        <option value="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/clustering/ClusteringFileHandlerTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/ClusteringFileHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/service/NetworkGraphService.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/util/TableUtills.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/view/SpectrumTable.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/util/TableViewUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/io/ClusteringFileHandler.java" />
         <option value="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/clustering/view/ClusterTableTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/mgf/view/MgfInfoDisplayPane.java" />
         <option value="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/page/TableViewWithPaginationTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/page/Page.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/db/Mysql.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/websocket/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/websocket/WebViewWithWebSocket.java" />
         <option value="$PROJECT_DIR$/src/main/resources/html/echarts-messages-deliver.html" />
@@ -259,15 +235,30 @@
         <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/util/ColorUtils.java" />
         <option value="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/util/ColorUtilsTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/view/ClusterTable.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/main/Application.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/view/PieChartTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/page/TableViewWithPagination.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/view/PieChart.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/view/SpectrumTable.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/main/ClusterSelection.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/controller/AreaPieChartController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/view/AreaPieChart.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/db/ElasticSearch.java" />
+        <option value="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/db/ElasticSearchTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/view/PieChart.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/io/ClusteringFileHandler.java" />
+        <option value="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/clustering/ClusteringFileHandlerTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/main/Application.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/view/AreaPieChart.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/page/Page.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/log4j2.properties.kt" />
+        <option value="$PROJECT_DIR$/src/main/resources/log4j2.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/model/Spectrum.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/log4j2.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/db/ESDataStorageTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/db/ESLogAnalysisTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/db/ESLogAnalysis.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/db/ESDataStorage.java" />
+        <option value="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/db/MysqlDataStorageTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/db/MysqlDataStorage.java" />
       </list>
     </option>
   </component>
@@ -335,8 +326,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
@@ -398,6 +387,16 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="cqupt" type="462c0819:PsiDirectoryNode" />
               <item name="clustering" type="462c0819:PsiDirectoryNode" />
+              <item name="io" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="clusters-comparator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="clusters-comparator" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cqupt" type="462c0819:PsiDirectoryNode" />
+              <item name="clustering" type="462c0819:PsiDirectoryNode" />
               <item name="view" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -435,6 +434,24 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="cqupt" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="clusters-comparator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="clusters-comparator" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cqupt" type="462c0819:PsiDirectoryNode" />
+              <item name="page" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="clusters-comparator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="clusters-comparator" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cqupt" type="462c0819:PsiDirectoryNode" />
               <item name="util" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -452,22 +469,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="clusters-comparator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="clusters-comparator" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="html" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="clusters-comparator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="clusters-comparator" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="image-app" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="clusters-comparator" type="b2602c69:ProjectViewProjectNode" />
@@ -512,6 +513,22 @@
             <path>
               <item name="clusters-comparator" type="b2602c69:ProjectViewProjectNode" />
               <item name="clusters-comparator" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cqupt" type="462c0819:PsiDirectoryNode" />
+              <item name="db" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="clusters-comparator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="clusters-comparator" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="clusters-comparator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="clusters-comparator" type="462c0819:PsiDirectoryNode" />
               <item name="testdata" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -524,11 +541,13 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="SearchEverywhereHistoryKey" value="FXCollec&#9;PSI&#9;JAVA://javafx.collections.FXCollections&#10;ObservableMap&#9;PSI&#9;JAVA://javafx.collections.ObservableMap&#10;DoublePro&#9;PSI&#9;JAVA://javafx.beans.property.DoubleProperty" />
+    <property name="SearchEverywhereHistoryKey" value="Mysql&#9;FILE&#9;file://C:/@code/java/clusters-comparator/src/main/java/cn/edu/cqupt/db/MysqlDataStorage.java&#10;FXCollec&#9;PSI&#9;JAVA://javafx.collections.FXCollections&#10;ObservableMap&#9;PSI&#9;JAVA://javafx.collections.ObservableMap&#10;DoublePro&#9;PSI&#9;JAVA://javafx.beans.property.DoubleProperty" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit3" />
@@ -542,11 +561,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="cn.edu.cqupt.db" />
       <recent name="cn.edu.cqupt.util" />
       <recent name="cn.edu.cqupt.clustering.view" />
       <recent name="cn.edu.cqupt.clustering" />
       <recent name="cn.edu.cqupt.service" />
-      <recent name="cn.edu.cqupt.dao" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\@code\java\clusters-comparator\src\main\resources\html" />
@@ -580,45 +599,47 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Application">
-    <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="cn.edu.cqupt.main.Application" />
-      <module name="clusters-comparator" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="cn.edu.cqupt.main.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-    </configuration>
-    <configuration name="AreaPieChartTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="cn.edu.cqupt.clustering.view.AreaPieChartTest" />
-      <module name="clusters-comparator" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="cn.edu.cqupt.clustering.view.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-    </configuration>
+  <component name="RunManager" selected="JUnit.MysqlDataStorageTest.testBulkWriteData">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
-    <configuration name="ColorUtilsTest.testArray" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ESDataStorageTest.testBulkWriteData" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <output_file path="$USER_HOME$/Desktop/idea-bulk-write.txt" is_save="true" />
       <module name="clusters-comparator" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="cn.edu.cqupt.util.*" />
+          <option name="PATTERN" value="cn.edu.cqupt.db.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="cn.edu.cqupt.util" />
-      <option name="MAIN_CLASS_NAME" value="cn.edu.cqupt.util.ColorUtilsTest" />
-      <option name="METHOD_NAME" value="testArray" />
+      <option name="PACKAGE_NAME" value="cn.edu.cqupt.db" />
+      <option name="MAIN_CLASS_NAME" value="cn.edu.cqupt.db.ESDataStorageTest" />
+      <option name="METHOD_NAME" value="testBulkWriteData" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="ESDataStorageTest.testWriteData" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="clusters-comparator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.edu.cqupt.db.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="cn.edu.cqupt.db" />
+      <option name="MAIN_CLASS_NAME" value="cn.edu.cqupt.db.ESDataStorageTest" />
+      <option name="METHOD_NAME" value="testWriteData" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -629,19 +650,19 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="ColorUtilsTest.testColorArray" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ESLogAnalysisTest.testHandle" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="clusters-comparator" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="cn.edu.cqupt.util.*" />
+          <option name="PATTERN" value="cn.edu.cqupt.db.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="cn.edu.cqupt.util" />
-      <option name="MAIN_CLASS_NAME" value="cn.edu.cqupt.util.ColorUtilsTest" />
-      <option name="METHOD_NAME" value="testColorArray" />
+      <option name="PACKAGE_NAME" value="cn.edu.cqupt.db" />
+      <option name="MAIN_CLASS_NAME" value="cn.edu.cqupt.db.ESLogAnalysisTest" />
+      <option name="METHOD_NAME" value="testHandle" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -652,19 +673,43 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="ColorUtilsTest.testRandomColor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MysqlDataStorageTest.testBulkWriteData" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <output_file path="$USER_HOME$/Desktop/mysql-bulk-write.txt" is_save="true" />
       <module name="clusters-comparator" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="cn.edu.cqupt.util.*" />
+          <option name="PATTERN" value="cn.edu.cqupt.db.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="cn.edu.cqupt.util" />
-      <option name="MAIN_CLASS_NAME" value="cn.edu.cqupt.util.ColorUtilsTest" />
-      <option name="METHOD_NAME" value="testRandomColor" />
+      <option name="PACKAGE_NAME" value="cn.edu.cqupt.db" />
+      <option name="MAIN_CLASS_NAME" value="cn.edu.cqupt.db.MysqlDataStorageTest" />
+      <option name="METHOD_NAME" value="testBulkWriteData" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="MysqlDataStorageTest.testIsConnected" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="clusters-comparator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.edu.cqupt.db.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="cn.edu.cqupt.db" />
+      <option name="MAIN_CLASS_NAME" value="cn.edu.cqupt.db.MysqlDataStorageTest" />
+      <option name="METHOD_NAME" value="testIsConnected" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -714,19 +759,19 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="Application.Application" />
-      <item itemvalue="Application.AreaPieChartTest" />
-      <item itemvalue="JUnit.ColorUtilsTest.testRandomColor" />
-      <item itemvalue="JUnit.ColorUtilsTest.testColorArray" />
-      <item itemvalue="JUnit.ColorUtilsTest.testArray" />
+      <item itemvalue="JUnit.ESDataStorageTest.testWriteData" />
+      <item itemvalue="JUnit.MysqlDataStorageTest.testIsConnected" />
+      <item itemvalue="JUnit.ESDataStorageTest.testBulkWriteData" />
+      <item itemvalue="JUnit.ESLogAnalysisTest.testHandle" />
+      <item itemvalue="JUnit.MysqlDataStorageTest.testBulkWriteData" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Application" />
-        <item itemvalue="Application.AreaPieChartTest" />
-        <item itemvalue="JUnit.ColorUtilsTest.testArray" />
-        <item itemvalue="JUnit.ColorUtilsTest.testColorArray" />
-        <item itemvalue="JUnit.ColorUtilsTest.testRandomColor" />
+        <item itemvalue="JUnit.MysqlDataStorageTest.testBulkWriteData" />
+        <item itemvalue="JUnit.MysqlDataStorageTest.testIsConnected" />
+        <item itemvalue="JUnit.ESLogAnalysisTest.testHandle" />
+        <item itemvalue="JUnit.ESDataStorageTest.testBulkWriteData" />
+        <item itemvalue="JUnit.ESDataStorageTest.testWriteData" />
       </list>
     </recent_temporary>
   </component>
@@ -755,48 +800,48 @@
       <workItem from="1533082266043" duration="48604000" />
       <workItem from="1533199534824" duration="51004000" />
       <workItem from="1533353462753" duration="20332000" />
-      <workItem from="1533395889235" duration="19654000" />
+      <workItem from="1533395889235" duration="91522000" />
+      <workItem from="1533717712460" duration="9734000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ColorUtilsTest_testRandomColor - 2018.08.05 at 11h 50m 15s.xml">
-      <configuration name="ColorUtilsTest.testRandomColor" configurationId="JUnit" />
+    <history-entry file="MysqlDataStorageTest_testBulkWriteData - 2018.08.08 at 17h 12m 48s.xml">
+      <configuration name="MysqlDataStorageTest.testBulkWriteData" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ColorUtilsTest_testRandomColor - 2018.08.05 at 11h 50m 44s.xml">
-      <configuration name="ColorUtilsTest.testRandomColor" configurationId="JUnit" />
+    <history-entry file="MysqlDataStorageTest_testBulkWriteData - 2018.08.08 at 17h 16m 27s.xml">
+      <configuration name="MysqlDataStorageTest.testBulkWriteData" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ColorUtilsTest_testRandomColor - 2018.08.05 at 11h 51m 50s.xml">
-      <configuration name="ColorUtilsTest.testRandomColor" configurationId="JUnit" />
+    <history-entry file="MysqlDataStorageTest_testBulkWriteData - 2018.08.08 at 17h 21m 32s.xml">
+      <configuration name="MysqlDataStorageTest.testBulkWriteData" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ColorUtilsTest_testRandomColor - 2018.08.05 at 12h 17m 53s.xml">
-      <configuration name="ColorUtilsTest.testRandomColor" configurationId="JUnit" />
+    <history-entry file="MysqlDataStorageTest_testBulkWriteData - 2018.08.08 at 17h 23m 04s.xml">
+      <configuration name="MysqlDataStorageTest.testBulkWriteData" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ColorUtilsTest_testRandomColor - 2018.08.05 at 12h 18m 02s.xml">
-      <configuration name="ColorUtilsTest.testRandomColor" configurationId="JUnit" />
+    <history-entry file="MysqlDataStorageTest_testBulkWriteData - 2018.08.08 at 17h 24m 46s.xml">
+      <configuration name="MysqlDataStorageTest.testBulkWriteData" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ColorUtilsTest_testRandomColor - 2018.08.05 at 12h 36m 37s.xml">
-      <configuration name="ColorUtilsTest.testRandomColor" configurationId="JUnit" />
+    <history-entry file="MysqlDataStorageTest_testBulkWriteData - 2018.08.08 at 17h 26m 16s.xml">
+      <configuration name="MysqlDataStorageTest.testBulkWriteData" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ColorUtilsTest_testColorArray - 2018.08.05 at 12h 46m 46s.xml">
-      <configuration name="ColorUtilsTest.testColorArray" configurationId="JUnit" />
+    <history-entry file="MysqlDataStorageTest_testBulkWriteData - 2018.08.08 at 17h 29m 34s.xml">
+      <configuration name="MysqlDataStorageTest.testBulkWriteData" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ColorUtilsTest_testColorArray - 2018.08.05 at 12h 48m 45s.xml">
-      <configuration name="ColorUtilsTest.testColorArray" configurationId="JUnit" />
+    <history-entry file="MysqlDataStorageTest_testBulkWriteData - 2018.08.08 at 17h 35m 07s.xml">
+      <configuration name="MysqlDataStorageTest.testBulkWriteData" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ColorUtilsTest_testColorArray - 2018.08.05 at 12h 54m 10s.xml">
-      <configuration name="ColorUtilsTest.testColorArray" configurationId="JUnit" />
+    <history-entry file="MysqlDataStorageTest_testBulkWriteData - 2018.08.08 at 17h 41m 23s.xml">
+      <configuration name="MysqlDataStorageTest.testBulkWriteData" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ColorUtilsTest_testArray - 2018.08.05 at 13h 22m 14s.xml">
-      <configuration name="ColorUtilsTest.testArray" configurationId="JUnit" />
+    <history-entry file="MysqlDataStorageTest_testBulkWriteData - 2018.08.09 at 05h 49m 03s.xml">
+      <configuration name="MysqlDataStorageTest.testBulkWriteData" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="278794000" />
+    <option name="totallyTimeSpent" value="360396000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="7" />
@@ -808,15 +853,14 @@
       <window_info anchor="right" id="Maven Projects" order="7" weight="0.19726562" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="11" />
-      <window_info anchor="bottom" id="Run" order="3" visible="true" weight="0.26702127" />
+      <window_info active="true" anchor="bottom" id="Run" order="3" visible="true" weight="0.5223404" />
       <window_info anchor="bottom" id="Spring" order="0" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.27978724" />
       <window_info id="Capture Tool" order="3" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.50554675" visible="true" weight="0.16145833" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.50362843" visible="true" weight="0.19427083" />
       <window_info anchor="right" id="Database" order="6" />
-      <window_info anchor="bottom" id="Find" order="2" weight="0.3287234" />
-      <window_info id="Structure" order="1" sideWeight="0.49445325" side_tool="true" weight="0.16145833" />
+      <window_info id="Structure" order="1" sideWeight="0.49637157" side_tool="true" weight="0.24322917" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
       <window_info anchor="right" id="Theme Preview" order="5" />
@@ -828,13 +872,15 @@
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.3287234" />
     </layout>
     <layout-to-restore>
       <window_info id="Designer" order="2" />
       <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="bottom" id="Run" order="3" visible="true" weight="0.25" />
       <window_info anchor="bottom" id="Spring" order="0" />
       <window_info id="Image Layers" order="6" />
-      <window_info anchor="bottom" id="Run" order="3" visible="true" weight="0.26702127" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.3287234" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
@@ -850,15 +896,14 @@
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="11" />
       <window_info anchor="right" id="Maven Projects" order="7" weight="0.19726562" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.50554675" visible="true" weight="0.16145833" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.50362843" weight="0.19427083" />
       <window_info anchor="right" id="Database" order="6" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="TODO" order="7" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info id="Structure" order="1" sideWeight="0.49445325" side_tool="true" weight="0.16145833" />
+      <window_info id="Structure" order="1" sideWeight="0.49637157" side_tool="true" weight="0.24322917" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
-      <window_info anchor="bottom" id="Find" order="2" weight="0.3287234" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.3776596" />
     </layout-to-restore>
   </component>
@@ -883,213 +928,301 @@
           <properties />
           <option name="timeStamp" value="24" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/db/ESLogAnalysis.java</url>
+          <line>44</line>
+          <properties />
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="28" />
+      <option name="time" value="31" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/java.base/java/lang/Iterable.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/elasticsearch/elasticsearch/1.5.2/elasticsearch-1.5.2-sources.jar!/org/elasticsearch/common/settings/Settings.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="954">
-          <caret line="71" column="17" selection-start-line="71" selection-start-column="17" selection-end-line="71" selection-end-column="17" />
+        <state relative-caret-position="713">
+          <caret line="81" column="16" selection-start-line="81" selection-start-column="4" selection-end-line="81" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/java.base/java/util/Set.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/elasticsearch/elasticsearch/6.3.2/elasticsearch-6.3.2.jar!/org/elasticsearch/common/settings/Settings.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-12605">
-          <caret line="111" column="17" selection-start-line="111" selection-start-column="17" selection-end-line="111" selection-end-column="17" />
+        <state relative-caret-position="144">
+          <caret line="69" column="19" selection-start-line="69" selection-start-column="19" selection-end-line="69" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/java.base/java/lang/Double.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/elasticsearch/client/transport/6.3.2/transport-6.3.2.jar!/org/elasticsearch/transport/client/PreBuiltTransportClient.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2248">
-          <caret line="1040" column="25" selection-start-line="1040" selection-start-column="25" selection-end-line="1040" selection-end-column="25" />
+        <state relative-caret-position="217">
+          <caret line="46" column="11" selection-start-line="46" selection-start-column="11" selection-end-line="46" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/java.base/java/util/stream/DoubleStream.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/elasticsearch/elasticsearch-x-content/6.3.2/elasticsearch-x-content-6.3.2.jar!/org/elasticsearch/common/xcontent/XContentFactory.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="708" column="18" lean-forward="true" selection-start-line="708" selection-start-column="4" selection-end-line="708" selection-end-column="18" />
+        <state relative-caret-position="-216">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/java.base/java/util/OptionalDouble.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/elasticsearch/elasticsearch-x-content/6.3.2/elasticsearch-x-content-6.3.2.jar!/org/elasticsearch/common/xcontent/XContentGenerator.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="128" column="18" selection-start-line="128" selection-start-column="18" selection-end-line="128" selection-end-column="18" />
+        <state relative-caret-position="-1943">
+          <caret line="25" column="17" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/java.base/java/lang/Math.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/elasticsearch/elasticsearch-x-content/6.3.2/elasticsearch-x-content-6.3.2.jar!/org/elasticsearch/common/xcontent/XContentBuilder.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="152" column="25" selection-start-line="152" selection-start-column="25" selection-end-line="152" selection-end-column="25" />
+        <state relative-caret-position="-1889">
+          <caret line="289" column="32" selection-start-line="289" selection-start-column="27" selection-end-line="289" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/javafx.graphics/javafx/scene/shape/MoveTo.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/cn/edu/cqupt/db/ElasticSearchTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/test/java/cn/edu/cqupt/clustering/view/ClusterTableTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="74" column="11" selection-start-line="74" selection-start-column="11" selection-end-line="74" selection-end-column="11" />
+        <state relative-caret-position="240">
+          <caret line="19" column="32" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/javafx.graphics/javafx/scene/Group.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/score/calculate/SimilarityScore.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="167" column="42" selection-start-line="167" selection-start-column="42" selection-end-line="167" selection-end-column="42" />
+        <state relative-caret-position="-3432">
+          <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/cn/edu/cqupt/clustering/view/PieChartTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/view/PieChart.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="169" column="55" selection-end-line="224" selection-end-column="1" />
           <folding>
-            <element signature="e#4745#4746#0" expanded="true" />
-            <element signature="e#4787#4788#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#1376#1377#0" expanded="true" />
+            <element signature="e#1406#1407#0" expanded="true" />
+            <element signature="e#1472#1473#0" expanded="true" />
+            <element signature="e#1509#1510#0" expanded="true" />
+            <element signature="e#1582#1583#0" expanded="true" />
+            <element signature="e#1619#1620#0" expanded="true" />
+            <element signature="e#1675#1676#0" expanded="true" />
+            <element signature="e#1712#1713#0" expanded="true" />
+            <element signature="e#1761#1762#0" expanded="true" />
+            <element signature="e#1798#1799#0" expanded="true" />
+            <element signature="e#8473#8474#0" expanded="true" />
+            <element signature="e#8500#8501#0" expanded="true" />
+            <element signature="e#8540#8541#0" expanded="true" />
+            <element signature="e#8572#8573#0" expanded="true" />
+            <element signature="e#8601#8602#0" expanded="true" />
+            <element signature="e#8629#8630#0" expanded="true" />
+            <element signature="e#8668#8669#0" expanded="true" />
+            <element signature="e#8702#8703#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/javafx.graphics/javafx/scene/text/Text.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/websocket/EchartsServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-54">
-          <caret line="191" column="11" selection-start-line="191" selection-start-column="11" selection-end-line="191" selection-end-column="11" />
+        <state relative-caret-position="-1459">
+          <caret line="2" column="39" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/javafx.graphics/javafx/scene/text/Font.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/io/ClusteringFileReader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="251" column="23" selection-start-line="251" selection-start-column="23" selection-end-line="251" selection-end-column="23" />
+        <state relative-caret-position="216">
+          <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
           <folding>
-            <element signature="e#8894#8895#0" expanded="true" />
-            <element signature="e#8945#8946#0" expanded="true" />
-            <element signature="e#9504#9505#0" expanded="true" />
-            <element signature="e#9555#9556#0" expanded="true" />
+            <element signature="e#423#424#0" expanded="true" />
+            <element signature="e#466#467#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/javafx.graphics/com/sun/javafx/application/LauncherImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/cn/edu/cqupt/clustering/ClusteringFileHandlerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="18" column="21" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/model/Cluster.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-9">
+          <caret line="119" column="8" selection-start-line="119" selection-start-column="8" selection-end-line="119" selection-end-column="8" />
+          <folding>
+            <element signature="e#1066#1067#0" expanded="true" />
+            <element signature="e#1087#1088#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testdata/clustering/cli_clustering.pxd000021.0.7_4.clustering">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="122977" column="39" lean-forward="true" selection-start-line="122977" selection-start-column="3" selection-end-line="122977" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/main/ClusterSelection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="90" column="46" selection-start-line="90" selection-start-column="46" selection-end-line="90" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/main/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="132" column="22" selection-start-line="132" selection-start-column="22" selection-end-line="132" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/util/TableViewUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="24">
-          <caret line="918" selection-start-line="918" selection-end-line="918" />
+          <caret line="68" column="28" selection-start-line="68" selection-start-column="28" selection-end-line="68" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/view/NetworkGraph.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/view/AreaPieChart.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-678">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        <state relative-caret-position="280">
+          <caret line="126" column="32" selection-start-line="126" selection-start-column="32" selection-end-line="126" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/java.base/java/util/Arrays.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/page/Page.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="3947" column="26" selection-start-line="3947" selection-start-column="26" selection-end-line="3947" selection-end-column="26" />
+        <state relative-caret-position="673">
+          <caret line="104" column="29" selection-start-line="104" selection-start-column="29" selection-end-line="104" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/java.base/java/util/stream/Stream.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/page/TableViewWithPagination.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="704" column="12" selection-start-line="704" selection-start-column="12" selection-end-line="704" selection-end-column="12" />
+        <state relative-caret-position="145">
+          <caret line="127" column="27" selection-start-line="127" selection-start-column="27" selection-end-line="127" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/javafx.base/javafx/beans/property/ReadOnlyIntegerWrapper.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/view/ClusterTable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="103" selection-start-line="103" selection-end-line="103" />
+        <state relative-caret-position="280">
+          <caret line="64" column="65" selection-start-line="64" selection-start-column="65" selection-end-line="64" selection-end-column="65" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/javafx.base/javafx/beans/property/IntegerPropertyBase.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/model/Spectrum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="53" column="51" selection-start-line="53" selection-start-column="51" selection-end-line="53" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/sql/Statement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="574" column="62" lean-forward="true" selection-start-line="572" selection-start-column="15" selection-end-line="574" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/elasticsearch/elasticsearch/6.3.2/elasticsearch-6.3.2.jar!/org/elasticsearch/action/bulk/BulkRequestBuilder.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/elasticsearch/elasticsearch/6.3.2/elasticsearch-6.3.2.jar!/org/elasticsearch/client/support/AbstractClient.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="443" column="65" lean-forward="true" selection-start-line="443" selection-start-column="14" selection-end-line="443" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/elasticsearch/elasticsearch/6.3.2/elasticsearch-6.3.2.jar!/org/elasticsearch/action/ActionRequestBuilder.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="32" column="58" lean-forward="true" selection-start-line="32" selection-start-column="36" selection-end-line="32" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j2.properties" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j2.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="4" column="73" selection-start-line="4" selection-start-column="73" selection-end-line="4" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/io/FileFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="38" column="17" selection-start-line="38" selection-start-column="17" selection-end-line="38" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/io/File.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="327">
+          <caret line="1246" column="35" selection-start-line="1246" selection-start-column="35" selection-end-line="1246" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/io/FilenameFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="429">
+          <caret line="51" column="27" selection-start-line="51" selection-start-column="24" selection-end-line="51" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/nio/file/attribute/FileAttribute.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="39" column="17" selection-start-line="39" selection-start-column="17" selection-end-line="39" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/nio/file/OpenOption.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="41" column="3" lean-forward="true" selection-start-line="41" selection-start-column="3" selection-end-line="41" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/nio/file/Files.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="178">
-          <caret line="149" selection-start-line="149" selection-end-line="149" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/javafx.controls/javafx/scene/control/FocusModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="73" column="43" selection-start-line="73" selection-start-column="43" selection-end-line="73" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/javafx.base/javafx/beans/WeakInvalidationListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="89" selection-start-line="89" selection-end-line="89" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/javafx.base/javafx/beans/property/ObjectPropertyBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="148" selection-start-line="148" selection-end-line="148" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/javafx.controls/javafx/scene/control/TableView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="861" column="57" selection-start-line="861" selection-start-column="57" selection-end-line="861" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/javafx.controls/javafx/scene/control/skin/PaginationSkin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="223" selection-start-line="223" selection-end-line="223" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/javafx.controls/javafx/scene/control/Pagination.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="334" selection-start-line="334" selection-end-line="334" />
-          <folding>
-            <element signature="e#11874#11875#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/javafx.controls/javafx/scene/control/Control.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="89" selection-start-line="89" selection-end-line="89" />
-          <folding>
-            <element signature="e#2757#2758#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/javafx.graphics/javafx/scene/Parent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="1410" selection-start-line="1410" selection-end-line="1410" />
-          <folding>
-            <element signature="e#4069#4070#0" expanded="true" />
-            <element signature="e#4131#4132#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/javafx.base/javafx/beans/property/ReadOnlyIntegerPropertyBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="72" selection-start-line="72" selection-end-line="72" />
+          <caret line="3285" column="57" lean-forward="true" selection-start-line="3285" selection-start-column="57" selection-end-line="3285" selection-end-column="57" />
         </state>
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/runner/JUnitCore.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="71" selection-start-line="71" selection-end-line="71" />
+        <state relative-caret-position="824">
+          <caret line="63" column="38" selection-start-line="63" selection-start-column="38" selection-end-line="63" selection-end-column="38" />
         </state>
       </provider>
     </entry>
@@ -1100,206 +1233,105 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/java.base/java/io/BufferedReader.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/cn/edu/cqupt/db/ESLogAnalysisTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="114" column="11" selection-start-line="114" selection-start-column="11" selection-end-line="114" selection-end-column="11" />
-          <folding>
-            <element signature="e#3008#3009#0" expanded="true" />
-            <element signature="e#3055#3056#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/java.base/java/nio/file/Paths.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="37" column="19" selection-start-line="37" selection-start-column="19" selection-end-line="37" selection-end-column="19" />
-          <folding>
-            <element signature="e#2673#2674#0" expanded="true" />
-            <element signature="e#2741#2742#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/java.base/java/nio/file/Files.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="3919" column="31" lean-forward="true" selection-start-line="3919" selection-start-column="31" selection-end-line="3919" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/java.base/java/io/InputStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="69" column="24" selection-start-line="69" selection-start-column="24" selection-end-line="69" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/color.list.backup">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="8" column="7" lean-forward="true" selection-end-line="75" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/java.base/java/util/stream/IntStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="101" column="14" selection-start-line="101" selection-start-column="14" selection-end-line="101" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/color.list">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1305" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/cn/edu/cqupt/util/ColorUtilsTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="81" selection-start-line="81" selection-end-line="86" selection-end-column="9" />
+        <state relative-caret-position="216">
+          <caret line="9" column="35" lean-forward="true" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/cn/edu/cqupt/clustering/view/AreaPieChartTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/io/ClusteringFileHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1416">
+          <caret line="69" column="32" selection-start-line="69" selection-start-column="32" selection-end-line="69" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/slf4j/slf4j-api/1.7.16/slf4j-api-1.7.16.jar!/org/slf4j/Logger.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-48">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/slf4j/slf4j-api/1.7.16/slf4j-api-1.7.16.jar!/org/slf4j/LoggerFactory.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="259" column="25" selection-start-line="259" selection-start-column="25" selection-end-line="259" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/util/stream/Stream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="606" column="6" selection-start-line="606" selection-start-column="6" selection-end-line="606" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/cn/edu/cqupt/db/ESDataStorageTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="698">
+          <caret line="43" column="31" selection-start-line="43" selection-start-column="31" selection-end-line="43" selection-end-column="71" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/cn/edu/cqupt/db/MysqlDataStorageTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="21" column="35" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/db/ESLogAnalysis.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="511">
+          <caret line="56" column="61" selection-start-line="56" selection-start-column="61" selection-end-line="56" selection-end-column="61" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/db/ESDataStorage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="531">
+          <caret line="169" column="13" selection-start-line="127" selection-start-column="8" selection-end-line="127" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1777">
+          <caret line="88" column="26" selection-start-line="88" selection-start-column="26" selection-end-line="88" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/db/MysqlDataStorage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+          <caret line="71" column="41" lean-forward="true" selection-start-line="71" selection-start-column="41" selection-end-line="71" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/util/ColorUtils.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/object/ClusteringFileSpectrumReference.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="63" column="13" selection-start-line="63" selection-start-column="8" selection-end-line="63" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/view/ClusterTable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1104">
-          <caret line="67" column="50" lean-forward="true" selection-start-line="67" selection-start-column="50" selection-end-line="67" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/main/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="37" column="26" selection-start-line="37" selection-start-column="10" selection-end-line="37" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/view/PieChartTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="32" column="44" lean-forward="true" selection-start-column="2" selection-end-line="52" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/view/PieChart.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="165" selection-start-line="165" selection-end-line="184" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/page/TableViewWithPagination.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="543">
-          <caret line="150" column="77" lean-forward="true" selection-start-line="150" selection-start-column="77" selection-end-line="150" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/view/SpectrumTable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1068">
-          <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/view/SpectrumTable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-360">
-          <caret column="8" lean-forward="true" selection-start-column="8" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/main/ClusterSelection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="126" column="48" selection-start-line="126" selection-start-column="48" selection-end-line="126" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/javafx.base/javafx/beans/property/SimpleStringProperty.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="72" column="51" selection-start-line="72" selection-start-column="39" selection-end-line="72" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/java.base/java/util/HashMap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="554" column="13" selection-start-line="554" selection-start-column="13" selection-end-line="554" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/util/TabPaneExpansion.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="471">
-          <caret line="74" column="25" lean-forward="true" selection-start-line="74" selection-start-column="25" selection-end-line="74" selection-end-column="25" />
-          <folding>
-            <element signature="e#2051#2052#0" expanded="true" />
-            <element signature="e#2091#2092#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/controller/AreaPieChartController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="433">
-          <caret line="118" column="5" selection-start-line="118" selection-start-column="5" selection-end-line="118" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1584#1585#0" expanded="true" />
-            <element signature="e#1626#1627#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/view/AreaPieChart.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="97">
-          <caret line="213" column="37" selection-start-line="213" selection-start-column="37" selection-end-line="213" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1198#1199#0" expanded="true" />
-            <element signature="e#1237#1238#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/db/ElasticSearch.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+        <state relative-caret-position="60">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
         </state>
       </provider>
     </entry>
@@ -1343,7 +1375,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>9</last-edited>
+          <last-edited>1.8u144</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1360,7 +1392,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>

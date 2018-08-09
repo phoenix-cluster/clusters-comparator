@@ -82,9 +82,13 @@ public class ClusteringFileHandler {
                             .collect(Collectors.toList());
 
                     return new Cluster(iCluster.getId(),
-                            iCluster.getAvPrecursorMz(), iCluster.getAvPrecursorIntens(),
-                            iCluster.getSpecCount(), iCluster.getMaxRatio(), spectra,
-                            iCluster.getConsensusMzValues(), iCluster.getConsensusIntensValues());
+                            iCluster.getAvPrecursorMz(),
+                            iCluster.getAvPrecursorIntens(),
+                            iCluster.getSpecCount(),
+                            iCluster.getMaxRatio(),
+                            spectra,
+                            iCluster.getConsensusMzValues(),
+                            iCluster.getConsensusIntensValues());
                 }).collect(Collectors.toList());
     }
 }

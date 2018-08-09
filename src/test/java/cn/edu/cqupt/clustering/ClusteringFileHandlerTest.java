@@ -3,6 +3,7 @@ package cn.edu.cqupt.clustering;
 import cn.edu.cqupt.clustering.io.ClusteringFileHandler;
 import cn.edu.cqupt.clustering.io.ClusteringFileReader;
 import cn.edu.cqupt.object.ICluster;
+import com.sun.tracing.dtrace.Attributes;
 import junit.framework.TestCase;
 import org.junit.Before;
 import org.junit.Test;
@@ -30,4 +31,12 @@ public class ClusteringFileHandlerTest extends TestCase {
     public void testReassembleCluster() {
         ClusteringFileHandler.reassembleCluster(clusterList);
     }
+
+    @Test
+    public void testClusteringFileHandler() throws Exception {
+        ClusteringFileHandler.getAllClusters(
+                new File("C:\\@code\\java\\clusters-comparator\\testdata\\clustering\\compare_5.clustering")
+        ).forEach(System.out::println);
+    }
+
 }

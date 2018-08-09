@@ -94,8 +94,8 @@ public class SpectrumTable {
         spectrumTable.getColumns().add(seqCol);
 
         // charge
-        TableColumn<Spectrum, Float> chaCol = new TableColumn<>("Charge");
-        chaCol.setCellValueFactory(new PropertyValueFactory<Spectrum, Float>("Charge"));
+        TableColumn<Spectrum, Integer> chaCol = new TableColumn<>("Charge");
+        chaCol.setCellValueFactory(new PropertyValueFactory<Spectrum, Integer>("Charge"));
         chaCol.setStyle("-fx-font-family: 'Arial'; -fx-font-size: 14; -fx-alignment: CENTER");
         spectrumTable.getColumns().add(chaCol);
 

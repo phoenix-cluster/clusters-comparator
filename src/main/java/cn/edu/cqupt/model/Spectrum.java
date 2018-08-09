@@ -3,7 +3,7 @@ package cn.edu.cqupt.model;
 public class Spectrum implements Cloneable {
 	private String id;
 	private String sequence;
-	private float charge;
+	private int charge;
 	private float precursorMz;
 	private String species;
 
@@ -23,11 +23,11 @@ public class Spectrum implements Cloneable {
 		this.sequence = sequence;
 	}
 
-	public float getCharge() {
+	public int getCharge() {
 		return charge;
 	}
 
-	public void setCharge(float charge) {
+	public void setCharge(int charge) {
 		this.charge = charge;
 	}
 
@@ -51,7 +51,7 @@ public class Spectrum implements Cloneable {
 
 	}
 
-	public Spectrum(String id, String sequence, float charge, float precursorMz, String species) {
+	public Spectrum(String id, String sequence, int charge, float precursorMz, String species) {
 		super();
 		this.id = id;
 		this.sequence = sequence;

@@ -102,7 +102,7 @@ public class Page<T> {
         currentPage.set(currentPageValue);
         int fromIndex = pageSize.get() * currentPage.get();
         int tmp = pageSize.get() * currentPage.get() + pageSize.get() - 1;
-        int endIndex = tmp > totalRecord.get() ? totalRecord.get() - 1 : tmp;
+        int endIndex = tmp >= totalRecord.get() ? totalRecord.get() - 1 : tmp;
 
         // subList(fromIndex, toIndex) -> [fromIndex, toIndex)
         this.currentPageDataList = rowDataList.subList(fromIndex, endIndex + 1);

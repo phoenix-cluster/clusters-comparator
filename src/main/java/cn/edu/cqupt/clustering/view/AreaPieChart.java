@@ -1,6 +1,7 @@
 package cn.edu.cqupt.clustering.view;
 
 import cn.edu.cqupt.util.ColorUtils;
+import javafx.beans.property.SimpleBooleanProperty;
 import javafx.beans.property.SimpleDoubleProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
@@ -27,6 +28,7 @@ public class AreaPieChart {
     private SimpleDoubleProperty offset;
     private SimpleIntegerProperty filter;
     private SimpleStringProperty clickedClusterId;
+    private SimpleBooleanProperty isShowAreaChart;
     private Color[] colorArr; // color array
     private Group areaPieChartPane;
     private GridPane regulator;
@@ -52,6 +54,7 @@ public class AreaPieChart {
         offset = new SimpleDoubleProperty(10);
         filter = new SimpleIntegerProperty(-1);
         clickedClusterId = new SimpleStringProperty();
+        isShowAreaChart = new SimpleBooleanProperty(false);
         areaPieChartPane = new Group();
 
     }
@@ -83,7 +86,7 @@ public class AreaPieChart {
         double[] percentage = calPercentage(filteredValueArr);
 
         // get maximum radium
-        double maxRadius = Arrays.stream(percentage).max().getAsDouble() * zoomFactor.get();
+        final double maxRadius = Arrays.stream(percentage).max().getAsDouble() * zoomFactor.get();
         double[][] intersectionPoints = intersectionPoints(percentage, maxRadius, offset.get());
 
         double startAnglle = 0.0;
@@ -119,7 +122,10 @@ public class AreaPieChart {
             texts[t] = text;
 
             /** arc **/
-            double radius = percentage[t] * zoomFactor.get();
+            double radius = isShowAreaChart.get()
+                    ? percentage[t] * zoomFactor.get()
+                    : maxRadius ;
+
             Arc arc = new Arc();
             arc.setId(nameArr[i]);
             arc.setCenterX(centerX);
