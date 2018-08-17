@@ -16,6 +16,7 @@ import java.util.List;
 
 public class PieChartTest extends Application {
     public static Stage primaryStage;
+
     @Override
     public void start(Stage primaryStage) throws Exception {
         PieChartTest.primaryStage = primaryStage;
@@ -26,7 +27,7 @@ public class PieChartTest extends Application {
         PieChart pieChart = new PieChart(releaseIName, releaseIIName);
 
         List<Cluster> releaseI = ClusteringFileHandler.getAllClusters(
-               new File("C:\\@code\\java\\clusters-comparator\\testdata\\clustering\\compare_5.clustering"));
+                new File("C:\\@code\\java\\clusters-comparator\\testdata\\clustering\\compare_5.clustering"));
 
         List<Cluster> releaseII = ClusteringFileHandler.getAllClusters(
                 new File("C:\\@code\\java\\clusters-comparator\\testdata\\clustering\\compare_6.clustering"));

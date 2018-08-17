@@ -32,26 +32,26 @@ public class MgfInfoDisplayPane {
 
     private String mgfName1;
     private String mgfName2;
-    private ArrayList<MS> msList1;
-    private ArrayList<MS> msList2;
+    private List<MS> msList1;
+    private List<MS> msList2;
     private SimpleDoubleProperty fragmentTolerance;
     private SimpleIntegerProperty threshold;
     private int pageSize;
     private GridPane mgfInfoDisplayPane;
 
-    public ArrayList<MS> getMsList1() {
+    public List<MS> getMsList1() {
         return msList1;
     }
 
-    public void setMsList1(ArrayList<MS> msList1) {
+    public void setMsList1(List<MS> msList1) {
         this.msList1 = msList1;
     }
 
-    public ArrayList<MS> getMsList2() {
+    public List<MS> getMsList2() {
         return msList2;
     }
 
-    public void setMsList2(ArrayList<MS> msList2) {
+    public void setMsList2(List<MS> msList2) {
         this.msList2 = msList2;
     }
 
@@ -84,7 +84,7 @@ public class MgfInfoDisplayPane {
         threshold = new SimpleIntegerProperty(10);
     }
 
-    public MgfInfoDisplayPane(String mgfName1, String mgfName2, ArrayList<MS> msList1, ArrayList<MS> msList2, int pageSize) {
+    public MgfInfoDisplayPane(String mgfName1, String mgfName2, List<MS> msList1, List<MS> msList2, int pageSize) {
         this();
         this.mgfName1 = mgfName1;
         this.mgfName2 = mgfName2;

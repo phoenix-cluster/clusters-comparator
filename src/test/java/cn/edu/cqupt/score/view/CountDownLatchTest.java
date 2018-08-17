@@ -29,7 +29,7 @@ public class CountDownLatchTest {
         }
 
         System.out.print("array : ");
-        for(int e : array){
+        for (int e : array) {
             System.out.print(e + "\t");
         }
 

@@ -6,15 +6,15 @@
 
     <script>
 
-        function updateHello(user){
-            document.getElementById("helloprompt").innerHTML="Hello: " + user;
+        function updateHello(user) {
+            document.getElementById("helloprompt").innerHTML = "Hello: " + user;
         }
 
-        function clearHello(user){
-            document.getElementById("helloprompt").innerHTML="Hello <a href='http://java-buddy.blogspot.com/'>Java-Buddy</a>";
+        function clearHello(user) {
+            document.getElementById("helloprompt").innerHTML = "Hello <a href='http://java-buddy.blogspot.com/'>Java-Buddy</a>";
         }
 
-        function callJavaFX(){
+        function callJavaFX() {
             var msg = document.getElementById("textto").value;
             app.callFromJavascript(msg);
         }

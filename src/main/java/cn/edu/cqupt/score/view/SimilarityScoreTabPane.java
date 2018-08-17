@@ -12,6 +12,7 @@ import javafx.scene.layout.VBox;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 
 /**
  * Created by huangjs on 2018/4/3.
@@ -29,7 +30,7 @@ public class SimilarityScoreTabPane {
     }
 
 
-    public static void setData(MS ms1, ArrayList<MS> msList, double fragmentTolerance, int threshold) {
+    public static void setData(MS ms1, List<MS> msList, double fragmentTolerance, int threshold) {
 
         // get data from similarity score table service
         long time0 = System.currentTimeMillis();

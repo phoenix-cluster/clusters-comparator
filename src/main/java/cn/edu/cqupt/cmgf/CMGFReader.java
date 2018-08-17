@@ -16,7 +16,7 @@ public class CMGFReader {
         String[] clusterLabels = readClusterLabels(clusterLabelsFile);
 //        System.out.println("msList.size = " + msList.size() + "\n" + "labels.size = " + clusterLabels.length);
         List<CMGF> cmgfList = new ArrayList<>();
-        for(int i = 0; i < msList.size(); i++){
+        for (int i = 0; i < msList.size(); i++) {
             cmgfList.add(new CMGF(msList.get(i), clusterLabels[i]));
         }
         return cmgfList;

@@ -8,6 +8,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.CountDownLatch;
 
 public class MGFSimilarityScore {
@@ -34,7 +35,7 @@ public class MGFSimilarityScore {
                     final int index = i * shardSize + j;
                     new Thread(() -> {
                         SimilarityScore simiScore = new SimilarityScore(subMsList.get(index), subMsList, 0.5);
-                        HashMap<MS, Double> score = simiScore.onlyCalSimilarityScore();
+                        Map<MS, Double> score = simiScore.onlyCalSimilarityScore();
                         int k = 0;
                         for (MS ms : subMsList) {
                             distances[index][k++] = score.get(ms);

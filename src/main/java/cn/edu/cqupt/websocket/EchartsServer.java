@@ -76,7 +76,7 @@ public class EchartsServer extends WebSocketServer {
             case "PieChartClickEvent":
 //                System.out.println("PieChart.createClusterComparison():" + params.getData());
 //                PieChart.createClusterComparison(params.getData());
-                 webSocketMap.put(message, webSocket);
+                webSocketMap.put(message, webSocket);
                 break;
         }
     }

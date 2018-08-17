@@ -18,7 +18,7 @@ public class Explore extends Application {
 
         List<Item> itemList = new ArrayList<>();
 
-        for(int i = 0; i < 10; i++){
+        for (int i = 0; i < 10; i++) {
             String id = "No." + i;
             double weight = 99.8 + i;
             Button btn = new Button("Click");
@@ -35,7 +35,7 @@ public class Explore extends Application {
     }
 }
 
-class Item{
+class Item {
     private String id;
     private double weight;
     private Button btn;

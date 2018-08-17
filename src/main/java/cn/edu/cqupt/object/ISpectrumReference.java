@@ -3,6 +3,7 @@ package cn.edu.cqupt.object;
 /**
  * Created by Johnny on 2017/3/20.
  */
+
 import cn.edu.cqupt.object.ClusteringFileSpectrumReference;
 import cn.edu.cqupt.object.IPeptideSpectrumMatch;
 
@@ -12,29 +13,29 @@ import java.util.List;
  * Created by jg on 01.08.14.
  */
 public interface ISpectrumReference {
-	public String getSpectrumId();
-	
-	public String getSequence();
+    public String getSpectrumId();
 
-	public float getPrecursorMz();
+    public String getSequence();
 
-	public int getCharge();
+    public float getPrecursorMz();
 
-	public float getSimilarityScore();
+    public int getCharge();
 
-	public String getSpecies();
+    public float getSimilarityScore();
 
-	public boolean isIdentifiedAsMultiplePeptides();
+    public String getSpecies();
 
-	public boolean isIdentified();
+    public boolean isIdentifiedAsMultiplePeptides();
 
-	public IPeptideSpectrumMatch getMostCommonPSM();
+    public boolean isIdentified();
 
-	public List<IPeptideSpectrumMatch> getPSMs();
+    public IPeptideSpectrumMatch getMostCommonPSM();
 
-	public boolean hasPeaks();
+    public List<IPeptideSpectrumMatch> getPSMs();
 
-	public List<ClusteringFileSpectrumReference.Peak> getPeaks();
+    public boolean hasPeaks();
 
-	public void addPeaksFromString(String mzString, String intensityString) throws Exception;
+    public List<ClusteringFileSpectrumReference.Peak> getPeaks();
+
+    public void addPeaksFromString(String mzString, String intensityString) throws Exception;
 }

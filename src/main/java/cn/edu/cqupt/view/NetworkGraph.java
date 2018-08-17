@@ -24,7 +24,7 @@ public class NetworkGraph {
         this.backupTab = new Tab();
     }
 
-    public GridPane create(NetworkGraphService networkGraphService){
+    public GridPane create(NetworkGraphService networkGraphService) {
 
         GridPane networkGraphPane = new GridPane();
 

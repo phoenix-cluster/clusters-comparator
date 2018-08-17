@@ -1,50 +1,57 @@
 package cn.edu.cqupt.score.calculate;
 
-import cn.edu.cqupt.model.Cluster;
-import cn.edu.cqupt.service.ClusterTableService;
-import javafx.application.Application;
-import javafx.scene.Scene;
-import javafx.scene.control.ScrollPane;
-import javafx.stage.Stage;
+import cn.edu.cqupt.mgf.MgfFileReader;
+import cn.edu.cqupt.util.MathUtil;
+import org.junit.Before;
+import org.junit.Test;
 
 import java.io.File;
-import java.util.ArrayList;
-import java.util.HashMap;
+import java.io.IOException;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by huangjs on 2018/3/24.
  */
-public class SimilarityScoreTest extends Application {
+public class SimilarityScoreTest {
+    private SimilarityScore simiScore;
+    private List<MS> msList;
 
-    @Override
-    public void start(Stage primaryStage) {
-        File clusterFile1 = new File(
-                "D:\\@project\\program\\coding\\java\\cluster-comparer\\testdata\\clustering\\cli_clustering.pxd000021.0.7_4.clustering");
-        File clusterFile2 = new File(
-                "D:\\@project\\program\\coding\\java\\cluster-comparer\\testdata\\clustering\\hdp_clustering.pxd000021.0.7_4.clustering");
-//        File clusterFile1 = new File("C:\\Users\\huangjs\\Desktop\\compare\\compare_1.clustering");
-//        File clusterFile2 = new File("C:\\Users\\huangjs\\Desktop\\compare\\compare_2.clustering");
-        ClusterTableService serviceReleaseI = new ClusterTableService(clusterFile1);
-        ClusterTableService serviceReleaseII = new ClusterTableService(clusterFile2);
-        List<Cluster> clusterList1 = serviceReleaseI.getAllClusters();
-        List<Cluster> clusterList2 = serviceReleaseII.getAllClusters();
+    @Before
+    public void startUp() throws IOException {
 
-        // score
-        MS ms1 = MS.clustering2MS(clusterList1.get(0));
-        List<MS> msList = new ArrayList<>();
-        for(int i = 0; i < 4; i++){
-            msList.add(MS.clustering2MS(clusterList2.get(i)));
-        }
-        SimilarityScore score = new SimilarityScore(ms1, msList, 0.5);
-        HashMap<MS, Double> result = score.calSimilarityScore();
-        System.out.println("similarity score: " + result);
-        Scene scene = new Scene(new ScrollPane(score.mulPairsSpecReport()), 1000, 600);
-        primaryStage.setScene(scene);
-        primaryStage.show();
+        // read a mgf file
+        msList = MgfFileReader.getAllSpectra(new File("C:\\@code\\java\\clusters-comparator\\testdata\\mgf\\sample3.mgf"));
+        MS ms = msList.get(0);
+        simiScore = new SimilarityScore(ms, msList, 0.5);
     }
 
-    public static void main(String[] args) {
-        launch(args);
+    @Test
+    public void testSplitAndFilter() {
+        MS ms2 = msList.get(0);
+        MS ms1 = msList.get(1);
+        int q = 2;
+        int windowSize = 100;
+        List<Peak> sfPeakList1 = simiScore.splitAndFilter(ms1, q);
+        List<Peak> sfPeakList2 = simiScore.splitAndFilter(ms2, q);
+
+        // match
+        Map<Peak, Peak> matchedPeaks = simiScore.searchMatchedPeaks(sfPeakList1,
+                sfPeakList2, 0.5);
+
+        // calculate probability-based score
+        int n = sfPeakList1.size() > sfPeakList2.size()
+                ? sfPeakList1.size()
+                : sfPeakList2.size();
+        int k = matchedPeaks.size();
+        double p = (double) q / windowSize;
+        double probabilityScore = simiScore.calProbabilityScore(n, k, p);
+
+        // calculate intensity-based score
+        double intensityScore = simiScore.calIntensityScore(sfPeakList1, sfPeakList2, matchedPeaks);
+
+        // calculate a similarity score when retaining i high intensity peaks
+        double currSimilarityScore = -10 * Math.log10(probabilityScore) * intensityScore;
+        System.out.println("current similarity score is " + currSimilarityScore);
     }
 }

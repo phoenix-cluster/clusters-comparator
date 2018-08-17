@@ -141,7 +141,7 @@ public class PieChart {
 
                             if (change.getKey().matches("\\{\"type\":\"PieChartClickEvent\",\"data\":\".*\"\\}")) {
 
-                              Parameters params = gson.fromJson(change.getKey(), Parameters.class);
+                                Parameters params = gson.fromJson(change.getKey(), Parameters.class);
 
                                 System.out.println(params);
 //                                createClusterComparison(params.getData());

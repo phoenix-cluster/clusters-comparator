@@ -97,7 +97,7 @@ public class RestfulClient {
     }
 
     public UndirectedGraph<Vertex, Edge> getGraphByClusterId(String clusterId, String releaseIName,
-                                                             String releaseIIName){
+                                                             String releaseIIName) {
         String url = "http://192.168.6.20:9091/cande/Test/graph?" +
                 "clusterId=" + clusterId + "&" +
                 "release1=" + releaseIName + "&" +

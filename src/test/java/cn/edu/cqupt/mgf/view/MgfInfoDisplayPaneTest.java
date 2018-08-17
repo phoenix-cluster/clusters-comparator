@@ -7,17 +7,17 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.File;
-import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by huangjs on 2018/4/6.
  */
-public class MgfInfoDisplayPaneTest extends Application{
+public class MgfInfoDisplayPaneTest extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        ArrayList<MS> msList1 = MgfFileReader.getAllSpectra(new File("C:\\Users\\huangjs\\Desktop\\mgf\\header_test.mgf"));
-        ArrayList<MS> msList2 = MgfFileReader.getAllSpectra(new File("C:\\Users\\huangjs\\Desktop\\mgf\\header_test.mgf"));
+        List<MS> msList1 = MgfFileReader.getAllSpectra(new File("C:\\Users\\huangjs\\Desktop\\mgf\\header_test.mgf"));
+        List<MS> msList2 = MgfFileReader.getAllSpectra(new File("C:\\Users\\huangjs\\Desktop\\mgf\\header_test.mgf"));
         MgfInfoDisplayPane pane = new MgfInfoDisplayPane("header_test.mgf", "header_test.mgf", msList1, msList2, 8);
 
         Scene scene = new Scene(pane.getMgfInfoDisplayPane());

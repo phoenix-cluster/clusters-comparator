@@ -1,4 +1,5 @@
 package cn.edu.cqupt.util;
+
 public class MathUtil {
 
     /**
@@ -20,7 +21,7 @@ public class MathUtil {
      * @return
      * @throws Exception
      */
-    
+
     public static long calCombination(int n, int r) throws Exception {
         long result = 0;
         if (r == 0) {

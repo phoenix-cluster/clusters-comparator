@@ -15,6 +15,7 @@ import java.util.List;
 public class ClusteringFileHandlerTest extends TestCase {
 
     private List<ICluster> clusterList;
+
     @Before
     public void setUp() throws Exception {
         clusterList = new ClusteringFileReader(

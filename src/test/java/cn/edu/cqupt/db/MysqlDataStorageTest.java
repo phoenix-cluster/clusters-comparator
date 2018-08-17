@@ -1,13 +1,9 @@
 package cn.edu.cqupt.db;
 
-import cn.edu.cqupt.clustering.io.ClusteringFileHandler;
-import cn.edu.cqupt.model.Cluster;
 import junit.framework.TestCase;
 import org.junit.Before;
 
-import java.io.File;
 import java.sql.SQLException;
-import java.util.List;
 
 public class MysqlDataStorageTest extends TestCase {
     private MysqlDataStorage storage = new MysqlDataStorage();

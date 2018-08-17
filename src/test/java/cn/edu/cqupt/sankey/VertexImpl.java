@@ -2,7 +2,7 @@ package cn.edu.cqupt.sankey;
 
 import java.util.Objects;
 
-public class VertexImpl implements Vertex{
+public class VertexImpl implements Vertex {
 
     private String id;
     private double weight;

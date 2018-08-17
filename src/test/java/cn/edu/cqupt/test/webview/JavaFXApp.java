@@ -25,6 +25,7 @@ public class JavaFXApp extends Application {
 
     private String str;
     private Map<String, String> map;
+
     private void createBrowse() {
 
         str = "hello";

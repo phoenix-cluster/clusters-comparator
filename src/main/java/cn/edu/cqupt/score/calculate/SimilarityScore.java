@@ -16,7 +16,7 @@ import javafx.scene.text.FontWeight;
 
 import java.util.*;
 import java.util.concurrent.CountDownLatch;
-import java.util.stream.IntStream;
+import java.util.stream.Collectors;
 
 /**
  * Created by huangjs on 2018/3/22.
@@ -29,28 +29,28 @@ public class SimilarityScore {
     private double fragmentTolerance;
 
     // subscript: the number of cycles; element: filtered data of each step
-    private ArrayList<ArrayList<Peak>> processedPeaks1;
+    private List<List<Peak>> processedPeaks1;
 
     // key: ms2 from msList; value: filtered data of each step
-    private HashMap<MS, ArrayList<ArrayList<Peak>>> processedPeaks2;
+    private Map<MS, List<List<Peak>>> processedPeaks2;
 
     // key: ms2 from msList; value: matched peaks of each step
-    private HashMap<MS, ArrayList<HashMap<Peak, Peak>>> allMatchedPeaks;
+    private Map<MS, List<Map<Peak, Peak>>> allMatchedPeaks;
 
     // key: ms2 from msList; value: similarity score of each step
-    private HashMap<MS, ArrayList<Double>> similarityScore;
+    private Map<MS, List<Double>> similarityScore;
 
     // key: ms2 from msList; value: the finial similarity score between ms1 and ms2
-    private HashMap<MS, Double> maxSimilarityScore;
+    private Map<MS, Double> maxSimilarityScore;
 
     // key: ms2 from msList; value: the cycle steps of the finial similarity score between ms1 and ms2
-    private HashMap<MS, Integer> maxSimilarityScoreIndex;
+    private Map<MS, Integer> maxSimilarityScoreIndex;
 
     public int getCycleTimes() {
         return cycleTimes;
     }
 
-    public ArrayList<ArrayList<Peak>> getProcessedPeaks1() {
+    public List<List<Peak>> getProcessedPeaks1() {
         return processedPeaks1;
     }
 
@@ -82,23 +82,23 @@ public class SimilarityScore {
         return massWindow;
     }
 
-    public HashMap<MS, ArrayList<ArrayList<Peak>>> getProcessedPeaks2() {
+    public Map<MS, List<List<Peak>>> getProcessedPeaks2() {
         return processedPeaks2;
     }
 
-    public HashMap<MS, ArrayList<HashMap<Peak, Peak>>> getAllMatchedPeaks() {
+    public Map<MS, List<Map<Peak, Peak>>> getAllMatchedPeaks() {
         return allMatchedPeaks;
     }
 
-    public HashMap<MS, ArrayList<Double>> getSimilarityScore() {
+    public Map<MS, List<Double>> getSimilarityScore() {
         return similarityScore;
     }
 
-    public HashMap<MS, Double> getMaxSimilarityScore() {
+    public Map<MS, Double> getMaxSimilarityScore() {
         return maxSimilarityScore;
     }
 
-    public HashMap<MS, Integer> getMaxSimilarityScoreIndex() {
+    public Map<MS, Integer> getMaxSimilarityScoreIndex() {
         return maxSimilarityScoreIndex;
     }
 
@@ -110,9 +110,10 @@ public class SimilarityScore {
 
     /**
      * calculate similarity score
+     *
      * @return maximum similarity score of each alignment
      */
-    public HashMap<MS, Double> calSimilarityScore() {
+    public Map<MS, Double> calSimilarityScore() {
         processedPeaks1 = new ArrayList<>();
         processedPeaks2 = new HashMap<>();
         allMatchedPeaks = new HashMap<>();
@@ -122,9 +123,9 @@ public class SimilarityScore {
         for (MS ms2 : msList) {
 
             // the result of a similarity score(subscripts represent the number of cycles)
-            ArrayList<ArrayList<Peak>> tmpProcessedPeaks2 = new ArrayList<>();
-            ArrayList<HashMap<Peak, Peak>> tmpAllMatchedPeaks = new ArrayList<>();
-            ArrayList<Double> tmpSimilarityScore = new ArrayList<>();
+            List<List<Peak>> tmpProcessedPeaks2 = new ArrayList<>();
+            List<Map<Peak, Peak>> tmpAllMatchedPeaks = new ArrayList<>();
+            List<Double> tmpSimilarityScore = new ArrayList<>();
             double tmpMaxSimilarityScore = Double.NEGATIVE_INFINITY;
             int tmpMaxSimilarityScoreIndex = -1;
             for (int i = 0; i < cycleTimes; i++) {
@@ -138,11 +139,14 @@ public class SimilarityScore {
                 tmpProcessedPeaks2.add(sfPeakList2);
 
                 // match: peak1(from ms1) => peak2(from ms2)
-                HashMap<Peak, Peak> matchedPeaks = searchMatchedPeaks(processedPeaks1.get(i), sfPeakList2);
+                Map<Peak, Peak> matchedPeaks = searchMatchedPeaks(processedPeaks1.get(i), sfPeakList2,
+                        fragmentTolerance);
                 tmpAllMatchedPeaks.add(matchedPeaks);
 
                 // calculate probability-based score
-                int n = processedPeaks1.get(i).size() > sfPeakList2.size() ? processedPeaks1.get(i).size() : sfPeakList2.size();
+                int n = processedPeaks1.get(i).size() > sfPeakList2.size()
+                        ? processedPeaks1.get(i).size()
+                        : sfPeakList2.size();
                 int k = matchedPeaks.size();
                 double p = (double) (i + 1) / massWindow;
                 double probabilityScore = calProbabilityScore(n, k, p);
@@ -151,7 +155,7 @@ public class SimilarityScore {
                 double intensityScore = calIntensityScore(processedPeaks1.get(i), sfPeakList2, matchedPeaks);
 
                 // calculate a similarity score when retaining i high intensity peaks
-                double currSimilarityScore = -10 * MathUtil.log(probabilityScore, 10) * intensityScore;
+                double currSimilarityScore = -10 * Math.log10(probabilityScore) * intensityScore;
                 currSimilarityScore = currSimilarityScore == 0.0 ? 0.0 : currSimilarityScore;
                 tmpSimilarityScore.add(currSimilarityScore);
 
@@ -172,16 +176,17 @@ public class SimilarityScore {
 
     /**
      * only calculating similarity score, so other parameters will not be assigned
+     *
      * @return maximum similarity score of each alignment
      */
-    public HashMap<MS, Double> onlyCalSimilarityScore(){
+    public Map<MS, Double> onlyCalSimilarityScore() {
         processedPeaks1 = new ArrayList<>();
         maxSimilarityScore = new HashMap<>();
         for (MS ms2 : msList) {
 
             // the result of a similarity score(subscripts represent the number of cycles)
             ArrayList<ArrayList<Peak>> tmpProcessedPeaks2 = new ArrayList<>();
-            ArrayList<HashMap<Peak, Peak>> tmpAllMatchedPeaks = new ArrayList<>();
+            ArrayList<Map<Peak, Peak>> tmpAllMatchedPeaks = new ArrayList<>();
             ArrayList<Double> tmpSimilarityScore = new ArrayList<>();
             double tmpMaxSimilarityScore = Double.NEGATIVE_INFINITY;
             for (int i = 0; i < cycleTimes; i++) {
@@ -195,7 +200,8 @@ public class SimilarityScore {
                 tmpProcessedPeaks2.add(sfPeakList2);
 
                 // match: peak1(from ms1) => peak2(from ms2)
-                HashMap<Peak, Peak> matchedPeaks = searchMatchedPeaks(processedPeaks1.get(i), sfPeakList2);
+                Map<Peak, Peak> matchedPeaks = searchMatchedPeaks(processedPeaks1.get(i),
+                        sfPeakList2, fragmentTolerance);
                 tmpAllMatchedPeaks.add(matchedPeaks);
 
                 // calculate probability-based score
@@ -208,7 +214,7 @@ public class SimilarityScore {
                 double intensityScore = calIntensityScore(processedPeaks1.get(i), sfPeakList2, matchedPeaks);
 
                 // calculate a similarity score when retaining i high intensity peaks
-                double currSimilarityScore = -10 * MathUtil.log(probabilityScore, 10) * intensityScore;
+                double currSimilarityScore = -10 * Math.log10(probabilityScore) * intensityScore;
                 currSimilarityScore = currSimilarityScore == 0.0 ? 0.0 : currSimilarityScore;
                 tmpSimilarityScore.add(currSimilarityScore);
 
@@ -222,7 +228,14 @@ public class SimilarityScore {
         return maxSimilarityScore;
     }
 
-    private ArrayList<Peak> splitAndFilter(MS ms, int highIntensityPeaksCount) {
+    /**
+     * split ms data by window size and filter the top q peaks
+     *
+     * @param ms
+     * @param q
+     * @return
+     */
+    public ArrayList<Peak> splitAndFilter(MS ms, int q) {
         ArrayList<Peak> sfPeakList = new ArrayList<>(); // peaks list after splitting and filtering
         ArrayList<Peak> peakListAscMz = ms.getPeakListAscMz();
         double limitMz = peakListAscMz.get(0).getMz(); // minimal mz value
@@ -233,7 +246,7 @@ public class SimilarityScore {
             } else {
                 // filter peaks list
                 Collections.sort(tmpPeakList, Peak.DescIntensityComparator);
-                for (int j = 0; j < highIntensityPeaksCount && j < tmpPeakList.size(); j++) {
+                for (int j = 0; j < q && j < tmpPeakList.size(); j++) {
                     sfPeakList.add(tmpPeakList.get(j));
                 }
                 // assign parameters
@@ -244,20 +257,34 @@ public class SimilarityScore {
         }
         // record data of the last cycle
         Collections.sort(tmpPeakList, Peak.DescIntensityComparator);
-        for (int j = 0; j < highIntensityPeaksCount && j < tmpPeakList.size(); j++) {
+        for (int j = 0; j < q && j < tmpPeakList.size(); j++) {
             sfPeakList.add(tmpPeakList.get(j));
         }
         return sfPeakList;
     }
 
-    private HashMap<Peak, Peak> searchMatchedPeaks(ArrayList<Peak> sfPeakList1, ArrayList<Peak> sfPeakList2) {
+    /**
+     * search matched peaks between two peak lists
+     * taking into account a given fragment tolerance
+     *
+     * @param sfPeakList1
+     * @param sfPeakList2
+     * @param fragmentTolerance
+     * @return
+     */
+    public Map<Peak, Peak> searchMatchedPeaks(List<Peak> sfPeakList1,
+                                              List<Peak> sfPeakList2,
+                                              double fragmentTolerance) {
+
         // record matched peaks, peak belongs to filtered peak list 1 => peak belongs to filtered peak list 2
-        HashMap<Peak, Peak> matchedPeaks = new HashMap<>();
+        Map<Peak, Peak> matchedPeaks = new HashMap<>();
         Collections.sort(sfPeakList1, Peak.AscMzComparator);
         Collections.sort(sfPeakList2, Peak.AscMzComparator);
         double minDistance = fragmentTolerance;
         for (Peak peak1 : sfPeakList1) {
-            Peak bestMatchedPeak = null; // the best matched peak is the peak with the closest mz value
+
+            // the best matched peak is the peak with the closest mz value
+            Peak bestMatchedPeak = null;
             for (Peak peak2 : sfPeakList2) {
                 double distance = peak1.getMz() - peak2.getMz();
                 if (Math.abs(distance) > fragmentTolerance) {
@@ -265,12 +292,23 @@ public class SimilarityScore {
                         break;
                     }
                 } else {
-                    if (Math.abs(distance) < minDistance) {
+
+                    /**
+                     * if there are multiple peaks in list 2 match the same peak in list 1,
+                     * the best matched peak is the peak with the closest mz value
+                     */
+                    if (Math.abs(distance) <= minDistance) {
                         bestMatchedPeak = peak2;
+                        minDistance = Math.abs(distance);
                     }
                 }
             }
-            if (bestMatchedPeak != null && !matchedPeaks.containsKey(peak1) && !matchedPeaks.containsValue(bestMatchedPeak)) {
+
+            /**
+             * if there are multiple peaks in list 1 match the same peak in list 2,
+             * we only record the first discovered peak in list 1 and its matched peak in list 2.
+             */
+            if (bestMatchedPeak != null && !matchedPeaks.containsValue(bestMatchedPeak)) {
                 matchedPeaks.put(peak1, bestMatchedPeak);
             }
         }
@@ -282,11 +320,12 @@ public class SimilarityScore {
      *
      * @param n represents the number of peaks in processed spectrum with the most peaks
      * @param k is the number of matched peaks taking into account a given fragment tolerance
-     * @param p is the probability of finding a single matched peak by chance and is calculated by dividing the number
-     *          of retained high intensity peaks by the mass window size
+     * @param p is the probability of finding a single matched peak by chance
+     *          and is calculated by dividing the number of retained high intensity peaks
+     *          by the mass window size
      * @return the probability-based score
      */
-    private double calProbabilityScore(int n, int k, double p) {
+    public double calProbabilityScore(int n, int k, double p) {
         double probabilityScore = 0.0;
         for (int i = k; i <= n; i++) {
             try {
@@ -299,18 +338,20 @@ public class SimilarityScore {
         return probabilityScore;
     }
 
-    private double calIntensityScore(ArrayList<Peak> sfPeakList1, ArrayList<Peak> sfPeakList2, HashMap<Peak, Peak> matchedPeaks) {
+    public double calIntensityScore(List<Peak> sfPeakList1, List<Peak> sfPeakList2, Map<Peak, Peak> matchedPeaks) {
+
         // intensity accumulation of peaks in precessed spectrum
         double sfPeakList1Acc = calIntensityAccumulation(sfPeakList1);
         double sfPeakList2Acc = calIntensityAccumulation(sfPeakList2);
         double matchedPeaksKeysAcc = calIntensityAccumulation(new ArrayList<>(matchedPeaks.keySet()));
         double matchedPeaksValuesAcc = calIntensityAccumulation(new ArrayList<>(matchedPeaks.values()));
+
         // calculate the intensity-based score
         double intensityScore = matchedPeaksKeysAcc / sfPeakList1Acc * (matchedPeaksValuesAcc / sfPeakList2Acc);
         return intensityScore;
     }
 
-    private double calIntensityAccumulation(ArrayList<Peak> peakList) {
+    private double calIntensityAccumulation(List<Peak> peakList) {
         double result = 0.0;
         for (Peak peak : peakList) {
             result += peak.getIntensity();
@@ -320,9 +361,10 @@ public class SimilarityScore {
 
     /**
      * get keys in descending order of maxSimilarityScore's values
+     *
      * @return
      */
-    public MS[] getKeysDescByMaxSimScoreValues(){
+    public MS[] getKeysDescByMaxSimScoreValues() {
 
         int size = maxSimilarityScore.size();
         MS[] keysDescByMaxSimScoreValues = new MS[size];
@@ -333,15 +375,16 @@ public class SimilarityScore {
 
         // get values contained in the map
         List<Double> values = new ArrayList<>(size);
-        for(MS ms : keys){
+        for (MS ms : keys) {
             values.add(maxSimilarityScore.get(ms));
         }
         int[] descOrderIndex = getDescOrderIndex(values);
-        for(int i = 0; i < descOrderIndex.length; i++){
+        for (int i = 0; i < descOrderIndex.length; i++) {
             keysDescByMaxSimScoreValues[i] = keys[descOrderIndex[i]];
         }
         return keysDescByMaxSimScoreValues;
     }
+
     public GridPane mulPairsSpecReport() {
 
         // set column
@@ -352,7 +395,7 @@ public class SimilarityScore {
         root.getColumnConstraints().addAll(noCol, titleCol);
 
         MS[] msArr = getKeysDescByMaxSimScoreValues();
-        for(int i = 0, row = 2; i < msArr.length; i++, row += 2){
+        for (int i = 0, row = 2; i < msArr.length; i++, row += 2) {
             MS ms2 = msArr[i];
 
             // ms2's title
@@ -392,8 +435,10 @@ public class SimilarityScore {
      * @param processedPeaksList2
      * @return
      */
-    public GridPane singlePairSpecReport(MS ms1, MS ms2, List<Double> similarityScoreList,
-                           ArrayList<ArrayList<Peak>> processedPeaksList1, ArrayList<ArrayList<Peak>> processedPeaksList2) {
+    public GridPane singlePairSpecReport(MS ms1, MS ms2,
+                                         List<Double> similarityScoreList,
+                                         List<List<Peak>> processedPeaksList1,
+                                         List<List<Peak>> processedPeaksList2) {
 
         // root pane setting
         GridPane report = new GridPane();
@@ -411,8 +456,8 @@ public class SimilarityScore {
 
         // header
         Label headerTitle = new Label(ms1.getTitle() + "\n"
-        + "vs\n"
-        + ms2.getTitle());
+                + "vs\n"
+                + ms2.getTitle());
         headerTitle.setFont(Font.font("Arial", FontWeight.BOLD, 18));
         report.add(headerTitle, 0, 0, 3, 1);
         GridPane.setHalignment(headerTitle, HPos.CENTER);
@@ -490,8 +535,8 @@ public class SimilarityScore {
         return result;
     }
 
-    private XYChart<Number, Number> chart(MS ms1, MS ms2, ArrayList<Peak> currProcessedPeakList1,
-                                          ArrayList<Peak> currProcessedPeakList2) {
+    private XYChart<Number, Number> chart(MS ms1, MS ms2, List<Peak> currProcessedPeakList1,
+                                          List<Peak> currProcessedPeakList2) {
         ArrayList<Peak> peakList1 = ms1.getPeakList();
         ArrayList<Peak> peakList2 = ms2.getPeakList();
 
@@ -519,17 +564,16 @@ public class SimilarityScore {
     }
 
     /**
-     *
-     * @param cycleIndex which is the cycle between ms1 and ms2
+     * @param cycleIndex          which is the cycle between ms1 and ms2
      * @param processedPeaksList1
      * @param processedPeaksList2
      * @param matchedPeaksList
      * @param similarityScoreList
      * @return
      */
-    private String remark(int cycleIndex, ArrayList<ArrayList<Peak>> processedPeaksList1,
-                          ArrayList<ArrayList<Peak>> processedPeaksList2, ArrayList<HashMap<Peak, Peak>> matchedPeaksList,
-                          ArrayList<Double> similarityScoreList) {
+    private String remark(int cycleIndex, List<List<Peak>> processedPeaksList1,
+                          List<List<Peak>> processedPeaksList2, List<Map<Peak, Peak>> matchedPeaksList,
+                          List<Double> similarityScoreList) {
         String remark = "The highest-intensity peaks are retained in each mass window is " + (cycleIndex + 1) + "\n";
         remark += "The filtered data size: " + "spectrum I is " + processedPeaksList1.get(cycleIndex).size() +
                 " and spectrum II is " + processedPeaksList2.get(cycleIndex).size() + "\n";

@@ -15,7 +15,7 @@ public class ClusterDaoRestfulImpl implements IClusterDao {
     private int endIndex;
 
 
-    public ClusterDaoRestfulImpl(){
+    public ClusterDaoRestfulImpl() {
 
     }
 

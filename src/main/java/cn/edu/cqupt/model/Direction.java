@@ -10,11 +10,12 @@ public enum Direction {
     DES("descent");
 
     private String direction;
-    private Direction(String direction){
+
+    private Direction(String direction) {
         this.direction = direction;
     }
 
-    public String getDirection(){
+    public String getDirection() {
         return this.direction;
     }
 }

@@ -33,7 +33,7 @@ public class NetworkGraph {
     }
 
     public GridPane create(String releaseIName, String releaseIIName,
-                           UndirectedGraph<Vertex, Edge> graph, Vertex focusedVertex){
+                           UndirectedGraph<Vertex, Edge> graph, Vertex focusedVertex) {
 
         // obtain sankey diagram
         ClusteringSankeyDiagram sankey = new ClusteringSankeyDiagram(releaseIName, releaseIIName, graph, focusedVertex);

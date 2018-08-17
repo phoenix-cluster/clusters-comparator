@@ -18,24 +18,24 @@ public class ColorUtilsTest extends TestCase {
         Color[] colors1 = ColorUtils.colorArray(75);
         Color[] colors2 = ColorUtils.colorArray(76);
         Color[] colors3 = ColorUtils.colorArray(77);
-        IntStream.range(0, colors1.length).forEach(c->{
+        IntStream.range(0, colors1.length).forEach(c -> {
             System.out.print(c + ":" + colors1[c] + "\t");
-            if((c+ 1) % 76 == 0){
+            if ((c + 1) % 76 == 0) {
                 System.out.println();
             }
         });
         System.out.println();
         System.out.println("---------------------------");
-        IntStream.range(0, colors2.length).forEach(c->{
+        IntStream.range(0, colors2.length).forEach(c -> {
             System.out.print(c + ":" + colors2[c] + "\t");
-            if((c+ 1) % 76 == 0){
+            if ((c + 1) % 76 == 0) {
                 System.out.println();
             }
         });
         System.out.println("---------------------------");
-        IntStream.range(0, colors3.length).forEach(c->{
+        IntStream.range(0, colors3.length).forEach(c -> {
             System.out.print(c + ":" + colors3[c] + "\t");
-            if((c+ 1) % 76 == 0){
+            if ((c + 1) % 76 == 0) {
                 System.out.println();
             }
         });
@@ -74,12 +74,12 @@ public class ColorUtilsTest extends TestCase {
     }
 
     @Test
-    public void testArray(){
+    public void testArray() {
         String[] strArr = new String[]{"A", "B"};
         String[] strArrCopy = Arrays.copyOf(strArr, strArr.length);
         String[] strArrClone = strArr.clone();
 
-        for(int i = 0; i < strArr.length; i++){
+        for (int i = 0; i < strArr.length; i++) {
             System.out.println("%%%%%%%%%%%%%%%%%" + i + "%%%%%%%%%%");
             System.out.println(strArr[i] + ":" + strArr.hashCode());
             System.out.println(strArrCopy[i] + ":" + strArrCopy.hashCode());

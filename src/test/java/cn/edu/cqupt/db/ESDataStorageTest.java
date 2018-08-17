@@ -35,7 +35,7 @@ public class ESDataStorageTest extends TestCase {
     }
 
     @Test
-    public void testIsConnected(){
+    public void testIsConnected() {
         storage.isConnected();
     }
 

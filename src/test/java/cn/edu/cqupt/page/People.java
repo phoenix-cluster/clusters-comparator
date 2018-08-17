@@ -3,7 +3,7 @@ package cn.edu.cqupt.page;
 /**
  * Created by huangjs on 2018/4/6.
  */
-public class People{
+public class People {
     private String name;
     private Integer age;
 

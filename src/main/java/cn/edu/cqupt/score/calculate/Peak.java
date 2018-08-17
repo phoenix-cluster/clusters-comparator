@@ -5,21 +5,20 @@ import java.util.Comparator;
 /**
  * Created by huangjs on 2018/3/22.
  */
-public class Peak implements Cloneable{
+public class Peak implements Cloneable {
     private double mz;
     private double intensity;
-    public static final Comparator<Peak> AscMzComparator = (o1, o2) -> {
-        return o1.getMz() > o2.getMz() ? 1 : (o1.getMz() < o2.getMz() ? -1 : 0);
-    };
-    public static final Comparator<Peak> DescMzComparator = (o1, o2) -> {
-        return o1.getMz() > o2.getMz() ? -1 : (o1.getMz() < o2.getMz() ? 1 : 0);
-    };
-    public static final Comparator<Peak> AscIntensityComparator = (o1, o2) -> {
-        return o1.getIntensity() > o2.getIntensity() ? 1 : (o1.getIntensity() < o2.getIntensity() ? -1 : 0);
-    };
-    public static final Comparator<Peak> DescIntensityComparator = (o1, o2) -> {
-        return o1.getIntensity() > o2.getIntensity() ? -1 : (o1.getIntensity() < o2.getIntensity() ? 1 : 0);
-    };
+    public static final Comparator<Peak> AscMzComparator = (o1, o2) ->
+            o1.getMz() > o2.getMz() ? 1 : (o1.getMz() < o2.getMz() ? -1 : 0);
+
+    public static final Comparator<Peak> DescMzComparator = (o1, o2) ->
+            o1.getMz() > o2.getMz() ? -1 : (o1.getMz() < o2.getMz() ? 1 : 0);
+
+    public static final Comparator<Peak> AscIntensityComparator = (o1, o2) ->
+            o1.getIntensity() > o2.getIntensity() ? 1 : (o1.getIntensity() < o2.getIntensity() ? -1 : 0);
+
+    public static final Comparator<Peak> DescIntensityComparator = (o1, o2) ->
+            o1.getIntensity() > o2.getIntensity() ? -1 : (o1.getIntensity() < o2.getIntensity() ? 1 : 0);
 
 
     public Peak() {
@@ -48,11 +47,11 @@ public class Peak implements Cloneable{
 
     @Override
     public String toString() {
-        return getMz() + "\t" + getIntensity() ;
+        return getMz() + "\t" + getIntensity();
     }
 
     @Override
-    public Peak clone() throws CloneNotSupportedException{
+    public Peak clone() throws CloneNotSupportedException {
         return (Peak) super.clone();
     }
 

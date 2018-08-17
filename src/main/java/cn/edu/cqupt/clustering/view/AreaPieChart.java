@@ -124,7 +124,7 @@ public class AreaPieChart {
             /** arc **/
             double radius = isShowAreaChart.get()
                     ? percentage[t] * zoomFactor.get()
-                    : maxRadius ;
+                    : maxRadius;
 
             Arc arc = new Arc();
             arc.setId(nameArr[i]);

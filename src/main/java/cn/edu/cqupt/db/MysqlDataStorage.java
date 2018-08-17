@@ -49,14 +49,14 @@ public class MysqlDataStorage {
         return DriverManager.getConnection(URL, USER, PASSWD);
     }
 
-    public void deleteData(String table) throws SQLException{
+    public void deleteData(String table) throws SQLException {
         String sql = "delete from " + table;
         PreparedStatement ps = getConnection().prepareStatement(sql);
         ps.execute();
     }
 
     public void bulkWriteData(String dir) throws Exception {
-        int bulkSize = 2000;
+        int bulkSize = 6000;
 
         File[] fileArr = new File(dir).listFiles(file ->
                 file.getName().endsWith(".clustering")

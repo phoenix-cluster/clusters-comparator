@@ -35,7 +35,7 @@ public class ClusterTableService {
 
     public ClusterTableService(String releaseName, String orderKey,
                                String orderDirection, int startIndex,
-                               int endIndex){
+                               int endIndex) {
         this.clusterDao = new ClusterDaoRestfulImpl(releaseName, orderKey, orderDirection,
                 startIndex, endIndex);
     }

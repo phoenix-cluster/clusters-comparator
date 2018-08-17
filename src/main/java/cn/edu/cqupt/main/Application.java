@@ -32,6 +32,7 @@ public class Application extends javafx.application.Application {
     public static TabPaneExpansion tabPaneExpansion;
     public static final Rectangle2D SCREEN_BOUNDS = Screen.getPrimary().getBounds();
     public static EchartsServer echartsServer;
+
     static {
         pageSize = new SimpleIntegerProperty(8);
         tabPaneExpansion = new TabPaneExpansion();

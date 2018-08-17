@@ -11,7 +11,7 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 import java.io.File;
-import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by huangjs on 2018/4/3.
@@ -25,9 +25,9 @@ public class SimilarityScoreTableTest extends Application {
     public void start(Stage primaryStage) throws Exception {
 
         // read data
-        ArrayList<MS> msList1 = MgfFileReader.getAllSpectra(
+        List<MS> msList1 = MgfFileReader.getAllSpectra(
                 new File("D:\\@project\\program\\coding\\java\\cluster-comparer\\testdata\\mgf\\sample1.mgf"));
-        ArrayList<MS> msList2 = MgfFileReader.getAllSpectra(
+        List<MS> msList2 = MgfFileReader.getAllSpectra(
                 new File("D:\\@project\\program\\coding\\java\\cluster-comparer\\testdata\\mgf\\sample2.mgf"));
 
         Button btn = new Button("next");

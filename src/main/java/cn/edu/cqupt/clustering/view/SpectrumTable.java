@@ -113,8 +113,9 @@ public class SpectrumTable {
 
     /**
      * create a table to show a cluster's spectra
+     *
      * @param spectrumTableView a spectrum table view framework with no data
-     * @param spectra a cluster's spectra
+     * @param spectra           a cluster's spectra
      * @return spectrum table view after formatting
      */
     public TableView<Spectrum> setTableView(TableView<Spectrum> spectrumTableView, List<Spectrum> spectra) {
@@ -128,6 +129,7 @@ public class SpectrumTable {
 
     /**
      * display overlap spectra of two cluster
+     *
      * @param spectrumTableView1
      * @param spectrumTableView2
      * @param releaseIName
@@ -141,8 +143,8 @@ public class SpectrumTable {
             TableView<Spectrum> spectrumTableView1,
             TableView<Spectrum> spectrumTableView2,
             String releaseIName, String releaseIIName,
-                    Cluster cluster1, Cluster cluster2,
-                    List<Spectrum> overlapSpectra) {
+            Cluster cluster1, Cluster cluster2,
+            List<Spectrum> overlapSpectra) {
 
         // the component of two table and some small builds
         GridPane overlapSpectraPane = new GridPane();

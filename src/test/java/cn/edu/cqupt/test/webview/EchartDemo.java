@@ -9,7 +9,7 @@ import javafx.stage.Stage;
 import java.net.URL;
 
 public class EchartDemo extends Application {
-    public void start(Stage primaryStage) throws Exception{
+    public void start(Stage primaryStage) throws Exception {
         WebView webView = new WebView();
         WebEngine webEngine = webView.getEngine();
         URL url = EchartDemo.class.getResource("/pie-nest.html");

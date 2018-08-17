@@ -35,11 +35,11 @@ public class MGF {
         this.mzIntensityPairs = mzIntensityPairs;
     }
 
-    public String format2Mgf(){
+    public String format2Mgf() {
         String result = "BEGIN IONS\n";
         result += "TITLE=" + title + "\n";
         Iterator<Map.Entry<Float, Float>> itr = mzIntensityPairs.entrySet().iterator();
-        while(itr.hasNext()){
+        while (itr.hasNext()) {
             Map.Entry<Float, Float> entry = itr.next();
             result += entry.getKey() + "\t" + entry.getValue() + "\n";
         }

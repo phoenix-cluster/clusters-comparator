@@ -1,5 +1,7 @@
 package cn.edu.cqupt.test.webview;
+
 import java.net.URL;
+
 import javafx.application.Application;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -22,7 +24,6 @@ import javafx.stage.Stage;
 import netscape.javascript.JSObject;
 
 /**
- *
  * @web http://java-buddy.blogspot.com/
  */
 public class JavaFXWeb extends Application {
@@ -50,7 +51,7 @@ public class JavaFXWeb extends Application {
         primaryStage.show();
     }
 
-    class MyBrowser extends Region{
+    class MyBrowser extends Region {
 
         HBox toolbar;
         VBox toolbox;
@@ -58,45 +59,45 @@ public class JavaFXWeb extends Application {
         WebView webView = new WebView();
         WebEngine webEngine = webView.getEngine();
 
-        public MyBrowser(){
+        public MyBrowser() {
 
             final URL urlHello = getClass().getResource("/welcome.html");
             webEngine.load(urlHello.toExternalForm());
 
             webEngine.getLoadWorker().stateProperty().addListener(
-                    new ChangeListener<State>(){
+                    new ChangeListener<State>() {
 
                         @Override
                         public void changed(ObservableValue<? extends State> ov, State oldState, State newState) {
-                            if(newState == State.SUCCEEDED){
-                                JSObject window = (JSObject)webEngine.executeScript("window");
+                            if (newState == State.SUCCEEDED) {
+                                JSObject window = (JSObject) webEngine.executeScript("window");
                                 window.setMember("app", new JavaApplication());
                             }
                         }
                     });
 
 
-            JSObject window = (JSObject)webEngine.executeScript("window");
+            JSObject window = (JSObject) webEngine.executeScript("window");
             window.setMember("app", new JavaApplication());
 
-            final TextField textField = new TextField ();
+            final TextField textField = new TextField();
             textField.setPromptText("Hello! Who are?");
 
             Button buttonEnter = new Button("Enter");
-            buttonEnter.setOnAction(new EventHandler<ActionEvent>(){
+            buttonEnter.setOnAction(new EventHandler<ActionEvent>() {
 
                 @Override
                 public void handle(ActionEvent arg0) {
-                    webEngine.executeScript( " updateHello(' " + textField.getText() + " ') " );
+                    webEngine.executeScript(" updateHello(' " + textField.getText() + " ') ");
                 }
             });
 
             Button buttonClear = new Button("Clear");
-            buttonClear.setOnAction(new EventHandler<ActionEvent>(){
+            buttonClear.setOnAction(new EventHandler<ActionEvent>() {
 
                 @Override
                 public void handle(ActionEvent arg0) {
-                    webEngine.executeScript( "clearHello()" );
+                    webEngine.executeScript("clearHello()");
                 }
             });
 
@@ -117,12 +118,12 @@ public class JavaFXWeb extends Application {
         }
 
         @Override
-        protected void layoutChildren(){
+        protected void layoutChildren() {
             double w = getWidth();
             double h = getHeight();
             double toolboxHeight = toolbox.prefHeight(w);
-            layoutInArea(webView, 0, 0, w, h-toolboxHeight, 0, HPos.CENTER, VPos.CENTER);
-            layoutInArea(toolbox, 0, h-toolboxHeight, w, toolboxHeight, 0, HPos.CENTER, VPos.CENTER);
+            layoutInArea(webView, 0, 0, w, h - toolboxHeight, 0, HPos.CENTER, VPos.CENTER);
+            layoutInArea(toolbox, 0, h - toolboxHeight, w, toolboxHeight, 0, HPos.CENTER, VPos.CENTER);
         }
 
     }

@@ -5,7 +5,6 @@ import com.google.gson.Gson;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
-import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -15,7 +14,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
-public class ESLogAnalysis {
+public class DBLogAnalysis {
     public static void handle(String logFile, String resultPath) throws IOException {
         List<Double> writeDataTime = new ArrayList<>();
         List<Integer> dataSize = new ArrayList<>();
@@ -24,7 +23,7 @@ public class ESLogAnalysis {
         List<String> lines = Files.lines(Paths.get(logFile), StandardCharsets.UTF_8)
                 .collect(Collectors.toList());
         Iterator<String> itr = lines.iterator();
-        Pattern p1 = Pattern.compile("6000 clusters has (\\d+) spectra");
+        Pattern p1 = Pattern.compile("\\d+ clusters has (\\d+) spectra");
         Pattern p2 = Pattern.compile("(\\d+) data costs (\\d+\\.\\d+)m");
         while (itr.hasNext()) {
             Matcher m1 = p1.matcher(itr.next());

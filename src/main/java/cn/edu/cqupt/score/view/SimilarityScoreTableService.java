@@ -10,6 +10,7 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.CountDownLatch;
 
 /**
@@ -18,7 +19,7 @@ import java.util.concurrent.CountDownLatch;
 public class SimilarityScoreTableService {
 
     private MS ms1;
-    private ArrayList<MS> msList;
+    private List<MS> msList;
     private double fragmentTolerance;
     private int threshold;
     private SimilarityScore similarityScore;
@@ -27,7 +28,7 @@ public class SimilarityScoreTableService {
         return similarityScore;
     }
 
-    public SimilarityScoreTableService(MS ms1, ArrayList<MS> msList, double fragmentTolerance, int threshold) {
+    public SimilarityScoreTableService(MS ms1, List<MS> msList, double fragmentTolerance, int threshold) {
         this.ms1 = ms1;
         this.msList = msList;
         this.fragmentTolerance = fragmentTolerance;

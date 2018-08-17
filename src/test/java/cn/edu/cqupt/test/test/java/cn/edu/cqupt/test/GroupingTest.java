@@ -23,7 +23,7 @@ public class GroupingTest {
 }
 
 
-class Cluster{
+class Cluster {
     private String label1;
     private String label2;
     private String label3;

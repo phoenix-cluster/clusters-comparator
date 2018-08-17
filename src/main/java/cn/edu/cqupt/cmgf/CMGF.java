@@ -5,7 +5,7 @@ import cn.edu.cqupt.score.calculate.Peak;
 
 import java.util.ArrayList;
 
-public class CMGF extends MS{
+public class CMGF extends MS {
 
     private String clusterLabel;
 
@@ -21,9 +21,10 @@ public class CMGF extends MS{
 
     /**
      * use copy constructor replacing Cloneable
+     *
      * @param cmgf
      */
-    public CMGF(CMGF cmgf){
+    public CMGF(CMGF cmgf) {
         this(cmgf.getTitle(), cmgf.getCharge(), cmgf.getPeakList(), cmgf.getClusterLabel());
     }
 

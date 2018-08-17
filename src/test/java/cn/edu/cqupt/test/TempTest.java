@@ -18,14 +18,14 @@ public class TempTest {
         arr[0] = new Double(12);
         set.toArray(arr);
         arr[3] = new Double(9);
-       for(Double e : arr){
-           System.out.println(e.doubleValue());
-       }
+        for (Double e : arr) {
+            System.out.println(e.doubleValue());
+        }
 
-       List<Integer> re = Arrays.asList(new Integer[]{1, 2, 3});
+        List<Integer> re = Arrays.asList(new Integer[]{1, 2, 3});
         System.out.println(re.subList(0, 3));
 
         // 向上取整
-        System.out.println(Math.ceil((double)-7 / 2 ));
+        System.out.println(Math.ceil((double) -7 / 2));
     }
 }
