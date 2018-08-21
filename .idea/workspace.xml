@@ -3,100 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="dbd4db41-c464-4a98-b49b-0be87eaf2fdd" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/circos/ArcTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/circos/ArcTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/circos/Circos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/circos/Circos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/circos/CircosTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/circos/CircosTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/circos/GraphCircosTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/circos/GraphCircosTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/io/ClusteringFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/io/ClusteringFileReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/io/IClusterSourceListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/io/IClusterSourceListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/io/IClusterSourceReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/io/IClusterSourceReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/view/AreaPieChart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/view/AreaPieChart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/view/NetworkGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/view/NetworkGraph.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/view/PieChart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/view/PieChart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/view/PieChart.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/view/PieChartTest.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/view/SpectrumTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/view/SpectrumTable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/cmgf/CMGF.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/cmgf/CMGF.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/cmgf/CMGFReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/cmgf/CMGFReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/cmgf/graph/CMGFGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/cmgf/graph/CMGFGraph.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/dao/ClusterDaoFileImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/dao/ClusterDaoFileImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/dao/ClusterDaoRestfulImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/dao/ClusterDaoRestfulImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/dao/IClusterDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/dao/IClusterDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/dao/ImportDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/dao/ImportDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/db/ESLogAnalysis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/db/DBLogAnalysis.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/db/MysqlDataStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/db/MysqlDataStorage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/graph/NetworkGraphData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/graph/NetworkGraphData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/graph/UndirectedGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/graph/UndirectedGraph.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/graph/UndirectedGraphTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/graph/UndirectedGraphTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/main/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/main/Application.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/mgf/MgfFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/mgf/MgfFileReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/mgf/view/MgfInfoDisplayPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/mgf/view/MgfInfoDisplayPane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/model/Cluster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/model/Cluster.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/model/Direction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/model/Direction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/model/Edge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/model/Edge.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/model/MGF.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/model/MGF.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/model/Spectrum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/model/Spectrum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/model/Vertex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/model/Vertex.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/object/ClusteringFileCluster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/object/ClusteringFileCluster.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/object/ClusteringFilePSM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/object/ClusteringFilePSM.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/object/ClusteringFileSpectrumReference.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/object/ClusteringFileSpectrumReference.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/object/ICluster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/object/ICluster.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/object/IModification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/object/IModification.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/object/IPeptideSpectrumMatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/object/IPeptideSpectrumMatch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/object/ISpectrumReference.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/object/ISpectrumReference.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/object/PeakMzComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/object/PeakMzComparator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/object/SequenceCount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/object/SequenceCount.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/restful/RestCluster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/restful/RestCluster.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/restful/RestSpectrum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/restful/RestSpectrum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/restful/RestfulClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/restful/RestfulClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/restful/RestfulGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/restful/RestfulGraph.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/sankey/ClusteringSankeyDiagram.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/sankey/ClusteringSankeyDiagram.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/sankey/Vertex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/sankey/Vertex.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/score/calculate/Peak.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/score/calculate/Peak.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/score/calculate/SimilarityScore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/score/calculate/SimilarityScore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/score/calculate/SimilarityScoreUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/score/calculate/SimilarityScoreVariant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/score/view/SimilarityScoreTabPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/score/view/SimilarityScoreTabPane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/score/view/SimilarityScoreTableService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/score/view/SimilarityScoreTableService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/service/ClusterTableService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/service/ClusterTableService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/service/NetworkGraphService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/service/NetworkGraphService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/service/SpectrumComparerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/service/SpectrumComparerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/util/FileUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/util/FileUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/util/MathUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/util/MathUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/util/ZoomManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/util/ZoomManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/view/ClusterApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/view/ClusterApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/view/ComparerPieChart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/view/ComparerPieChart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/view/ImportDataStage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/view/ImportDataStage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/view/NetworkGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/view/NetworkGraph.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/view/PeakMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/view/PeakMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/score/calculate/SimilarityScoreVariant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/score/calculate/SimilarityScoreVariant.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/websocket/EchartsServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/websocket/EchartsServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/js/echarts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/js/echarts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/clustering/ClusteringFileHandlerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/clustering/ClusteringFileHandlerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/clustering/view/PieChartTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/clustering/view/PieChartTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/db/ESDataStorageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/db/ESDataStorageTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/db/ESLogAnalysisTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/db/DBLogAnalysisTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/db/MysqlDataStorageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/db/MysqlDataStorageTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/mgf/MGFSimilarityScore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/mgf/MGFSimilarityScore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/mgf/MgfFileReaderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/mgf/MgfFileReaderTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/mgf/view/MgfInfoDisplayPaneTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/mgf/view/MgfInfoDisplayPaneTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/page/PageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/page/PageTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/page/People.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/page/People.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/sankey/ClusteringSankeyDiagramTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/sankey/ClusteringSankeyDiagramTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/sankey/VertexImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/sankey/VertexImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/score/calculate/Explore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/score/calculate/Explore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/score/calculate/SimilarityScoreTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/score/calculate/SimilarityScoreTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/score/view/CountDownLatchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/score/view/CountDownLatchTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/score/view/SimilarityScoreTableTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/score/view/SimilarityScoreTableTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/test/AbstractClassTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/test/AbstractClassTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/test/FontFamilyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/test/FontFamilyTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/test/TempTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/test/TempTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/test/test/java/cn/edu/cqupt/test/FontFamilyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/test/test/java/cn/edu/cqupt/test/FontFamilyTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/test/test/java/cn/edu/cqupt/test/GroupingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/test/test/java/cn/edu/cqupt/test/GroupingTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/test/webview/EchartDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/test/webview/EchartDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/test/webview/JavaFXApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/test/webview/JavaFXApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/test/webview/JavaFXWeb.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/test/webview/JavaFXWeb.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/util/ColorUtilsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/util/ColorUtilsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/book.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/book.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/echarts-demo.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/echarts-demo.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/echarts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/echarts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/welcome.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/welcome.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/image-app/zoom.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/image-app/zoom.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/clustering/view/PieChartTest.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -107,130 +23,89 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.34712347">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="SimilarityScoreVariant.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/score/calculate/SimilarityScoreVariant.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="24">
-                  <caret line="20" column="31" selection-start-line="177" selection-start-column="16" selection-end-line="178" selection-end-column="17" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="MathUtil.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/util/MathUtil.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="864">
-                  <caret line="39" column="49" selection-start-line="39" selection-start-column="11" selection-end-line="39" selection-end-column="49" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="MS.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/score/calculate/MS.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1008">
-                  <caret line="58" column="48" selection-start-line="58" selection-start-column="40" selection-end-line="58" selection-end-column="55" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Peak.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/score/calculate/Peak.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="168">
-                  <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="SimilarityScoreVariantTest.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/test/java/cn/edu/cqupt/score/calculate/SimilarityScoreVariantTest.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="288">
-                  <caret line="18" selection-start-line="18" selection-end-line="19" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="SimilarityScoreVarChuan.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/test/java/cn/edu/cqupt/score/calculate/SimilarityScoreVarChuan.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-318">
-                  <caret line="33" selection-start-line="33" selection-end-line="34" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ChuanDataProcessing.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/test/java/cn/edu/cqupt/score/calculate/ChuanDataProcessing.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="196">
-                  <caret line="59" column="33" selection-start-line="39" selection-start-column="8" selection-end-line="46" selection-end-column="9" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="GroupTest.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/test/java/cn/edu/cqupt/score/calculate/GroupTest.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="912">
-                  <caret line="38" column="25" selection-end-line="43" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Stream.java" pinned="false" current-in-tab="false">
-            <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/util/stream/Stream.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="24">
-                  <caret line="526" column="13" selection-start-line="526" selection-start-column="13" selection-end-line="526" selection-end-column="13" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Charset.java" pinned="false" current-in-tab="false">
-            <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/nio/charset/Charset.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="4680">
-                  <caret line="237" column="3" selection-start-line="237" selection-start-column="3" selection-end-line="237" selection-end-column="8" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="MgfFileReader.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/mgf/MgfFileReader.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="312">
-                  <caret line="21" column="27" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf>
+      <file leaf-file-name="DISMS2.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/score/calculate/disms2/DISMS2.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="384">
+              <caret line="27" column="11" lean-forward="true" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="11" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SimilarityScore.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/score/calculate/SimilarityScore.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="623">
+              <caret line="158" column="16" lean-forward="true" selection-start-line="156" selection-start-column="16" selection-end-line="158" selection-end-column="16" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SimilarityScoreVariant.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/score/calculate/SimilarityScoreVariant.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="479">
+              <caret line="103" column="17" selection-start-line="103" selection-start-column="17" selection-end-line="103" selection-end-column="17" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DISMS2Test.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/cn/edu/cqupt/score/calculate/disms2/DISMS2Test.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="743">
+              <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Page.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/page/es/Page.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="68" column="29" selection-start-line="68" selection-start-column="16" selection-end-line="68" selection-end-column="38" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PageTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/cn/edu/cqupt/page/es/PageTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="218">
+              <caret line="17" column="9" lean-forward="true" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MgfFileReader.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/mgf/MgfFileReader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="112" column="30" selection-start-line="112" selection-start-column="30" selection-end-line="112" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -238,15 +113,13 @@
         <option value="HTML File" />
         <option value="Kotlin File" />
         <option value="JUnit3 Test Class" />
-        <option value="JUnit4 Test Class" />
         <option value="Class" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>clusterComparisonTab</find>
-      <find>group</find>
       <find>fillColorArr</find>
       <find>factor</find>
       <find>line</find>
@@ -274,6 +147,9 @@
       <find>peak</find>
       <find>filter</find>
       <find>MathUtil.log</find>
+      <find>sum</find>
+      <find>preprocessing</find>
+      <find>id</find>
     </findStrings>
     <replaceStrings>
       <replace>create</replace>
@@ -297,12 +173,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/util/ColorUtilTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/util/ColorUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/color.list" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/util/ColorUtils.java" />
-        <option value="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/util/ColorUtilsTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/view/ClusterTable.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/view/PieChartTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/page/TableViewWithPagination.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/view/SpectrumTable.java" />
@@ -313,12 +183,10 @@
         <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/view/PieChart.java" />
         <option value="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/clustering/ClusteringFileHandlerTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/main/Application.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/view/AreaPieChart.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/page/Page.java" />
         <option value="$PROJECT_DIR$/src/main/resources/log4j2.properties.kt" />
         <option value="$PROJECT_DIR$/src/main/resources/log4j2.properties" />
         <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/model/Spectrum.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/log4j2.xml" />
         <option value="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/db/ESDataStorageTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/db/ESLogAnalysisTest.java" />
@@ -330,7 +198,6 @@
         <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/db/MysqlDataStorage.java" />
         <option value="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/db/DBLogAnalysisTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/score/calculate/Peak.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/mgf/MgfFileReader.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/view/ClusterApplication.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/mgf/view/MgfInfoDisplayPane.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/score/view/SimilarityScoreTableService.java" />
@@ -343,18 +210,22 @@
         <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/score/calculate/SimilarityScoreUnit.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/score/calculate/SimilarityScore.java" />
         <option value="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/score/calculate/SimilarityScoreTest.java" />
-        <option value="$PROJECT_DIR$/testdata/mgf/sample3.mgf" />
         <option value="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/score/calculate/SimilarityScoreVariantTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/score/calculate/SimilarityScoreVariant.java" />
         <option value="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/score/calculate/SimilarityScoreVarChuan.java" />
         <option value="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/score/calculate/ChuanDataProcessing.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/view/SpectrumTable.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/view/AreaPieChart.java" />
+        <option value="$PROJECT_DIR$/testdata/mgf/sample3.mgf" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/websocket/EchartsServer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/score/calculate/disms2/DISMS2.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/page/es/Page.java" />
+        <option value="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/page/es/PageTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/mgf/MgfFileReader.java" />
+        <option value="$PROJECT_DIR$/src/test/java/cn/edu/cqupt/score/calculate/disms2/DISMS2Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/edu/cqupt/score/calculate/SimilarityScoreVariant.java" />
       </list>
     </option>
-  </component>
-  <component name="JavaAutoRunManager">
-    <enabled-run-configurations>
-      <run-configuration type="JUnit" name="SimilarityScoreTest.testSplitAndFilter" />
-    </enabled-run-configurations>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
@@ -408,10 +279,10 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="962" />
-    <option name="height" value="948" />
+    <option name="x" value="-10" />
+    <option name="y" value="-10" />
+    <option name="width" value="1203" />
+    <option name="height" value="1185" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -421,7 +292,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -463,16 +335,6 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="cqupt" type="462c0819:PsiDirectoryNode" />
               <item name="clustering" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="clusters-comparator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="clusters-comparator" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="cqupt" type="462c0819:PsiDirectoryNode" />
-              <item name="clustering" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="clusters-comparator" type="b2602c69:ProjectViewProjectNode" />
@@ -556,6 +418,16 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="cqupt" type="462c0819:PsiDirectoryNode" />
+              <item name="page" type="462c0819:PsiDirectoryNode" />
+              <item name="es" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="clusters-comparator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="clusters-comparator" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cqupt" type="462c0819:PsiDirectoryNode" />
               <item name="score" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -567,6 +439,17 @@
               <item name="cqupt" type="462c0819:PsiDirectoryNode" />
               <item name="score" type="462c0819:PsiDirectoryNode" />
               <item name="calculate" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="clusters-comparator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="clusters-comparator" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cqupt" type="462c0819:PsiDirectoryNode" />
+              <item name="score" type="462c0819:PsiDirectoryNode" />
+              <item name="calculate" type="462c0819:PsiDirectoryNode" />
+              <item name="disms2" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="clusters-comparator" type="b2602c69:ProjectViewProjectNode" />
@@ -592,6 +475,14 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="clusters-comparator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="clusters-comparator" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="image-app" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="clusters-comparator" type="b2602c69:ProjectViewProjectNode" />
@@ -666,6 +557,15 @@
               <item name="clusters-comparator" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cqupt" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="clusters-comparator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="clusters-comparator" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -689,8 +589,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -700,7 +599,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit3" value="junit.framework.TestCase" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="org.junit.Test" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../book-plan" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -711,21 +610,14 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="cn.edu.cqupt.page.es" />
+      <recent name="cn.edu.cqupt.score.calculate.disms2" />
       <recent name="cn.edu.cqupt.score.calculate" />
       <recent name="cn.edu.cqupt.db" />
       <recent name="cn.edu.cqupt.util" />
-      <recent name="cn.edu.cqupt.clustering.view" />
-      <recent name="cn.edu.cqupt.clustering" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\@code\java\clusters-comparator\src\main\resources\html" />
-      <recent name="C:\@code\java\clusters-comparator\testdata\clutering" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="cn.edu.cqupt.clustering.view" />
-      <recent name="cn.edu.cqupt.main" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
       <recent name="org.junit.Test" />
       <recent name="junit.framework.TestCase" />
       <recent name="cn.edu.cqupt.main.Application" />
@@ -736,6 +628,14 @@
       <recent name="C:\@code\java\clusters-comparator\src\main\resources\image-app" />
       <recent name="C:\@code\java\clusters-comparator\src\test\resources" />
       <recent name="C:\@code\java\clusters-comparator\src\main\resources\html" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="cn.edu.cqupt.clustering.view" />
+      <recent name="cn.edu.cqupt.main" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\@code\java\clusters-comparator\src\main\resources\html" />
+      <recent name="C:\@code\java\clusters-comparator\testdata\clutering" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -750,34 +650,47 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.GroupTest">
-    <configuration name="GroupTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="cn.edu.cqupt.score.calculate.GroupTest" />
-      <module name="clusters-comparator" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="cn.edu.cqupt.score.calculate.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-    </configuration>
+  <component name="RunManager" selected="JUnit.PageTest.testGetCurrentPageDataList">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
-    <configuration name="ChuanDataProcessing.dataProcessing" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DISMS2Test.dataPreprocessing" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <output_file path="$USER_HOME$/Desktop/DISMS2-comparison.txt" is_save="true" />
       <module name="clusters-comparator" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="cn.edu.cqupt.score.calculate.*" />
+          <option name="PATTERN" value="cn.edu.cqupt.score.calculate.disms2.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="cn.edu.cqupt.score.calculate" />
-      <option name="MAIN_CLASS_NAME" value="cn.edu.cqupt.score.calculate.ChuanDataProcessing" />
-      <option name="METHOD_NAME" value="dataProcessing" />
+      <option name="PACKAGE_NAME" value="cn.edu.cqupt.score.calculate.disms2" />
+      <option name="MAIN_CLASS_NAME" value="cn.edu.cqupt.score.calculate.disms2.DISMS2Test" />
+      <option name="METHOD_NAME" value="dataPreprocessing" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="DISMS2Test.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="clusters-comparator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.edu.cqupt.score.calculate.disms2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="cn.edu.cqupt.score.calculate.disms2" />
+      <option name="MAIN_CLASS_NAME" value="cn.edu.cqupt.score.calculate.disms2.DISMS2Test" />
+      <option name="METHOD_NAME" value="test" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -788,18 +701,18 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="SimilarityScoreVarChuan" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PageTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="clusters-comparator" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="cn.edu.cqupt.score.calculate.*" />
+          <option name="PATTERN" value="cn.edu.cqupt.page.es.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="cn.edu.cqupt.score.calculate" />
-      <option name="MAIN_CLASS_NAME" value="cn.edu.cqupt.score.calculate.SimilarityScoreVarChuan" />
+      <option name="PACKAGE_NAME" value="cn.edu.cqupt.page.es" />
+      <option name="MAIN_CLASS_NAME" value="cn.edu.cqupt.page.es.PageTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -811,19 +724,19 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="SimilarityScoreVarChuan.calSimilarityScoreVar" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PageTest.testGetCurrentPageDataList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="clusters-comparator" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="cn.edu.cqupt.score.calculate.*" />
+          <option name="PATTERN" value="cn.edu.cqupt.page.es.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="cn.edu.cqupt.score.calculate" />
-      <option name="MAIN_CLASS_NAME" value="cn.edu.cqupt.score.calculate.SimilarityScoreVarChuan" />
-      <option name="METHOD_NAME" value="calSimilarityScoreVar" />
+      <option name="PACKAGE_NAME" value="cn.edu.cqupt.page.es" />
+      <option name="MAIN_CLASS_NAME" value="cn.edu.cqupt.page.es.PageTest" />
+      <option name="METHOD_NAME" value="testGetCurrentPageDataList" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -834,19 +747,19 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="SimilarityScoreVariantTest.calSimilarityScore" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PageTest.testInsert" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="clusters-comparator" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="cn.edu.cqupt.score.calculate.*" />
+          <option name="PATTERN" value="cn.edu.cqupt.page.es.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="cn.edu.cqupt.score.calculate" />
-      <option name="MAIN_CLASS_NAME" value="cn.edu.cqupt.score.calculate.SimilarityScoreVariantTest" />
-      <option name="METHOD_NAME" value="calSimilarityScore" />
+      <option name="PACKAGE_NAME" value="cn.edu.cqupt.page.es" />
+      <option name="MAIN_CLASS_NAME" value="cn.edu.cqupt.page.es.PageTest" />
+      <option name="METHOD_NAME" value="testInsert" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -896,19 +809,19 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="JUnit.SimilarityScoreVariantTest.calSimilarityScore" />
-      <item itemvalue="JUnit.SimilarityScoreVarChuan.calSimilarityScoreVar" />
-      <item itemvalue="JUnit.SimilarityScoreVarChuan" />
-      <item itemvalue="JUnit.ChuanDataProcessing.dataProcessing" />
-      <item itemvalue="Application.GroupTest" />
+      <item itemvalue="JUnit.DISMS2Test.dataPreprocessing" />
+      <item itemvalue="JUnit.PageTest" />
+      <item itemvalue="JUnit.PageTest.testInsert" />
+      <item itemvalue="JUnit.DISMS2Test.test" />
+      <item itemvalue="JUnit.PageTest.testGetCurrentPageDataList" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.GroupTest" />
-        <item itemvalue="JUnit.ChuanDataProcessing.dataProcessing" />
-        <item itemvalue="JUnit.SimilarityScoreVarChuan.calSimilarityScoreVar" />
-        <item itemvalue="JUnit.SimilarityScoreVarChuan" />
-        <item itemvalue="JUnit.SimilarityScoreVariantTest.calSimilarityScore" />
+        <item itemvalue="JUnit.PageTest.testGetCurrentPageDataList" />
+        <item itemvalue="JUnit.DISMS2Test.test" />
+        <item itemvalue="JUnit.DISMS2Test.dataPreprocessing" />
+        <item itemvalue="JUnit.PageTest.testInsert" />
+        <item itemvalue="JUnit.PageTest" />
       </list>
     </recent_temporary>
   </component>
@@ -941,48 +854,48 @@
       <workItem from="1533717712460" duration="11420000" />
       <workItem from="1533862979388" duration="3660000" />
       <workItem from="1534051680634" duration="52833000" />
-      <workItem from="1534389590496" duration="7633000" />
+      <workItem from="1534389590496" duration="15203000" />
+      <workItem from="1534589840316" duration="52632000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ChuanDataProcessing_dataProcessing - 2018.08.16 at 12h 50m 19s.xml">
-      <configuration name="ChuanDataProcessing.dataProcessing" configurationId="JUnit" />
+    <history-entry file="DISMS2Test_dataPreprocessing - 2018.08.19 at 23h 02m 05s.xml">
+      <configuration name="DISMS2Test.dataPreprocessing" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ChuanDataProcessing_dataProcessing - 2018.08.16 at 12h 50m 53s.xml">
-      <configuration name="ChuanDataProcessing.dataProcessing" configurationId="JUnit" />
+    <history-entry file="DISMS2Test_dataPreprocessing - 2018.08.19 at 23h 02m 26s.xml">
+      <configuration name="DISMS2Test.dataPreprocessing" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ChuanDataProcessing_dataProcessing - 2018.08.16 at 12h 51m 52s.xml">
-      <configuration name="ChuanDataProcessing.dataProcessing" configurationId="JUnit" />
+    <history-entry file="DISMS2Test_dataPreprocessing - 2018.08.19 at 23h 02m 35s.xml">
+      <configuration name="DISMS2Test.dataPreprocessing" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ChuanDataProcessing_dataProcessing - 2018.08.16 at 12h 53m 23s.xml">
-      <configuration name="ChuanDataProcessing.dataProcessing" configurationId="JUnit" />
+    <history-entry file="DISMS2Test_dataPreprocessing - 2018.08.19 at 23h 03m 15s.xml">
+      <configuration name="DISMS2Test.dataPreprocessing" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ChuanDataProcessing_dataProcessing - 2018.08.16 at 12h 54m 25s.xml">
-      <configuration name="ChuanDataProcessing.dataProcessing" configurationId="JUnit" />
+    <history-entry file="DISMS2Test_dataPreprocessing - 2018.08.19 at 23h 06m 55s.xml">
+      <configuration name="DISMS2Test.dataPreprocessing" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ChuanDataProcessing_dataProcessing - 2018.08.16 at 13h 03m 21s.xml">
-      <configuration name="ChuanDataProcessing.dataProcessing" configurationId="JUnit" />
+    <history-entry file="DISMS2Test_dataPreprocessing - 2018.08.20 at 09h 30m 41s.xml">
+      <configuration name="DISMS2Test.dataPreprocessing" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ChuanDataProcessing_dataProcessing - 2018.08.16 at 13h 03m 59s.xml">
-      <configuration name="ChuanDataProcessing.dataProcessing" configurationId="JUnit" />
+    <history-entry file="DISMS2Test_dataPreprocessing - 2018.08.20 at 09h 30m 57s.xml">
+      <configuration name="DISMS2Test.dataPreprocessing" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ChuanDataProcessing_dataProcessing - 2018.08.16 at 13h 04m 25s.xml">
-      <configuration name="ChuanDataProcessing.dataProcessing" configurationId="JUnit" />
+    <history-entry file="DISMS2Test_test - 2018.08.20 at 10h 06m 35s.xml">
+      <configuration name="DISMS2Test.test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ChuanDataProcessing_dataProcessing - 2018.08.16 at 13h 17m 09s.xml">
-      <configuration name="ChuanDataProcessing.dataProcessing" configurationId="JUnit" />
+    <history-entry file="DISMS2Test_test - 2018.08.20 at 10h 06m 46s.xml">
+      <configuration name="DISMS2Test.test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ChuanDataProcessing_dataProcessing - 2018.08.16 at 13h 23m 41s.xml">
-      <configuration name="ChuanDataProcessing.dataProcessing" configurationId="JUnit" />
+    <history-entry file="PageTest_testGetCurrentPageDataList - 2018.08.20 at 13h 55m 34s.xml">
+      <configuration name="PageTest.testGetCurrentPageDataList" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="426208000" />
+    <option name="totallyTimeSpent" value="486410000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="0" width="768" height="664" extended-state="6" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="7" />
@@ -990,24 +903,24 @@
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info id="Image Layers" order="6" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5005208" side_tool="true" weight="0.25851065" />
       <window_info anchor="right" id="Maven Projects" order="7" weight="0.19726562" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="11" />
-      <window_info active="true" anchor="bottom" id="Run" order="3" visible="true" weight="0.36595744" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49947917" weight="0.43636364" />
       <window_info anchor="bottom" id="Spring" order="0" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.14361702" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.14893617" />
       <window_info id="Capture Tool" order="3" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.50362843" visible="true" weight="0.19427083" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.84648496" weight="0.19401042" />
       <window_info anchor="right" id="Database" order="6" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.3287234" />
-      <window_info id="Structure" order="1" sideWeight="0.49637157" side_tool="true" weight="0.24322917" />
+      <window_info id="Structure" order="1" sideWeight="0.15351507" side_tool="true" weight="0.19427083" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.20957446" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.4106383" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" x="0" y="0" width="337" height="638" id="Documentation" order="9" side_tool="true" weight="0.3294271" />
@@ -1020,32 +933,32 @@
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="Spring" order="0" />
       <window_info id="Image Layers" order="6" />
-      <window_info active="true" anchor="bottom" id="Run" order="3" visible="true" weight="0.36595744" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49947917" visible="true" weight="0.3319672" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.14361702" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.14893617" />
       <window_info id="Capture Tool" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5005208" side_tool="true" weight="0.25851065" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.20106383" />
       <window_info anchor="right" x="0" y="0" width="337" height="638" id="Documentation" order="9" side_tool="true" weight="0.3294271" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="11" />
       <window_info anchor="right" id="Maven Projects" order="7" weight="0.19726562" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.50362843" visible="true" weight="0.19427083" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.84648496" visible="true" weight="0.19401042" />
       <window_info anchor="right" id="Database" order="6" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="TODO" order="7" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info id="Structure" order="1" sideWeight="0.49637157" side_tool="true" weight="0.24322917" />
+      <window_info id="Structure" order="1" sideWeight="0.15351507" side_tool="true" weight="0.19427083" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.3287234" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.20957446" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.4106383" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1064,11 +977,23 @@
           <properties />
           <option name="timeStamp" value="37" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/score/calculate/disms2/DISMS2.java</url>
+          <line>39</line>
+          <properties />
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/mgf/MgfFileReader.java</url>
+          <line>83</line>
+          <properties />
+          <option name="timeStamp" value="54" />
+        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="38" />
+      <option name="time" value="55" />
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
@@ -1084,206 +1009,55 @@
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
     </expressions>
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>filteredPeakList1.get(3).getMz() == filteredPeakList2.get(4).getMz()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>filteredPeakList1.get(3).getIntensity() == filteredPeakList2.get(4).getIntensity()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>filteredPeakList1.get(3) == filteredPeakList2.get(4)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>filteredPeakList1.get(3)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>filteredPeakList1.indexOf(filteredPeakList2.get(4))</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>filteredPeakList1.indexOf(filteredPeakList2.get(3))</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>filteredPeakList1.indexOf(filteredPeakList1.get(3))</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>filteredPeakList1.indexOf(filteredPeakList1.get(2))</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>filteredPeakList1.indexOf(filteredPeakList1.get(1))</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/io/FileFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="38" column="17" selection-start-line="38" selection-start-column="17" selection-end-line="38" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/io/File.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="1246" column="35" selection-start-line="1246" selection-start-column="35" selection-end-line="1246" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/io/FilenameFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="429">
-          <caret line="51" column="27" selection-start-line="51" selection-start-column="24" selection-end-line="51" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/nio/file/attribute/FileAttribute.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="39" column="17" selection-start-line="39" selection-start-column="17" selection-end-line="39" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/nio/file/OpenOption.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="41" column="3" lean-forward="true" selection-start-line="41" selection-start-column="3" selection-end-line="41" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/nio/file/Files.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="3285" column="57" lean-forward="true" selection-start-line="3285" selection-start-column="57" selection-end-line="3285" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/runner/JUnitCore.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="824">
-          <caret line="63" column="38" selection-start-line="63" selection-start-column="38" selection-end-line="63" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/internal/runners/JUnit38ClassRunner.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="42" selection-start-line="42" selection-end-line="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/slf4j/slf4j-api/1.7.16/slf4j-api-1.7.16.jar!/org/slf4j/Logger.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-48">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/slf4j/slf4j-api/1.7.16/slf4j-api-1.7.16.jar!/org/slf4j/LoggerFactory.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="259" column="25" selection-start-line="259" selection-start-column="25" selection-end-line="259" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/io/ClusteringFileHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="34" column="34" selection-start-line="34" selection-start-column="34" selection-end-line="34" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/db/DBLogAnalysis.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="25" column="38" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="28" column="23" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/db/ESDataStorage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="458">
-          <caret line="171" column="42" selection-start-line="171" selection-start-column="8" selection-end-line="171" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/cn/edu/cqupt/db/DBLogAnalysisTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="23" column="77" selection-start-line="23" selection-start-column="77" selection-end-line="23" selection-end-column="77" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/cn/edu/cqupt/db/MysqlDataStorageTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/util/function/BinaryOperator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="616">
-          <caret line="58" column="21" lean-forward="true" selection-start-line="58" selection-start-column="15" selection-end-line="58" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/db/MysqlDataStorage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="125" column="9" selection-start-line="125" selection-start-column="9" selection-end-line="125" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/util/stream/Collectors.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="803" column="4" selection-start-line="803" selection-start-column="4" selection-end-line="803" selection-end-column="4" />
-          <folding>
-            <element signature="e#33990#33991#0" expanded="true" />
-            <element signature="e#34045#34046#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/object/ClusteringFileSpectrumReference.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="492">
-          <caret line="70" column="4" lean-forward="true" selection-start-line="70" selection-start-column="4" selection-end-line="70" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/score/calculate/Peak.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/score/calculate/MS.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1008">
-          <caret line="58" column="48" selection-start-line="58" selection-start-column="40" selection-end-line="58" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testdata/mgf/sample1.mgf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="101">
-          <caret line="12" column="9" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/score/view/SimilarityScoreTableService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="21" column="12" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/score/view/SimilarityScoreTabPane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="32" column="44" selection-start-line="32" selection-start-column="44" selection-end-line="32" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/mgf/view/MgfInfoDisplayPane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="114" column="35" selection-start-line="114" selection-start-column="35" selection-end-line="114" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/view/ClusterApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="409">
@@ -1344,41 +1118,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/score/calculate/SimilarityScore.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1200">
-          <caret line="158" column="16" lean-forward="true" selection-start-line="156" selection-start-column="16" selection-end-line="158" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/cn/edu/cqupt/score/view/SimilarityScoreTableTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="305">
           <caret line="29" column="54" selection-start-line="29" selection-start-column="54" selection-end-line="29" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/runners/BlockJUnit4ClassRunner.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="49" selection-start-line="49" selection-end-line="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/runners/ParentRunner.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="205" selection-start-line="205" selection-end-line="205" />
         </state>
       </provider>
     </entry>
@@ -1389,20 +1132,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/internal/runners/statements/InvokeMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/runners/model/FrameworkMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/cn/edu/cqupt/score/calculate/SimilarityScoreTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1104">
@@ -1410,20 +1139,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testdata/mgf/sample3.mgf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="2" column="8" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/mgf/MgfFileReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="21" column="27" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
         </state>
       </provider>
     </entry>
@@ -1438,16 +1153,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="18" selection-start-line="18" selection-end-line="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/score/calculate/SimilarityScoreVariant.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="20" column="31" selection-start-line="177" selection-start-column="16" selection-end-line="178" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1485,6 +1190,274 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="912">
           <caret line="38" column="25" selection-end-line="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/view/SpectrumTable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3096">
+          <caret line="149" selection-start-line="149" selection-end-line="149" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/view/PieChartTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/test/java/cn/edu/cqupt/clustering/view/PieChartTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/util/TableViewUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/util/TabPaneExpansion.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/page/TableViewWithPagination.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/javax/swing/text/html/ImageView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="135" column="11" selection-start-line="135" selection-start-column="11" selection-end-line="135" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/cn/edu/cqupt/clustering/view/AreaPieChartTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="17" column="61" selection-start-line="17" selection-start-column="61" selection-end-line="17" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/clustering/view/AreaPieChart.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="231" column="26" selection-start-line="231" selection-start-column="26" selection-end-line="231" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/score/calculate/MS.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="530">
+          <caret line="58" column="48" selection-start-line="58" selection-start-column="40" selection-end-line="58" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/score/calculate/Peak.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-120">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/util/stream/BaseStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="46" column="28" selection-start-line="46" selection-start-column="25" selection-end-line="46" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/util/stream/DoubleStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1095">
+          <caret line="495" column="11" selection-start-line="495" selection-start-column="11" selection-end-line="495" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/util/stream/IntStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="777" column="80" selection-start-line="777" selection-start-column="71" selection-end-line="777" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/runners/BlockJUnit4ClassRunner.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="49" selection-start-line="49" selection-end-line="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/runners/ParentRunner.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="177" selection-start-line="177" selection-end-line="177" />
+          <folding>
+            <element signature="e#6484#6648#0" expanded="true" />
+            <element signature="e#6647#6648#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/internal/runners/statements/InvokeMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/runners/model/FrameworkMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+          <folding>
+            <element signature="e#870#1063#0" expanded="true" />
+            <element signature="e#1062#1063#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testdata/mgf/sample3.mgf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="7" selection-start-line="7" selection-end-line="11" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="359">
+          <caret line="72" column="33" selection-start-line="72" selection-start-column="33" selection-end-line="72" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/elasticsearch/elasticsearch/6.3.2/elasticsearch-6.3.2.jar!/org/elasticsearch/search/sort/FieldSortBuilder.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="1" column="58" selection-start-line="1" selection-start-column="56" selection-end-line="1" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/cn/edu/cqupt/page/PageTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/websocket/EchartsServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="44" column="44" lean-forward="true" selection-start-line="44" selection-start-column="44" selection-end-line="44" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/elasticsearch/elasticsearch/6.3.2/elasticsearch-6.3.2.jar!/org/elasticsearch/search/SearchHit.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="232" column="37" lean-forward="true" selection-start-line="232" selection-start-column="37" selection-end-line="232" selection-end-column="37" />
+          <folding>
+            <element signature="e#7861#7862#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/db/ESDataStorage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1272">
+          <caret line="91" column="24" selection-start-line="91" selection-start-column="24" selection-end-line="91" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/elasticsearch/elasticsearch/6.3.2/elasticsearch-6.3.2.jar!/org/elasticsearch/action/search/SearchRequestBuilder.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="28" column="33" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/page/Page.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="100" column="41" selection-start-line="100" selection-start-column="19" selection-end-line="100" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/mgf/MgfFileReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="112" column="30" selection-start-line="112" selection-start-column="30" selection-end-line="112" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/score/calculate/disms2/DISMS2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="27" column="11" lean-forward="true" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/score/calculate/SimilarityScore.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="623">
+          <caret line="158" column="16" lean-forward="true" selection-start-line="156" selection-start-column="16" selection-end-line="158" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/score/calculate/SimilarityScoreVariant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="479">
+          <caret line="103" column="17" selection-start-line="103" selection-start-column="17" selection-end-line="103" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/cn/edu/cqupt/score/calculate/disms2/DISMS2Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="743">
+          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/cqupt/page/es/Page.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="68" column="29" selection-start-line="68" selection-start-column="16" selection-end-line="68" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/cn/edu/cqupt/page/es/PageTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="17" column="9" lean-forward="true" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

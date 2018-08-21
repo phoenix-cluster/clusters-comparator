@@ -15,7 +15,9 @@ import javafx.scene.shape.*;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Map;
 import java.util.stream.IntStream;
 
 public class AreaPieChart {
@@ -210,9 +212,6 @@ public class AreaPieChart {
         );
 
         /** overlap spectra count filter. those count less than threshold will not display. **/
-        // maximum overlap spectra count
-//        int maxCount = (int)Arrays.stream(valueArr).max().getAsDouble();
-
         // label
         Label filterLabel = new Label("filter: ");
 
@@ -239,7 +238,6 @@ public class AreaPieChart {
             filterText.setText(newValue + "");
 
         });
-
 
         regulator.add(factorLab, 0, 0);
         regulator.add(factorSlider, 1, 0);

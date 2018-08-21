@@ -146,10 +146,11 @@ public class SpectrumTable {
             Cluster cluster1, Cluster cluster2,
             List<Spectrum> overlapSpectra) {
 
+        // data-processing: put the overlap spectra first
+
         // the component of two table and some small builds
         GridPane overlapSpectraPane = new GridPane();
         overlapSpectraPane.setPadding(new Insets(10, 0, 0, 0));
-//		this.overlapSpectraPane.setHgap(10);
 
         // spectrum table
         setTableView(spectrumTableView1, cluster1.getSpectra());
@@ -186,6 +187,7 @@ public class SpectrumTable {
 
         return overlapSpectraPane;
     }
+
 
     /**
      * render overlap row

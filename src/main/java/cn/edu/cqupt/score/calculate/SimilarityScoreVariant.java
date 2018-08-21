@@ -89,11 +89,11 @@ public class SimilarityScoreVariant {
                 ));
 
         List<Peak> sfPeakList = group.values().stream()
-                .map(peakList -> {
-                    Collections.sort(peakList,
-                            (ms1, ms2) -> Double.compare(ms2.getIntensity(), ms1.getIntensity()));
-                    return peakList.size() > q ? peakList.subList(0, q) : peakList;
-                })
+                .map(peakList -> peakList.stream()
+                        .sorted(Comparator.comparingDouble(Peak::getIntensity).reversed())
+                        .limit(q)
+                        .collect(Collectors.toList())
+                )
                 .flatMap(peakList -> peakList.stream())
                 .collect(Collectors.toList());
         return sfPeakList;

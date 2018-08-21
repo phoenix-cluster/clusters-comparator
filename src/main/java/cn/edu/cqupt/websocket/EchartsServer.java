@@ -1,25 +1,15 @@
 package cn.edu.cqupt.websocket;
 
-import cn.edu.cqupt.clustering.view.PieChart;
-import cn.edu.cqupt.main.Application;
 import com.google.gson.Gson;
-import javafx.beans.property.ObjectProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableMap;
-import javafx.scene.control.Button;
-import javafx.scene.control.Tab;
-import javafx.scene.layout.BorderPane;
 import org.java_websocket.WebSocket;
 import org.java_websocket.handshake.ClientHandshake;
 import org.java_websocket.server.WebSocketServer;
 
-import java.net.InetAddress;
 import java.net.InetSocketAddress;
 import java.net.UnknownHostException;
 import java.util.HashMap;
-import java.util.Objects;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class EchartsServer extends WebSocketServer {
 
