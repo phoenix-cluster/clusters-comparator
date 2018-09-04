@@ -84,14 +84,18 @@ public class MS implements Cloneable {
         return peakList;
     }
 
+//    public String toString() {
+//        String result = "BEGIN IONS\n";
+//        result += "TITLE=" + title + "\n";
+//        for (Peak peak : peakList) {
+//            result += peak + "\n";
+//        }
+//        result += "END IONS";
+//        return result;
+//    }
+
     public String toString() {
-        String result = "BEGIN IONS\n";
-        result += "TITLE=" + title + "\n";
-        for (Peak peak : peakList) {
-            result += peak + "\n";
-        }
-        result += "END IONS";
-        return result;
+        return getTitle();
     }
 
     public MS clone() {

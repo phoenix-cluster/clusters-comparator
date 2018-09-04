@@ -142,10 +142,13 @@ public class UndirectedGraph<V, E> {
     }
 
     public boolean hasEdge(V vertex1, V vertex2) {
-        if (!adjacencyTable.containsKey(vertex1) || !adjacencyTable.containsKey(vertex2)) {
-            return false;
+
+        if (adjacencyTable.containsKey(vertex1)
+                && adjacencyTable.containsKey(vertex2)
+                && adjacencyTable.get(vertex1).containsKey(vertex2)) {
+            return true;
         } else {
-            return adjacencyTable.get(vertex1).get(vertex2) == null ? false : true;
+            return false;
         }
     }
 

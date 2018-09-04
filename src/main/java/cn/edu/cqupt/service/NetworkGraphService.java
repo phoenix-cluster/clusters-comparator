@@ -62,7 +62,7 @@ public class NetworkGraphService {
         this.visitedEdges = new ArrayList<>();
         this.visitedVertices = new HashMap<>();
         focusVertex = new Vertex(this.releaseIName, this.cluster, this.cluster.getSpecCount());
-        doCompare(this.cluster, this.releaseIName, this.cluster.getSpectra());
+        doCompare(this.releaseIName, this.cluster, this.cluster.getSpectra());
 
     }
 
@@ -70,12 +70,12 @@ public class NetworkGraphService {
     /**
      * compare source cluster's spectra and spectra of cluster in releaseI or releaseII
      *
-     * @param releaseName   sourceCluster's release name
+     * @param sourceReleaseName   sourceCluster's release name
      * @param sourceCluster
      * @param sourceSpectra
      * @throws CloneNotSupportedException
      */
-    public void doCompare(Cluster sourceCluster, String sourceReleaseName, List<Spectrum> sourceSpectra)
+    public void doCompare(String sourceReleaseName, Cluster sourceCluster, List<Spectrum> sourceSpectra)
             throws CloneNotSupportedException {
         List<Cluster> objectRelease = null;
         String objectReleaseName = null;
@@ -120,7 +120,7 @@ public class NetworkGraphService {
                         undirectedGraph.addEdge(vertex1, vertex2, new Edge(tmpSpectra1, tmpSpectra1.size()));
                         visitedEdges.add(tmpSpectra1);
 
-                        doCompare(tmpCluster, objectReleaseName, tmpSpectra2);
+                        doCompare(objectReleaseName, tmpCluster, tmpSpectra2);
                     }
                 } else { // child spectrums belong to parent spectrums: leaf node
                     Vertex vertex1 = new Vertex(sourceReleaseName, sourceCluster, sourceCluster.getSpecCount());
